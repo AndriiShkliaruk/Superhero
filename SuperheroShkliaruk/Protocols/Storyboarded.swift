@@ -8,18 +8,14 @@
 import UIKit
 
 public protocol Storyboarded: AnyObject {
-    static var storyboard: UIStoryboard { get }
-}
-
-public extension Storyboarded {
-    static var storyboard: UIStoryboard {
-      return UIStoryboard(name: String(describing: self), bundle: Bundle(for: self))
-    }
+    static func instantiate() -> Self
 }
 
 extension Storyboarded where Self: UIViewController {
     static func instantiate() -> Self {
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as? Self else {
+        let storyboardIdentifier = String(describing: self)
+        let storyboard = UIStoryboard(name: storyboardIdentifier, bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as? Self else {
           fatalError("The ViewController of \(storyboard.classForCoder) is not of class \(self)")
       }
       return viewController

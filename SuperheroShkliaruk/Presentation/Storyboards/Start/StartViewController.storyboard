@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Saira-Regular.ttf">
+            <string>Saira-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StartViewController" customModule="SuperheroShkliaruk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBb-hy-46Q" userLabel="Superman View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start-male" translatesAutoresizingMaskIntoConstraints="NO" id="5eq-Xc-cbV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                    </imageView>
+                                    <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lo-Em-gRe" customClass="CustomRoundedButton" customModule="SuperheroShkliaruk" customModuleProvider="target">
+                                        <rect key="frame" x="135" y="202" width="144" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="d7B-Mx-5n9"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="vgh-40-vCD"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="SUPERMAN"/>
+                                        <connections>
+                                            <action selector="chooseCharacterButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yw8-oT-FQX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9lo-Em-gRe" firstAttribute="centerY" secondItem="vBb-hy-46Q" secondAttribute="centerY" id="1rt-wZ-ta3"/>
+                                    <constraint firstAttribute="bottom" secondItem="5eq-Xc-cbV" secondAttribute="bottom" id="GzZ-xH-XE2"/>
+                                    <constraint firstItem="5eq-Xc-cbV" firstAttribute="leading" secondItem="vBb-hy-46Q" secondAttribute="leading" id="KE6-Al-tqA"/>
+                                    <constraint firstItem="9lo-Em-gRe" firstAttribute="centerX" secondItem="vBb-hy-46Q" secondAttribute="centerX" id="d62-0Y-7NR"/>
+                                    <constraint firstAttribute="trailing" secondItem="5eq-Xc-cbV" secondAttribute="trailing" id="d93-XQ-nNo"/>
+                                    <constraint firstItem="5eq-Xc-cbV" firstAttribute="top" secondItem="vBb-hy-46Q" secondAttribute="top" id="sUo-T4-e8B"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHp-Hb-ZYE" userLabel="Supergirl View">
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start-female" translatesAutoresizingMaskIntoConstraints="NO" id="fOC-Ig-2Sf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                    </imageView>
+                                    <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InZ-4v-ptP" customClass="CustomRoundedButton" customModule="SuperheroShkliaruk" customModuleProvider="target">
+                                        <rect key="frame" x="135" y="202" width="144" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="90K-gQ-WCN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="u9a-ci-ELp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="SUPERGIRL"/>
+                                        <connections>
+                                            <action selector="chooseCharacterButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RER-dK-UpC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="InZ-4v-ptP" firstAttribute="centerY" secondItem="fHp-Hb-ZYE" secondAttribute="centerY" id="1fL-eS-Kis"/>
+                                    <constraint firstItem="fOC-Ig-2Sf" firstAttribute="top" secondItem="fHp-Hb-ZYE" secondAttribute="top" id="acl-ns-8PJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="fOC-Ig-2Sf" secondAttribute="bottom" id="bGo-4G-nEV"/>
+                                    <constraint firstItem="fOC-Ig-2Sf" firstAttribute="leading" secondItem="fHp-Hb-ZYE" secondAttribute="leading" id="dCx-jc-urH"/>
+                                    <constraint firstAttribute="trailing" secondItem="fOC-Ig-2Sf" secondAttribute="trailing" id="wEy-YK-d23"/>
+                                    <constraint firstItem="InZ-4v-ptP" firstAttribute="centerX" secondItem="fHp-Hb-ZYE" secondAttribute="centerX" id="y7j-Hl-vab"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grK-4z-bSj" userLabel="Gradient View">
+                                <rect key="frame" x="0.0" y="351" width="414" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WHH-ov-Lyc" userLabel="Labels Stack View">
+                                        <rect key="frame" x="0.0" y="58.5" width="414" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPERHERO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikd-nq-5cS">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
+                                                <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7u-0O-PT0">
+                                                <rect key="frame" x="0.0" y="44" width="414" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Cpj-2b-h9E"/>
+                                    <constraint firstItem="WHH-ov-Lyc" firstAttribute="leading" secondItem="grK-4z-bSj" secondAttribute="leading" id="c7d-gd-l1y"/>
+                                    <constraint firstItem="WHH-ov-Lyc" firstAttribute="centerY" secondItem="grK-4z-bSj" secondAttribute="centerY" id="fGx-hP-btG"/>
+                                    <constraint firstAttribute="trailing" secondItem="WHH-ov-Lyc" secondAttribute="trailing" id="ndz-Qv-gxf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fHp-Hb-ZYE" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="7bB-ek-SQT"/>
+                            <constraint firstItem="grK-4z-bSj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DjY-J4-DED"/>
+                            <constraint firstItem="fHp-Hb-ZYE" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="OTV-CG-vRF"/>
+                            <constraint firstAttribute="bottom" secondItem="fHp-Hb-ZYE" secondAttribute="bottom" id="RhW-DY-ZDZ"/>
+                            <constraint firstItem="vBb-hy-46Q" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Tnk-dG-L0V"/>
+                            <constraint firstItem="grK-4z-bSj" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-7" id="V3W-W4-4Ep"/>
+                            <constraint firstItem="vBb-hy-46Q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VaH-n0-x5O"/>
+                            <constraint firstItem="fHp-Hb-ZYE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VsH-ve-Be1"/>
+                            <constraint firstItem="vBb-hy-46Q" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="afi-Is-ZKw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="grK-4z-bSj" secondAttribute="trailing" id="fkZ-aY-gDT"/>
+                            <constraint firstItem="vBb-hy-46Q" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="nFh-LV-Xkz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseLabel" destination="D7u-0O-PT0" id="LZ2-7c-Hhc"/>
+                        <outlet property="femaleButton" destination="InZ-4v-ptP" id="WW1-2c-XeW"/>
+                        <outlet property="femaleImageView" destination="fOC-Ig-2Sf" id="gUS-cD-5jI"/>
+                        <outlet property="gradientView" destination="grK-4z-bSj" id="QcH-d3-VN4"/>
+                        <outlet property="maleButton" destination="9lo-Em-gRe" id="EmE-Kf-iX6"/>
+                        <outlet property="maleImageView" destination="5eq-Xc-cbV" id="nYF-Xg-b1C"/>
+                        <outlet property="superheroLabel" destination="Ikd-nq-5cS" id="VUi-Ti-lJp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="start-female" width="375" height="406"/>
+        <image name="start-male" width="375" height="406"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

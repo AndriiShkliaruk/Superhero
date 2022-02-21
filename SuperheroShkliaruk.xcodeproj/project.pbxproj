@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DF82727C11E7100B76F30 /* StartViewModel.swift */; };
+		F90DF82A27C11EA600B76F30 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DF82927C11EA600B76F30 /* HomeViewModel.swift */; };
 		F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41727BBC85000DE14B7 /* AppDelegate.swift */; };
 		F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41927BBC85000DE14B7 /* SceneDelegate.swift */; };
 		F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41B27BBC85000DE14B7 /* StartViewController.swift */; };
@@ -16,9 +18,27 @@
 		F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E43627BBE0E700DE14B7 /* MainCoordinator.swift */; };
 		F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F953E43927BC088D00DE14B7 /* StartViewController.storyboard */; };
 		F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E43B27BC08FC00DE14B7 /* Storyboarded.swift */; };
+		F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */; };
+		F968597227C3BB4D0007FF5C /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968597027C3BB4D0007FF5C /* Profile+CoreDataClass.swift */; };
+		F968597327C3BB4D0007FF5C /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968597127C3BB4D0007FF5C /* Profile+CoreDataProperties.swift */; };
+		F968597727C3C4B00007FF5C /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968597627C3C4B00007FF5C /* Sex.swift */; };
+		F96B771127BE64B600678747 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771027BE64B600678747 /* HomeViewController.swift */; };
+		F96B771527BE6C7C00678747 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96B771427BE6C7C00678747 /* HomeViewController.storyboard */; };
+		F96B771827BE810800678747 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771727BE810800678747 /* UIColor+CustomColor.swift */; };
+		F96B771A27BE811D00678747 /* UIFont+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771927BE811D00678747 /* UIFont+CustomFont.swift */; };
+		F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771F27BE8CBC00678747 /* CustomRoundedButton.swift */; };
+		F96B772327BE90B200678747 /* Saira-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772227BE90B200678747 /* Saira-Bold.ttf */; };
+		F96B772727BE90C400678747 /* Saira-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772427BE90C400678747 /* Saira-Thin.ttf */; };
+		F96B772827BE90C400678747 /* Saira-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772527BE90C400678747 /* Saira-Light.ttf */; };
+		F96B772927BE90C400678747 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772627BE90C400678747 /* Saira-Regular.ttf */; };
+		F96B772B27BE90EC00678747 /* Saira-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772A27BE90EC00678747 /* Saira-SemiBold.ttf */; };
+		F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B772C27BE98A900678747 /* UIView+Gradient.swift */; };
+		F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D68A2D27C12D18005F551E /* ProfileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F90DF82727C11E7100B76F30 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		F90DF82927C11EA600B76F30 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F953E41427BBC85000DE14B7 /* SuperheroShkliaruk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroShkliaruk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F953E41727BBC85000DE14B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F953E41927BBC85000DE14B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +50,22 @@
 		F953E43627BBE0E700DE14B7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F953E43927BC088D00DE14B7 /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		F953E43B27BC08FC00DE14B7 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		F968596427C3B6EB0007FF5C /* Profile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Profile.xcdatamodel; sourceTree = "<group>"; };
+		F968597027C3BB4D0007FF5C /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F968597127C3BB4D0007FF5C /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F968597627C3C4B00007FF5C /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		F96B771027BE64B600678747 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F96B771427BE6C7C00678747 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		F96B771727BE810800678747 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
+		F96B771927BE811D00678747 /* UIFont+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFont.swift"; sourceTree = "<group>"; };
+		F96B771F27BE8CBC00678747 /* CustomRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedButton.swift; sourceTree = "<group>"; };
+		F96B772227BE90B200678747 /* Saira-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Bold.ttf"; sourceTree = "<group>"; };
+		F96B772427BE90C400678747 /* Saira-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Thin.ttf"; sourceTree = "<group>"; };
+		F96B772527BE90C400678747 /* Saira-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Light.ttf"; sourceTree = "<group>"; };
+		F96B772627BE90C400678747 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
+		F96B772A27BE90EC00678747 /* Saira-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-SemiBold.ttf"; sourceTree = "<group>"; };
+		F96B772C27BE98A900678747 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		F9D68A2D27C12D18005F551E /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F90DF82527C11E5700B76F30 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				F90DF82727C11E7100B76F30 /* StartViewModel.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		F90DF82627C11E5D00B76F30 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F90DF82927C11EA600B76F30 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		F953E40B27BBC85000DE14B7 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +114,14 @@
 		F953E41627BBC85000DE14B7 /* SuperheroShkliaruk */ = {
 			isa = PBXGroup;
 			children = (
+				F96B771627BE80CD00678747 /* Extensions */,
 				F953E42D27BBDF4000DE14B7 /* Protocols */,
 				F953E42C27BBDF2900DE14B7 /* Presentation */,
 				F953E42B27BBDF1A00DE14B7 /* Models */,
+				F96B771B27BE822D00678747 /* Resources */,
 				F953E42527BBC85100DE14B7 /* Info.plist */,
 				F953E41727BBC85000DE14B7 /* AppDelegate.swift */,
 				F953E41927BBC85000DE14B7 /* SceneDelegate.swift */,
-				F953E42027BBC85100DE14B7 /* Assets.xcassets */,
 			);
 			path = SuperheroShkliaruk;
 			sourceTree = "<group>";
@@ -76,6 +129,8 @@
 		F953E42B27BBDF1A00DE14B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F9D68A2C27C12CEF005F551E /* Profile */,
+				F9D68A2B27C12CDC005F551E /* ProfileCoreData */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +159,7 @@
 		F953E42E27BBDF5A00DE14B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F968596227C3AD0C0007FF5C /* Button */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,6 +167,8 @@
 		F953E42F27BBDF6200DE14B7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F90DF82627C11E5D00B76F30 /* Home */,
+				F90DF82527C11E5700B76F30 /* Start */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -118,7 +176,8 @@
 		F953E43027BBDF6E00DE14B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F953E41B27BBC85000DE14B7 /* StartViewController.swift */,
+				F96B771227BE656800678747 /* Start */,
+				F96B771327BE656F00678747 /* Home */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -126,7 +185,8 @@
 		F953E43127BBDF7F00DE14B7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				F953E43927BC088D00DE14B7 /* StartViewController.storyboard */,
+				F96B770E27BE647800678747 /* Start */,
+				F96B770F27BE649300678747 /* Home */,
 				F953E42227BBC85100DE14B7 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -146,6 +206,104 @@
 				F953E43427BBE08700DE14B7 /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F968596227C3AD0C0007FF5C /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				F96B771F27BE8CBC00678747 /* CustomRoundedButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		F96B770E27BE647800678747 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				F953E43927BC088D00DE14B7 /* StartViewController.storyboard */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		F96B770F27BE649300678747 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F96B771427BE6C7C00678747 /* HomeViewController.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F96B771227BE656800678747 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				F953E41B27BBC85000DE14B7 /* StartViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		F96B771327BE656F00678747 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F96B771027BE64B600678747 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F96B771627BE80CD00678747 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F96B771727BE810800678747 /* UIColor+CustomColor.swift */,
+				F96B771927BE811D00678747 /* UIFont+CustomFont.swift */,
+				F96B772C27BE98A900678747 /* UIView+Gradient.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F96B771B27BE822D00678747 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F96B771C27BE823F00678747 /* Fonts */,
+				F953E42027BBC85100DE14B7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F96B771C27BE823F00678747 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F96B772127BE909600678747 /* Saira */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F96B772127BE909600678747 /* Saira */ = {
+			isa = PBXGroup;
+			children = (
+				F96B772A27BE90EC00678747 /* Saira-SemiBold.ttf */,
+				F96B772527BE90C400678747 /* Saira-Light.ttf */,
+				F96B772627BE90C400678747 /* Saira-Regular.ttf */,
+				F96B772427BE90C400678747 /* Saira-Thin.ttf */,
+				F96B772227BE90B200678747 /* Saira-Bold.ttf */,
+			);
+			path = Saira;
+			sourceTree = "<group>";
+		};
+		F9D68A2B27C12CDC005F551E /* ProfileCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F968597027C3BB4D0007FF5C /* Profile+CoreDataClass.swift */,
+				F968597127C3BB4D0007FF5C /* Profile+CoreDataProperties.swift */,
+				F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */,
+			);
+			path = ProfileCoreData;
+			sourceTree = "<group>";
+		};
+		F9D68A2C27C12CEF005F551E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F9D68A2D27C12D18005F551E /* ProfileManager.swift */,
+				F968597627C3C4B00007FF5C /* Sex.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +364,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96B771527BE6C7C00678747 /* HomeViewController.storyboard in Resources */,
 				F953E42427BBC85100DE14B7 /* LaunchScreen.storyboard in Resources */,
+				F96B772B27BE90EC00678747 /* Saira-SemiBold.ttf in Resources */,
 				F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */,
 				F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */,
+				F96B772927BE90C400678747 /* Saira-Regular.ttf in Resources */,
+				F96B772727BE90C400678747 /* Saira-Thin.ttf in Resources */,
+				F96B772327BE90B200678747 /* Saira-Bold.ttf in Resources */,
+				F96B772827BE90C400678747 /* Saira-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,11 +383,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */,
 				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
+				F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */,
+				F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */,
 				F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */,
 				F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */,
 				F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */,
 				F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */,
+				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
+				F968597327C3BB4D0007FF5C /* Profile+CoreDataProperties.swift in Sources */,
+				F96B771127BE64B600678747 /* HomeViewController.swift in Sources */,
+				F96B771A27BE811D00678747 /* UIFont+CustomFont.swift in Sources */,
+				F90DF82A27C11EA600B76F30 /* HomeViewModel.swift in Sources */,
+				F968597227C3BB4D0007FF5C /* Profile+CoreDataClass.swift in Sources */,
+				F96B771827BE810800678747 /* UIColor+CustomColor.swift in Sources */,
+				F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */,
+				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +614,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F968596427C3B6EB0007FF5C /* Profile.xcdatamodel */,
+			);
+			currentVersion = F968596427C3B6EB0007FF5C /* Profile.xcdatamodel */;
+			path = Profile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F953E40C27BBC85000DE14B7 /* Project object */;
 }
