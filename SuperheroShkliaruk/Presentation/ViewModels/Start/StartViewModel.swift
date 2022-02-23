@@ -8,11 +8,11 @@
 import Foundation
 
 struct StartViewModel {
-    public let titleLabelText = "SUPERHERO"
+    public let titleLabelText = "Superhero"
     public let subtitleLabelText = "выберите героя"
     
-    public let maleButtonText = "SUPERMAN"
-    public let femaleButtonText = "SUPERGIRL"
+    public let maleButtonText = "Superman"
+    public let femaleButtonText = "Supergirl"
     
     public let manImageName = "start-male"
     public let womanImageName = "start-female"

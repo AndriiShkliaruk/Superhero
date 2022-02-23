@@ -12,6 +12,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.sairaMediumWithSize18], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.sairaMediumWithSize18], for: .highlighted)
+        
         return true
     }
 

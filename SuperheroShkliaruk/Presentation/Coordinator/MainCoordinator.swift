@@ -11,13 +11,18 @@ class MainCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
+        navigationController.navigationBar.tintColor = .customDarkYellow
+        navigationController.navigationBar.titleTextAttributes = [
+            .font: UIFont.sairaMediumWithSize18,
+            .foregroundColor: UIColor.white
+        ]
         self.navigationController = navigationController
     }
     
     func start() {
         ProfileManager.sharedInstance.retrieveSavedProfile()
         if ProfileManager.sharedInstance.userProfile != nil {
-            home()
+            presentHome()
         } else {
             let startViewController = StartViewController.instantiate()
             startViewController.coordinator = self
@@ -25,11 +30,9 @@ class MainCoordinator: Coordinator {
         }
     }
     
-    func home() {
+    func presentHome() {
         let homeViewController = HomeViewController.instantiate()
         homeViewController.coordinator = self
         navigationController.pushViewController(homeViewController, animated: true)
     }
-    
-    
 }

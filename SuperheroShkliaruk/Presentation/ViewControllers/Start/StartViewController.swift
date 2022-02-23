@@ -28,7 +28,7 @@ class StartViewController: UIViewController, Storyboarded {
     private func setupUI() {
         gradientView.applyBlackGradientInForeground()
         
-        superheroLabel.text = viewModel.titleLabelText
+        superheroLabel.text = viewModel.titleLabelText.uppercased()
         superheroLabel.textColor = .customYellow
         superheroLabel.font = .futuraBoldWithSize32
         
@@ -37,12 +37,12 @@ class StartViewController: UIViewController, Storyboarded {
         chooseLabel.font = .sairaRegularWithSize16
         
         maleImageView.image = UIImage(named: viewModel.manImageName)
-        maleButton.setTitle(viewModel.maleButtonText, for: .normal)
+        maleButton.setTitle(viewModel.maleButtonText.uppercased(), for: .normal)
         maleButton.backgroundColor = .customYellow
         maleButton.titleLabel?.font = .sairaRegularWithSize18
         
         femaleImageView.image = UIImage(named: viewModel.womanImageName)
-        femaleButton.setTitle(viewModel.femaleButtonText, for: .normal)
+        femaleButton.setTitle(viewModel.femaleButtonText.uppercased(), for: .normal)
         femaleButton.backgroundColor = .customYellow
         femaleButton.titleLabel?.font = .sairaRegularWithSize18
     }
@@ -50,10 +50,6 @@ class StartViewController: UIViewController, Storyboarded {
     @IBAction func chooseCharacterButtonTapped(_ sender: UIButton) {
         let sex = Sex.getStringValueByTag(sender.tag)
         viewModel.createNewUserWithSex(sex)
-        coordinator?.home()
+        coordinator?.presentHome()
     }
-    
-
 }
-
-

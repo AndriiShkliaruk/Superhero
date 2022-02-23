@@ -21,5 +21,11 @@ extension Profile {
 }
 
 extension Profile : Identifiable {
-
+    func getSex() -> Sex? {
+        if let sex = Sex(rawValue: self.sex) {
+            return sex
+        } else {
+            return .none
+        }
+    }
 }

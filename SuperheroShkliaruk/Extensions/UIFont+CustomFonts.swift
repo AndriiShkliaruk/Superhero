@@ -1,5 +1,5 @@
 //
-//  UIFont+CustomFont.swift
+//  UIFont+CustomFonts.swift
 //  SuperheroShkliaruk
 //
 //  Created by Andrii Shkliaruk on 17.02.2022.
@@ -29,5 +29,9 @@ extension UIFont {
     
     public class var sairaRegularWithSize24: UIFont {
         return customFont(name: "Saira-Regular", size: 24)
+    }
+    
+    public class var sairaMediumWithSize18: UIFont {
+        return customFont(name: "Saira-Medium", size: 18)
     }
 }

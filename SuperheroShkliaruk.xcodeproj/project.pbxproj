@@ -24,8 +24,8 @@
 		F968597727C3C4B00007FF5C /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968597627C3C4B00007FF5C /* Sex.swift */; };
 		F96B771127BE64B600678747 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771027BE64B600678747 /* HomeViewController.swift */; };
 		F96B771527BE6C7C00678747 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96B771427BE6C7C00678747 /* HomeViewController.storyboard */; };
-		F96B771827BE810800678747 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771727BE810800678747 /* UIColor+CustomColor.swift */; };
-		F96B771A27BE811D00678747 /* UIFont+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771927BE811D00678747 /* UIFont+CustomFont.swift */; };
+		F96B771827BE810800678747 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771727BE810800678747 /* UIColor+CustomColors.swift */; };
+		F96B771A27BE811D00678747 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771927BE811D00678747 /* UIFont+CustomFonts.swift */; };
 		F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771F27BE8CBC00678747 /* CustomRoundedButton.swift */; };
 		F96B772327BE90B200678747 /* Saira-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772227BE90B200678747 /* Saira-Bold.ttf */; };
 		F96B772727BE90C400678747 /* Saira-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772427BE90C400678747 /* Saira-Thin.ttf */; };
@@ -33,6 +33,29 @@
 		F96B772927BE90C400678747 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772627BE90C400678747 /* Saira-Regular.ttf */; };
 		F96B772B27BE90EC00678747 /* Saira-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772A27BE90EC00678747 /* Saira-SemiBold.ttf */; };
 		F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B772C27BE98A900678747 /* UIView+Gradient.swift */; };
+		F99706E527C65D7300C24B50 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706E327C65D7300C24B50 /* MenuTableCell.swift */; };
+		F99706E627C65D7300C24B50 /* MenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99706E427C65D7300C24B50 /* MenuTableCell.xib */; };
+		F99706E827C662DF00C24B50 /* Coordinator+Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706E727C662DF00C24B50 /* Coordinator+Calculator.swift */; };
+		F99706EA27C662F100C24B50 /* Coordinator+Muscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706E927C662F100C24B50 /* Coordinator+Muscles.swift */; };
+		F99706EC27C662FC00C24B50 /* Coordinator+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706EB27C662FC00C24B50 /* Coordinator+Profile.swift */; };
+		F99706EE27C6630900C24B50 /* Coordinator+Programs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706ED27C6630900C24B50 /* Coordinator+Programs.swift */; };
+		F99706F027C6631700C24B50 /* Coordinator+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706EF27C6631700C24B50 /* Coordinator+Progress.swift */; };
+		F99706F527C6659300C24B50 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706F427C6659300C24B50 /* CalculatorViewController.swift */; };
+		F99706F727C665B100C24B50 /* MusclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706F627C665B100C24B50 /* MusclesViewController.swift */; };
+		F99706F927C665BB00C24B50 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706F827C665BB00C24B50 /* ProfileViewController.swift */; };
+		F99706FB27C665CC00C24B50 /* ProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706FA27C665CC00C24B50 /* ProgramsViewController.swift */; };
+		F99706FD27C665D700C24B50 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706FC27C665D700C24B50 /* ProgressViewController.swift */; };
+		F99706FF27C6660400C24B50 /* CalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99706FE27C6660400C24B50 /* CalculatorViewController.storyboard */; };
+		F997070127C6661C00C24B50 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F997070027C6661C00C24B50 /* CalculatorViewModel.swift */; };
+		F997070327C6662E00C24B50 /* MusclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F997070227C6662D00C24B50 /* MusclesViewModel.swift */; };
+		F997070527C6663B00C24B50 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F997070427C6663B00C24B50 /* ProfileViewModel.swift */; };
+		F997070727C6664700C24B50 /* ProgramsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F997070627C6664700C24B50 /* ProgramsViewModel.swift */; };
+		F997070927C6665600C24B50 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F997070827C6665600C24B50 /* ProgressViewModel.swift */; };
+		F997070B27C6B0F900C24B50 /* MusclesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997070A27C6B0F900C24B50 /* MusclesViewController.storyboard */; };
+		F997070D27C6B11000C24B50 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997070C27C6B11000C24B50 /* ProfileViewController.storyboard */; };
+		F997070F27C6B12200C24B50 /* ProgramsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997070E27C6B12200C24B50 /* ProgramsViewController.storyboard */; };
+		F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997071027C6B13100C24B50 /* ProgressViewController.storyboard */; };
+		F997071327C6C05F00C24B50 /* Saira-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F997071227C6C05F00C24B50 /* Saira-Medium.ttf */; };
 		F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D68A2D27C12D18005F551E /* ProfileManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +79,8 @@
 		F968597627C3C4B00007FF5C /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		F96B771027BE64B600678747 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F96B771427BE6C7C00678747 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
-		F96B771727BE810800678747 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
-		F96B771927BE811D00678747 /* UIFont+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFont.swift"; sourceTree = "<group>"; };
+		F96B771727BE810800678747 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
+		F96B771927BE811D00678747 /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
 		F96B771F27BE8CBC00678747 /* CustomRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedButton.swift; sourceTree = "<group>"; };
 		F96B772227BE90B200678747 /* Saira-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Bold.ttf"; sourceTree = "<group>"; };
 		F96B772427BE90C400678747 /* Saira-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Thin.ttf"; sourceTree = "<group>"; };
@@ -65,6 +88,29 @@
 		F96B772627BE90C400678747 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
 		F96B772A27BE90EC00678747 /* Saira-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-SemiBold.ttf"; sourceTree = "<group>"; };
 		F96B772C27BE98A900678747 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		F99706E327C65D7300C24B50 /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
+		F99706E427C65D7300C24B50 /* MenuTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableCell.xib; sourceTree = "<group>"; };
+		F99706E727C662DF00C24B50 /* Coordinator+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Calculator.swift"; sourceTree = "<group>"; };
+		F99706E927C662F100C24B50 /* Coordinator+Muscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Muscles.swift"; sourceTree = "<group>"; };
+		F99706EB27C662FC00C24B50 /* Coordinator+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Profile.swift"; sourceTree = "<group>"; };
+		F99706ED27C6630900C24B50 /* Coordinator+Programs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Programs.swift"; sourceTree = "<group>"; };
+		F99706EF27C6631700C24B50 /* Coordinator+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Progress.swift"; sourceTree = "<group>"; };
+		F99706F427C6659300C24B50 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		F99706F627C665B100C24B50 /* MusclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewController.swift; sourceTree = "<group>"; };
+		F99706F827C665BB00C24B50 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F99706FA27C665CC00C24B50 /* ProgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsViewController.swift; sourceTree = "<group>"; };
+		F99706FC27C665D700C24B50 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		F99706FE27C6660400C24B50 /* CalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculatorViewController.storyboard; sourceTree = "<group>"; };
+		F997070027C6661C00C24B50 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		F997070227C6662D00C24B50 /* MusclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewModel.swift; sourceTree = "<group>"; };
+		F997070427C6663B00C24B50 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F997070627C6664700C24B50 /* ProgramsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsViewModel.swift; sourceTree = "<group>"; };
+		F997070827C6665600C24B50 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+		F997070A27C6B0F900C24B50 /* MusclesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusclesViewController.storyboard; sourceTree = "<group>"; };
+		F997070C27C6B11000C24B50 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		F997070E27C6B12200C24B50 /* ProgramsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgramsViewController.storyboard; sourceTree = "<group>"; };
+		F997071027C6B13100C24B50 /* ProgressViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressViewController.storyboard; sourceTree = "<group>"; };
+		F997071227C6C05F00C24B50 /* Saira-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Medium.ttf"; sourceTree = "<group>"; };
 		F9D68A2D27C12D18005F551E /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,7 +205,8 @@
 		F953E42E27BBDF5A00DE14B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F968596227C3AD0C0007FF5C /* Button */,
+				F99706E227C65D3D00C24B50 /* Cells */,
+				F968596227C3AD0C0007FF5C /* Buttons */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,8 +214,13 @@
 		F953E42F27BBDF6200DE14B7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F90DF82627C11E5D00B76F30 /* Home */,
 				F90DF82527C11E5700B76F30 /* Start */,
+				F90DF82627C11E5D00B76F30 /* Home */,
+				F997072027C6D33200C24B50 /* Calculator */,
+				F997072127C6D33900C24B50 /* Muscles */,
+				F997072227C6D33F00C24B50 /* Profile */,
+				F997072327C6D34500C24B50 /* Programs */,
+				F997072427C6D34D00C24B50 /* Progress */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,6 +230,11 @@
 			children = (
 				F96B771227BE656800678747 /* Start */,
 				F96B771327BE656F00678747 /* Home */,
+				F99706F327C664A100C24B50 /* Calculator */,
+				F997071627C6D28200C24B50 /* Muscles */,
+				F997071727C6D28C00C24B50 /* Profile */,
+				F997071827C6D29300C24B50 /* Programs */,
+				F997071927C6D29C00C24B50 /* Progress */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +244,11 @@
 			children = (
 				F96B770E27BE647800678747 /* Start */,
 				F96B770F27BE649300678747 /* Home */,
+				F997071A27C6D2DD00C24B50 /* Calculator */,
+				F997071B27C6D2E600C24B50 /* Muscles */,
+				F997071C27C6D2EC00C24B50 /* Profile */,
+				F997071D27C6D2F300C24B50 /* Programs */,
+				F997071E27C6D2FA00C24B50 /* Progress */,
 				F953E42227BBC85100DE14B7 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -196,6 +258,11 @@
 			isa = PBXGroup;
 			children = (
 				F953E43627BBE0E700DE14B7 /* MainCoordinator.swift */,
+				F99706E727C662DF00C24B50 /* Coordinator+Calculator.swift */,
+				F99706E927C662F100C24B50 /* Coordinator+Muscles.swift */,
+				F99706EB27C662FC00C24B50 /* Coordinator+Profile.swift */,
+				F99706ED27C6630900C24B50 /* Coordinator+Programs.swift */,
+				F99706EF27C6631700C24B50 /* Coordinator+Progress.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -208,12 +275,12 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		F968596227C3AD0C0007FF5C /* Button */ = {
+		F968596227C3AD0C0007FF5C /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				F96B771F27BE8CBC00678747 /* CustomRoundedButton.swift */,
 			);
-			path = Button;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		F96B770E27BE647800678747 /* Start */ = {
@@ -251,8 +318,8 @@
 		F96B771627BE80CD00678747 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F96B771727BE810800678747 /* UIColor+CustomColor.swift */,
-				F96B771927BE811D00678747 /* UIFont+CustomFont.swift */,
+				F96B771727BE810800678747 /* UIColor+CustomColors.swift */,
+				F96B771927BE811D00678747 /* UIFont+CustomFonts.swift */,
 				F96B772C27BE98A900678747 /* UIView+Gradient.swift */,
 			);
 			path = Extensions;
@@ -280,11 +347,141 @@
 			children = (
 				F96B772A27BE90EC00678747 /* Saira-SemiBold.ttf */,
 				F96B772527BE90C400678747 /* Saira-Light.ttf */,
+				F997071227C6C05F00C24B50 /* Saira-Medium.ttf */,
 				F96B772627BE90C400678747 /* Saira-Regular.ttf */,
 				F96B772427BE90C400678747 /* Saira-Thin.ttf */,
 				F96B772227BE90B200678747 /* Saira-Bold.ttf */,
 			);
 			path = Saira;
+			sourceTree = "<group>";
+		};
+		F99706E227C65D3D00C24B50 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F99706E427C65D7300C24B50 /* MenuTableCell.xib */,
+				F99706E327C65D7300C24B50 /* MenuTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F99706F327C664A100C24B50 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				F99706F427C6659300C24B50 /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		F997071627C6D28200C24B50 /* Muscles */ = {
+			isa = PBXGroup;
+			children = (
+				F99706F627C665B100C24B50 /* MusclesViewController.swift */,
+			);
+			path = Muscles;
+			sourceTree = "<group>";
+		};
+		F997071727C6D28C00C24B50 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F99706F827C665BB00C24B50 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F997071827C6D29300C24B50 /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				F99706FA27C665CC00C24B50 /* ProgramsViewController.swift */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		F997071927C6D29C00C24B50 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				F99706FC27C665D700C24B50 /* ProgressViewController.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		F997071A27C6D2DD00C24B50 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				F99706FE27C6660400C24B50 /* CalculatorViewController.storyboard */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		F997071B27C6D2E600C24B50 /* Muscles */ = {
+			isa = PBXGroup;
+			children = (
+				F997070A27C6B0F900C24B50 /* MusclesViewController.storyboard */,
+			);
+			path = Muscles;
+			sourceTree = "<group>";
+		};
+		F997071C27C6D2EC00C24B50 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F997070C27C6B11000C24B50 /* ProfileViewController.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F997071D27C6D2F300C24B50 /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				F997070E27C6B12200C24B50 /* ProgramsViewController.storyboard */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		F997071E27C6D2FA00C24B50 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				F997071027C6B13100C24B50 /* ProgressViewController.storyboard */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		F997072027C6D33200C24B50 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				F997070027C6661C00C24B50 /* CalculatorViewModel.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		F997072127C6D33900C24B50 /* Muscles */ = {
+			isa = PBXGroup;
+			children = (
+				F997070227C6662D00C24B50 /* MusclesViewModel.swift */,
+			);
+			path = Muscles;
+			sourceTree = "<group>";
+		};
+		F997072227C6D33F00C24B50 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F997070427C6663B00C24B50 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F997072327C6D34500C24B50 /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				F997070627C6664700C24B50 /* ProgramsViewModel.swift */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		F997072427C6D34D00C24B50 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				F997070827C6665600C24B50 /* ProgressViewModel.swift */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 		F9D68A2B27C12CDC005F551E /* ProfileCoreData */ = {
@@ -335,6 +532,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					F953E41327BBC85000DE14B7 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -364,15 +562,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F997070B27C6B0F900C24B50 /* MusclesViewController.storyboard in Resources */,
 				F96B771527BE6C7C00678747 /* HomeViewController.storyboard in Resources */,
 				F953E42427BBC85100DE14B7 /* LaunchScreen.storyboard in Resources */,
 				F96B772B27BE90EC00678747 /* Saira-SemiBold.ttf in Resources */,
+				F99706E627C65D7300C24B50 /* MenuTableCell.xib in Resources */,
 				F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */,
 				F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */,
+				F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */,
+				F99706FF27C6660400C24B50 /* CalculatorViewController.storyboard in Resources */,
+				F997070F27C6B12200C24B50 /* ProgramsViewController.storyboard in Resources */,
+				F997071327C6C05F00C24B50 /* Saira-Medium.ttf in Resources */,
 				F96B772927BE90C400678747 /* Saira-Regular.ttf in Resources */,
 				F96B772727BE90C400678747 /* Saira-Thin.ttf in Resources */,
 				F96B772327BE90B200678747 /* Saira-Bold.ttf in Resources */,
 				F96B772827BE90C400678747 /* Saira-Light.ttf in Resources */,
+				F997070D27C6B11000C24B50 /* ProfileViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,22 +588,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F997070727C6664700C24B50 /* ProgramsViewModel.swift in Sources */,
+				F997070327C6662E00C24B50 /* MusclesViewModel.swift in Sources */,
+				F99706EC27C662FC00C24B50 /* Coordinator+Profile.swift in Sources */,
+				F99706E827C662DF00C24B50 /* Coordinator+Calculator.swift in Sources */,
+				F99706E527C65D7300C24B50 /* MenuTableCell.swift in Sources */,
+				F99706F727C665B100C24B50 /* MusclesViewController.swift in Sources */,
+				F997070127C6661C00C24B50 /* CalculatorViewModel.swift in Sources */,
+				F99706EE27C6630900C24B50 /* Coordinator+Programs.swift in Sources */,
 				F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */,
+				F99706F927C665BB00C24B50 /* ProfileViewController.swift in Sources */,
 				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
+				F99706FD27C665D700C24B50 /* ProgressViewController.swift in Sources */,
 				F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */,
 				F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */,
 				F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */,
+				F997070527C6663B00C24B50 /* ProfileViewModel.swift in Sources */,
+				F99706F027C6631700C24B50 /* Coordinator+Progress.swift in Sources */,
+				F997070927C6665600C24B50 /* ProgressViewModel.swift in Sources */,
+				F99706F527C6659300C24B50 /* CalculatorViewController.swift in Sources */,
 				F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */,
 				F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */,
 				F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */,
 				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
 				F968597327C3BB4D0007FF5C /* Profile+CoreDataProperties.swift in Sources */,
 				F96B771127BE64B600678747 /* HomeViewController.swift in Sources */,
-				F96B771A27BE811D00678747 /* UIFont+CustomFont.swift in Sources */,
+				F96B771A27BE811D00678747 /* UIFont+CustomFonts.swift in Sources */,
 				F90DF82A27C11EA600B76F30 /* HomeViewModel.swift in Sources */,
+				F99706FB27C665CC00C24B50 /* ProgramsViewController.swift in Sources */,
 				F968597227C3BB4D0007FF5C /* Profile+CoreDataClass.swift in Sources */,
-				F96B771827BE810800678747 /* UIColor+CustomColor.swift in Sources */,
+				F96B771827BE810800678747 /* UIColor+CustomColors.swift in Sources */,
 				F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */,
+				F99706EA27C662F100C24B50 /* Coordinator+Muscles.swift in Sources */,
 				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
 			);
@@ -540,9 +761,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6F228H4277;
+				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -555,8 +777,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.devshkliaruk.SuperheroShkliaruk;
+				PRODUCT_BUNDLE_IDENTIFIER = devshkliaruk.SuperheroShkliaruk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -569,9 +792,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6F228H4277;
+				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -584,8 +808,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.devshkliaruk.SuperheroShkliaruk;
+				PRODUCT_BUNDLE_IDENTIFIER = devshkliaruk.SuperheroShkliaruk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
