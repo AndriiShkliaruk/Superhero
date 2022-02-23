@@ -27,6 +27,7 @@ class MenuTableCell: UITableViewCell {
     
     func configure(with text: String) {
         titleLabel.text = text
+        titleLabel.font = .helveticaNeueRegularWithSize18
     }
     
 }

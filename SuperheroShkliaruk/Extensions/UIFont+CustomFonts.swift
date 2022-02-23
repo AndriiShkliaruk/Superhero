@@ -34,4 +34,8 @@ extension UIFont {
     public class var sairaMediumWithSize18: UIFont {
         return customFont(name: "Saira-Medium", size: 18)
     }
+    
+    public class var helveticaNeueRegularWithSize18: UIFont {
+        return customFont(name: "HelveticaNeue", size: 18)
+    }
 }
