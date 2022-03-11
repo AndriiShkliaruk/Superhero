@@ -22,7 +22,7 @@ struct HomeViewModel {
         case muscles = "MusclesViewController"
     }
     
-    let tableItems = ["Профиль", "Прогресс", "Программы", "Калькулятор", "Мышцы"]
+    let tableItems = ["Профиль", "Прогресс", "Программы", "Калькулятор", "Мышцы", "Профиль", "Прогресс", "Программы", "Калькулятор", "Мышцы"]
     
     public let characterImageName: String
     public let characterLabelText: String
