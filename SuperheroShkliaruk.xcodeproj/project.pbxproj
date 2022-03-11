@@ -57,6 +57,7 @@
 		F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997071027C6B13100C24B50 /* ProgressViewController.storyboard */; };
 		F997071327C6C05F00C24B50 /* Saira-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F997071227C6C05F00C24B50 /* Saira-Medium.ttf */; };
 		F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D68A2D27C12D18005F551E /* ProfileManager.swift */; };
+		F9FF38D127DB652F00DDA957 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF38D027DB652F00DDA957 /* UITextField+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		F997071027C6B13100C24B50 /* ProgressViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressViewController.storyboard; sourceTree = "<group>"; };
 		F997071227C6C05F00C24B50 /* Saira-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Medium.ttf"; sourceTree = "<group>"; };
 		F9D68A2D27C12D18005F551E /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		F9FF38D027DB652F00DDA957 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 				F96B771727BE810800678747 /* UIColor+CustomColors.swift */,
 				F96B771927BE811D00678747 /* UIFont+CustomFonts.swift */,
 				F96B772C27BE98A900678747 /* UIView+Gradient.swift */,
+				F9FF38D027DB652F00DDA957 /* UITextField+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				F99706FD27C665D700C24B50 /* ProgressViewController.swift in Sources */,
 				F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */,
 				F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */,
+				F9FF38D127DB652F00DDA957 /* UITextField+Extension.swift in Sources */,
 				F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */,
 				F997070527C6663B00C24B50 /* ProfileViewModel.swift in Sources */,
 				F99706F027C6631700C24B50 /* Coordinator+Progress.swift in Sources */,
@@ -772,7 +776,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -803,7 +807,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

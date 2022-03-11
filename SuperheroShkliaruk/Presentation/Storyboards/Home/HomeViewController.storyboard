@@ -26,19 +26,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJo-fD-peK">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQN-uo-iZM">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="766"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZG-Jd-8Ny">
-                                                <rect key="frame" x="137" y="76" width="116" height="38"/>
+                                                <rect key="frame" x="137" y="36" width="116" height="38"/>
                                                 <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="24"/>
                                                 <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZKF-EV-2OS">
-                                                <rect key="frame" x="43" y="406" width="304" height="290"/>
+                                                <rect key="frame" x="43" y="443" width="304" height="290"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="290" id="w3S-Qn-WuJ"/>
@@ -47,12 +47,12 @@
                                             </tableView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="BZG-Jd-8Ny" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="76" id="3B6-aa-e3e"/>
+                                            <constraint firstItem="BZG-Jd-8Ny" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="36" id="3B6-aa-e3e"/>
                                             <constraint firstItem="ZKF-EV-2OS" firstAttribute="leading" secondItem="FQN-uo-iZM" secondAttribute="leading" constant="43" id="LOP-rA-X8M"/>
                                             <constraint firstItem="BZG-Jd-8Ny" firstAttribute="centerX" secondItem="FQN-uo-iZM" secondAttribute="centerX" id="SzE-EA-pIs"/>
-                                            <constraint firstItem="ZKF-EV-2OS" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="406" id="Zcc-eE-Q3v"/>
+                                            <constraint firstItem="ZKF-EV-2OS" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="443" id="Zcc-eE-Q3v"/>
                                             <constraint firstAttribute="trailing" secondItem="ZKF-EV-2OS" secondAttribute="trailing" constant="43" id="Ziw-Pe-MYs"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZKF-EV-2OS" secondAttribute="bottom" constant="50" id="b4W-z7-XVl"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZKF-EV-2OS" secondAttribute="bottom" id="b4W-z7-XVl"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -70,13 +70,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XJo-fD-peK" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="BmX-90-ElF"/>
-                            <constraint firstAttribute="bottom" secondItem="XJo-fD-peK" secondAttribute="bottom" id="CE7-gF-r9m"/>
+                            <constraint firstAttribute="bottom" secondItem="XJo-fD-peK" secondAttribute="bottom" constant="34" id="CE7-gF-r9m"/>
                             <constraint firstItem="XJo-fD-peK" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Fwe-CL-HH0"/>
                             <constraint firstItem="YFd-Xq-crM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Hac-sm-AHP"/>
                             <constraint firstItem="YFd-Xq-crM" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="ILY-PR-f1a"/>
                             <constraint firstAttribute="bottom" secondItem="YFd-Xq-crM" secondAttribute="bottom" id="LIq-wP-UK1"/>
                             <constraint firstItem="YFd-Xq-crM" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="a7z-5G-4X5"/>
-                            <constraint firstItem="XJo-fD-peK" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="vY4-2S-I5W"/>
+                            <constraint firstItem="XJo-fD-peK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="vY4-2S-I5W"/>
                         </constraints>
                     </view>
                     <connections>

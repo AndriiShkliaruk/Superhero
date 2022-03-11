@@ -35,7 +35,15 @@ extension UIFont {
         return customFont(name: "Saira-Medium", size: 18)
     }
     
+    public class var sairaLightWithSize16: UIFont {
+        return customFont(name: "Saira-Light", size: 16)
+    }
+    
     public class var helveticaNeueRegularWithSize18: UIFont {
         return customFont(name: "HelveticaNeue", size: 18)
+    }
+    
+    public class var helveticaNeueThinWithSize18: UIFont {
+        return customFont(name: "HelveticaNeue-Thin", size: 18)
     }
 }

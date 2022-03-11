@@ -14,6 +14,11 @@ struct ProfileViewModel {
     
     public let navigationBarTitleText = "Профиль"
     public let characterImageName: String
+    public let saveBarButtonText = "Сохранить"
+    public let nameLabelText = "Имя"
+    public let nameTextFieldPlaceholder = "Введите Имя"
+    public let descriptionLabelText = "Выберите параметр для отображения на главном экране."
+    public let addParametersButtonText = "Добавить параметры"
     
     init() {
         guard let sex = profile?.getSex() else {

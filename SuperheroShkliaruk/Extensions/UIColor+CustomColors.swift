@@ -15,4 +15,8 @@ extension UIColor {
     public class var customDarkYellow: UIColor {
             return UIColor(red: 231/255, green: 196/255, blue: 87/255, alpha: 1)
         }
+    
+    public class var customGray: UIColor {
+            return UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1)
+        }
 }
