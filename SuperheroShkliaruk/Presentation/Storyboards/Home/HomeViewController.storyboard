@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -31,12 +30,30 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQN-uo-iZM">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="766"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZG-Jd-8Ny">
-                                                <rect key="frame" x="137" y="36" width="116" height="38"/>
-                                                <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="24"/>
-                                                <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZdO-5O-kwF">
+                                                <rect key="frame" x="137.33333333333334" y="32" width="115.33333333333334" height="63.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZG-Jd-8Ny">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115.33333333333333" height="38"/>
+                                                        <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXE-E8-GnC" userLabel="Name Label">
+                                                        <rect key="frame" x="25.666666666666657" y="40" width="64.333333333333329" height="23.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0F6-tf-JDX" userLabel="Avatar Image View">
+                                                <rect key="frame" x="304" y="38" width="51" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="jFy-Qo-wse"/>
+                                                    <constraint firstAttribute="width" constant="51" id="sJL-KK-Fwi"/>
+                                                </constraints>
+                                            </imageView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZKF-EV-2OS">
                                                 <rect key="frame" x="43" y="443" width="304" height="290"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -47,12 +64,15 @@
                                             </tableView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="BZG-Jd-8Ny" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="36" id="3B6-aa-e3e"/>
+                                            <constraint firstItem="ZdO-5O-kwF" firstAttribute="centerX" secondItem="FQN-uo-iZM" secondAttribute="centerX" id="0ot-H5-450"/>
+                                            <constraint firstItem="0F6-tf-JDX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZdO-5O-kwF" secondAttribute="trailing" constant="5" id="L2O-Yz-iC9"/>
                                             <constraint firstItem="ZKF-EV-2OS" firstAttribute="leading" secondItem="FQN-uo-iZM" secondAttribute="leading" constant="43" id="LOP-rA-X8M"/>
-                                            <constraint firstItem="BZG-Jd-8Ny" firstAttribute="centerX" secondItem="FQN-uo-iZM" secondAttribute="centerX" id="SzE-EA-pIs"/>
+                                            <constraint firstAttribute="trailing" secondItem="0F6-tf-JDX" secondAttribute="trailing" constant="35" id="LpK-Xx-hzn"/>
+                                            <constraint firstItem="0F6-tf-JDX" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="38" id="YFk-UW-HFe"/>
                                             <constraint firstItem="ZKF-EV-2OS" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="443" id="Zcc-eE-Q3v"/>
                                             <constraint firstAttribute="trailing" secondItem="ZKF-EV-2OS" secondAttribute="trailing" constant="43" id="Ziw-Pe-MYs"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZKF-EV-2OS" secondAttribute="bottom" id="b4W-z7-XVl"/>
+                                            <constraint firstItem="ZdO-5O-kwF" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="32" id="eez-Ox-QJf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -80,9 +100,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="avatarImageView" destination="0F6-tf-JDX" id="6jl-kh-zdB"/>
                         <outlet property="characterImageView" destination="YFd-Xq-crM" id="ey2-EH-wHj"/>
                         <outlet property="characterLabel" destination="BZG-Jd-8Ny" id="eux-fP-BsI"/>
                         <outlet property="menuTableView" destination="ZKF-EV-2OS" id="KYY-w0-TuI"/>
+                        <outlet property="nameLabel" destination="MXE-E8-GnC" id="pTz-D0-09w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -94,6 +116,9 @@
         <image name="home-male" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

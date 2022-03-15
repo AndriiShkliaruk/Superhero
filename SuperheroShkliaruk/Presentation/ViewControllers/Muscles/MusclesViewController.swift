@@ -8,7 +8,7 @@
 import UIKit
 
 class MusclesViewController: UIViewController, Storyboarded {
-    @IBOutlet weak var characterImageView: UIImageView!
+    @IBOutlet private weak var characterImageView: UIImageView!
     
     var coordinator: MainCoordinator?
     let viewModel = MusclesViewModel()

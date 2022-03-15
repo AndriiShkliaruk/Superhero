@@ -20,15 +20,27 @@ struct ProfileViewModel {
     public let descriptionLabelText = "Выберите параметр для отображения на главном экране."
     public let addParametersButtonText = "Добавить параметры"
     
+    public var profileName: String
+    public var profileNewName = String()
+    
     init() {
-        guard let sex = profile?.getSex() else {
+        if let sex = profile?.getSex() {
+            switch sex {
+            case .male:
+                characterImageName = maleImageName
+            case .female:
+                characterImageName = femaleImageName
+            }
+        } else {
             fatalError("Profile does not exist")
         }
-        switch sex {
-        case .male:
-            characterImageName = maleImageName
-        case .female:
-            characterImageName = femaleImageName
-        }
+        
+        profileName = profile?.name ?? ""
+    }
+    
+    public func saveUserProfile() {
+        guard !profileNewName.isEmpty && profileNewName != profileName else { return }
+        ProfileManager.sharedInstance.userProfile?.name = profileNewName
+        ProfileManager.sharedInstance.saveProfile()
     }
 }

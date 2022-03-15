@@ -2,7 +2,7 @@
 //  Profile+CoreDataProperties.swift
 //  SuperheroShkliaruk
 //
-//  Created by Andrii Shkliaruk on 21.02.2022.
+//  Created by Andrii Shkliaruk on 15.03.2022.
 //
 //
 
@@ -17,15 +17,6 @@ extension Profile {
     }
 
     @NSManaged public var sex: String
+    @NSManaged public var name: String?
 
-}
-
-extension Profile : Identifiable {
-    func getSex() -> Sex? {
-        if let sex = Sex(rawValue: self.sex) {
-            return sex
-        } else {
-            return .none
-        }
-    }
 }

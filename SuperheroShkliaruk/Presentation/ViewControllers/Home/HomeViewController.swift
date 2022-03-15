@@ -8,9 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController, Storyboarded {
-    @IBOutlet weak var characterImageView: UIImageView!
-    @IBOutlet weak var characterLabel: UILabel!
-    @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet private weak var characterImageView: UIImageView!
+    @IBOutlet private weak var characterLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var menuTableView: UITableView!
     
     let viewModel = HomeViewModel()
     var coordinator: MainCoordinator?
@@ -28,6 +30,7 @@ class HomeViewController: UIViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
+        updateNameLabelText()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -39,9 +42,26 @@ class HomeViewController: UIViewController, Storyboarded {
         characterImageView.image = UIImage(named: viewModel.characterImageName)
         characterLabel.font = .sairaRegularWithSize24
         characterLabel.tintColor = .white
-        characterLabel.text = viewModel.characterLabelText
+        characterLabel.text = viewModel.characterLabel
+        
+        nameLabel.font = .helveticaNeueRegularWithSize20
+        nameLabel.tintColor = .customDarkYellow
+        
+        avatarImageView.layer.cornerRadius = 8
+        avatarImageView.layer.borderWidth = 1
+        avatarImageView.layer.borderColor = UIColor.customDarkYellow.cgColor
+        avatarImageView.isHidden = true
         
         menuTableView.backgroundColor = .clear
+    }
+    
+    private func updateNameLabelText() {
+        if !viewModel.profileName.isEmpty {
+            nameLabel.isHidden = false
+            nameLabel.text = viewModel.profileName
+        } else {
+            nameLabel.isHidden = true
+        }
     }
 }
 

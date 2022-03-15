@@ -25,23 +25,27 @@ struct HomeViewModel {
     let tableItems = ["Профиль", "Прогресс", "Программы", "Калькулятор", "Мышцы"]
     
     public let characterImageName: String
-    public let characterLabelText: String
+    public let characterLabel: String
+    public var profileName: String {
+        return profile?.name ?? ""
+    }
     
     init() {
-        guard let sex = profile?.getSex() else {
+        if let sex = profile?.getSex() {
+            switch sex {
+            case .male:
+                characterImageName = maleImageName
+                characterLabel = maleLabelText
+            case .female:
+                characterImageName = femaleImageName
+                characterLabel = femaleLabelText
+            }
+        } else {
             fatalError("Profile does not exist")
-        }
-        switch sex {
-        case .male:
-            characterImageName = maleImageName
-            characterLabelText = maleLabelText
-        case .female:
-            characterImageName = femaleImageName
-            characterLabelText = femaleLabelText
         }
     }
     
-    func pushToViewController(at indexPath: IndexPath, with coordinator: MainCoordinator?) {
+    public func pushToViewController(at indexPath: IndexPath, with coordinator: MainCoordinator?) {
         switch ViewControllerIDs.allCases[indexPath.row] {
         case .profile:
             coordinator?.presentProfile()

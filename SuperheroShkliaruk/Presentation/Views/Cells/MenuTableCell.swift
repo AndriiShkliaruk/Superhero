@@ -8,8 +8,8 @@
 import UIKit
 
 class MenuTableCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var underlineView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var underlineView: UIView!
     
     static let identifier = "MenuTableCell"
     

@@ -43,6 +43,10 @@ extension UIFont {
         return customFont(name: "HelveticaNeue", size: 18)
     }
     
+    public class var helveticaNeueRegularWithSize20: UIFont {
+        return customFont(name: "HelveticaNeue", size: 20)
+    }
+    
     public class var helveticaNeueThinWithSize18: UIFont {
         return customFont(name: "HelveticaNeue-Thin", size: 18)
     }

@@ -10,10 +10,11 @@ import UIKit
 extension UITextField {
     func underlined(withColor color: UIColor){
         let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0, y: frame.size.height + 11, width: frame.size.width, height: 1)
+        bottomLine.frame = CGRect(x: 0, y: bounds.size.height + 11, width: bounds.size.width, height: 1)
         bottomLine.backgroundColor = color.cgColor
         borderStyle = .none
         layer.insertSublayer(bottomLine, at: 0)
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     func changeUnderlineColor(_ color: UIColor) {

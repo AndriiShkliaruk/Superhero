@@ -35,4 +35,8 @@ class MainCoordinator: Coordinator {
         homeViewController.coordinator = self
         navigationController.pushViewController(homeViewController, animated: true)
     }
+    
+    func back() {
+        navigationController.popViewController(animated: true)
+    }
 }
