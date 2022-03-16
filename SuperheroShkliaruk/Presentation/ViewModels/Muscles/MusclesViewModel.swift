@@ -12,7 +12,7 @@ struct MusclesViewModel {
     private let maleImageName = "home-male"
     private let femaleImageName = "home-female"
     
-    public let navigationBarTitleText = "Мышцы"
+    public let navigationBarTitleText = "Muscles"
     public let characterImageName: String
     
     init() {

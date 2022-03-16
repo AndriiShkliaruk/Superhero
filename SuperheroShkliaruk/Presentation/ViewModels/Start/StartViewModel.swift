@@ -9,7 +9,7 @@ import Foundation
 
 struct StartViewModel {
     public let titleLabelText = "Superhero"
-    public let subtitleLabelText = "выберите героя"
+    public let subtitleLabelText = "choose a hero"
     
     public let maleButtonText = "Superman"
     public let femaleButtonText = "Supergirl"

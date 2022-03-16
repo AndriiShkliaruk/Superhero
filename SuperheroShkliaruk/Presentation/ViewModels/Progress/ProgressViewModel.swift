@@ -12,7 +12,7 @@ struct ProgressViewModel {
     private let maleImageName = "home-male"
     private let femaleImageName = "home-female"
     
-    public let navigationBarTitleText = "Прогресс"
+    public let navigationBarTitleText = "Progress"
     public let characterImageName: String
     
     init() {

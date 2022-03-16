@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" interfaceStyle="dark" id="iN0-l3-epB" customClass="ProfileTableHeaderView" customModule="SuperheroShkliaruk" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="311"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="310"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uO4-JP-Vt1" userLabel="Avatar Button">
@@ -23,19 +23,19 @@
                     <state key="normal" image="camera"/>
                 </button>
                 <stackView opaque="NO" contentMode="center" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="M2L-uD-zo5">
-                    <rect key="frame" x="43" y="242" width="328" height="53"/>
+                    <rect key="frame" x="43" y="242" width="328" height="52"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1y4-eG-FsS" userLabel="Name Label">
-                            <rect key="frame" x="0.0" y="16" width="48" height="21"/>
+                            <rect key="frame" x="0.0" y="15.5" width="48" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Name" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Mmd-we-6Gw" userLabel="Name Text Field">
-                            <rect key="frame" x="91" y="15" width="237" height="23"/>
+                            <rect key="frame" x="91" y="14.5" width="237" height="23"/>
                             <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textField>
                     </subviews>
                 </stackView>
@@ -54,7 +54,7 @@
                 <outlet property="nameLabel" destination="1y4-eG-FsS" id="8fu-ii-ZM7"/>
                 <outlet property="nameTextField" destination="Mmd-we-6Gw" id="n8n-yf-t3d"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="-65.290178571428569"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-65.625"/>
         </view>
     </objects>
     <resources>

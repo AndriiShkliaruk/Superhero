@@ -12,7 +12,7 @@ struct ProgramsViewModel {
     private let maleImageName = "home-male"
     private let femaleImageName = "home-female"
     
-    public let navigationBarTitleText = "Программы"
+    public let navigationBarTitleText = "Programs"
     public let characterImageName: String
     
     init() {

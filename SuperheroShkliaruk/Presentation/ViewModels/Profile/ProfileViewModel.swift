@@ -12,13 +12,13 @@ struct ProfileViewModel {
     private let maleImageName = "home-male"
     private let femaleImageName = "home-female"
     
-    public let navigationBarTitleText = "Профиль"
+    public let navigationBarTitleText = "Profile"
     public let characterImageName: String
-    public let saveBarButtonText = "Сохранить"
-    public let nameLabelText = "Имя"
-    public let nameTextFieldPlaceholder = "Введите Имя"
-    public let descriptionLabelText = "Выберите параметр для отображения на главном экране."
-    public let addParametersButtonText = "Добавить параметры"
+    public let saveBarButtonText = "Save"
+    public let nameLabelText = "Name"
+    public let nameTextFieldPlaceholder = "Enter Name"
+    public let descriptionLabelText = "Select an option to display on the main screen."
+    public let addParametersButtonText = "Add options"
     
     public var profileName: String
     public var profileNewName = String()

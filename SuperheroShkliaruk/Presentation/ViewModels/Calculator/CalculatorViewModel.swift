@@ -12,7 +12,7 @@ struct CalculatorViewModel {
     private let maleImageName = "home-male"
     private let femaleImageName = "home-female"
     
-    public let navigationBarTitleText = "Калькулятор"
+    public let navigationBarTitleText = "Calculator"
     public let characterImageName: String
     
     init() {

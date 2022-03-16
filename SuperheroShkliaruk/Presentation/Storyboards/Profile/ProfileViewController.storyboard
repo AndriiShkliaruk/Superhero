@@ -47,16 +47,16 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <viewLayoutGuide key="safeArea" id="aUc-or-Y1q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VU5-uD-7Vi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GRg-Fw-aVd"/>
+                            <constraint firstItem="VU5-uD-7Vi" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="GRg-Fw-aVd"/>
                             <constraint firstAttribute="bottom" secondItem="VU5-uD-7Vi" secondAttribute="bottom" id="QAw-oX-ZyV"/>
                             <constraint firstAttribute="trailing" secondItem="xQV-QQ-dBh" secondAttribute="trailing" id="TnY-1c-LXd"/>
                             <constraint firstItem="xQV-QQ-dBh" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="eF2-zg-qFM"/>
                             <constraint firstItem="xQV-QQ-dBh" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="gSy-8x-5BR"/>
                             <constraint firstAttribute="bottom" secondItem="xQV-QQ-dBh" secondAttribute="bottom" id="veT-Ca-X6J"/>
-                            <constraint firstItem="VU5-uD-7Vi" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="zbO-6G-FyH"/>
+                            <constraint firstItem="VU5-uD-7Vi" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="zbO-6G-FyH"/>
                         </constraints>
                     </view>
                     <connections>

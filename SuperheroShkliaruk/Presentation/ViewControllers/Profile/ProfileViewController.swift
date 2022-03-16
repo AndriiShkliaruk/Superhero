@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var characterImageView: UIImageView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var addParametersButton: CustomRoundedButton!
     
     private lazy var saveBarButtonItem: UIBarButtonItem = {
@@ -19,8 +19,8 @@ class ProfileViewController: UIViewController, Storyboarded {
     }()
     
     var coordinator: MainCoordinator?
-    var viewModel = ProfileViewModel()
-
+    private var viewModel = ProfileViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,58 +63,9 @@ extension ProfileViewController: UITableViewDelegate {
     //MARK: - Table View Header Setup
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableHeaderView.identifier) as! ProfileTableHeaderView
-        
-        headerView.nameLabel.textColor = .white
-        headerView.nameLabel.text = viewModel.nameLabelText
-        headerView.nameLabel.font = .helveticaNeueRegularWithSize18
-        
-        headerView.nameTextField.underlined(withColor: .white)
-        headerView.nameTextField.font = .helveticaNeueRegularWithSize18
-        headerView.nameTextField.tintColor = .white
-        headerView.nameTextField.configurePlaceholder(withText: viewModel.nameTextFieldPlaceholder, font: .helveticaNeueThinWithSize18, textColor: .customGray)
-        
-        if !viewModel.profileName.isEmpty {
-            headerView.nameTextField.text = viewModel.profileName
-        }
-        
-        headerView.nameTextField.addTarget(self, action: #selector(nameTextFieldEditingDidBegin), for: .editingDidBegin)
-        headerView.nameTextField.addTarget(self, action: #selector(nameTextFieldEditingDidEnd), for: .editingDidEnd)
-        headerView.nameTextField.addTarget(self, action: #selector(nameTextFieldEditingChanged), for: .editingChanged)
-        headerView.nameTextField.addTarget(self, action: #selector(nameTextFieldEditingDidEndOnExit), for: .editingDidEndOnExit)
-        
+        headerView.profileViewModel = viewModel
+        headerView.delegate = self
         return headerView
-    }
-    
-    @objc private func nameTextFieldEditingDidBegin(_ sender: UITextField) {
-        sender.changeUnderlineColor(.customYellow)
-    }
-    
-    @objc private func nameTextFieldEditingDidEnd(_ sender: UITextField) {
-        updateTextFieldUnderlineColor(sender)
-    }
-    
-    @objc private func nameTextFieldEditingChanged(_ sender: UITextField) {
-        guard let enteredName = sender.text else { return }
-        saveBarButtonItem.isEnabled = isValidNewEnteredName(enteredName)
-        viewModel.profileNewName = enteredName
-    }
-    
-    @objc private func nameTextFieldEditingDidEndOnExit(_ sender: UITextField) {
-        updateTextFieldUnderlineColor(sender)
-        sender.resignFirstResponder()
-    }
-    
-    private func updateTextFieldUnderlineColor(_ sender: UITextField) {
-        if !(sender.text?.isEmpty ?? true) {
-            sender.changeUnderlineColor(.customYellow)
-        } else {
-            sender.changeUnderlineColor(.white)
-        }
-    }
-    
-    private func isValidNewEnteredName(_ name: String?) -> Bool {
-        guard let newName = name else { return false }
-        return !newName.isEmpty && newName != viewModel.profileName
     }
     
     
@@ -138,8 +89,19 @@ extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
 }
+
+extension ProfileViewController: ProfileTableHeaderViewDelegate {
+    func setIsEnabledSaveButton(_ isEnabled: Bool) {
+        saveBarButtonItem.isEnabled = isEnabled
+    }
+    
+    func setProfileName(_ name: String) {
+        viewModel.profileNewName = name
+    }
+}
+
