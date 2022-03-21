@@ -6,14 +6,12 @@
 //
 
 import Foundation
+import CoreData
 
-struct ProfileViewModel {
+class ProfileViewModel {
     private let profile = ProfileManager.sharedInstance.userProfile
-    private let maleImageName = "home-male"
-    private let femaleImageName = "home-female"
     
     public let navigationBarTitleText = "Profile"
-    public let characterImageName: String
     public let saveBarButtonText = "Save"
     public let nameLabelText = "Name"
     public let nameTextFieldPlaceholder = "Enter Name"
@@ -21,26 +19,45 @@ struct ProfileViewModel {
     public let addParametersButtonText = "Add options"
     
     public var profileName: String
-    public var profileNewName = String()
+    public var newProfileName = String()
+    
+    var parametersViewModels = [BodyParameterViewModel]()
+    var displayedParameters: [BodyParameterViewModel] {
+        get {
+            return parametersViewModels.filter { $0.isSelected }
+        }
+    }
     
     init() {
-        if let sex = profile?.getSex() {
-            switch sex {
-            case .male:
-                characterImageName = maleImageName
-            case .female:
-                characterImageName = femaleImageName
-            }
-        } else {
-            fatalError("Profile does not exist")
-        }
-        
         profileName = profile?.name ?? ""
+        let parameters = BodyParametersStorage.sharedInstance.fetchBodyParameters()
+        parametersViewModels = createViewModels(from: parameters)
+    }
+    
+    private func createViewModels(from bodyParameters: [BodyParameter]) -> [BodyParameterViewModel] {
+        let viewModels = bodyParameters.map { BodyParameterViewModel($0) }
+        return viewModels
     }
     
     public func saveUserProfile() {
-        guard !profileNewName.isEmpty && profileNewName != profileName else { return }
-        ProfileManager.sharedInstance.userProfile?.name = profileNewName
+        guard !newProfileName.isEmpty && newProfileName != profileName else { return }
+        ProfileManager.sharedInstance.userProfile?.name = newProfileName
         ProfileManager.sharedInstance.saveProfile()
+    }
+    
+    public func updateParametersStates() {
+        for parameter in parametersViewModels {
+            parameter.updateState()
+        }
+    }
+    
+    public func resetParametersCheckboxes() {
+        for parameter in parametersViewModels {
+            parameter.resetCheckbox()
+        }
+    }
+    
+    public func deleteDisplayedParameter(_ parameter: BodyParameterViewModel) {
+        parameter.resetCheckboxAndState()
     }
 }

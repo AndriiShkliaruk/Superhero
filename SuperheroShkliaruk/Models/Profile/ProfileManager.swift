@@ -33,6 +33,7 @@ class ProfileManager {
         
         userProfile?.sex = sex
         userProfile?.name = ""
+        userProfile?.bodyParameters = []
         saveProfile()
     }
     
@@ -55,6 +56,4 @@ class ProfileManager {
             fatalError("Error \(nserror), \(nserror.userInfo)")
         }
     }
-    
 }
-

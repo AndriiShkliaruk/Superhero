@@ -7,8 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, Storyboarded {
-    @IBOutlet private weak var characterImageView: UIImageView!
+class HomeViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var characterLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var avatarImageView: UIImageView!
@@ -22,7 +21,7 @@ class HomeViewController: UIViewController, Storyboarded {
 
         menuTableView.delegate = self
         menuTableView.dataSource = self
-        menuTableView.register(UINib(nibName: MenuTableCell.identifier, bundle: nil), forCellReuseIdentifier: MenuTableCell.identifier)
+        menuTableView.register(UINib(nibName: MenuTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MenuTableViewCell.identifier)
         
         setupUI()
     }
@@ -39,7 +38,6 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     private func setupUI() {
-        characterImageView.image = UIImage(named: viewModel.characterImageName)
         characterLabel.font = .sairaRegularWithSize24
         characterLabel.tintColor = .white
         characterLabel.text = viewModel.characterLabel
@@ -78,7 +76,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = menuTableView.dequeueReusableCell(withIdentifier: MenuTableCell.identifier, for: indexPath) as? MenuTableCell else { return UITableViewCell() }
+        guard let cell = menuTableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as? MenuTableViewCell else { return UITableViewCell() }
         cell.configure(with: viewModel.tableItems[indexPath.row])
         
         return cell

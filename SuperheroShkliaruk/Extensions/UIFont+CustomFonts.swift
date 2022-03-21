@@ -50,4 +50,8 @@ extension UIFont {
     public class var helveticaNeueThinWithSize18: UIFont {
         return customFont(name: "HelveticaNeue-Thin", size: 18)
     }
+    
+    public class var helveticaNeueMediumWithSize18: UIFont {
+        return customFont(name: "HelveticaNeue-Medium", size: 18)
+    }
 }

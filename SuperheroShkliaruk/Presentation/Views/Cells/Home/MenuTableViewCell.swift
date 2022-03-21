@@ -1,5 +1,5 @@
 //
-//  MenuTableCell.swift
+//  MenuTableViewCell.swift
 //  SuperheroShkliaruk
 //
 //  Created by Andrii Shkliaruk on 23.02.2022.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class MenuTableCell: UITableViewCell {
+class MenuTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var underlineView: UIView!
     
-    static let identifier = "MenuTableCell"
+    static let identifier = "MenuTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

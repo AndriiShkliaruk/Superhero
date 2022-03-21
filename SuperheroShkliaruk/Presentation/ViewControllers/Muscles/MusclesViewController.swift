@@ -7,9 +7,7 @@
 
 import UIKit
 
-class MusclesViewController: UIViewController, Storyboarded {
-    @IBOutlet private weak var characterImageView: UIImageView!
-    
+class MusclesViewController: BaseViewController, Storyboarded {
     var coordinator: MainCoordinator?
     let viewModel = MusclesViewModel()
 
@@ -21,6 +19,5 @@ class MusclesViewController: UIViewController, Storyboarded {
     
     private func setupUI() {
         title = viewModel.navigationBarTitleText
-        characterImageView.image = UIImage(named: viewModel.characterImageName)
     }
 }

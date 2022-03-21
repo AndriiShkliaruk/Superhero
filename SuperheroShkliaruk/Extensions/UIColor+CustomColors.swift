@@ -9,14 +9,18 @@ import UIKit
 
 extension UIColor {
     public class var customYellow: UIColor {
-            return UIColor(red: 255/255, green: 219/255, blue: 100/255, alpha: 1)
-        }
+        return UIColor(red: 255/255, green: 219/255, blue: 100/255, alpha: 1)
+    }
     
     public class var customDarkYellow: UIColor {
-            return UIColor(red: 231/255, green: 196/255, blue: 87/255, alpha: 1)
-        }
+        return UIColor(red: 231/255, green: 196/255, blue: 87/255, alpha: 1)
+    }
     
     public class var customGray: UIColor {
-            return UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1)
-        }
+        return UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1)
+    }
+    
+    public class var customClearBlack: UIColor {
+        return UIColor(red: 1/255, green: 1/255, blue: 2/255, alpha: 0.65)
+    }
 }

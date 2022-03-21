@@ -8,7 +8,13 @@
 import UIKit
 
 class ProfileTableFooterView: UITableViewHeaderFooterView {
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
     static let identifier = "ProfileTableFooterView"
+    
+    public func setupUI(_ viewModel: ProfileViewModel) {
+        descriptionLabel.text = viewModel.descriptionLabelText
+        descriptionLabel.font = .sairaLightWithSize16
+        descriptionLabel.textColor = .customGray
+    }
 }

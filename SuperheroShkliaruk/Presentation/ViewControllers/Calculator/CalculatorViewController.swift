@@ -7,9 +7,7 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController, Storyboarded {
-    @IBOutlet private weak var characterImageView: UIImageView!
-    
+class CalculatorViewController: BaseViewController, Storyboarded {
     var coordinator: MainCoordinator?
     let viewModel = CalculatorViewModel()
     
@@ -21,6 +19,5 @@ class CalculatorViewController: UIViewController, Storyboarded {
     
     private func setupUI() {
         title = viewModel.navigationBarTitleText
-        characterImageView.image = UIImage(named: viewModel.characterImageName)
     }
 }

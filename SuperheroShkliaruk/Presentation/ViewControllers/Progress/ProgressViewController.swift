@@ -7,9 +7,7 @@
 
 import UIKit
 
-class ProgressViewController: UIViewController, Storyboarded {
-    @IBOutlet private weak var characterImageView: UIImageView!
-    
+class ProgressViewController: BaseViewController, Storyboarded {
     var coordinator: MainCoordinator?
     let viewModel = ProgressViewModel()
 
@@ -21,6 +19,5 @@ class ProgressViewController: UIViewController, Storyboarded {
     
     private func setupUI() {
         title = viewModel.navigationBarTitleText
-        characterImageView.image = UIImage(named: viewModel.characterImageName)
     }
 }
