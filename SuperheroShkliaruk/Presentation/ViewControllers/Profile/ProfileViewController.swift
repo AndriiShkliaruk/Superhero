@@ -31,6 +31,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: ProfileParametersCell.identifier, bundle: nil), forCellReuseIdentifier: ProfileParametersCell.identifier)
         tableView.register(UINib(nibName: ProfileTableHeaderView.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableHeaderView.identifier)
         tableView.register(UINib(nibName: ProfileTableFooterView.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableFooterView.identifier)
         tableView.backgroundColor = .clear
@@ -38,7 +39,6 @@ class ProfileViewController: BaseViewController, Storyboarded {
     
     private func setupUI() {
         title = viewModel.navigationBarTitleText
-        tableView.register(UINib(nibName: ProfileParametersCell.identifier, bundle: nil), forCellReuseIdentifier: ProfileParametersCell.identifier)
         
         addParametersButton.setTitle(viewModel.addParametersButtonText.capitalized, for: .normal)
         addParametersButton.backgroundColor = .customYellow

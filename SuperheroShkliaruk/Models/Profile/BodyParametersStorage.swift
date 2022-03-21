@@ -43,7 +43,7 @@ class BodyParametersStorage {
     }
     
     public func fetchBodyParameters() -> [BodyParameter] {
-        if let bodyParameters = profileManager.userProfile?.bodyParameters {
+        if let bodyParameters = profileManager.userProfile?.bodyParameters, bodyParameters.count > 0 {
             let parameters: [BodyParameter] = Array(_immutableCocoaArray: bodyParameters)
             return parameters
         } else {
