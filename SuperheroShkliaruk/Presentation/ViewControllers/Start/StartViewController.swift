@@ -26,7 +26,7 @@ class StartViewController: UIViewController, Storyboarded {
     }
     
     private func setupUI() {
-        gradientView.applyBlackGradientInForeground()
+        gradientView.applyBlackVerticalGradient()
         
         superheroLabel.text = viewModel.titleLabelText.uppercased()
         superheroLabel.textColor = .customYellow
@@ -50,6 +50,6 @@ class StartViewController: UIViewController, Storyboarded {
     @IBAction func chooseCharacterButtonTapped(_ sender: UIButton) {
         let sex = Sex.getStringValueByTag(sender.tag)
         viewModel.createNewUserWithSex(sex)
-        coordinator?.presentHome()
+        coordinator?.moveToHome()
     }
 }

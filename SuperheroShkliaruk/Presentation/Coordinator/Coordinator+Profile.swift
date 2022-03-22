@@ -6,11 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 extension MainCoordinator {
-    func presentProfile() {
+    func moveToProfile() {
         let viewController = ProfileViewController.instantiate()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func presentBodyParameters(configuration: (BodyParametersViewController) -> Void) {
+        let viewController = BodyParametersViewController.instantiate()
+        configuration(viewController)
+        navigationController.present(viewController, animated: true)
     }
 }

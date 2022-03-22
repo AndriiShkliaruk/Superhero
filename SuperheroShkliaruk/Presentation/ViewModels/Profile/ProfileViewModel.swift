@@ -21,8 +21,9 @@ class ProfileViewModel {
     public var profileName: String
     public var newProfileName = String()
     
+    let parameters: [BodyParameter]
     var parametersViewModels = [BodyParameterViewModel]()
-    var displayedParameters: [BodyParameterViewModel] {
+    var selectedParameters: [BodyParameterViewModel] {
         get {
             return parametersViewModels.filter { $0.isSelected }
         }
@@ -30,7 +31,7 @@ class ProfileViewModel {
     
     init() {
         profileName = profile?.name ?? ""
-        let parameters = BodyParametersStorage.sharedInstance.fetchBodyParameters()
+        parameters = BodyParametersStorage.sharedInstance.fetchBodyParameters()
         parametersViewModels = createViewModels(from: parameters)
     }
     
@@ -46,15 +47,11 @@ class ProfileViewModel {
     }
     
     public func updateParametersStates() {
-        for parameter in parametersViewModels {
-            parameter.updateState()
-        }
+        parametersViewModels.forEach { $0.updateState() }
     }
     
     public func resetParametersCheckboxes() {
-        for parameter in parametersViewModels {
-            parameter.resetCheckbox()
-        }
+        parametersViewModels.forEach { $0.resetCheckbox() }
     }
     
     public func deleteDisplayedParameter(_ parameter: BodyParameterViewModel) {

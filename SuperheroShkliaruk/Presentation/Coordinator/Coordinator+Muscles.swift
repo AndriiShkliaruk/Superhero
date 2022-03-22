@@ -8,7 +8,7 @@
 import Foundation
 
 extension MainCoordinator {
-    func presentMuscles() {
+    func moveToMuscles() {
         let viewController = MusclesViewController.instantiate()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)

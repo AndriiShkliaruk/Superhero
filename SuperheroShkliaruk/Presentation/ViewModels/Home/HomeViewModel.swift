@@ -48,15 +48,15 @@ struct HomeViewModel {
     public func pushToViewController(at indexPath: IndexPath, with coordinator: MainCoordinator?) {
         switch ViewControllerIDs.allCases[indexPath.row] {
         case .profile:
-            coordinator?.presentProfile()
+            coordinator?.moveToProfile()
         case .progress:
-            coordinator?.presentProgress()
+            coordinator?.moveToProgress()
         case .programs:
-            coordinator?.presentPrograms()
+            coordinator?.moveToPrograms()
         case .calculator:
-            coordinator?.presentCalculator()
+            coordinator?.moveToCalculator()
         case .muscles:
-            coordinator?.presentMuscles()
+            coordinator?.moveToMuscles()
         }
     }
     

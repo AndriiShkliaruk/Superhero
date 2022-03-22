@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xQV-QQ-dBh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ywM-XN-prO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VU5-uD-7Vi">
@@ -45,20 +46,23 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="NkA-AS-IoW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xQV-QQ-dBh" secondAttribute="bottom" id="3TY-4G-vUp"/>
+                            <constraint firstItem="NkA-AS-IoW" firstAttribute="bottom" secondItem="ywM-XN-prO" secondAttribute="bottom" id="8KR-DV-huW"/>
+                            <constraint firstItem="ywM-XN-prO" firstAttribute="leading" secondItem="NkA-AS-IoW" secondAttribute="leading" id="8eq-4Q-mOl"/>
                             <constraint firstItem="VU5-uD-7Vi" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="GRg-Fw-aVd"/>
-                            <constraint firstItem="xQV-QQ-dBh" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="KZC-en-Scq"/>
                             <constraint firstAttribute="bottom" secondItem="VU5-uD-7Vi" secondAttribute="bottom" id="QAw-oX-ZyV"/>
-                            <constraint firstItem="xQV-QQ-dBh" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="vXa-8k-BDr"/>
-                            <constraint firstAttribute="trailing" secondItem="xQV-QQ-dBh" secondAttribute="trailing" id="wiu-3M-SRM"/>
+                            <constraint firstItem="NkA-AS-IoW" firstAttribute="trailing" secondItem="ywM-XN-prO" secondAttribute="trailing" id="VIc-B5-auS"/>
+                            <constraint firstItem="ywM-XN-prO" firstAttribute="top" secondItem="NkA-AS-IoW" secondAttribute="top" id="Zrn-nX-NKV"/>
                             <constraint firstItem="VU5-uD-7Vi" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="zbO-6G-FyH"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="addParametersButton" destination="2DH-0n-1gr" id="mdd-Wi-3cr"/>
-                        <outlet property="tableView" destination="xQV-QQ-dBh" id="Mry-2H-rJP"/>
+                        <outlet property="buttonBackgroundView" destination="VU5-uD-7Vi" id="4qq-rJ-5ke"/>
+                        <outlet property="tableView" destination="ywM-XN-prO" id="Z3a-Sy-HFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

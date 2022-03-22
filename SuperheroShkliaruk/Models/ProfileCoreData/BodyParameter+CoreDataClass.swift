@@ -2,7 +2,7 @@
 //  BodyParameter+CoreDataClass.swift
 //  SuperheroShkliaruk
 //
-//  Created by Andrii Shkliaruk on 17.03.2022.
+//  Created by Andrii Shkliaruk on 21.03.2022.
 //
 //
 

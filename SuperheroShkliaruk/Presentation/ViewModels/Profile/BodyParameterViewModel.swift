@@ -11,9 +11,13 @@ class BodyParameterViewModel {
     private let checkedImageName = "checked"
     private let uncheckedImageName = "unchecked"
     
+    let title: String
+    let valueType: String
+    var value: Int
     var isSelected: Bool
     var isChecked: Bool
-    let title: String
+    var isDisplayed: Bool
+    
     var checkboxImageName: String {
         get {
             return isChecked ? checkedImageName : uncheckedImageName
@@ -22,8 +26,11 @@ class BodyParameterViewModel {
     
     init(_ model: BodyParameter) {
         title = model.title
+        valueType = model.valueType
+        value = Int(model.value)
         isSelected = model.isSelected
         isChecked = model.isSelected
+        isDisplayed = model.isDisplayed
     }
     
     public func updateState() {

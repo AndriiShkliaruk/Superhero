@@ -1,30 +1,30 @@
 //
-//  BodyParametersListView.swift
+//  BodyParametersViewController.swift
 //  SuperheroShkliaruk
 //
-//  Created by Andrii Shkliaruk on 18.03.2022.
+//  Created by Andrii Shkliaruk on 21.03.2022.
 //
 
 import UIKit
 
-class BodyParametersListView: UIView {
+class BodyParametersViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var innerView: UIView!
     @IBOutlet private weak var topLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var cancelButton: UIButton!
     @IBOutlet private weak var selectButton: UIButton!
     
-    var delegate: BodyParametersListDelegate?
+    var delegate: BodyParametersDelegate?
     var viewModel: ProfileViewModel?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
         setupUI()
     }
     
     private func setupUI() {
-        backgroundColor = .customClearBlack
+        view.backgroundColor = .clear
         innerView.backgroundColor = .black
         innerView.layer.cornerRadius = 8
         innerView.layer.borderWidth = 1
@@ -36,17 +36,17 @@ class BodyParametersListView: UIView {
         tableView.register(UINib(nibName: BodyParameterListCell.identifier, bundle: nil), forCellReuseIdentifier: BodyParameterListCell.identifier)
     }
     
-    
+
     @IBAction private func cancelButtonTapped(_ sender: UIButton) {
-        delegate?.close(childView: self)
+        delegate?.reset()
     }
     
     @IBAction private func selectButtonTapped(_ sender: UIButton) {
-        delegate?.saveAndClose(childView: self)
+        delegate?.save()
     }
 }
 
-extension BodyParametersListView: UITableViewDelegate, UITableViewDataSource {
+extension BodyParametersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BodyParameterListCell.identifier, for: indexPath) as? BodyParameterListCell else { return UITableViewCell() }
         if let parametersList = viewModel?.parametersViewModels {

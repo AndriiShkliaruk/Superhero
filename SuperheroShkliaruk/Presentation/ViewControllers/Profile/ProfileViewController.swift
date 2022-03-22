@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var buttonBackgroundView: UIView!
     @IBOutlet private weak var addParametersButton: CustomRoundedButton!
     
     private lazy var saveBarButtonItem: UIBarButtonItem = {
@@ -16,6 +17,8 @@ class ProfileViewController: BaseViewController, Storyboarded {
         saveButton.isEnabled = false
         return saveButton
     }()
+    
+    private lazy var transitionDelegate = DimmTransitionManager()
     
     var coordinator: MainCoordinator?
     private var viewModel = ProfileViewModel()
@@ -35,11 +38,12 @@ class ProfileViewController: BaseViewController, Storyboarded {
         tableView.register(UINib(nibName: ProfileTableHeaderView.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableHeaderView.identifier)
         tableView.register(UINib(nibName: ProfileTableFooterView.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableFooterView.identifier)
         tableView.backgroundColor = .clear
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
     }
     
     private func setupUI() {
         title = viewModel.navigationBarTitleText
-        
+        buttonBackgroundView.applyBlackTopGradient()
         addParametersButton.setTitle(viewModel.addParametersButtonText.capitalized, for: .normal)
         addParametersButton.backgroundColor = .customYellow
         addParametersButton.titleLabel?.font = .sairaRegularWithSize16
@@ -57,11 +61,12 @@ class ProfileViewController: BaseViewController, Storyboarded {
     }
     
     @IBAction func addParametersButtonTapped(_ sender: UIButton) {
-        let parametersListView: BodyParametersListView = UIView.fromNib()
-        parametersListView.viewModel = viewModel
-        parametersListView.delegate = self
-        parametersListView.frame = view.frame
-        UIView.showWithTransition(childView: parametersListView, in: view)
+        coordinator?.presentBodyParameters { viewController in
+            viewController.delegate = self
+            viewController.viewModel = viewModel
+            viewController.transitioningDelegate = transitionDelegate
+            viewController.modalPresentationStyle = .custom
+        }
     }
 }
 
@@ -75,6 +80,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return headerView
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 285
+    }
+    
     
     //MARK: - Table View Footer Setup
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -83,19 +92,23 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return footerView
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 112
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.displayedParameters.count
+        return viewModel.selectedParameters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileParametersCell.identifier, for: indexPath) as? ProfileParametersCell else { return UITableViewCell() }
-        cell.configure(with: viewModel.displayedParameters[indexPath.row])
+        cell.configure(with: viewModel.selectedParameters[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
-        let parameter = viewModel.displayedParameters[indexPath.row]
+        let parameter = viewModel.selectedParameters[indexPath.row]
         viewModel.deleteDisplayedParameter(parameter)
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
@@ -111,15 +124,15 @@ extension ProfileViewController: ProfileTableHeaderViewDelegate {
     }
 }
 
-extension ProfileViewController: BodyParametersListDelegate {
-    func close(childView: UIView) {
+extension ProfileViewController: BodyParametersDelegate {
+    func reset() {
         viewModel.resetParametersCheckboxes()
-        UIView.hideWithTransition(childView: childView, from: view)
+        coordinator?.dismiss(animated: true)
     }
     
-    func saveAndClose(childView: UIView) {
+    func save() {
         viewModel.updateParametersStates()
-        UIView.hideWithTransition(childView: childView, from: view)
+        coordinator?.dismiss(animated: true)
         tableView.reloadData()
     }
 }

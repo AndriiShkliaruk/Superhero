@@ -8,7 +8,7 @@
 import Foundation
 
 extension MainCoordinator {
-    func presentProgress() {
+    func moveToProgress() {
         let viewController = ProgressViewController.instantiate()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)

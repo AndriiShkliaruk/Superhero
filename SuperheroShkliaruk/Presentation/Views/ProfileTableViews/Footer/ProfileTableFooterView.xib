@@ -14,11 +14,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" interfaceStyle="dark" id="iN0-l3-epB" customClass="ProfileTableFooterView" customModule="SuperheroShkliaruk" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+            <rect key="frame" x="0.0" y="0.0" width="358" height="112"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose parameters" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlI-1C-XeI" userLabel="Description Label">
-                    <rect key="frame" x="37" y="16" width="343" height="43"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an option to display on the main screen." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlI-1C-XeI" userLabel="Description Label">
+                    <rect key="frame" x="37" y="16" width="287" height="64"/>
                     <fontDescription key="fontDescription" name="Saira-Light" family="Saira" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
             <connections>
                 <outlet property="descriptionLabel" destination="IlI-1C-XeI" id="QDv-Rj-kL9"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="-138.95089285714286"/>
+            <point key="canvasLocation" x="91.304347826086968" y="-131.91964285714286"/>
         </view>
     </objects>
 </document>

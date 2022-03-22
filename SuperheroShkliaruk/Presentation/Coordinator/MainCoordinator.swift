@@ -22,7 +22,7 @@ class MainCoordinator: Coordinator {
     func start() {
         ProfileManager.sharedInstance.retrieveSavedProfile()
         if ProfileManager.sharedInstance.userProfile != nil {
-            presentHome()
+            moveToHome()
         } else {
             let startViewController = StartViewController.instantiate()
             startViewController.coordinator = self
@@ -30,7 +30,7 @@ class MainCoordinator: Coordinator {
         }
     }
     
-    func presentHome() {
+    func moveToHome() {
         let homeViewController = HomeViewController.instantiate()
         homeViewController.coordinator = self
         navigationController.pushViewController(homeViewController, animated: true)
@@ -38,5 +38,9 @@ class MainCoordinator: Coordinator {
     
     func back() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func dismiss(animated: Bool) {
+        navigationController.dismiss(animated: animated)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 extension MainCoordinator {
-    func presentCalculator() {
+    func moveToCalculator() {
         let viewController = CalculatorViewController.instantiate()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)

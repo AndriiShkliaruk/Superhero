@@ -15,15 +15,17 @@
 		F92D906627E378060018917F /* ProfileParametersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92D906427E378060018917F /* ProfileParametersCell.xib */; };
 		F92D906927E3781B0018917F /* BodyParameterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D906727E3781B0018917F /* BodyParameterListCell.swift */; };
 		F92D906A27E3781B0018917F /* BodyParameterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92D906827E3781B0018917F /* BodyParameterListCell.xib */; };
-		F92D907127E47DB50018917F /* BodyParametersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907027E47DB50018917F /* BodyParametersListView.swift */; };
-		F92D907327E47DDB0018917F /* BodyParametersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92D907227E47DDB0018917F /* BodyParametersListView.xib */; };
-		F92D907627E4A5160018917F /* BodyParametersListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907527E4A5160018917F /* BodyParametersListDelegate.swift */; };
+		F92D907627E4A5160018917F /* BodyParametersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907527E4A5160018917F /* BodyParametersDelegate.swift */; };
 		F92D907827E4A94B0018917F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907727E4A94B0018917F /* UIView+Extensions.swift */; };
 		F92D907A27E749640018917F /* ProfileTableHeaderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907927E749640018917F /* ProfileTableHeaderViewDelegate.swift */; };
+		F92D907D27E8FFEC0018917F /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907B27E8FFEC0018917F /* BodyParameter+CoreDataClass.swift */; };
+		F92D907E27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907C27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift */; };
+		F92D908027E9208A0018917F /* BodyParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907F27E9208A0018917F /* BodyParametersViewController.swift */; };
+		F92D908227E9209F0018917F /* BodyParametersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92D908127E9209F0018917F /* BodyParametersViewController.storyboard */; };
+		F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908527E9E21E0018917F /* DimmTransitionManager.swift */; };
+		F92D908827E9E2490018917F /* DimmPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908727E9E2490018917F /* DimmPresentationController.swift */; };
 		F935598A27DFA8CD00229A7B /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */; };
 		F935598C27DFA99500229A7B /* ProfileTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */; };
-		F938F60B27E3404900844F65 /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60727E3404900844F65 /* BodyParameter+CoreDataClass.swift */; };
-		F938F60C27E3404900844F65 /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60827E3404900844F65 /* BodyParameter+CoreDataProperties.swift */; };
 		F938F60D27E3404900844F65 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60927E3404900844F65 /* Profile+CoreDataClass.swift */; };
 		F938F60E27E3404900844F65 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60A27E3404900844F65 /* Profile+CoreDataProperties.swift */; };
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
@@ -90,15 +92,17 @@
 		F92D906427E378060018917F /* ProfileParametersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileParametersCell.xib; sourceTree = "<group>"; };
 		F92D906727E3781B0018917F /* BodyParameterListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParameterListCell.swift; sourceTree = "<group>"; };
 		F92D906827E3781B0018917F /* BodyParameterListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyParameterListCell.xib; sourceTree = "<group>"; };
-		F92D907027E47DB50018917F /* BodyParametersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersListView.swift; sourceTree = "<group>"; };
-		F92D907227E47DDB0018917F /* BodyParametersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyParametersListView.xib; sourceTree = "<group>"; };
-		F92D907527E4A5160018917F /* BodyParametersListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersListDelegate.swift; sourceTree = "<group>"; };
+		F92D907527E4A5160018917F /* BodyParametersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersDelegate.swift; sourceTree = "<group>"; };
 		F92D907727E4A94B0018917F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F92D907927E749640018917F /* ProfileTableHeaderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderViewDelegate.swift; sourceTree = "<group>"; };
+		F92D907B27E8FFEC0018917F /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F92D907C27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F92D907F27E9208A0018917F /* BodyParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersViewController.swift; sourceTree = "<group>"; };
+		F92D908127E9209F0018917F /* BodyParametersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BodyParametersViewController.storyboard; sourceTree = "<group>"; };
+		F92D908527E9E21E0018917F /* DimmTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmTransitionManager.swift; sourceTree = "<group>"; };
+		F92D908727E9E2490018917F /* DimmPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmPresentationController.swift; sourceTree = "<group>"; };
 		F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableHeaderView.xib; sourceTree = "<group>"; };
 		F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableFooterView.xib; sourceTree = "<group>"; };
-		F938F60727E3404900844F65 /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F938F60827E3404900844F65 /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F938F60927E3404900844F65 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F938F60A27E3404900844F65 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
@@ -213,28 +217,35 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		F92D906F27E47D720018917F /* BodyParametersList */ = {
-			isa = PBXGroup;
-			children = (
-				F92D907027E47DB50018917F /* BodyParametersListView.swift */,
-				F92D907227E47DDB0018917F /* BodyParametersListView.xib */,
-			);
-			path = BodyParametersList;
-			sourceTree = "<group>";
-		};
 		F92D907427E4A5030018917F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F92D907527E4A5160018917F /* BodyParametersListDelegate.swift */,
+				F92D907527E4A5160018917F /* BodyParametersDelegate.swift */,
 				F92D907927E749640018917F /* ProfileTableHeaderViewDelegate.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		F92D908327E9E1DC0018917F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F92D908427E9E1EE0018917F /* Transition */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F92D908427E9E1EE0018917F /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				F92D908527E9E21E0018917F /* DimmTransitionManager.swift */,
+				F92D908727E9E2490018917F /* DimmPresentationController.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		F935598D27DFB05400229A7B /* ProfileTableViews */ = {
 			isa = PBXGroup;
 			children = (
-				F92D906F27E47D720018917F /* BodyParametersList */,
 				F935598F27DFB07000229A7B /* Footer */,
 				F935598E27DFB06800229A7B /* Header */,
 			);
@@ -302,6 +313,7 @@
 		F953E42C27BBDF2900DE14B7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F92D908327E9E1DC0018917F /* Helpers */,
 				F953E43227BBDF8E00DE14B7 /* Coordinator */,
 				F953E43127BBDF7F00DE14B7 /* Storyboards */,
 				F953E43027BBDF6E00DE14B7 /* ViewControllers */,
@@ -526,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				F99706F827C665BB00C24B50 /* ProfileViewController.swift */,
+				F92D907F27E9208A0018917F /* BodyParametersViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -566,6 +579,7 @@
 			isa = PBXGroup;
 			children = (
 				F997070C27C6B11000C24B50 /* ProfileViewController.storyboard */,
+				F92D908127E9209F0018917F /* BodyParametersViewController.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -630,8 +644,8 @@
 		F9D68A2B27C12CDC005F551E /* ProfileCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F938F60727E3404900844F65 /* BodyParameter+CoreDataClass.swift */,
-				F938F60827E3404900844F65 /* BodyParameter+CoreDataProperties.swift */,
+				F92D907B27E8FFEC0018917F /* BodyParameter+CoreDataClass.swift */,
+				F92D907C27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift */,
 				F938F60927E3404900844F65 /* Profile+CoreDataClass.swift */,
 				F938F60A27E3404900844F65 /* Profile+CoreDataProperties.swift */,
 				F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */,
@@ -711,11 +725,11 @@
 				F997070B27C6B0F900C24B50 /* MusclesViewController.storyboard in Resources */,
 				F92D906A27E3781B0018917F /* BodyParameterListCell.xib in Resources */,
 				F96B771527BE6C7C00678747 /* HomeViewController.storyboard in Resources */,
+				F92D908227E9209F0018917F /* BodyParametersViewController.storyboard in Resources */,
 				F953E42427BBC85100DE14B7 /* LaunchScreen.storyboard in Resources */,
 				F96B772B27BE90EC00678747 /* Saira-SemiBold.ttf in Resources */,
 				F99706E627C65D7300C24B50 /* MenuTableViewCell.xib in Resources */,
 				F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */,
-				F92D907327E47DDB0018917F /* BodyParametersListView.xib in Resources */,
 				F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */,
 				F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */,
 				F99706FF27C6660400C24B50 /* CalculatorViewController.storyboard in Resources */,
@@ -757,12 +771,12 @@
 				F938F60D27E3404900844F65 /* Profile+CoreDataClass.swift in Sources */,
 				F99706FD27C665D700C24B50 /* ProgressViewController.swift in Sources */,
 				F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */,
-				F938F60B27E3404900844F65 /* BodyParameter+CoreDataClass.swift in Sources */,
 				F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */,
 				F9FF38D127DB652F00DDA957 /* UITextField+Extension.swift in Sources */,
 				F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */,
 				F997070527C6663B00C24B50 /* ProfileViewModel.swift in Sources */,
 				F99706F027C6631700C24B50 /* Coordinator+Progress.swift in Sources */,
+				F92D907D27E8FFEC0018917F /* BodyParameter+CoreDataClass.swift in Sources */,
 				F997070927C6665600C24B50 /* ProgressViewModel.swift in Sources */,
 				F92D906527E378060018917F /* ProfileParametersCell.swift in Sources */,
 				F99706F527C6659300C24B50 /* CalculatorViewController.swift in Sources */,
@@ -772,24 +786,26 @@
 				F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */,
 				F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */,
 				F98425FB27DFB111002F2196 /* ProfileTableFooterView.swift in Sources */,
-				F92D907127E47DB50018917F /* BodyParametersListView.swift in Sources */,
+				F92D908827E9E2490018917F /* DimmPresentationController.swift in Sources */,
 				F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */,
 				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
 				F96B771127BE64B600678747 /* HomeViewController.swift in Sources */,
 				F96B771A27BE811D00678747 /* UIFont+CustomFonts.swift in Sources */,
 				F90DF82A27C11EA600B76F30 /* HomeViewModel.swift in Sources */,
+				F92D908027E9208A0018917F /* BodyParametersViewController.swift in Sources */,
 				F99706FB27C665CC00C24B50 /* ProgramsViewController.swift in Sources */,
 				F96B771827BE810800678747 /* UIColor+CustomColors.swift in Sources */,
 				F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */,
 				F92D906927E3781B0018917F /* BodyParameterListCell.swift in Sources */,
 				F989AF3027E0AED8008751FB /* Profile+Sex.swift in Sources */,
 				F99706EA27C662F100C24B50 /* Coordinator+Muscles.swift in Sources */,
-				F92D907627E4A5160018917F /* BodyParametersListDelegate.swift in Sources */,
-				F938F60C27E3404900844F65 /* BodyParameter+CoreDataProperties.swift in Sources */,
+				F92D907627E4A5160018917F /* BodyParametersDelegate.swift in Sources */,
 				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F92D905827E362CF0018917F /* BodyParameterViewModel.swift in Sources */,
 				F92D907827E4A94B0018917F /* UIView+Extensions.swift in Sources */,
+				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
+				F92D907E27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

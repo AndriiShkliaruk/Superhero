@@ -12,31 +12,34 @@ class BodyParametersStorage {
     public static let sharedInstance = BodyParametersStorage()
     private let profileManager = ProfileManager.sharedInstance
     
-    private let parameterTitles = ["Height",
-                                   "Weight",
-                                   "Neck",
-                                   "Shoulders",
-                                   "Left biceps",
-                                   "Right biceps",
-                                   "Left thigh",
-                                   "Right thigh",
-                                   "Left forearm",
-                                   "Right forearm",
-                                   "Chest",
-                                   "Left lower leg",
-                                   "Right lower leg",
-                                   "Left ankle",
-                                   "Right ankle"]
+    private let rawParameters = ["Height": "cm",
+                                   "Weight": "kg",
+                                   "Neck": "cm",
+                                   "Shoulders": "cm",
+                                   "Left biceps": "cm",
+                                   "Right biceps": "cm",
+                                   "Left thigh": "cm",
+                                   "Right thigh": "cm",
+                                   "Left forearm": "cm",
+                                   "Right forearm": "cm",
+                                   "Chest": "cm",
+                                   "Left lower leg": "cm",
+                                   "Right lower leg": "cm",
+                                   "Left ankle": "cm",
+                                   "Right ankle": "cm"]
     
     private func createDefaultBodyParameters() -> [BodyParameter] {
         let context = ProfileManager.sharedInstance.mainContext
         let entity = NSEntityDescription.entity(forEntityName: "BodyParameter", in: context)
         
-        let parameters: [BodyParameter] = parameterTitles.map { parameterTitle in
-            let parameter = BodyParameter(entity: entity!, insertInto: context)
-            parameter.title = parameterTitle
-            parameter.isSelected = false
-            return parameter
+        let parameters: [BodyParameter] = rawParameters.map { parameter in
+            let bodyParameter = BodyParameter(entity: entity!, insertInto: context)
+            bodyParameter.title = parameter.key
+            bodyParameter.valueType = parameter.value
+            bodyParameter.value = 0
+            bodyParameter.isSelected = false
+            bodyParameter.isDisplayed = false
+            return bodyParameter
         }
         
         return parameters

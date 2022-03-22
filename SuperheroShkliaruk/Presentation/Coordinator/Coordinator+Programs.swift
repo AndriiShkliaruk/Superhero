@@ -8,7 +8,7 @@
 import Foundation
 
 extension MainCoordinator {
-    func presentPrograms() {
+    func moveToPrograms() {
         let viewController = ProgramsViewController.instantiate()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)

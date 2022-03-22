@@ -47,4 +47,9 @@ class ProfileParametersCell: UITableViewCell {
         valueType.text = "cm"
         isEnabledSwitch.isOn = true
     }
+    
+    @IBAction func switchValueChanged(_ sender: UISwitch) {
+        
+    }
+    
 }
