@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DimmPresentationController: UIPresentationController {
+class DimmPresentationController: PresentationController {
     private lazy var dimmView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(white: 0, alpha: 0.65)

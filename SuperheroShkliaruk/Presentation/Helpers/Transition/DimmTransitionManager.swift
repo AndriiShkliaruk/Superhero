@@ -12,4 +12,12 @@ class DimmTransitionManager: NSObject, UIViewControllerTransitioningDelegate {
         return DimmPresentationController(presentedViewController: presented,
                                           presenting: presenting ?? source)
     }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentAnimation()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissAnimation()
+    }
 }

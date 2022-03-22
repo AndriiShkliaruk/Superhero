@@ -57,4 +57,6 @@ class ProfileViewModel {
     public func deleteDisplayedParameter(_ parameter: BodyParameterViewModel) {
         parameter.resetCheckboxAndState()
     }
+    
+    
 }

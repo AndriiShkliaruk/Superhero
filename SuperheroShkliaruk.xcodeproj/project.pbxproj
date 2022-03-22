@@ -24,6 +24,9 @@
 		F92D908227E9209F0018917F /* BodyParametersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92D908127E9209F0018917F /* BodyParametersViewController.storyboard */; };
 		F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908527E9E21E0018917F /* DimmTransitionManager.swift */; };
 		F92D908827E9E2490018917F /* DimmPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908727E9E2490018917F /* DimmPresentationController.swift */; };
+		F92D908A27EA0E230018917F /* PresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908927EA0E230018917F /* PresentAnimation.swift */; };
+		F92D908C27EA0E830018917F /* DismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908B27EA0E830018917F /* DismissAnimation.swift */; };
+		F92D908E27EA10710018917F /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908D27EA10710018917F /* PresentationController.swift */; };
 		F935598A27DFA8CD00229A7B /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */; };
 		F935598C27DFA99500229A7B /* ProfileTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */; };
 		F938F60D27E3404900844F65 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60927E3404900844F65 /* Profile+CoreDataClass.swift */; };
@@ -101,6 +104,9 @@
 		F92D908127E9209F0018917F /* BodyParametersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BodyParametersViewController.storyboard; sourceTree = "<group>"; };
 		F92D908527E9E21E0018917F /* DimmTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmTransitionManager.swift; sourceTree = "<group>"; };
 		F92D908727E9E2490018917F /* DimmPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmPresentationController.swift; sourceTree = "<group>"; };
+		F92D908927EA0E230018917F /* PresentAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimation.swift; sourceTree = "<group>"; };
+		F92D908B27EA0E830018917F /* DismissAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimation.swift; sourceTree = "<group>"; };
+		F92D908D27EA10710018917F /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableHeaderView.xib; sourceTree = "<group>"; };
 		F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableFooterView.xib; sourceTree = "<group>"; };
 		F938F60927E3404900844F65 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -239,6 +245,9 @@
 			children = (
 				F92D908527E9E21E0018917F /* DimmTransitionManager.swift */,
 				F92D908727E9E2490018917F /* DimmPresentationController.swift */,
+				F92D908927EA0E230018917F /* PresentAnimation.swift */,
+				F92D908B27EA0E830018917F /* DismissAnimation.swift */,
+				F92D908D27EA10710018917F /* PresentationController.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -768,6 +777,7 @@
 				F92D907A27E749640018917F /* ProfileTableHeaderViewDelegate.swift in Sources */,
 				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
 				F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */,
+				F92D908E27EA10710018917F /* PresentationController.swift in Sources */,
 				F938F60D27E3404900844F65 /* Profile+CoreDataClass.swift in Sources */,
 				F99706FD27C665D700C24B50 /* ProgressViewController.swift in Sources */,
 				F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */,
@@ -785,6 +795,7 @@
 				F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */,
 				F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */,
 				F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */,
+				F92D908A27EA0E230018917F /* PresentAnimation.swift in Sources */,
 				F98425FB27DFB111002F2196 /* ProfileTableFooterView.swift in Sources */,
 				F92D908827E9E2490018917F /* DimmPresentationController.swift in Sources */,
 				F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */,
@@ -806,6 +817,7 @@
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
 				F92D907E27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift in Sources */,
+				F92D908C27EA0E830018917F /* DismissAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
