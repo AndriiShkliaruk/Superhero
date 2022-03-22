@@ -16,7 +16,7 @@ class ProfileParametersCell: UITableViewCell {
     @IBOutlet private weak var underlineView: UIView!
     
     static let identifier = "ProfileParametersCell"
-    public var parameterViewModel: BodyParameterViewModel?
+    private var parameterViewModel: BodyParameterViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
