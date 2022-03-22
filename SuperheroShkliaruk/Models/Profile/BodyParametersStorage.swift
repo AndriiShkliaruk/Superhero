@@ -9,24 +9,24 @@ import Foundation
 import CoreData
 
 class BodyParametersStorage {
-    public static let sharedInstance = BodyParametersStorage()
+    static let sharedInstance = BodyParametersStorage()
     private let profileManager = ProfileManager.sharedInstance
     
     private let rawParameters = ["Height": "cm",
-                                   "Weight": "kg",
-                                   "Neck": "cm",
-                                   "Shoulders": "cm",
-                                   "Left biceps": "cm",
-                                   "Right biceps": "cm",
-                                   "Left thigh": "cm",
-                                   "Right thigh": "cm",
-                                   "Left forearm": "cm",
-                                   "Right forearm": "cm",
-                                   "Chest": "cm",
-                                   "Left lower leg": "cm",
-                                   "Right lower leg": "cm",
-                                   "Left ankle": "cm",
-                                   "Right ankle": "cm"]
+                                 "Weight": "kg",
+                                 "Neck": "cm",
+                                 "Shoulders": "cm",
+                                 "Left biceps": "cm",
+                                 "Right biceps": "cm",
+                                 "Left thigh": "cm",
+                                 "Right thigh": "cm",
+                                 "Left forearm": "cm",
+                                 "Right forearm": "cm",
+                                 "Chest": "cm",
+                                 "Left lower leg": "cm",
+                                 "Right lower leg": "cm",
+                                 "Left ankle": "cm",
+                                 "Right ankle": "cm"]
     
     private func createDefaultBodyParameters() -> [BodyParameter] {
         let context = ProfileManager.sharedInstance.mainContext
@@ -38,14 +38,14 @@ class BodyParametersStorage {
             bodyParameter.valueType = parameter.value
             bodyParameter.value = 0
             bodyParameter.isSelected = false
-            bodyParameter.isDisplayed = false
+            bodyParameter.isDisplayed = true
             return bodyParameter
         }
         
         return parameters
     }
     
-    public func fetchBodyParameters() -> [BodyParameter] {
+    func fetchBodyParameters() -> [BodyParameter] {
         if let bodyParameters = profileManager.userProfile?.bodyParameters, bodyParameters.count > 0 {
             let parameters: [BodyParameter] = Array(_immutableCocoaArray: bodyParameters)
             return parameters

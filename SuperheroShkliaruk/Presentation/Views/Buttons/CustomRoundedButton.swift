@@ -25,5 +25,4 @@ final class CustomRoundedButton: UIButton {
         layer.cornerRadius = layer.frame.height / 2
         tintColor = .black
     }
-    
 }

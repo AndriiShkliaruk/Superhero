@@ -8,14 +8,13 @@
 import UIKit
 
 class BodyParameterListCell: UITableViewCell {
-    @IBOutlet weak var checkboxImageView: UIImageView!
+    @IBOutlet private weak var checkboxImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
     static let identifier = "BodyParameterListCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setupUI()
     }
     

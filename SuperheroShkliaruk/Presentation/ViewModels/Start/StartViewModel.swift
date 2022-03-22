@@ -8,16 +8,16 @@
 import Foundation
 
 struct StartViewModel {
-    public let titleLabelText = "Superhero"
-    public let subtitleLabelText = "choose a hero"
+    let titleLabelText = "Superhero"
+    let subtitleLabelText = "choose a hero"
     
-    public let maleButtonText = "Superman"
-    public let femaleButtonText = "Supergirl"
+    let maleButtonText = "Superman"
+    let femaleButtonText = "Supergirl"
     
-    public let manImageName = "start-male"
-    public let womanImageName = "start-female"
+    let manImageName = "start-male"
+    let womanImageName = "start-female"
     
-    public func createNewUserWithSex(_ sex: String) {
+    func createNewUserWithSex(_ sex: String) {
         ProfileManager.sharedInstance.createDefaultProfileWith(sex)
     }
 }

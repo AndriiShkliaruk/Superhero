@@ -10,14 +10,29 @@ import Foundation
 class BodyParameterViewModel {
     private let checkedImageName = "checked"
     private let uncheckedImageName = "unchecked"
+    private let model: BodyParameter
+    var delegate: ProfileViewControllerDelegate?
+    var isChanged = false
     
     let title: String
     let valueType: String
-    var value: Int
-    var isSelected: Bool
     var isChecked: Bool
-    var isDisplayed: Bool
     
+    var value: Int16 {
+        didSet {
+            updateParameterState()
+        }
+    }
+    var isSelected: Bool {
+        didSet {
+            updateParameterState()
+        }
+    }
+    var isDisplayed: Bool {
+        didSet {
+            updateParameterState()
+        }
+    }
     var checkboxImageName: String {
         get {
             return isChecked ? checkedImageName : uncheckedImageName
@@ -25,27 +40,37 @@ class BodyParameterViewModel {
     }
     
     init(_ model: BodyParameter) {
+        self.model = model
         title = model.title
         valueType = model.valueType
-        value = Int(model.value)
+        value = model.value
         isSelected = model.isSelected
         isChecked = model.isSelected
         isDisplayed = model.isDisplayed
     }
     
-    public func updateState() {
+    private func updateParameterState() {
+        if value != model.value || isSelected != model.isSelected || isDisplayed != model.isDisplayed {
+            isChanged = true
+        } else {
+            isChanged = false
+        }
+        delegate?.updateSaveButtonState()
+    }
+    
+    func updateState() {
         isSelected = isChecked
     }
     
-    public func resetCheckbox() {
+    func resetCheckbox() {
         isChecked = isSelected
     }
     
-    public func toggleCheckbox() {
+    func toggleCheckbox() {
         isChecked.toggle()
     }
     
-    public func resetCheckboxAndState() {
+    func resetCheckboxAndState() {
         isChecked = false
         isSelected = false
     }

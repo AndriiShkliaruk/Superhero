@@ -24,9 +24,9 @@ struct HomeViewModel {
     
     let tableItems = ["Profile", "Progress", "Programs", "Calculator", "Muscles"]
     
-    public let characterImageName: String
-    public let characterLabel: String
-    public var profileName: String {
+    let characterImageName: String
+    let characterLabel: String
+    var profileName: String {
         return profile?.name ?? ""
     }
     
@@ -45,7 +45,7 @@ struct HomeViewModel {
         }
     }
     
-    public func pushToViewController(at indexPath: IndexPath, with coordinator: MainCoordinator?) {
+    func pushToViewController(at indexPath: IndexPath, with coordinator: MainCoordinator?) {
         switch ViewControllerIDs.allCases[indexPath.row] {
         case .profile:
             coordinator?.moveToProfile()
@@ -59,5 +59,4 @@ struct HomeViewModel {
             coordinator?.moveToMuscles()
         }
     }
-    
 }

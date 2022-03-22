@@ -39,4 +39,3 @@ extension DismissAnimation: UIViewControllerAnimatedTransitioning {
         return self.animator(using: transitionContext)
     }
 }
-

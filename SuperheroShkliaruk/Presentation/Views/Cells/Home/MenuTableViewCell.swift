@@ -15,7 +15,6 @@ class MenuTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setupUI()
     }
     
@@ -29,5 +28,4 @@ class MenuTableViewCell: UITableViewCell {
         titleLabel.text = text
         titleLabel.font = .helveticaNeueRegularWithSize18
     }
-    
 }

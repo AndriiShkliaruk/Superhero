@@ -39,6 +39,12 @@
                             <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <action selector="nameTextFieldDidEndOnExit:" destination="iN0-l3-epB" eventType="editingDidEndOnExit" id="iUa-Ej-AKC"/>
+                                <action selector="nameTextFieldEditingChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="UOr-hV-fIK"/>
+                                <action selector="nameTextFieldEditingDidBegin:" destination="iN0-l3-epB" eventType="editingDidBegin" id="rvA-u5-K03"/>
+                                <action selector="nameTextFieldEditingDidEnd:" destination="iN0-l3-epB" eventType="editingDidEnd" id="DYi-l0-Q5A"/>
+                            </connections>
                         </textField>
                     </subviews>
                 </stackView>

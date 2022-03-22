@@ -8,5 +8,5 @@
 import Foundation
 
 struct ProgramsViewModel {
-    public let navigationBarTitleText = "Programs"
+    let navigationBarTitleText = "Programs"
 }

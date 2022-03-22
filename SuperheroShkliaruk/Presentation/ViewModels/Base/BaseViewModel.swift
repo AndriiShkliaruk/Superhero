@@ -12,7 +12,7 @@ struct BaseViewModel {
     private let maleImageName = "home-male"
     private let femaleImageName = "home-female"
     
-    public let characterImageName: String
+    let characterImageName: String
     
     init() {
         if let sex = profile?.getSex() {
@@ -23,7 +23,6 @@ struct BaseViewModel {
                 characterImageName = femaleImageName
             }
         } else {
-            //fatalError("Profile does not exist")
             characterImageName = maleImageName
         }
     }

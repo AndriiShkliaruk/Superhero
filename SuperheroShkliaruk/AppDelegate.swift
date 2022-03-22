@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.sairaMediumWithSize18], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.sairaMediumWithSize18], for: .highlighted)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.sairaMediumWithSize18], for: .disabled)
         
         return true
     }

@@ -8,5 +8,5 @@
 import Foundation
 
 struct ProgressViewModel {    
-    public let navigationBarTitleText = "Progress"
+    let navigationBarTitleText = "Progress"
 }

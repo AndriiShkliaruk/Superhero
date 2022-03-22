@@ -8,13 +8,13 @@
 import UIKit
 
 class StartViewController: UIViewController, Storyboarded {
-    @IBOutlet weak var gradientView: UIView!
-    @IBOutlet weak var superheroLabel: UILabel!
-    @IBOutlet weak var chooseLabel: UILabel!
-    @IBOutlet weak var maleButton: CustomRoundedButton!
-    @IBOutlet weak var femaleButton: CustomRoundedButton!
-    @IBOutlet weak var maleImageView: UIImageView!
-    @IBOutlet weak var femaleImageView: UIImageView!
+    @IBOutlet private weak var gradientView: UIView!
+    @IBOutlet private weak var superheroLabel: UILabel!
+    @IBOutlet private weak var chooseLabel: UILabel!
+    @IBOutlet private weak var maleButton: CustomRoundedButton!
+    @IBOutlet private weak var femaleButton: CustomRoundedButton!
+    @IBOutlet private weak var maleImageView: UIImageView!
+    @IBOutlet private weak var femaleImageView: UIImageView!
     
     private let viewModel = StartViewModel()
     var coordinator: MainCoordinator?
@@ -47,7 +47,7 @@ class StartViewController: UIViewController, Storyboarded {
         femaleButton.titleLabel?.font = .sairaRegularWithSize18
     }
     
-    @IBAction func chooseCharacterButtonTapped(_ sender: UIButton) {
+    @IBAction private func chooseCharacterButtonTapped(_ sender: UIButton) {
         let sex = Sex.getStringValueByTag(sender.tag)
         viewModel.createNewUserWithSex(sex)
         coordinator?.moveToHome()

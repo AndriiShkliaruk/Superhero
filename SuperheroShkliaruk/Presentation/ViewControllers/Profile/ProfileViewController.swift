@@ -60,7 +60,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
         coordinator?.back()
     }
     
-    @IBAction func addParametersButtonTapped(_ sender: UIButton) {
+    @IBAction private func addParametersButtonTapped(_ sender: UIButton) {
         coordinator?.presentBodyParameters { viewController in
             viewController.delegate = self
             viewController.viewModel = viewModel
@@ -102,7 +102,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileParametersCell.identifier, for: indexPath) as? ProfileParametersCell else { return UITableViewCell() }
-        cell.configure(with: viewModel.selectedParameters[indexPath.row])
+        let parameterViewModel = viewModel.selectedParameters[indexPath.row]
+        parameterViewModel.delegate = self
+        cell.configure(with: parameterViewModel)
         return cell
     }
     
@@ -114,13 +116,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ProfileViewController: ProfileTableHeaderViewDelegate {
-    func setIsEnabledSaveButton(_ isEnabled: Bool) {
-        saveBarButtonItem.isEnabled = isEnabled
-    }
-    
-    func setProfileName(_ name: String) {
-        viewModel.newProfileName = name
+extension ProfileViewController: ProfileViewControllerDelegate {
+    func updateSaveButtonState() {
+        saveBarButtonItem.isEnabled = viewModel.stateHasChanges()
     }
 }
 

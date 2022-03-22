@@ -17,7 +17,7 @@
 		F92D906A27E3781B0018917F /* BodyParameterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92D906827E3781B0018917F /* BodyParameterListCell.xib */; };
 		F92D907627E4A5160018917F /* BodyParametersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907527E4A5160018917F /* BodyParametersDelegate.swift */; };
 		F92D907827E4A94B0018917F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907727E4A94B0018917F /* UIView+Extensions.swift */; };
-		F92D907A27E749640018917F /* ProfileTableHeaderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907927E749640018917F /* ProfileTableHeaderViewDelegate.swift */; };
+		F92D907A27E749640018917F /* ProfileViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907927E749640018917F /* ProfileViewControllerDelegate.swift */; };
 		F92D907D27E8FFEC0018917F /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907B27E8FFEC0018917F /* BodyParameter+CoreDataClass.swift */; };
 		F92D907E27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907C27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift */; };
 		F92D908027E9208A0018917F /* BodyParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907F27E9208A0018917F /* BodyParametersViewController.swift */; };
@@ -97,7 +97,7 @@
 		F92D906827E3781B0018917F /* BodyParameterListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyParameterListCell.xib; sourceTree = "<group>"; };
 		F92D907527E4A5160018917F /* BodyParametersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersDelegate.swift; sourceTree = "<group>"; };
 		F92D907727E4A94B0018917F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		F92D907927E749640018917F /* ProfileTableHeaderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderViewDelegate.swift; sourceTree = "<group>"; };
+		F92D907927E749640018917F /* ProfileViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerDelegate.swift; sourceTree = "<group>"; };
 		F92D907B27E8FFEC0018917F /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F92D907C27E8FFEC0018917F /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F92D907F27E9208A0018917F /* BodyParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersViewController.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				F92D907527E4A5160018917F /* BodyParametersDelegate.swift */,
-				F92D907927E749640018917F /* ProfileTableHeaderViewDelegate.swift */,
+				F92D907927E749640018917F /* ProfileViewControllerDelegate.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -774,7 +774,7 @@
 				F99706EE27C6630900C24B50 /* Coordinator+Programs.swift in Sources */,
 				F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */,
 				F99706F927C665BB00C24B50 /* ProfileViewController.swift in Sources */,
-				F92D907A27E749640018917F /* ProfileTableHeaderViewDelegate.swift in Sources */,
+				F92D907A27E749640018917F /* ProfileViewControllerDelegate.swift in Sources */,
 				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
 				F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */,
 				F92D908E27EA10710018917F /* PresentationController.swift in Sources */,

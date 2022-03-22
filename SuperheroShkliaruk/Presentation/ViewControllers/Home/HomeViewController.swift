@@ -15,10 +15,10 @@ class HomeViewController: BaseViewController, Storyboarded {
     
     let viewModel = HomeViewModel()
     var coordinator: MainCoordinator?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         menuTableView.delegate = self
         menuTableView.dataSource = self
         menuTableView.register(UINib(nibName: MenuTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MenuTableViewCell.identifier)
@@ -31,7 +31,7 @@ class HomeViewController: BaseViewController, Storyboarded {
         coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
         updateNameLabelText()
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         coordinator?.navigationController.setNavigationBarHidden(false, animated: animated)

@@ -8,5 +8,5 @@
 import Foundation
 
 struct MusclesViewModel {
-    public let navigationBarTitleText = "Muscles"
+    let navigationBarTitleText = "Muscles"
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 struct CalculatorViewModel {
-    public let navigationBarTitleText = "Calculator"
+    let navigationBarTitleText = "Calculator"
 }
