@@ -26,22 +26,25 @@ struct HomeViewModel {
     
     let characterImageName: String
     let characterLabel: String
-    var profileName: String {
+    var name: String {
         return profile?.name ?? ""
+    }
+    var avatarImageData: Data? {
+        return profile?.avatar
     }
     
     init() {
-        if let sex = profile?.getSex() {
-            switch sex {
-            case .male:
-                characterImageName = maleImageName
-                characterLabel = maleLabelText
-            case .female:
-                characterImageName = femaleImageName
-                characterLabel = femaleLabelText
-            }
-        } else {
+        guard let sex = profile?.getSex() else {
             fatalError("Profile does not exist")
+        }
+
+        switch sex {
+        case .male:
+            characterImageName = maleImageName
+            characterLabel = maleLabelText
+        case .female:
+            characterImageName = femaleImageName
+            characterLabel = femaleLabelText
         }
     }
     

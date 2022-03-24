@@ -7,12 +7,13 @@
 
 import Foundation
 import CoreData
+import OrderedCollections
 
 class BodyParametersStorage {
     static let sharedInstance = BodyParametersStorage()
     private let profileManager = ProfileManager.sharedInstance
     
-    private let rawParameters = ["Height": "cm",
+    private let rawParameters: OrderedDictionary = ["Height": "cm",
                                  "Weight": "kg",
                                  "Neck": "cm",
                                  "Shoulders": "cm",

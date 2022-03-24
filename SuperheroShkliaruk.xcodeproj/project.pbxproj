@@ -27,12 +27,13 @@
 		F92D908E27EA10710018917F /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908D27EA10710018917F /* PresentationController.swift */; };
 		F935598A27DFA8CD00229A7B /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */; };
 		F935598C27DFA99500229A7B /* ProfileTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */; };
-		F938F60D27E3404900844F65 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60927E3404900844F65 /* Profile+CoreDataClass.swift */; };
-		F938F60E27E3404900844F65 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60A27E3404900844F65 /* Profile+CoreDataProperties.swift */; };
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
 		F94E9F3B27EBA78800693538 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F3A27EBA78800693538 /* ImagePicker.swift */; };
 		F94E9F3F27EBAC1C00693538 /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F3D27EBAC1C00693538 /* BodyParameter+CoreDataClass.swift */; };
 		F94E9F4027EBAC1C00693538 /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F3E27EBAC1C00693538 /* BodyParameter+CoreDataProperties.swift */; };
+		F94E9F4727ECD3CA00693538 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */; };
+		F94E9F4827ECD3CA00693538 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */; };
+		F94E9F4B27ED0EEB00693538 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = F94E9F4A27ED0EEB00693538 /* OrderedCollections */; };
 		F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41727BBC85000DE14B7 /* AppDelegate.swift */; };
 		F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41927BBC85000DE14B7 /* SceneDelegate.swift */; };
 		F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41B27BBC85000DE14B7 /* StartViewController.swift */; };
@@ -108,12 +109,12 @@
 		F92D908D27EA10710018917F /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableHeaderView.xib; sourceTree = "<group>"; };
 		F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableFooterView.xib; sourceTree = "<group>"; };
-		F938F60927E3404900844F65 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F938F60A27E3404900844F65 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
 		F94E9F3A27EBA78800693538 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F94E9F3D27EBAC1C00693538 /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F94E9F3E27EBAC1C00693538 /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F953E41427BBC85000DE14B7 /* SuperheroShkliaruk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroShkliaruk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F953E41727BBC85000DE14B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F953E41927BBC85000DE14B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94E9F4B27ED0EEB00693538 /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,8 +666,8 @@
 		F9D68A2B27C12CDC005F551E /* ProfileCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F938F60927E3404900844F65 /* Profile+CoreDataClass.swift */,
-				F938F60A27E3404900844F65 /* Profile+CoreDataProperties.swift */,
+				F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */,
+				F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */,
 				F94E9F3D27EBAC1C00693538 /* BodyParameter+CoreDataClass.swift */,
 				F94E9F3E27EBAC1C00693538 /* BodyParameter+CoreDataProperties.swift */,
 				F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */,
@@ -699,6 +701,9 @@
 			dependencies = (
 			);
 			name = SuperheroShkliaruk;
+			packageProductDependencies = (
+				F94E9F4A27ED0EEB00693538 /* OrderedCollections */,
+			);
 			productName = SuperheroShkliaruk;
 			productReference = F953E41427BBC85000DE14B7 /* SuperheroShkliaruk.app */;
 			productType = "com.apple.product-type.application";
@@ -728,6 +733,9 @@
 				Base,
 			);
 			mainGroup = F953E40B27BBC85000DE14B7;
+			packageReferences = (
+				F94E9F4927ED0EEB00693538 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = F953E41527BBC85000DE14B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -790,7 +798,6 @@
 				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
 				F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */,
 				F92D908E27EA10710018917F /* PresentationController.swift in Sources */,
-				F938F60D27E3404900844F65 /* Profile+CoreDataClass.swift in Sources */,
 				F99706FD27C665D700C24B50 /* ProgressViewController.swift in Sources */,
 				F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */,
 				F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */,
@@ -803,7 +810,6 @@
 				F94E9F3F27EBAC1C00693538 /* BodyParameter+CoreDataClass.swift in Sources */,
 				F99706F527C6659300C24B50 /* CalculatorViewController.swift in Sources */,
 				F98425F927DFB0D9002F2196 /* ProfileTableHeaderView.swift in Sources */,
-				F938F60E27E3404900844F65 /* Profile+CoreDataProperties.swift in Sources */,
 				F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */,
 				F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */,
 				F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */,
@@ -812,6 +818,7 @@
 				F92D908827E9E2490018917F /* DimmPresentationController.swift in Sources */,
 				F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */,
 				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
+				F94E9F4727ECD3CA00693538 /* Profile+CoreDataClass.swift in Sources */,
 				F96B771127BE64B600678747 /* HomeViewController.swift in Sources */,
 				F96B771A27BE811D00678747 /* UIFont+CustomFonts.swift in Sources */,
 				F90DF82A27C11EA600B76F30 /* HomeViewModel.swift in Sources */,
@@ -829,6 +836,7 @@
 				F92D907827E4A94B0018917F /* UIView+Extensions.swift in Sources */,
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
+				F94E9F4827ECD3CA00693538 /* Profile+CoreDataProperties.swift in Sources */,
 				F92D908C27EA0E830018917F /* DismissAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,10 +980,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to use your camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app wants to use your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1003,10 +1013,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to use your camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app wants to use your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1048,6 +1060,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F94E9F4927ED0EEB00693538 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F94E9F4A27ED0EEB00693538 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F94E9F4927ED0EEB00693538 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */ = {

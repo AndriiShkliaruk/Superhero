@@ -30,6 +30,7 @@ class HomeViewController: BaseViewController, Storyboarded {
         super.viewWillAppear(animated)
         coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
         updateNameLabelText()
+        updateAvatarImageView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,17 +49,25 @@ class HomeViewController: BaseViewController, Storyboarded {
         avatarImageView.layer.cornerRadius = 8
         avatarImageView.layer.borderWidth = 1
         avatarImageView.layer.borderColor = UIColor.customDarkYellow.cgColor
-        avatarImageView.isHidden = true
         
         menuTableView.backgroundColor = .clear
     }
     
     private func updateNameLabelText() {
-        if !viewModel.profileName.isEmpty {
+        if !viewModel.name.isEmpty {
             nameLabel.isHidden = false
-            nameLabel.text = viewModel.profileName
+            nameLabel.text = viewModel.name
         } else {
             nameLabel.isHidden = true
+        }
+    }
+    
+    private func updateAvatarImageView() {
+        if let imageData = viewModel.avatarImageData {
+            avatarImageView.image = UIImage(data: imageData)
+            avatarImageView.isHidden = false
+        } else {
+            avatarImageView.isHidden = true
         }
     }
 }

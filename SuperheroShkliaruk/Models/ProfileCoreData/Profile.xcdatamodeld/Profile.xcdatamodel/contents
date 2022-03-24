@@ -9,12 +9,13 @@
         <relationship name="profile" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="bodyParameters" inverseEntity="Profile"/>
     </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="Binary" customClassName="UIImage"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="sex" attributeType="String"/>
         <relationship name="bodyParameters" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="BodyParameter" inverseName="profile" inverseEntity="BodyParameter"/>
     </entity>
     <elements>
         <element name="BodyParameter" positionX="353.08984375" positionY="-308.16015625" width="128" height="119"/>
-        <element name="Profile" positionX="-123.2578125" positionY="-326.6875" width="128" height="74"/>
+        <element name="Profile" positionX="-123.2578125" positionY="-326.6875" width="128" height="89"/>
     </elements>
 </model>

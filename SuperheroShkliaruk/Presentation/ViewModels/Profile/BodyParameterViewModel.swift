@@ -12,7 +12,7 @@ class BodyParameterViewModel {
     private let uncheckedImageName = "unchecked"
     private let model: BodyParameter
     var delegate: ProfileViewControllerDelegate?
-    var isChanged = false
+    var isChanged = false 
     
     let title: String
     let units: String
@@ -20,17 +20,17 @@ class BodyParameterViewModel {
     
     var value: Int16 {
         didSet {
-            updateParameterState()
+            updateChanges()
         }
     }
     var isSelected: Bool {
         didSet {
-            updateParameterState()
+            updateChanges()
         }
     }
     var isDisplayed: Bool {
         didSet {
-            updateParameterState()
+            updateChanges()
         }
     }
     var checkboxImageName: String {
@@ -47,7 +47,7 @@ class BodyParameterViewModel {
         isDisplayed = model.isDisplayed
     }
     
-    private func updateParameterState() {
+    private func updateChanges() {
         if value != model.value || isSelected != model.isSelected || isDisplayed != model.isDisplayed {
             isChanged = true
         } else {

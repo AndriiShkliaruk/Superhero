@@ -12,16 +12,14 @@ class ProfileViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var buttonBackgroundView: UIView!
     @IBOutlet private weak var addParametersButton: CustomRoundedButton!
     
+    private var viewModel = ProfileViewModel()
+    var coordinator: MainCoordinator?
+    private lazy var transitionDelegate = DimmTransitionManager()
     private lazy var saveBarButtonItem: UIBarButtonItem = {
         let saveButton = UIBarButtonItem(title: viewModel.saveBarButtonText, style: .plain, target: self, action: #selector(saveBarButtonTapped))
         saveButton.isEnabled = false
         return saveButton
     }()
-    
-    private lazy var transitionDelegate = DimmTransitionManager()
-    
-    var coordinator: MainCoordinator?
-    private var viewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +75,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableHeaderView.identifier) as! ProfileTableHeaderView
         headerView.setupUI(viewModel)
         headerView.delegate = self
+        headerView.imagePicker = ImagePicker(presentationController: self, delegate: headerView)
         return headerView
     }
     

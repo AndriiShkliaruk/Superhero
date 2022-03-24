@@ -17,9 +17,12 @@ class ProfileViewModel {
     let nameTextFieldPlaceholder = "Enter Name"
     let descriptionLabelText = "Select an option to display on the main screen."
     let addParametersButtonText = "Add options"
+    let defaultAvatarName = "camera"
     
-    var profileName: String
-    var newProfileName: String
+    let name: String
+    var newName: String
+    var avatarData: Data?
+    var isAvatarChanged = false
     
     var parameters: [BodyParameter]
     var parametersViewModels = [BodyParameterViewModel]()
@@ -28,8 +31,10 @@ class ProfileViewModel {
     }
     
     init() {
-        profileName = profile?.name ?? ""
-        newProfileName = profileName
+        name = profile?.name ?? ""
+        newName = name
+        avatarData = profile?.avatar
+        
         parameters = BodyParametersStorage.sharedInstance.fetchBodyParameters()
         parametersViewModels = createViewModels(from: parameters)
     }
@@ -51,15 +56,16 @@ class ProfileViewModel {
     }
     
     func stateHasChanges() -> Bool {
-        let isNewNameEmpty = newProfileName.isEmpty
-        let isNameChanged = newProfileName != profileName
+        let isNewNameEmpty = newName.isEmpty
+        let isNameChanged = newName != name
         let isParametersChanged = parametersViewModels.contains(where: { $0.isChanged })
-        return !isNewNameEmpty && (isNameChanged || isParametersChanged)
+        return (!isNewNameEmpty && (isNameChanged || isParametersChanged)) || (isAvatarChanged && !isNewNameEmpty)
 //        return (isNewNameEmpty && isParametersChanged) || ((isNameChanged || isParametersChanged) && !isNewNameEmpty)
     }
     
     func saveUserProfile() {
-        profile?.name = newProfileName
+        profile?.name = newName
+        profile?.avatar = avatarData
         updateParametersFromViewModels()
         profile?.bodyParameters = NSOrderedSet(array: parameters)
         ProfileManager.sharedInstance.saveProfile()
