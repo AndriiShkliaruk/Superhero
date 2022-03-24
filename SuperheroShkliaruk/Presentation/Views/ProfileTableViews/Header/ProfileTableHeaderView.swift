@@ -8,6 +8,8 @@
 import UIKit
 
 class ProfileTableHeaderView: UITableViewHeaderFooterView {
+
+    @IBOutlet private weak var avatarImageButton: UIButton!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var textFieldUnderlineView: UIView!
@@ -19,12 +21,13 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     func setupUI(_ viewModel: ProfileViewModel) {
         profileViewModel = viewModel
         
+        
+        
         nameLabel.textColor = .white
         nameLabel.text = viewModel.nameLabelText
         nameLabel.font = .helveticaNeueRegularWithSize18
         
-        setTextFieldUnderlineColor(.white)
-        
+        textFieldUnderlineView.backgroundColor = .white
         nameTextField.font = .helveticaNeueRegularWithSize18
         nameTextField.tintColor = .white
         nameTextField.configurePlaceholder(withText: viewModel.nameTextFieldPlaceholder, font: .helveticaNeueThinWithSize18, textColor: .customGray)
@@ -36,15 +39,15 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     }
     
     @IBAction private func nameTextFieldEditingDidBegin(_ sender: UITextField) {
-        setTextFieldUnderlineColor(.customYellow)
+        textFieldUnderlineView.backgroundColor = .customDarkYellow
     }
     
     @IBAction private func nameTextFieldEditingDidEnd(_ sender: UITextField) {
-        updateTextFieldUnderlineColor(sender)
+        sender.updateUnderlineColor(underlineView: textFieldUnderlineView)
     }
     
     @IBAction private func nameTextFieldDidEndOnExit(_ sender: UITextField) {
-        updateTextFieldUnderlineColor(sender)
+        sender.updateUnderlineColor(underlineView: textFieldUnderlineView)
         sender.resignFirstResponder()
     }
     
@@ -53,15 +56,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         delegate?.updateSaveButtonState()
     }
     
-    private func updateTextFieldUnderlineColor(_ sender: UITextField) {
-        if !(sender.text?.isEmpty ?? true) {
-            setTextFieldUnderlineColor(.customYellow)
-        } else {
-            setTextFieldUnderlineColor(.white)
-        }
-    }
-    
-    private func setTextFieldUnderlineColor(_ color: UIColor) {
-        textFieldUnderlineView.backgroundColor = color
+    @IBAction private func avatarImageButtonTapped(_ sender: UIButton) {
+        
     }
 }

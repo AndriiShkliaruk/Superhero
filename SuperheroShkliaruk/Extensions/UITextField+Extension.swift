@@ -12,4 +12,12 @@ extension UITextField {
         attributedPlaceholder = NSAttributedString(string: text, attributes: [.font: font,
                                                                               .foregroundColor: textColor])
     }
+    
+    func updateUnderlineColor(underlineView: UIView) {
+        if text != nil && text != "" {
+            underlineView.backgroundColor = .customDarkYellow
+        } else {
+            underlineView.backgroundColor = .white
+        }
+    }
 }

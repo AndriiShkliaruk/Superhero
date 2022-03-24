@@ -24,9 +24,7 @@ class ProfileViewModel {
     var parameters: [BodyParameter]
     var parametersViewModels = [BodyParameterViewModel]()
     var selectedParameters: [BodyParameterViewModel] {
-        get {
-            return parametersViewModels.filter { $0.isSelected }
-        }
+        return parametersViewModels.filter { $0.isSelected }
     }
     
     init() {
@@ -53,10 +51,11 @@ class ProfileViewModel {
     }
     
     func stateHasChanges() -> Bool {
-        let isNameNotEmpty = !newProfileName.isEmpty
+        let isNewNameEmpty = newProfileName.isEmpty
         let isNameChanged = newProfileName != profileName
         let isParametersChanged = parametersViewModels.contains(where: { $0.isChanged })
-        return isNameNotEmpty && (isNameChanged || isParametersChanged)
+        return !isNewNameEmpty && (isNameChanged || isParametersChanged)
+//        return (isNewNameEmpty && isParametersChanged) || ((isNameChanged || isParametersChanged) && !isNewNameEmpty)
     }
     
     func saveUserProfile() {

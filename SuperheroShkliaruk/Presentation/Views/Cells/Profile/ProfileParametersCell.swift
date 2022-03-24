@@ -11,7 +11,7 @@ class ProfileParametersCell: UITableViewCell {
     @IBOutlet private weak var backView: UIView!
     @IBOutlet private weak var bodyPartLabel: UILabel!
     @IBOutlet private weak var valueTextField: UITextField!
-    @IBOutlet private weak var valueType: UILabel!
+    @IBOutlet private weak var unitsLabel: UILabel!
     @IBOutlet private weak var isEnabledSwitch: UISwitch!
     @IBOutlet private weak var underlineView: UIView!
     
@@ -35,11 +35,11 @@ class ProfileParametersCell: UITableViewCell {
         valueTextField.textColor = .customGray
         valueTextField.delegate = self
         
-        valueType.font = .helveticaNeueMediumWithSize18
-        valueType.textColor = .customGray
+        unitsLabel.font = .helveticaNeueMediumWithSize18
+        unitsLabel.textColor = .customGray
         
         isEnabledSwitch.onTintColor = .customYellow
-        underlineView.backgroundColor = .customDarkYellow
+        underlineView.backgroundColor = .white
     }
     
     func configure(with viewModel: BodyParameterViewModel) {
@@ -47,7 +47,7 @@ class ProfileParametersCell: UITableViewCell {
         
         bodyPartLabel.text = viewModel.title
         valueTextField.text = viewModel.value != 0 ? String(viewModel.value) : ""
-        valueType.text = viewModel.valueType
+        unitsLabel.text = viewModel.units
         isEnabledSwitch.isOn = viewModel.isDisplayed
     }
     
@@ -58,6 +58,19 @@ class ProfileParametersCell: UITableViewCell {
     @IBAction private func valueTextFieldEditingChanged(_ sender: UITextField) {
         guard let stringValue = sender.text else { return }
         parameterViewModel?.value = Int16(stringValue) ?? 0
+    }
+    
+    @IBAction private func valueTextFieldEditingDidBegin(_ sender: UITextField) {
+        underlineView.backgroundColor = .customDarkYellow
+    }
+    
+    @IBAction private func valueTextFieldEditingDidEnd(_ sender: UITextField) {
+        sender.updateUnderlineColor(underlineView: underlineView)
+    }
+    
+    @IBAction private func valueTextFieldDidEndOnExit(_ sender: UITextField) {
+        sender.updateUnderlineColor(underlineView: underlineView)
+        sender.resignFirstResponder()
     }
 }
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,21 +26,21 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfp-Ii-B4t" userLabel="Is Enabled Switch">
-                        <rect key="frame" x="281" y="16" width="57" height="27"/>
+                        <rect key="frame" x="287" y="16" width="51" height="27"/>
                         <color key="onTintColor" systemColor="systemYellowColor"/>
                         <connections>
                             <action selector="switchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="QAJ-Ib-Tmj"/>
                         </connections>
                     </switch>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fum-PS-XKu" userLabel="Underline View">
-                        <rect key="frame" x="134" y="42" width="92" height="1"/>
+                        <rect key="frame" x="134" y="42" width="98" height="1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="R6L-0Y-zun"/>
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7m4-Lm-iai" userLabel="TextField Stack View">
-                        <rect key="frame" x="134" y="14.5" width="92" height="22.5"/>
+                        <rect key="frame" x="134" y="14.5" width="98" height="22.5"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="174" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="0aK-at-W6f" userLabel="Value Text Field">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="22.5"/>
@@ -51,19 +51,19 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
+                                    <action selector="valueTextFieldDidEndOnExit:" destination="KGk-i7-Jjw" eventType="editingDidEndOnExit" id="pw6-iY-ZUm"/>
                                     <action selector="valueTextFieldEditingChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="85o-Uf-9Uc"/>
+                                    <action selector="valueTextFieldEditingDidBegin:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="r2S-W3-Cor"/>
+                                    <action selector="valueTextFieldEditingDidEnd:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="YLo-AW-uGa"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-SY-VbJ" userLabel="Value Type">
-                                <rect key="frame" x="66" y="0.5" width="26" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-SY-VbJ" userLabel="Units Label">
+                                <rect key="frame" x="72" y="0.5" width="26" height="21.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="92" id="DoL-R8-Nv7"/>
-                        </constraints>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,8 +86,8 @@
                 <outlet property="bodyPartLabel" destination="pwI-tg-ba0" id="SY4-Pc-Z2A"/>
                 <outlet property="isEnabledSwitch" destination="tfp-Ii-B4t" id="mdf-tn-E0U"/>
                 <outlet property="underlineView" destination="Fum-PS-XKu" id="Pz0-y4-Obg"/>
+                <outlet property="unitsLabel" destination="7EJ-SY-VbJ" id="Owc-SB-ZJb"/>
                 <outlet property="valueTextField" destination="0aK-at-W6f" id="rto-9H-HRx"/>
-                <outlet property="valueType" destination="7EJ-SY-VbJ" id="Owc-SB-ZJb"/>
             </connections>
             <point key="canvasLocation" x="171.73913043478262" y="143.63839285714286"/>
         </tableViewCell>

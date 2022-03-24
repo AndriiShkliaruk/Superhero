@@ -35,7 +35,7 @@ class BodyParametersStorage {
         let parameters: [BodyParameter] = rawParameters.map { parameter in
             let bodyParameter = BodyParameter(entity: entity!, insertInto: context)
             bodyParameter.title = parameter.key
-            bodyParameter.valueType = parameter.value
+            bodyParameter.units = parameter.value
             bodyParameter.value = 0
             bodyParameter.isSelected = false
             bodyParameter.isDisplayed = true

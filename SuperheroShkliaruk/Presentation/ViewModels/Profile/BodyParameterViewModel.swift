@@ -15,7 +15,7 @@ class BodyParameterViewModel {
     var isChanged = false
     
     let title: String
-    let valueType: String
+    let units: String
     var isChecked: Bool
     
     var value: Int16 {
@@ -34,15 +34,13 @@ class BodyParameterViewModel {
         }
     }
     var checkboxImageName: String {
-        get {
-            return isChecked ? checkedImageName : uncheckedImageName
-        }
+        return isChecked ? checkedImageName : uncheckedImageName
     }
     
     init(_ model: BodyParameter) {
         self.model = model
         title = model.title
-        valueType = model.valueType
+        units = model.units
         value = model.value
         isSelected = model.isSelected
         isChecked = model.isSelected
