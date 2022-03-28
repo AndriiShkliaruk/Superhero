@@ -19,27 +19,30 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     var delegate: ProfileViewControllerDelegate?
     var imagePicker: ImagePicker?
     
-    func setupUI(_ viewModel: ProfileViewModel) {
-        profileViewModel = viewModel
-        
-        setupAvatarImage()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupUI()
+    }
+    
+    private func setupUI() {
         nameLabel.textColor = .white
-        nameLabel.text = viewModel.nameLabelText
         nameLabel.font = .helveticaNeueRegularWithSize18
-        
         textFieldUnderlineView.backgroundColor = .white
         nameTextField.font = .helveticaNeueRegularWithSize18
         nameTextField.tintColor = .white
-        nameTextField.configurePlaceholder(withText: viewModel.nameTextFieldPlaceholder, font: .helveticaNeueThinWithSize18, textColor: .customGray)
         nameTextField.autocapitalizationType = .sentences
-        
-        if !viewModel.name.isEmpty {
-            nameTextField.text = viewModel.name
-        }
+    }
+    
+    func configure(with viewModel: ProfileViewModel) {
+        profileViewModel = viewModel
+        setupAvatarImage()
+        nameLabel.text = viewModel.nameLabelText  
+        nameTextField.configurePlaceholder(withText: viewModel.nameTextFieldPlaceholder, font: .helveticaNeueThinWithSize18, textColor: .customGray)
+        nameTextField.text = viewModel.userProfile.name
     }
     
     private func setupAvatarImage() {
-        if let imageData = profileViewModel?.avatarData {
+        if let imageData = profileViewModel?.userProfile.avatar {
             avatarImageButton.setImage(UIImage(data: imageData), for: .normal)
             setAvatarImageBorder()
         } else if let defaultImageName = profileViewModel?.defaultAvatarName {
@@ -68,7 +71,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     }
     
     @IBAction private func nameTextFieldEditingChanged(_ sender: UITextField) {
-        profileViewModel?.newName = sender.text ?? ""
+        profileViewModel?.userProfile.name = sender.text ?? ""
         delegate?.updateSaveButtonState()
     }
     
@@ -81,11 +84,10 @@ extension ProfileTableHeaderView: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
         guard let avatarImage = image else { return }
         avatarImageButton.setImage(avatarImage, for: .normal)
-        if profileViewModel?.avatarData == nil {
+        if profileViewModel?.userProfile.avatar == nil {
             setAvatarImageBorder()
         }
-        profileViewModel?.avatarData = avatarImage.pngData()
-        profileViewModel?.isAvatarChanged = true
+        profileViewModel?.userProfile.avatar = avatarImage.pngData()
         delegate?.updateSaveButtonState()
     }
 }

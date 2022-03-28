@@ -11,6 +11,7 @@ class HomeViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var characterLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var parametersCollectionView: UICollectionView!
     @IBOutlet private weak var menuTableView: UITableView!
     
     let viewModel = HomeViewModel()
@@ -18,6 +19,9 @@ class HomeViewController: BaseViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        parametersCollectionView.delegate = self
+        parametersCollectionView.dataSource = self
+        parametersCollectionView.register(UINib(nibName: HomeParametersCell.identifier, bundle: nil), forCellWithReuseIdentifier: HomeParametersCell.identifier)
         
         menuTableView.delegate = self
         menuTableView.dataSource = self
@@ -31,6 +35,9 @@ class HomeViewController: BaseViewController, Storyboarded {
         coordinator?.navigationController.setNavigationBarHidden(true, animated: animated)
         updateNameLabelText()
         updateAvatarImageView()
+        
+        viewModel.updateParametersViewModels()
+        updateParametersCollectionView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,6 +57,7 @@ class HomeViewController: BaseViewController, Storyboarded {
         avatarImageView.layer.borderWidth = 1
         avatarImageView.layer.borderColor = UIColor.customDarkYellow.cgColor
         
+        parametersCollectionView.backgroundColor = .clear
         menuTableView.backgroundColor = .clear
     }
     
@@ -70,14 +78,18 @@ class HomeViewController: BaseViewController, Storyboarded {
             avatarImageView.isHidden = true
         }
     }
-}
-
-extension HomeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        viewModel.pushToViewController(at: indexPath, with: coordinator)
+    
+    private func updateParametersCollectionView() {
+        //if !viewModel.parametersViewModels.isEmpty {
+            parametersCollectionView.reloadData()
+            parametersCollectionView.isHidden = false
+//        } else {
+//            parametersCollectionView.isHidden = true
+//        }
     }
 }
+
+//MARK: - Menu Table View
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,5 +101,38 @@ extension HomeViewController: UITableViewDataSource {
         cell.configure(with: viewModel.tableItems[indexPath.row])
         
         return cell
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        viewModel.pushToViewController(at: indexPath, with: coordinator)
+    }
+}
+
+//MARK: - Parameters Collection View
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.parametersViewModels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = parametersCollectionView.dequeueReusableCell(withReuseIdentifier: HomeParametersCell.identifier, for: indexPath) as? HomeParametersCell else { return UICollectionViewCell() }
+        cell.configure(with: viewModel.parametersViewModels[indexPath.row])
+        return cell
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let cell: HomeParametersCell = Bundle.main.loadNibNamed(HomeParametersCell.identifier, owner: self)?.first as? HomeParametersCell else {
+            return CGSize.zero
+        }
+        
+        cell.configure(with: viewModel.parametersViewModels[indexPath.row])
+        let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        return CGSize(width: size.width, height: 84)
     }
 }

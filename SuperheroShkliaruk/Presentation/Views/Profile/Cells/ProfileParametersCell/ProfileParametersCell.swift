@@ -16,7 +16,8 @@ class ProfileParametersCell: UITableViewCell {
     @IBOutlet private weak var underlineView: UIView!
     
     static let identifier = "ProfileParametersCell"
-    private var parameterViewModel: BodyParameterViewModel?
+    private var parameterViewModel: ParameterViewModel?
+    var delegate: ProfileViewControllerDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,22 +43,24 @@ class ProfileParametersCell: UITableViewCell {
         underlineView.backgroundColor = .white
     }
     
-    func configure(with viewModel: BodyParameterViewModel) {
+    func configure(with viewModel: ParameterViewModel) {
         parameterViewModel = viewModel
         
         bodyPartLabel.text = viewModel.title
-        valueTextField.text = viewModel.value != 0 ? String(viewModel.value) : ""
+        valueTextField.text = viewModel.changedValueString
         unitsLabel.text = viewModel.units
         isEnabledSwitch.isOn = viewModel.isDisplayed
     }
     
     @IBAction private func switchValueChanged(_ sender: UISwitch) {
         parameterViewModel?.isDisplayed = sender.isOn
+        delegate?.updateSaveButtonState()
     }
     
     @IBAction private func valueTextFieldEditingChanged(_ sender: UITextField) {
         guard let stringValue = sender.text else { return }
-        parameterViewModel?.value = Int16(stringValue) ?? 0
+        parameterViewModel?.changedValueString = stringValue
+        delegate?.updateSaveButtonState()
     }
     
     @IBAction private func valueTextFieldEditingDidBegin(_ sender: UITextField) {

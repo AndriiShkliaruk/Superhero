@@ -12,9 +12,18 @@ class ProfileTableFooterView: UITableViewHeaderFooterView {
     
     static let identifier = "ProfileTableFooterView"
     
-    func setupUI(_ viewModel: ProfileViewModel) {
-        descriptionLabel.text = viewModel.descriptionLabelText
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupUI()
+    }
+    
+    private func setupUI() {
         descriptionLabel.font = .sairaLightWithSize16
         descriptionLabel.textColor = .customGray
+    }
+    
+    func configure(with viewModel: ProfileViewModel) {
+        descriptionLabel.text = viewModel.descriptionLabelText
+        
     }
 }

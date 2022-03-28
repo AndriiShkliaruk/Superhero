@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: BaseViewController, Storyboarded {
+final class ProfileViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var buttonBackgroundView: UIView!
     @IBOutlet private weak var addParametersButton: CustomRoundedButton!
@@ -23,7 +23,6 @@ class ProfileViewController: BaseViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTableView()
         setupUI()
         setupNavigationBar()
@@ -42,7 +41,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
     private func setupUI() {
         title = viewModel.navigationBarTitleText
         buttonBackgroundView.applyBlackTopGradient()
-        addParametersButton.setTitle(viewModel.addParametersButtonText.capitalized, for: .normal)
+        addParametersButton.setTitle(viewModel.addParametersButtonText, for: .normal)
         addParametersButton.backgroundColor = .customYellow
         addParametersButton.titleLabel?.font = .sairaRegularWithSize16
     }
@@ -73,21 +72,21 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK: - Table View Header Setup
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableHeaderView.identifier) as! ProfileTableHeaderView
-        headerView.setupUI(viewModel)
+        headerView.configure(with: viewModel)
         headerView.delegate = self
         headerView.imagePicker = ImagePicker(presentationController: self, delegate: headerView)
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 293
+        return 295
     }
     
     
     //MARK: - Table View Footer Setup
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableFooterView.identifier) as! ProfileTableFooterView
-        footerView.setupUI(viewModel)
+        footerView.configure(with: viewModel)
         return footerView
     }
     
@@ -102,8 +101,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileParametersCell.identifier, for: indexPath) as? ProfileParametersCell else { return UITableViewCell() }
         let parameterViewModel = viewModel.selectedParameters[indexPath.row]
-        parameterViewModel.delegate = self
         cell.configure(with: parameterViewModel)
+        cell.delegate = self
         return cell
     }
     
@@ -112,6 +111,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         let parameter = viewModel.selectedParameters[indexPath.row]
         viewModel.deleteDisplayedParameter(parameter)
         tableView.deleteRows(at: [indexPath], with: .fade)
+        updateSaveButtonState()
     }
 }
 
@@ -131,5 +131,6 @@ extension ProfileViewController: BodyParametersDelegate {
         viewModel.updateParametersStates()
         coordinator?.dismiss(animated: true)
         tableView.reloadData()
+        updateSaveButtonState()
     }
 }

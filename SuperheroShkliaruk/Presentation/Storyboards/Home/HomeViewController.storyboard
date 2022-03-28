@@ -51,6 +51,20 @@
                                                     <constraint firstAttribute="width" constant="51" id="sJL-KK-Fwi"/>
                                                 </constraints>
                                             </imageView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xRa-WG-Sa0" userLabel="Parameters Collection View">
+                                                <rect key="frame" x="0.0" y="186.33333333333334" width="390" height="84.000000000000028"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="84" id="aCC-We-3MV"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GFA-QZ-hW4">
+                                                    <size key="itemSize" width="0.0" height="84"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="43" minY="0.0" maxX="43" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZKF-EV-2OS">
                                                 <rect key="frame" x="43" y="362" width="304" height="290"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,14 +76,17 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="ZdO-5O-kwF" firstAttribute="centerX" secondItem="FQN-uo-iZM" secondAttribute="centerX" id="0ot-H5-450"/>
+                                            <constraint firstItem="xRa-WG-Sa0" firstAttribute="leading" secondItem="FQN-uo-iZM" secondAttribute="leading" id="A0q-mC-100"/>
                                             <constraint firstItem="0F6-tf-JDX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZdO-5O-kwF" secondAttribute="trailing" constant="5" id="L2O-Yz-iC9"/>
                                             <constraint firstItem="ZKF-EV-2OS" firstAttribute="leading" secondItem="FQN-uo-iZM" secondAttribute="leading" constant="43" id="LOP-rA-X8M"/>
                                             <constraint firstAttribute="trailing" secondItem="0F6-tf-JDX" secondAttribute="trailing" constant="35" id="LpK-Xx-hzn"/>
+                                            <constraint firstItem="xRa-WG-Sa0" firstAttribute="top" secondItem="ZdO-5O-kwF" secondAttribute="bottom" constant="91" id="Lql-xh-ZZ2"/>
                                             <constraint firstItem="0F6-tf-JDX" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="38" id="YFk-UW-HFe"/>
                                             <constraint firstItem="ZKF-EV-2OS" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="362" id="Zcc-eE-Q3v"/>
                                             <constraint firstAttribute="trailing" secondItem="ZKF-EV-2OS" secondAttribute="trailing" constant="43" id="Ziw-Pe-MYs"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZKF-EV-2OS" secondAttribute="bottom" id="b4W-z7-XVl"/>
                                             <constraint firstItem="ZdO-5O-kwF" firstAttribute="top" secondItem="FQN-uo-iZM" secondAttribute="top" constant="32" id="eez-Ox-QJf"/>
+                                            <constraint firstAttribute="trailing" secondItem="xRa-WG-Sa0" secondAttribute="trailing" id="vjd-ng-BIB"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -97,6 +114,7 @@
                         <outlet property="characterLabel" destination="BZG-Jd-8Ny" id="eux-fP-BsI"/>
                         <outlet property="menuTableView" destination="ZKF-EV-2OS" id="KYY-w0-TuI"/>
                         <outlet property="nameLabel" destination="MXE-E8-GnC" id="pTz-D0-09w"/>
+                        <outlet property="parametersCollectionView" destination="xRa-WG-Sa0" id="b78-OB-7jQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

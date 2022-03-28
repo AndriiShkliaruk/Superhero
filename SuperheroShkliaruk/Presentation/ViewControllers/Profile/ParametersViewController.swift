@@ -1,5 +1,5 @@
 //
-//  BodyParametersViewController.swift
+//  ParametersViewController.swift
 //  SuperheroShkliaruk
 //
 //  Created by Andrii Shkliaruk on 21.03.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BodyParametersViewController: UIViewController, Storyboarded {
+class ParametersViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var innerView: UIView!
     @IBOutlet private weak var topLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
@@ -33,7 +33,19 @@ class BodyParametersViewController: UIViewController, Storyboarded {
         tableView.backgroundColor = .black
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: BodyParameterListCell.identifier, bundle: nil), forCellReuseIdentifier: BodyParameterListCell.identifier)
+        tableView.register(UINib(nibName: ProfileParametersListCell.identifier, bundle: nil), forCellReuseIdentifier: ProfileParametersListCell.identifier)
+        
+        topLabel.font = .sairaMediumWithSize18
+        topLabel.textColor = .customDarkYellow
+        topLabel.text = viewModel?.topLabelText
+        
+        cancelButton.titleLabel?.font = .sairaRegularWithSize18
+        cancelButton.titleLabel?.textColor = .white
+        cancelButton.setTitle(viewModel?.cancelButtonText, for: .normal)
+        
+        selectButton.titleLabel?.font = .sairaRegularWithSize18
+        selectButton.titleLabel?.textColor = .customDarkYellow
+        selectButton.setTitle(viewModel?.selectButtonText, for: .normal)
     }
     
 
@@ -46,21 +58,21 @@ class BodyParametersViewController: UIViewController, Storyboarded {
     }
 }
 
-extension BodyParametersViewController: UITableViewDelegate, UITableViewDataSource {
+extension ParametersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: BodyParameterListCell.identifier, for: indexPath) as? BodyParameterListCell else { return UITableViewCell() }
-        if let parametersList = viewModel?.parametersViewModels {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileParametersListCell.identifier, for: indexPath) as? ProfileParametersListCell else { return UITableViewCell() }
+        if let parametersList = viewModel?.userProfile.parameters {
             cell.configure(with: parametersList[indexPath.row])
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.parametersViewModels.count ?? 0
+        return viewModel?.userProfile.parameters.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.parametersViewModels[indexPath.row].toggleCheckbox()
-        tableView.reloadData()
+        viewModel?.userProfile.parameters[indexPath.row].toggleCheckbox()
+        tableView.reloadRows(at: [indexPath], with: .none)
     }
 }

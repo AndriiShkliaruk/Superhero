@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Semibold.ttf">
+            <string>Gilroy-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeParametersCell" customModule="SuperheroShkliaruk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="108" height="84"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="108" height="84"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aku-8S-ttL" userLabel="Title Label">
+                        <rect key="frame" x="11" y="13" width="51" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="174" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnm-s9-Y36" userLabel="Value Label">
+                        <rect key="frame" x="11" y="50" width="41" height="29"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                        <color key="textColor" systemColor="systemYellowColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEC-dg-EXa" userLabel="Difference View">
+                        <rect key="frame" x="70" y="8" width="28" height="28"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfw-M4-UJj" userLabel="Difference Label">
+                                <rect key="frame" x="7" y="8" width="14" height="12"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Semibold" family="Gilroy" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="Bfw-M4-UJj" firstAttribute="centerY" secondItem="tEC-dg-EXa" secondAttribute="centerY" id="TZJ-F5-Gmj"/>
+                            <constraint firstItem="Bfw-M4-UJj" firstAttribute="centerX" secondItem="tEC-dg-EXa" secondAttribute="centerX" id="et2-1t-E3O"/>
+                            <constraint firstAttribute="height" constant="28" id="fdS-Nf-W28"/>
+                            <constraint firstAttribute="width" constant="28" id="slQ-Cy-fhE"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRa-iw-iqy" userLabel="Units Label">
+                        <rect key="frame" x="74" y="58.5" width="23" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="aku-8S-ttL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="11" id="6rs-va-ZpM"/>
+                <constraint firstAttribute="trailing" secondItem="XRa-iw-iqy" secondAttribute="trailing" constant="11" id="Dwd-Jr-NpL"/>
+                <constraint firstAttribute="bottom" secondItem="qnm-s9-Y36" secondAttribute="bottom" constant="5" id="NCh-nI-SKx"/>
+                <constraint firstAttribute="trailing" secondItem="tEC-dg-EXa" secondAttribute="trailing" constant="10" id="TRF-fJ-Hmx"/>
+                <constraint firstItem="aku-8S-ttL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="13" id="YEc-iJ-Cvv"/>
+                <constraint firstItem="tEC-dg-EXa" firstAttribute="leading" secondItem="aku-8S-ttL" secondAttribute="trailing" constant="8" id="aG3-97-xa5"/>
+                <constraint firstItem="tEC-dg-EXa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="diV-pZ-F2W"/>
+                <constraint firstItem="XRa-iw-iqy" firstAttribute="firstBaseline" secondItem="qnm-s9-Y36" secondAttribute="firstBaseline" id="qTL-Zn-j4e"/>
+                <constraint firstItem="qnm-s9-Y36" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="11" id="sqt-Pg-mC4"/>
+            </constraints>
+            <size key="customSize" width="108" height="84"/>
+            <connections>
+                <outlet property="differenceLabel" destination="Bfw-M4-UJj" id="Dua-1W-Dbz"/>
+                <outlet property="differenceView" destination="tEC-dg-EXa" id="ruE-Ak-vdU"/>
+                <outlet property="titleLabel" destination="aku-8S-ttL" id="nVG-6F-r7L"/>
+                <outlet property="unitsLabel" destination="XRa-iw-iqy" id="XnH-7H-n68"/>
+                <outlet property="valueLabel" destination="qnm-s9-Y36" id="xey-zp-zzI"/>
+            </connections>
+            <point key="canvasLocation" x="179.71014492753625" y="121.20535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -39,6 +39,10 @@ extension UIFont {
         return customFont(name: "Saira-Light", size: 16)
     }
     
+    public class var helveticaNeueRegularWithSize16: UIFont {
+        return customFont(name: "HelveticaNeue", size: 16)
+    }
+    
     public class var helveticaNeueRegularWithSize18: UIFont {
         return customFont(name: "HelveticaNeue", size: 18)
     }
@@ -53,5 +57,13 @@ extension UIFont {
     
     public class var helveticaNeueMediumWithSize18: UIFont {
         return customFont(name: "HelveticaNeue-Medium", size: 18)
+    }
+    
+    public class var helveticaNeueBoldWithSize24: UIFont {
+        return customFont(name: "HelveticaNeue-Bold", size: 24)
+    }
+    
+    public class var gilroySemiboldWithSize12: UIFont {
+        return customFont(name: "Gilroy-Semibold", size: 12)
     }
 }

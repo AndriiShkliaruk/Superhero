@@ -7,14 +7,15 @@
 
 import Foundation
 
-struct HomeViewModel {
-    private let profile = ProfileManager.sharedInstance.userProfile
-    private let maleImageName = "home-male"
-    private let maleLabelText = "Superman"
-    private let femaleImageName = "home-female"
-    private let femaleLabelText = "Supergirl"
+class HomeViewModel {
+    private let coreDataProfile = ProfileManager.sharedInstance.userProfile
+    private let parametersInstance = BodyParametersStorage.sharedInstance
     
-    enum ViewControllerIDs: String, CaseIterable {
+    private enum CharacterLabelText: String {
+        case superman, supergirl
+    }
+    
+    private enum ViewControllerIDs: String, CaseIterable {
         case profile = "ProfileViewController"
         case progress = "ProgressViewController"
         case programs = "ProgramsViewController"
@@ -23,29 +24,31 @@ struct HomeViewModel {
     }
     
     let tableItems = ["Profile", "Progress", "Programs", "Calculator", "Muscles"]
-    
-    let characterImageName: String
     let characterLabel: String
     var name: String {
-        return profile?.name ?? ""
+        coreDataProfile?.name ?? ""
     }
     var avatarImageData: Data? {
-        return profile?.avatar
+        coreDataProfile?.avatar
     }
+    var parametersViewModels = [ParameterViewModel]()
     
     init() {
-        guard let sex = profile?.getSex() else {
+        guard let sex = coreDataProfile?.getSex() else {
             fatalError("Profile does not exist")
         }
-
         switch sex {
         case .male:
-            characterImageName = maleImageName
-            characterLabel = maleLabelText
+            characterLabel = CharacterLabelText.superman.rawValue.capitalized
         case .female:
-            characterImageName = femaleImageName
-            characterLabel = femaleLabelText
+            characterLabel = CharacterLabelText.supergirl.rawValue.capitalized
         }
+    }
+    
+    func updateParametersViewModels() {
+        let coreDataParameters = parametersInstance.fetchBodyParameters()
+        parametersViewModels = coreDataParameters.filter { $0.isDisplayed }
+            .map { ParameterViewModel($0) }
     }
     
     func pushToViewController(at indexPath: IndexPath, with coordinator: MainCoordinator?) {

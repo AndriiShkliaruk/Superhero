@@ -44,6 +44,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="174" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="0aK-at-W6f" userLabel="Value Text Field">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="22.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="52a-Ny-zKJ"/>
                                 </constraints>

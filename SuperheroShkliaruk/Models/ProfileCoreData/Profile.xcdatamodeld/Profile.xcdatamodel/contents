@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BodyParameter" representedClassName="BodyParameter" syncable="YES">
+        <attribute name="changedValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isDisplayed" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isSelected" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String"/>
         <attribute name="units" attributeType="String"/>
-        <attribute name="value" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="profile" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="bodyParameters" inverseEntity="Profile"/>
+        <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="bodyParameters" inverseEntity="Profile"/>
     </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
         <attribute name="avatar" optional="YES" attributeType="Binary" customClassName="UIImage"/>
@@ -15,7 +16,7 @@
         <relationship name="bodyParameters" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="BodyParameter" inverseName="profile" inverseEntity="BodyParameter"/>
     </entity>
     <elements>
-        <element name="BodyParameter" positionX="353.08984375" positionY="-308.16015625" width="128" height="119"/>
+        <element name="BodyParameter" positionX="353.08984375" positionY="-308.16015625" width="128" height="134"/>
         <element name="Profile" positionX="-123.2578125" positionY="-326.6875" width="128" height="89"/>
     </elements>
 </model>

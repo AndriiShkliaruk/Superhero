@@ -22,10 +22,10 @@ class MenuTableViewCell: UITableViewCell {
         backgroundColor = .clear
         underlineView.backgroundColor = .white
         titleLabel.textColor = .white
+        titleLabel.font = .helveticaNeueRegularWithSize18
     }
     
     func configure(with text: String) {
         titleLabel.text = text
-        titleLabel.font = .helveticaNeueRegularWithSize18
     }
 }

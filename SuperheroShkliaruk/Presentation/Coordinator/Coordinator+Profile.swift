@@ -14,8 +14,8 @@ extension MainCoordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func presentBodyParameters(configuration: (BodyParametersViewController) -> Void) {
-        let viewController = BodyParametersViewController.instantiate()
+    func presentBodyParameters(configuration: (ParametersViewController) -> Void) {
+        let viewController = ParametersViewController.instantiate()
         configuration(viewController)
         navigationController.present(viewController, animated: true)
     }

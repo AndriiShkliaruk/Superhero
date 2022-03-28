@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Saira-Regular.ttf">
+            <string>Saira-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -28,11 +33,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="e8X-64-f4k"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="16"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Add Parameters"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Add Parameters">
-                                            <fontDescription key="titleFontDescription" name="Saira-Regular" family="Saira" pointSize="16"/>
-                                        </buttonConfiguration>
+                                        <state key="normal" title="Add Parameters">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="addParametersButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tm1-ag-MAH"/>
                                         </connections>
@@ -70,6 +75,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

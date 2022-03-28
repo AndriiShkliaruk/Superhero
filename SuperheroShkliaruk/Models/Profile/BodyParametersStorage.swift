@@ -9,25 +9,26 @@ import Foundation
 import CoreData
 import OrderedCollections
 
-class BodyParametersStorage {
+final class BodyParametersStorage {
     static let sharedInstance = BodyParametersStorage()
     private let profileManager = ProfileManager.sharedInstance
     
-    private let rawParameters: OrderedDictionary = ["Height": "cm",
-                                 "Weight": "kg",
-                                 "Neck": "cm",
-                                 "Shoulders": "cm",
-                                 "Left biceps": "cm",
-                                 "Right biceps": "cm",
-                                 "Left thigh": "cm",
-                                 "Right thigh": "cm",
-                                 "Left forearm": "cm",
-                                 "Right forearm": "cm",
-                                 "Chest": "cm",
-                                 "Left lower leg": "cm",
-                                 "Right lower leg": "cm",
-                                 "Left ankle": "cm",
-                                 "Right ankle": "cm"]
+    private let rawParameters: OrderedDictionary =
+    ["Height": "cm",
+     "Weight": "kg",
+     "Neck": "cm",
+     "Shoulders": "cm",
+     "Left biceps": "cm",
+     "Right biceps": "cm",
+     "Left thigh": "cm",
+     "Right thigh": "cm",
+     "Left forearm": "cm",
+     "Right forearm": "cm",
+     "Chest": "cm",
+     "Left lower leg": "cm",
+     "Right lower leg": "cm",
+     "Left ankle": "cm",
+     "Right ankle": "cm"]
     
     private func createDefaultBodyParameters() -> [BodyParameter] {
         let context = ProfileManager.sharedInstance.mainContext
@@ -38,8 +39,9 @@ class BodyParametersStorage {
             bodyParameter.title = parameter.key
             bodyParameter.units = parameter.value
             bodyParameter.value = 0
+            bodyParameter.changedValue = 0
             bodyParameter.isSelected = false
-            bodyParameter.isDisplayed = true
+            bodyParameter.isDisplayed = false
             return bodyParameter
         }
         

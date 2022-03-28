@@ -9,8 +9,10 @@ import Foundation
 
 struct BaseViewModel {
     private let profile = ProfileManager.sharedInstance.userProfile
-    private let maleImageName = "home-male"
-    private let femaleImageName = "home-female"
+    private enum CharacterImageName: String {
+        case male = "base-male"
+        case female = "base-female"
+    }
     
     let characterImageName: String
     
@@ -18,12 +20,12 @@ struct BaseViewModel {
         if let sex = profile?.getSex() {
             switch sex {
             case .male:
-                characterImageName = maleImageName
+                characterImageName = CharacterImageName.male.rawValue
             case .female:
-                characterImageName = femaleImageName
+                characterImageName = CharacterImageName.female.rawValue
             }
         } else {
-            characterImageName = maleImageName
+            characterImageName = CharacterImageName.male.rawValue
         }
     }
 }

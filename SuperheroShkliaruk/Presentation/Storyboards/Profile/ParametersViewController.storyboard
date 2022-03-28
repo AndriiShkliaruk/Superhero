@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,46 +10,49 @@
         <array key="Saira-Medium.ttf">
             <string>Saira-Medium</string>
         </array>
+        <array key="Saira-Regular.ttf">
+            <string>Saira-Regular</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--Body Parameters View Controller-->
+        <!--Parameters View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="BodyParametersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="BodyParametersViewController" customModule="SuperheroShkliaruk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParametersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ParametersViewController" customModule="SuperheroShkliaruk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ael-UK-vH7" userLabel="Inner View">
-                                <rect key="frame" x="44" y="122" width="326" height="662"/>
+                                <rect key="frame" x="24" y="78" width="366" height="740"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGz-UX-yZb" userLabel="Top Label">
-                                        <rect key="frame" x="140.5" y="20" width="45.5" height="28.5"/>
+                                        <rect key="frame" x="160.5" y="20" width="45.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Saira-Medium" family="Saira" pointSize="18"/>
                                         <color key="textColor" systemColor="systemYellowColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="reb-Bi-wS2">
-                                        <rect key="frame" x="44" y="611.5" width="238" height="42.5"/>
+                                        <rect key="frame" x="44" y="689" width="278" height="41"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUo-Df-7L2">
-                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="42.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Cancel">
-                                                    <fontDescription key="titleFontDescription" name="Saira-Regular" family="Saira" pointSize="18"/>
-                                                    <color key="baseForegroundColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                </buttonConfiguration>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUo-Df-7L2">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="41"/>
+                                                <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="18"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="cancelButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZEr-Xz-QJk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol4-2E-WbE">
-                                                <rect key="frame" x="163" y="0.0" width="75" height="42.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Select">
-                                                    <fontDescription key="titleFontDescription" name="Saira-Regular" family="Saira" pointSize="18"/>
-                                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                                </buttonConfiguration>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol4-2E-WbE">
+                                                <rect key="frame" x="227" y="0.0" width="51" height="41"/>
+                                                <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="18"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Select">
+                                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="selectButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NNI-cC-TR7"/>
                                                 </connections>
@@ -57,30 +60,30 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hop-Wk-nHe">
-                                        <rect key="frame" x="0.0" y="63.5" width="326" height="523"/>
+                                        <rect key="frame" x="0.0" y="63.5" width="366" height="615.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="reb-Bi-wS2" secondAttribute="bottom" constant="8" id="0fg-We-hja"/>
+                                    <constraint firstAttribute="bottom" secondItem="reb-Bi-wS2" secondAttribute="bottom" constant="10" id="0fg-We-hja"/>
                                     <constraint firstItem="KGz-UX-yZb" firstAttribute="centerX" secondItem="ael-UK-vH7" secondAttribute="centerX" id="N0z-9j-w4t"/>
                                     <constraint firstItem="KGz-UX-yZb" firstAttribute="top" secondItem="ael-UK-vH7" secondAttribute="top" constant="20" id="PNT-KB-D2c"/>
                                     <constraint firstItem="reb-Bi-wS2" firstAttribute="leading" secondItem="ael-UK-vH7" secondAttribute="leading" constant="44" id="hhB-BU-y2E"/>
                                     <constraint firstItem="Hop-Wk-nHe" firstAttribute="top" secondItem="KGz-UX-yZb" secondAttribute="bottom" constant="15" id="jUF-K5-nzg"/>
                                     <constraint firstAttribute="trailing" secondItem="Hop-Wk-nHe" secondAttribute="trailing" id="vi7-qX-Sdc"/>
                                     <constraint firstItem="Hop-Wk-nHe" firstAttribute="leading" secondItem="ael-UK-vH7" secondAttribute="leading" id="wL1-Ry-86y"/>
-                                    <constraint firstItem="reb-Bi-wS2" firstAttribute="top" secondItem="Hop-Wk-nHe" secondAttribute="bottom" constant="25" id="xaW-hd-jys"/>
+                                    <constraint firstItem="reb-Bi-wS2" firstAttribute="top" secondItem="Hop-Wk-nHe" secondAttribute="bottom" constant="10" id="xaW-hd-jys"/>
                                     <constraint firstAttribute="trailing" secondItem="reb-Bi-wS2" secondAttribute="trailing" constant="44" id="yEW-v0-i7I"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ael-UK-vH7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="78" id="Ug2-Wa-4Hh"/>
-                            <constraint firstItem="ael-UK-vH7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="24" id="bKw-Cd-10H"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ael-UK-vH7" secondAttribute="bottom" constant="78" id="beR-5Z-6Kx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ael-UK-vH7" secondAttribute="trailing" constant="24" id="sqp-44-Ltd"/>
+                            <constraint firstItem="ael-UK-vH7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="78" id="2Qx-Bh-y4X"/>
+                            <constraint firstAttribute="trailing" secondItem="ael-UK-vH7" secondAttribute="trailing" constant="24" id="3eP-Aa-8pj"/>
+                            <constraint firstItem="ael-UK-vH7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="24" id="4eh-u1-Sid"/>
+                            <constraint firstAttribute="bottom" secondItem="ael-UK-vH7" secondAttribute="bottom" constant="78" id="LSE-CT-p6y"/>
                         </constraints>
                     </view>
                     <connections>

@@ -8,46 +8,49 @@
 import Foundation
 import CoreData
 
-class ProfileViewModel {
-    private let profile = ProfileManager.sharedInstance.userProfile
+final class ProfileViewModel {
+    private let coreDataProfile = ProfileManager.sharedInstance.userProfile
     
+    //MARK: - ProfileViewController constants
     let navigationBarTitleText = "Profile"
     let saveBarButtonText = "Save"
     let nameLabelText = "Name"
     let nameTextFieldPlaceholder = "Enter Name"
     let descriptionLabelText = "Select an option to display on the main screen."
-    let addParametersButtonText = "Add options"
+    let addParametersButtonText = "Add Options"
     let defaultAvatarName = "camera"
     
-    let name: String
-    var newName: String
-    var avatarData: Data?
-    var isAvatarChanged = false
+    //MARK: - ParametersViewController constants
+    let topLabelText = "Select Option"
+    let cancelButtonText = "Cancel"
+    let selectButtonText = "Select"
     
-    var parameters: [BodyParameter]
-    var parametersViewModels = [BodyParameterViewModel]()
-    var selectedParameters: [BodyParameterViewModel] {
-        return parametersViewModels.filter { $0.isSelected }
+    private let initialUserProfile: UserProfileViewModel
+    private var initialParameters: [BodyParameter]
+    
+    var userProfile: UserProfileViewModel
+    var selectedParameters: [ParameterViewModel] {
+        userProfile.parameters.filter { $0.isSelected }
     }
     
     init() {
-        name = profile?.name ?? ""
-        newName = name
-        avatarData = profile?.avatar
-        
-        parameters = BodyParametersStorage.sharedInstance.fetchBodyParameters()
-        parametersViewModels = createViewModels(from: parameters)
+        guard let profile = coreDataProfile else {
+            fatalError("Profile does not exist")
+        }
+        initialParameters = BodyParametersStorage.sharedInstance.fetchBodyParameters()
+        let initialParametersViewModels = initialParameters.map { ParameterViewModel($0) }
+        let parametersViewModels = initialParameters.map { ParameterViewModel($0) }
+        initialUserProfile = UserProfileViewModel(profile, initialParametersViewModels)
+        userProfile = UserProfileViewModel(profile, parametersViewModels)
     }
     
-    private func createViewModels(from bodyParameters: [BodyParameter]) -> [BodyParameterViewModel] {
-        let viewModels = bodyParameters.map { BodyParameterViewModel($0) }
-        return viewModels
-    }
-    
-    private func updateParametersFromViewModels() {
-        parameters = parameters.map { parameter in
-            if let viewModel = parametersViewModels.first(where: { $0.title == parameter.title }) {
-                parameter.value = viewModel.value
+    private func updateInitialParameters(from viewModels: [ParameterViewModel]) {
+        initialParameters = initialParameters.map { parameter in
+            if let viewModel = viewModels.first(where: { $0.title == parameter.title }) {
+                if parameter.value == 0 {
+                    parameter.value = viewModel.changedValue
+                }
+                parameter.changedValue = viewModel.changedValue
                 parameter.isSelected = viewModel.isSelected
                 parameter.isDisplayed = viewModel.isDisplayed
             }
@@ -55,31 +58,33 @@ class ProfileViewModel {
         }
     }
     
+    private func isValidValues(in parameters: [ParameterViewModel]) -> Bool {
+        return !parameters.contains(where: { $0.isSelected && $0.changedValue == 0 })
+    }
+    
     func stateHasChanges() -> Bool {
-        let isNewNameEmpty = newName.isEmpty
-        let isNameChanged = newName != name
-        let isParametersChanged = parametersViewModels.contains(where: { $0.isChanged })
-        return (!isNewNameEmpty && (isNameChanged || isParametersChanged)) || (isAvatarChanged && !isNewNameEmpty)
-//        return (isNewNameEmpty && isParametersChanged) || ((isNameChanged || isParametersChanged) && !isNewNameEmpty)
+        guard isValidValues(in: userProfile.parameters) else { return false }
+        return initialUserProfile != userProfile
     }
     
     func saveUserProfile() {
-        profile?.name = newName
-        profile?.avatar = avatarData
-        updateParametersFromViewModels()
-        profile?.bodyParameters = NSOrderedSet(array: parameters)
+        coreDataProfile?.name = userProfile.name
+        coreDataProfile?.avatar = userProfile.avatar
+        
+        updateInitialParameters(from: userProfile.parameters)
+        coreDataProfile?.bodyParameters = NSOrderedSet(array: initialParameters)
         ProfileManager.sharedInstance.saveProfile()
     }
     
     func updateParametersStates() {
-        parametersViewModels.forEach { $0.updateState() }
+        userProfile.parameters.forEach { $0.updateState() }
     }
     
     func resetParametersCheckboxes() {
-        parametersViewModels.forEach { $0.resetCheckbox() }
+        userProfile.parameters.forEach { $0.resetCheckbox() }
     }
     
-    func deleteDisplayedParameter(_ parameter: BodyParameterViewModel) {
+    func deleteDisplayedParameter(_ parameter: ParameterViewModel) {
         parameter.resetCheckboxAndState()
     }
 }

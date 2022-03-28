@@ -1,5 +1,5 @@
 //
-//  BodyParameterListCell.swift
+//  ProfileParametersListCell.swift
 //  SuperheroShkliaruk
 //
 //  Created by Andrii Shkliaruk on 17.03.2022.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class BodyParameterListCell: UITableViewCell {
+class ProfileParametersListCell: UITableViewCell {
     @IBOutlet private weak var checkboxImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
-    static let identifier = "BodyParameterListCell"
+    static let identifier = "ProfileParametersListCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,7 @@ class BodyParameterListCell: UITableViewCell {
         titleLabel.textColor = .white
     }
     
-    public func configure(with viewModel: BodyParameterViewModel) {
+    public func configure(with viewModel: ParameterViewModel) {
         titleLabel.text = viewModel.title
         checkboxImageView.image = UIImage(named: viewModel.checkboxImageName)
     }
