@@ -31,30 +31,27 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         nameTextField.font = .helveticaNeueRegularWithSize18
         nameTextField.tintColor = .white
         nameTextField.autocapitalizationType = .sentences
+        avatarImageButton.imageView?.layer.cornerRadius = 8
+        avatarImageButton.imageView?.contentMode = .scaleAspectFill
+        avatarImageButton.imageView?.layer.borderColor = UIColor.customDarkYellow.cgColor
     }
     
     func configure(with viewModel: ProfileViewModel) {
         profileViewModel = viewModel
-        setupAvatarImage()
-        nameLabel.text = viewModel.nameLabelText  
+        updateAvatarImage()
+        nameLabel.text = viewModel.nameLabelText
         nameTextField.configurePlaceholder(withText: viewModel.nameTextFieldPlaceholder, font: .helveticaNeueThinWithSize18, textColor: .customGray)
         nameTextField.text = viewModel.userProfile.name
     }
     
-    private func setupAvatarImage() {
+    private func updateAvatarImage() {
         if let imageData = profileViewModel?.userProfile.avatar {
             avatarImageButton.setImage(UIImage(data: imageData), for: .normal)
-            setAvatarImageBorder()
+            avatarImageButton.imageView?.layer.borderWidth = 1
         } else if let defaultImageName = profileViewModel?.defaultAvatarName {
             avatarImageButton.setImage(UIImage(named: defaultImageName), for: .normal)
+            avatarImageButton.imageView?.layer.borderWidth = 0
         }
-        avatarImageButton.imageView?.layer.cornerRadius = 8
-        avatarImageButton.imageView?.contentMode = .scaleAspectFill
-    }
-    
-    private func setAvatarImageBorder() {
-        avatarImageButton.imageView?.layer.borderWidth = 1
-        avatarImageButton.imageView?.layer.borderColor = UIColor.customDarkYellow.cgColor
     }
     
     @IBAction private func nameTextFieldEditingDidBegin(_ sender: UITextField) {
@@ -83,11 +80,14 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
 extension ProfileTableHeaderView: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
         guard let avatarImage = image else { return }
-        avatarImageButton.setImage(avatarImage, for: .normal)
-        if profileViewModel?.userProfile.avatar == nil {
-            setAvatarImageBorder()
-        }
         profileViewModel?.userProfile.avatar = avatarImage.pngData()
+        updateAvatarImage()
+        delegate?.updateSaveButtonState()
+    }
+    
+    func deleteImage() {
+        profileViewModel?.userProfile.avatar = nil
+        updateAvatarImage()
         delegate?.updateSaveButtonState()
     }
 }

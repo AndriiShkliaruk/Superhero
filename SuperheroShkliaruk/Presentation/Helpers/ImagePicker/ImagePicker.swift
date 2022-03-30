@@ -9,6 +9,7 @@ import UIKit
 
 public protocol ImagePickerDelegate: AnyObject {
     func didSelect(image: UIImage?)
+    func deleteImage()
 }
 
 open class ImagePicker: NSObject {
@@ -51,7 +52,9 @@ open class ImagePicker: NSObject {
         if let action = self.action(for: .photoLibrary, title: "Photo library") {
             alertController.addAction(action)
         }
-        
+        alertController.addAction(UIAlertAction(title: "Delete photo", style: .destructive) { [unowned self] _ in
+            self.delegate?.deleteImage()
+        })
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         if UIDevice.current.userInterfaceIdiom == .pad {
