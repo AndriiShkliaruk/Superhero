@@ -16,7 +16,7 @@
 		F92D906927E3781B0018917F /* ProfileParametersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D906727E3781B0018917F /* ProfileParametersListCell.swift */; };
 		F92D906A27E3781B0018917F /* ProfileParametersListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92D906827E3781B0018917F /* ProfileParametersListCell.xib */; };
 		F92D907627E4A5160018917F /* BodyParametersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907527E4A5160018917F /* BodyParametersDelegate.swift */; };
-		F92D907827E4A94B0018917F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907727E4A94B0018917F /* UIView+Extensions.swift */; };
+		F92D907827E4A94B0018917F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907727E4A94B0018917F /* UIView+Extension.swift */; };
 		F92D907A27E749640018917F /* ProfileViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907927E749640018917F /* ProfileViewControllerDelegate.swift */; };
 		F92D908027E9208A0018917F /* ParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D907F27E9208A0018917F /* ParametersViewController.swift */; };
 		F92D908227E9209F0018917F /* ParametersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92D908127E9209F0018917F /* ParametersViewController.storyboard */; };
@@ -102,7 +102,7 @@
 		F92D906727E3781B0018917F /* ProfileParametersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileParametersListCell.swift; sourceTree = "<group>"; };
 		F92D906827E3781B0018917F /* ProfileParametersListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileParametersListCell.xib; sourceTree = "<group>"; };
 		F92D907527E4A5160018917F /* BodyParametersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersDelegate.swift; sourceTree = "<group>"; };
-		F92D907727E4A94B0018917F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F92D907727E4A94B0018917F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F92D907927E749640018917F /* ProfileViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerDelegate.swift; sourceTree = "<group>"; };
 		F92D907F27E9208A0018917F /* ParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersViewController.swift; sourceTree = "<group>"; };
 		F92D908127E9209F0018917F /* ParametersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParametersViewController.storyboard; sourceTree = "<group>"; };
@@ -514,7 +514,7 @@
 				F96B772C27BE98A900678747 /* UIView+Gradient.swift */,
 				F9FF38D027DB652F00DDA957 /* UITextField+Extension.swift */,
 				F989AF2F27E0AED8008751FB /* Profile+Sex.swift */,
-				F92D907727E4A94B0018917F /* UIView+Extensions.swift */,
+				F92D907727E4A94B0018917F /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -881,7 +881,7 @@
 				F92D905827E362CF0018917F /* ParameterViewModel.swift in Sources */,
 				F976555A27F0C8610099616D /* BodyParameter+CoreDataProperties.swift in Sources */,
 				F976555927F0C8610099616D /* BodyParameter+CoreDataClass.swift in Sources */,
-				F92D907827E4A94B0018917F /* UIView+Extensions.swift in Sources */,
+				F92D907827E4A94B0018917F /* UIView+Extension.swift in Sources */,
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
 				F94E9F4827ECD3CA00693538 /* Profile+CoreDataProperties.swift in Sources */,

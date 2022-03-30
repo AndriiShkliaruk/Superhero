@@ -5,8 +5,9 @@
 //  Created by Andrii Shkliaruk on 20.03.2022.
 //
 
-import Foundation
+import UIKit
 
 protocol ProfileViewControllerDelegate {
     func updateSaveButtonState()
+    func setActiveTableViewCell(_ cell: UITableViewCell?)
 }

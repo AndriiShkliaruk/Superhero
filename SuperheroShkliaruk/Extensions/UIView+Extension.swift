@@ -1,5 +1,5 @@
 //
-//  UIView+Nib.swift
+//  UIView+Extension.swift
 //  SuperheroShkliaruk
 //
 //  Created by Andrii Shkliaruk on 18.03.2022.

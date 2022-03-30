@@ -12,8 +12,10 @@ final class ProfileViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var buttonBackgroundView: UIView!
     @IBOutlet private weak var addParametersButton: CustomRoundedButton!
     
-    private var viewModel = ProfileViewModel()
     var coordinator: MainCoordinator?
+    private var viewModel = ProfileViewModel()
+    private var activeTableViewCell: UITableViewCell?
+    
     private lazy var transitionDelegate = DimmTransitionManager()
     private lazy var saveBarButtonItem: UIBarButtonItem = {
         let saveButton = UIBarButtonItem(title: viewModel.saveBarButtonText, style: .plain, target: self, action: #selector(saveBarButtonTapped))
@@ -26,6 +28,14 @@ final class ProfileViewController: BaseViewController, Storyboarded {
         setupTableView()
         setupUI()
         setupNavigationBar()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
     
     private func setupTableView() {
@@ -65,11 +75,24 @@ final class ProfileViewController: BaseViewController, Storyboarded {
             viewController.modalPresentationStyle = .custom
         }
     }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        guard let cell = activeTableViewCell else { return }
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+        tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
+    
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        tableView.contentInset = .zero
+    }
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - Table View Header Setup
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableHeaderView.identifier) as! ProfileTableHeaderView
         headerView.configure(with: viewModel)
@@ -84,6 +107,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     //MARK: - Table View Footer Setup
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableFooterView.identifier) as! ProfileTableFooterView
         footerView.configure(with: viewModel)
@@ -118,6 +142,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 extension ProfileViewController: ProfileViewControllerDelegate {
     func updateSaveButtonState() {
         saveBarButtonItem.isEnabled = viewModel.stateHasChanges()
+    }
+    
+    func setActiveTableViewCell(_ cell: UITableViewCell?) {
+        activeTableViewCell = cell
     }
 }
 
