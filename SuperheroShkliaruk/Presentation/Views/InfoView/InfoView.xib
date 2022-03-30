@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InfoView" customModule="SuperheroShkliaruk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUZ-vW-xn5" userLabel="Inner View">
+                    <rect key="frame" x="43" y="413.5" width="328" height="69"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="VqT-Dq-5Dx">
+                            <rect key="frame" x="20" y="24" width="21" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="21" id="Fxe-6q-5P8"/>
+                                <constraint firstAttribute="height" constant="21" id="UQ8-fZ-7V5"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftE-or-8k4">
+                            <rect key="frame" x="56" y="25" width="252" height="19"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ftE-or-8k4" secondAttribute="trailing" constant="20" id="M6r-UN-Eeg"/>
+                        <constraint firstAttribute="bottom" secondItem="ftE-or-8k4" secondAttribute="bottom" constant="25" id="bPj-0s-Jok"/>
+                        <constraint firstItem="VqT-Dq-5Dx" firstAttribute="leading" secondItem="CUZ-vW-xn5" secondAttribute="leading" constant="20" id="cYa-gE-tsf"/>
+                        <constraint firstItem="VqT-Dq-5Dx" firstAttribute="centerY" secondItem="ftE-or-8k4" secondAttribute="centerY" id="fAD-9f-cdx"/>
+                        <constraint firstItem="ftE-or-8k4" firstAttribute="leading" secondItem="VqT-Dq-5Dx" secondAttribute="trailing" constant="15" id="hVA-q7-D0A"/>
+                        <constraint firstItem="ftE-or-8k4" firstAttribute="top" secondItem="CUZ-vW-xn5" secondAttribute="top" constant="25" id="tjl-se-kXZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="CUZ-vW-xn5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Jn3-zY-J2t"/>
+                <constraint firstAttribute="trailing" secondItem="CUZ-vW-xn5" secondAttribute="trailing" constant="43" id="LxO-tu-VRA"/>
+                <constraint firstItem="CUZ-vW-xn5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="43" id="xOi-B5-pC1"/>
+            </constraints>
+            <connections>
+                <outlet property="infoIconImageView" destination="VqT-Dq-5Dx" id="gIZ-DE-Z9Q"/>
+                <outlet property="infoLabel" destination="ftE-or-8k4" id="GId-Ha-ALg"/>
+                <outlet property="innerView" destination="CUZ-vW-xn5" id="LHS-gw-jFs"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="success" width="42" height="42"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -25,6 +25,10 @@ final class ProfileViewModel {
     let cancelButtonText = "Cancel"
     let selectButtonText = "Select"
     
+    //MARK: - InfoView constants
+    let infoIconName = "success"
+    let infoText = "Profile has been saved!"
+    
     private let initialUserProfile: UserProfileViewModel
     private var initialParameters: [BodyParameter]
     

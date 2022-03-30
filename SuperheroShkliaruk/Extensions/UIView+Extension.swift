@@ -23,4 +23,17 @@ extension UIView {
             childView.removeFromSuperview()
         }, completion: nil)
     }
+    
+    class func showWithTransition(for time: TimeInterval, childView: UIView, in parentView: UIView,  completion: @escaping () -> Void) {
+        Self.transition(with: parentView, duration: 0.5, options: [.curveEaseOut], animations: {
+            parentView.addSubview(childView)
+        }, completion: nil)
+        
+        _ = Timer.scheduledTimer(withTimeInterval: time, repeats: false) { _ in
+            Self.transition(with: parentView, duration: 0.5, options: [.curveEaseOut], animations: {
+                childView.removeFromSuperview()
+            }, completion: nil)
+            completion()
+        }
+    }
 }
