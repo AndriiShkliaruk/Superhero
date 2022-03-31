@@ -51,10 +51,8 @@ final class ProfileViewModel {
     private func updateInitialParameters(from viewModels: [ParameterViewModel]) {
         initialParameters = initialParameters.map { parameter in
             if let viewModel = viewModels.first(where: { $0.title == parameter.title }) {
-                if parameter.value == 0 {
-                    parameter.value = viewModel.changedValue
-                }
-                parameter.changedValue = viewModel.changedValue
+                parameter.values = viewModel.values
+                parameter.dates = viewModel.dates
                 parameter.isSelected = viewModel.isSelected
                 parameter.isDisplayed = viewModel.isDisplayed
             }
@@ -75,9 +73,14 @@ final class ProfileViewModel {
         coreDataProfile?.name = userProfile.name
         coreDataProfile?.avatar = userProfile.avatar
         
+        saveValuesInParameterViewModels()
         updateInitialParameters(from: userProfile.parameters)
         coreDataProfile?.bodyParameters = NSOrderedSet(array: initialParameters)
         ProfileManager.sharedInstance.saveProfile()
+    }
+    
+    func saveValuesInParameterViewModels() {
+        userProfile.parameters.forEach { $0.addChangedValue() }
     }
     
     func updateParametersStates() {
@@ -89,6 +92,6 @@ final class ProfileViewModel {
     }
     
     func deleteDisplayedParameter(_ parameter: ParameterViewModel) {
-        parameter.resetCheckboxAndState()
+        parameter.deleteState()
     }
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,10 +41,10 @@
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7m4-Lm-iai" userLabel="TextField Stack View">
-                        <rect key="frame" x="134" y="14.5" width="98" height="22.5"/>
+                        <rect key="frame" x="134" y="12.5" width="98" height="29.5"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="174" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="0aK-at-W6f" userLabel="Value Text Field">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="22.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" text="174" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="0aK-at-W6f" userLabel="Value Text Field">
+                                <rect key="frame" x="0.0" y="3.5" width="50" height="22.5"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="52a-Ny-zKJ"/>
@@ -59,7 +60,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-SY-VbJ" userLabel="Units Label">
-                                <rect key="frame" x="72" y="0.5" width="26" height="21.5"/>
+                                <rect key="frame" x="72" y="4" width="26" height="21.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -80,6 +81,7 @@
                     <constraint firstItem="Fum-PS-XKu" firstAttribute="leading" secondItem="7m4-Lm-iai" secondAttribute="leading" id="e8b-KF-rvo"/>
                     <constraint firstItem="tfp-Ii-B4t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="eB3-CA-zwp"/>
                     <constraint firstItem="7m4-Lm-iai" firstAttribute="trailing" secondItem="tfp-Ii-B4t" secondAttribute="leading" constant="-55" id="jw6-j9-WZD"/>
+                    <constraint firstItem="Fum-PS-XKu" firstAttribute="top" secondItem="7m4-Lm-iai" secondAttribute="bottom" id="k4l-ah-A3z"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

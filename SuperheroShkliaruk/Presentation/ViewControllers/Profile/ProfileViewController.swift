@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProfileViewController: BaseViewController, Storyboarded {
+class ProfileViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var buttonBackgroundView: UIView!
     @IBOutlet private weak var addParametersButton: CustomRoundedButton!
@@ -98,7 +98,7 @@ final class ProfileViewController: BaseViewController, Storyboarded {
     }
     
     @objc private func keyboardWillHide(notification: NSNotification) {
-        tableView.contentInset = .zero
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
     }
 }
 

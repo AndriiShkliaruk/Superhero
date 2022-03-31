@@ -73,7 +73,8 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     }
     
     @IBAction private func avatarImageButtonTapped(_ sender: UIButton) {
-        imagePicker?.present(from: sender)
+        let isDeletable = profileViewModel?.userProfile.avatar != nil ? true : false
+        imagePicker?.present(from: sender, isDeletable: isDeletable)
     }
 }
 

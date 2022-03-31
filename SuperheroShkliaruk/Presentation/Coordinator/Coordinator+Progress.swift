@@ -13,4 +13,11 @@ extension MainCoordinator {
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func moveToChart(viewModel: ParameterViewModel) {
+        let viewController = ChartViewController.instantiate()
+        viewController.viewModel = viewModel
+        viewController.coordinator = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }

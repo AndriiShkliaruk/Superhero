@@ -7,6 +7,15 @@
 
 import Foundation
 
-struct ProgressViewModel {    
+struct ProgressViewModel {
+    private let parametersInstance = BodyParametersStorage.sharedInstance
     let navigationBarTitleText = "Progress"
+    var parametersViewModels = [ParameterViewModel]()
+    
+    init() {
+        let coreDataParameters = parametersInstance.fetchBodyParameters()
+        parametersViewModels = coreDataParameters.filter { $0.isDisplayed }
+            .map { ParameterViewModel($0) }
+        
+    }
 }

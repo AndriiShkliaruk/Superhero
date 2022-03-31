@@ -38,10 +38,10 @@ final class BodyParametersStorage {
             let bodyParameter = BodyParameter(entity: entity!, insertInto: context)
             bodyParameter.title = parameter.key
             bodyParameter.units = parameter.value
-            bodyParameter.value = 0
-            bodyParameter.changedValue = 0
             bodyParameter.isSelected = false
             bodyParameter.isDisplayed = false
+            bodyParameter.values = [Int16]()
+            bodyParameter.dates = [Date]()
             return bodyParameter
         }
         

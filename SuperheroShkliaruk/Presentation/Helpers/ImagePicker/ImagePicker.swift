@@ -40,21 +40,21 @@ open class ImagePicker: NSObject {
         }
     }
     
-    public func present(from sourceView: UIView) {
+    public func present(from sourceView: UIView, isDeletable: Bool) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         if let action = self.action(for: .camera, title: "Take photo") {
             alertController.addAction(action)
         }
-        if let action = self.action(for: .savedPhotosAlbum, title: "Camera roll") {
-            alertController.addAction(action)
-        }
         if let action = self.action(for: .photoLibrary, title: "Photo library") {
             alertController.addAction(action)
         }
-        alertController.addAction(UIAlertAction(title: "Delete photo", style: .destructive) { [unowned self] _ in
-            self.delegate?.deleteImage()
-        })
+        
+        if isDeletable {
+            alertController.addAction(UIAlertAction(title: "Delete photo", style: .destructive) { [unowned self] _ in
+                self.delegate?.deleteImage()
+            })
+        }
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         if UIDevice.current.userInterfaceIdiom == .pad {

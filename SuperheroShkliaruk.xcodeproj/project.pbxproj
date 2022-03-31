@@ -27,6 +27,10 @@
 		F92D908E27EA10710018917F /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D908D27EA10710018917F /* PresentationController.swift */; };
 		F92FF3F027F4FAB3003B97B5 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92FF3EF27F4FAB3003B97B5 /* InfoView.xib */; };
 		F92FF3F227F4FACB003B97B5 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92FF3F127F4FACB003B97B5 /* InfoView.swift */; };
+		F92FF3F527F5EC66003B97B5 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92FF3F327F5EC66003B97B5 /* ChartViewController.swift */; };
+		F92FF3F827F5ECBA003B97B5 /* ChartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92FF3F727F5ECBA003B97B5 /* ChartViewController.storyboard */; };
+		F92FF3FF27F61E0C003B97B5 /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92FF3FD27F61E0C003B97B5 /* BodyParameter+CoreDataClass.swift */; };
+		F92FF40027F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92FF3FE27F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift */; };
 		F935598A27DFA8CD00229A7B /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */; };
 		F935598C27DFA99500229A7B /* ProfileTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */; };
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
@@ -59,8 +63,6 @@
 		F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B772C27BE98A900678747 /* UIView+Gradient.swift */; };
 		F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97121D027E26CBE0095B8C9 /* BaseViewController.swift */; };
 		F97121D927E26E6B0095B8C9 /* BaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97121D827E26E6B0095B8C9 /* BaseViewController.storyboard */; };
-		F976555927F0C8610099616D /* BodyParameter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976555727F0C8610099616D /* BodyParameter+CoreDataClass.swift */; };
-		F976555A27F0C8610099616D /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F976555827F0C8610099616D /* BodyParameter+CoreDataProperties.swift */; };
 		F98425F927DFB0D9002F2196 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98425F827DFB0D9002F2196 /* ProfileTableHeaderView.swift */; };
 		F98425FB27DFB111002F2196 /* ProfileTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98425FA27DFB111002F2196 /* ProfileTableFooterView.swift */; };
 		F989AF3027E0AED8008751FB /* Profile+Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F989AF2F27E0AED8008751FB /* Profile+Sex.swift */; };
@@ -115,6 +117,10 @@
 		F92D908D27EA10710018917F /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		F92FF3EF27F4FAB3003B97B5 /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
 		F92FF3F127F4FACB003B97B5 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		F92FF3F327F5EC66003B97B5 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		F92FF3F727F5ECBA003B97B5 /* ChartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChartViewController.storyboard; sourceTree = "<group>"; };
+		F92FF3FD27F61E0C003B97B5 /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F92FF3FE27F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableHeaderView.xib; sourceTree = "<group>"; };
 		F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableFooterView.xib; sourceTree = "<group>"; };
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
@@ -148,8 +154,6 @@
 		F96B772C27BE98A900678747 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		F97121D027E26CBE0095B8C9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F97121D827E26E6B0095B8C9 /* BaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseViewController.storyboard; sourceTree = "<group>"; };
-		F976555727F0C8610099616D /* BodyParameter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F976555827F0C8610099616D /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F98425F827DFB0D9002F2196 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
 		F98425FA27DFB111002F2196 /* ProfileTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableFooterView.swift; sourceTree = "<group>"; };
 		F989AF2F27E0AED8008751FB /* Profile+Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Sex.swift"; sourceTree = "<group>"; };
@@ -626,6 +630,7 @@
 			isa = PBXGroup;
 			children = (
 				F99706FC27C665D700C24B50 /* ProgressViewController.swift */,
+				F92FF3F327F5EC66003B97B5 /* ChartViewController.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -667,6 +672,7 @@
 			isa = PBXGroup;
 			children = (
 				F997071027C6B13100C24B50 /* ProgressViewController.storyboard */,
+				F92FF3F727F5ECBA003B97B5 /* ChartViewController.storyboard */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -716,8 +722,8 @@
 		F9D68A2B27C12CDC005F551E /* ProfileCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F976555727F0C8610099616D /* BodyParameter+CoreDataClass.swift */,
-				F976555827F0C8610099616D /* BodyParameter+CoreDataProperties.swift */,
+				F92FF3FD27F61E0C003B97B5 /* BodyParameter+CoreDataClass.swift */,
+				F92FF3FE27F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift */,
 				F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */,
 				F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */,
 				F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */,
@@ -818,6 +824,7 @@
 				F92FF3F027F4FAB3003B97B5 /* InfoView.xib in Resources */,
 				F99706E627C65D7300C24B50 /* MenuTableViewCell.xib in Resources */,
 				F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */,
+				F92FF3F827F5ECBA003B97B5 /* ChartViewController.storyboard in Resources */,
 				F9D8F1EC27F081CE00D2365D /* Gilroy-Semibold.ttf in Resources */,
 				F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */,
 				F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */,
@@ -859,6 +866,7 @@
 				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
 				F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */,
 				F92D908E27EA10710018917F /* PresentationController.swift in Sources */,
+				F92FF3FF27F61E0C003B97B5 /* BodyParameter+CoreDataClass.swift in Sources */,
 				F94E9F4D27EDDFC200693538 /* UserProfileViewModel.swift in Sources */,
 				F99706FD27C665D700C24B50 /* ProgressViewController.swift in Sources */,
 				F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */,
@@ -872,6 +880,7 @@
 				F99706F527C6659300C24B50 /* CalculatorViewController.swift in Sources */,
 				F98425F927DFB0D9002F2196 /* ProfileTableHeaderView.swift in Sources */,
 				F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */,
+				F92FF3F527F5EC66003B97B5 /* ChartViewController.swift in Sources */,
 				F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */,
 				F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */,
 				F92D908A27EA0E230018917F /* PresentAnimation.swift in Sources */,
@@ -880,6 +889,7 @@
 				F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */,
 				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
 				F94E9F4727ECD3CA00693538 /* Profile+CoreDataClass.swift in Sources */,
+				F92FF40027F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift in Sources */,
 				F96B771127BE64B600678747 /* HomeViewController.swift in Sources */,
 				F96B771A27BE811D00678747 /* UIFont+CustomFonts.swift in Sources */,
 				F90DF82A27C11EA600B76F30 /* HomeViewModel.swift in Sources */,
@@ -895,8 +905,6 @@
 				F92D907627E4A5160018917F /* BodyParametersDelegate.swift in Sources */,
 				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F92D905827E362CF0018917F /* ParameterViewModel.swift in Sources */,
-				F976555A27F0C8610099616D /* BodyParameter+CoreDataProperties.swift in Sources */,
-				F976555927F0C8610099616D /* BodyParameter+CoreDataClass.swift in Sources */,
 				F92D907827E4A94B0018917F /* UIView+Extension.swift in Sources */,
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
@@ -1044,7 +1052,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
@@ -1054,7 +1062,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1077,7 +1085,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
@@ -1087,7 +1095,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

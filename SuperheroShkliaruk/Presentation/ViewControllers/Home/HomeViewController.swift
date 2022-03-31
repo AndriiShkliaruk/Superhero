@@ -80,18 +80,14 @@ class HomeViewController: BaseViewController, Storyboarded {
     }
     
     private func updateParametersCollectionView() {
-        //if !viewModel.parametersViewModels.isEmpty {
-            parametersCollectionView.reloadData()
-            parametersCollectionView.isHidden = false
-//        } else {
-//            parametersCollectionView.isHidden = true
-//        }
+        parametersCollectionView.reloadData()
+        parametersCollectionView.isHidden = false
     }
 }
 
-//MARK: - Menu Table View
+//MARK: - MenuTableView
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.tableItems.count
     }
@@ -102,16 +98,13 @@ extension HomeViewController: UITableViewDataSource {
         
         return cell
     }
-}
-
-extension HomeViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
         viewModel.pushToViewController(at: indexPath, with: coordinator)
     }
 }
 
-//MARK: - Parameters Collection View
+//MARK: - ParametersCollectionView
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
