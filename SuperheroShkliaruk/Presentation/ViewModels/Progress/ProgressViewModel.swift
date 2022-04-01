@@ -12,10 +12,13 @@ struct ProgressViewModel {
     let navigationBarTitleText = "Progress"
     var parametersViewModels = [ParameterViewModel]()
     
+    //MARK: - InfoView constants
+    let infoIconName = "alert"
+    let infoText = "Options are not selected.\nTo display them, add them to your profile."
+    
     init() {
         let coreDataParameters = parametersInstance.fetchBodyParameters()
         parametersViewModels = coreDataParameters.filter { $0.isDisplayed }
             .map { ParameterViewModel($0) }
-        
     }
 }

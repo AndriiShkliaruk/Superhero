@@ -71,7 +71,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
             
             let infoView: InfoView = InfoView.fromNib()
             infoView.frame = navigationControllerView.frame
-            infoView.configure(with: icon, text: viewModel.infoText)
+            infoView.configure(with: icon, text: viewModel.infoText, backgroundColor: nil)
             UIView.showWithTransition(for: 2, childView: infoView, in: navigationControllerView) {
                 self.coordinator?.back()
             }

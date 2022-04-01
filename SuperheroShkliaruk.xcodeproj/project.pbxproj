@@ -34,6 +34,8 @@
 		F935598A27DFA8CD00229A7B /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */; };
 		F935598C27DFA99500229A7B /* ProfileTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */; };
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
+		F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54A27F630AB00294816 /* ChartViewModel.swift */; };
+		F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */; };
 		F94E9F3B27EBA78800693538 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F3A27EBA78800693538 /* ImagePicker.swift */; };
 		F94E9F4727ECD3CA00693538 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */; };
 		F94E9F4827ECD3CA00693538 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */; };
@@ -124,6 +126,8 @@
 		F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableHeaderView.xib; sourceTree = "<group>"; };
 		F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableFooterView.xib; sourceTree = "<group>"; };
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
+		F946D54A27F630AB00294816 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewModel.swift; sourceTree = "<group>"; };
 		F94E9F3A27EBA78800693538 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -715,6 +719,8 @@
 			isa = PBXGroup;
 			children = (
 				F997070827C6665600C24B50 /* ProgressViewModel.swift */,
+				F946D54A27F630AB00294816 /* ChartViewModel.swift */,
+				F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -885,6 +891,7 @@
 				F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */,
 				F92D908A27EA0E230018917F /* PresentAnimation.swift in Sources */,
 				F98425FB27DFB111002F2196 /* ProfileTableFooterView.swift in Sources */,
+				F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */,
 				F92D908827E9E2490018917F /* DimmPresentationController.swift in Sources */,
 				F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */,
 				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
@@ -906,6 +913,7 @@
 				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F92D905827E362CF0018917F /* ParameterViewModel.swift in Sources */,
 				F92D907827E4A94B0018917F /* UIView+Extension.swift in Sources */,
+				F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */,
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
 				F94E9F4827ECD3CA00693538 /* Profile+CoreDataProperties.swift in Sources */,

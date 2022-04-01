@@ -31,6 +31,10 @@ extension UIFont {
         return customFont(name: "Saira-Regular", size: 24)
     }
     
+    public class var sairaMediumWithSize16: UIFont {
+        return customFont(name: "Saira-Medium", size: 16)
+    }
+    
     public class var sairaMediumWithSize18: UIFont {
         return customFont(name: "Saira-Medium", size: 18)
     }

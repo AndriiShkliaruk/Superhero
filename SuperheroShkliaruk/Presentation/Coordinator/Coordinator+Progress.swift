@@ -14,9 +14,9 @@ extension MainCoordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func moveToChart(viewModel: ParameterViewModel) {
+    func moveToChart(with parameterViewModel: ParameterViewModel) {
         let viewController = ChartViewController.instantiate()
-        viewController.viewModel = viewModel
+        viewController.viewModel = ChartViewModel(parameter: parameterViewModel)
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }

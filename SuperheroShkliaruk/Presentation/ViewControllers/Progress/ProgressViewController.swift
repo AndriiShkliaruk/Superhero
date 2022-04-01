@@ -25,6 +25,18 @@ class ProgressViewController: BaseViewController, Storyboarded {
     private func setupUI() {
         title = viewModel.navigationBarTitleText
         menuTableView.backgroundColor = .clear
+        
+        if viewModel.parametersViewModels.isEmpty {
+            showEmptyParametersInfoView()
+        }
+    }
+    
+    private func showEmptyParametersInfoView() {
+        guard let icon = UIImage(named: viewModel.infoIconName) else { return }
+        let infoView: InfoView = InfoView.fromNib()
+        infoView.frame = view.frame
+        infoView.configure(with: icon, text: viewModel.infoText, backgroundColor: .clear)
+        view.addSubview(infoView)
     }
 }
 
@@ -41,6 +53,6 @@ extension ProgressViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.moveToChart(viewModel: viewModel.parametersViewModels[indexPath.row])
+        coordinator?.moveToChart(with: viewModel.parametersViewModels[indexPath.row])
     }
 }

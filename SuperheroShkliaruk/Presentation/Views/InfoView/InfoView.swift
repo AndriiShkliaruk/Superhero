@@ -16,9 +16,8 @@ class InfoView: UIView {
         super.awakeFromNib()
         setupUI()
     }
-
+    
     private func setupUI() {
-        backgroundColor = UIColor(white: 0, alpha: 0.65)
         innerView.backgroundColor = .black
         innerView.layer.cornerRadius = 8
         innerView.layer.borderWidth = 1
@@ -27,8 +26,19 @@ class InfoView: UIView {
         infoLabel.textColor = .white
     }
     
-    func configure(with icon: UIImage, text: String) {
+    func configure(with icon: UIImage, text: String, backgroundColor: UIColor?) {
         infoIconImageView.image = icon
-        infoLabel.text = text
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 6
+        let attrString = NSMutableAttributedString(string: text)
+        attrString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        infoLabel.attributedText = attrString
+        
+        if backgroundColor != nil {
+            self.backgroundColor = backgroundColor
+        } else {
+            self.backgroundColor = UIColor(white: 0, alpha: 0.65)
+        }
     }
 }
