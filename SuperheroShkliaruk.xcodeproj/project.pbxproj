@@ -1060,11 +1060,11 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to use your camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to take pictures";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app wants to use your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1093,11 +1093,11 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to use your camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to take pictures";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app wants to use your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

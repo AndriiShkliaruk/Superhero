@@ -13,7 +13,7 @@ struct BaseViewModel {
         case male = "base-male"
         case female = "base-female"
     }
-    
+    let backButtonText = "Back"
     let characterImageName: String
     
     init() {

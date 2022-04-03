@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,19 +27,19 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RKZ-qj-lIh">
-                    <rect key="frame" x="43" y="246" width="328" height="21"/>
+                    <rect key="frame" x="32" y="246" width="350" height="21"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scs-sJ-6c3" userLabel="Name Label">
-                            <rect key="frame" x="0.0" y="0.0" width="75" height="21"/>
+                            <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
                             <constraints>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Qa3-hQ-3RI"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="Qa3-hQ-3RI"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Name" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="0Ko-ZO-WT5" userLabel="Name Text Field">
-                            <rect key="frame" x="91" y="-0.5" width="237" height="21.5"/>
+                            <rect key="frame" x="111" y="-0.5" width="239" height="21.5"/>
                             <color key="textColor" red="1" green="0.99215686270000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -52,7 +53,7 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgL-LQ-DfW" userLabel="Underline View">
-                    <rect key="frame" x="134" y="278" width="237" height="1"/>
+                    <rect key="frame" x="143" y="278" width="239" height="1"/>
                     <color key="backgroundColor" systemColor="labelColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Bpi-1F-3eW"/>
@@ -67,8 +68,8 @@
                 <constraint firstAttribute="bottom" secondItem="HgL-LQ-DfW" secondAttribute="bottom" constant="16" id="PuU-GD-oa8"/>
                 <constraint firstItem="HgL-LQ-DfW" firstAttribute="top" secondItem="0Ko-ZO-WT5" secondAttribute="bottom" constant="11" id="SPD-5u-Qfx"/>
                 <constraint firstItem="RKZ-qj-lIh" firstAttribute="top" secondItem="uO4-JP-Vt1" secondAttribute="bottom" constant="76" id="VoJ-iP-XPQ"/>
-                <constraint firstAttribute="trailing" secondItem="RKZ-qj-lIh" secondAttribute="trailing" constant="43" id="b13-Wr-QMo"/>
-                <constraint firstItem="RKZ-qj-lIh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="43" id="kta-IL-BRg"/>
+                <constraint firstAttribute="trailing" secondItem="RKZ-qj-lIh" secondAttribute="trailing" constant="32" id="b13-Wr-QMo"/>
+                <constraint firstItem="RKZ-qj-lIh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="kta-IL-BRg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

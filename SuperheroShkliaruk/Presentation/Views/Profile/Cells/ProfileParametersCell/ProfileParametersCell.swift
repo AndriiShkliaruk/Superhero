@@ -41,7 +41,6 @@ class ProfileParametersCell: UITableViewCell {
         unitsLabel.textColor = .customGray
         
         isEnabledSwitch.onTintColor = .customYellow
-        underlineView.backgroundColor = .white
     }
     
     func configure(with viewModel: ParameterViewModel) {
@@ -51,6 +50,7 @@ class ProfileParametersCell: UITableViewCell {
         valueTextField.text = viewModel.changedValueString
         unitsLabel.text = viewModel.units
         isEnabledSwitch.isOn = viewModel.isDisplayed
+        underlineView.backgroundColor = .white
     }
     
     private func addDoneButtonOnKeyboard(textField: UITextField) {
@@ -63,7 +63,6 @@ class ProfileParametersCell: UITableViewCell {
         keypadToolbar.sizeToFit()
         textField.inputAccessoryView = keypadToolbar
     }
-    
     
     @IBAction private func switchValueChanged(_ sender: UISwitch) {
         parameterViewModel?.isDisplayed = sender.isOn

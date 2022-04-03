@@ -11,11 +11,6 @@ class MainCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
-        navigationController.navigationBar.tintColor = .customDarkYellow
-        navigationController.navigationBar.titleTextAttributes = [
-            .font: UIFont.sairaMediumWithSize18,
-            .foregroundColor: UIColor.white
-        ]
         self.navigationController = navigationController
     }
     

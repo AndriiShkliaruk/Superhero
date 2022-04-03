@@ -18,7 +18,7 @@ struct ProgressViewModel {
     
     init() {
         let coreDataParameters = parametersInstance.fetchBodyParameters()
-        parametersViewModels = coreDataParameters.filter { $0.isDisplayed }
+        parametersViewModels = coreDataParameters.filter { $0.isSelected }
             .map { ParameterViewModel($0) }
     }
 }

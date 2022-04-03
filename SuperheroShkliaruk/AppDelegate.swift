@@ -12,10 +12,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let fontAttribute = [NSAttributedString.Key.font: UIFont.sairaMediumWithSize18]
+        UIBarButtonItem.appearance().setTitleTextAttributes(fontAttribute, for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes(fontAttribute, for: .highlighted)
+        UIBarButtonItem.appearance().setTitleTextAttributes(fontAttribute, for: .disabled)
         
-        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.sairaMediumWithSize18], for: .normal)
-        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.sairaMediumWithSize18], for: .highlighted)
-        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.sairaMediumWithSize18], for: .disabled)
+        UINavigationBar.appearance().tintColor = .customYellow
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font: UIFont.sairaMediumWithSize18,
+            .foregroundColor: UIColor.white
+        ]
         
         return true
     }
@@ -33,7 +39,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-

@@ -12,7 +12,6 @@ class ChartViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var descriptionLabel: UILabel!
     
     var viewModel: ChartViewModel?
-    var coordinator: MainCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
