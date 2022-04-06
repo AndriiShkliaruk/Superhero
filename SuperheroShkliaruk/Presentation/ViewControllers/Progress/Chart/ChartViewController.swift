@@ -8,6 +8,7 @@
 import UIKit
 
 class ChartViewController: UIViewController, Storyboarded {
+    @IBOutlet private weak var chartView: ChartView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     
@@ -16,6 +17,13 @@ class ChartViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let chartBarViewModels = viewModel?.chartBarViewModels {
+            chartView.dataEntries = chartBarViewModels
+        }
     }
     
     private func setupUI() {

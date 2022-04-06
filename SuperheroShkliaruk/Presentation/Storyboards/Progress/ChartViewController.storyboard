@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DC-xg-SzW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DC-xg-SzW" userLabel="Header View">
                                 <rect key="frame" x="0.0" y="44" width="414" height="183"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Displaying dynamics relative to data from 14.05.2021" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg2-Dq-Req">
@@ -51,59 +50,23 @@
                                     <constraint firstItem="bvA-oZ-EBs" firstAttribute="centerX" secondItem="8DC-xg-SzW" secondAttribute="centerX" id="xKh-AW-iBI"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-DE-TTD">
-                                <rect key="frame" x="24" y="227" width="366" height="573"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-dC-wJv">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="573"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4y-Q9-Nas">
-                                                <rect key="frame" x="0.0" y="543.5" width="366" height="0.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="0.5" id="HGS-Et-BJp"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-rc-hrE">
-                                                <rect key="frame" x="0.0" y="93" width="366" height="0.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="0.5" id="8et-FG-zEh"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Oaj-rc-hrE" firstAttribute="leading" secondItem="tcu-dC-wJv" secondAttribute="leading" id="5XX-i9-Gl7"/>
-                                            <constraint firstItem="Oaj-rc-hrE" firstAttribute="top" secondItem="tcu-dC-wJv" secondAttribute="top" constant="93" id="Gfm-eF-JZL"/>
-                                            <constraint firstAttribute="trailing" secondItem="Oaj-rc-hrE" secondAttribute="trailing" id="Igp-l8-2z8"/>
-                                            <constraint firstAttribute="trailing" secondItem="T4y-Q9-Nas" secondAttribute="trailing" id="bsn-bH-Raf"/>
-                                            <constraint firstItem="T4y-Q9-Nas" firstAttribute="leading" secondItem="tcu-dC-wJv" secondAttribute="leading" id="ehY-P2-NCf"/>
-                                            <constraint firstAttribute="bottom" secondItem="T4y-Q9-Nas" secondAttribute="bottom" constant="29" id="zee-ny-44q"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="tcu-dC-wJv" firstAttribute="height" secondItem="hYh-DE-TTD" secondAttribute="height" priority="250" id="1y9-99-rNL"/>
-                                    <constraint firstItem="tcu-dC-wJv" firstAttribute="leading" secondItem="hYh-DE-TTD" secondAttribute="leading" id="bVT-Fc-HAy"/>
-                                    <constraint firstAttribute="bottom" secondItem="tcu-dC-wJv" secondAttribute="bottom" id="bZj-zT-kZa"/>
-                                    <constraint firstItem="tcu-dC-wJv" firstAttribute="width" secondItem="hYh-DE-TTD" secondAttribute="width" priority="250" id="wPu-ae-fT2"/>
-                                    <constraint firstItem="tcu-dC-wJv" firstAttribute="top" secondItem="hYh-DE-TTD" secondAttribute="top" id="xRb-wj-eFP"/>
-                                    <constraint firstAttribute="trailing" secondItem="tcu-dC-wJv" secondAttribute="trailing" id="zzr-mp-Oqs"/>
-                                </constraints>
-                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiU-th-35S" userLabel="Chart View" customClass="ChartView" customModule="SuperheroShkliaruk" customModuleProvider="target">
+                                <rect key="frame" x="24" y="227" width="366" height="621"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TxF-wK-AZp"/>
                         <constraints>
                             <constraint firstItem="8DC-xg-SzW" firstAttribute="leading" secondItem="TxF-wK-AZp" secondAttribute="leading" id="0dO-QP-2VV"/>
-                            <constraint firstAttribute="trailing" secondItem="hYh-DE-TTD" secondAttribute="trailing" constant="24" id="6OK-Zs-fmv"/>
+                            <constraint firstItem="hiU-th-35S" firstAttribute="top" secondItem="8DC-xg-SzW" secondAttribute="bottom" id="3GL-j9-Edu"/>
                             <constraint firstItem="TxF-wK-AZp" firstAttribute="trailing" secondItem="8DC-xg-SzW" secondAttribute="trailing" id="8DU-1x-0wJ"/>
-                            <constraint firstItem="hYh-DE-TTD" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="24" id="Sbf-Uo-c7t"/>
+                            <constraint firstAttribute="bottom" secondItem="hiU-th-35S" secondAttribute="bottom" constant="48" id="NbW-M6-onW"/>
+                            <constraint firstItem="TxF-wK-AZp" firstAttribute="trailing" secondItem="hiU-th-35S" secondAttribute="trailing" constant="24" id="ccV-Y8-9Sf"/>
                             <constraint firstItem="8DC-xg-SzW" firstAttribute="top" secondItem="TxF-wK-AZp" secondAttribute="top" id="fDp-1I-rzJ"/>
-                            <constraint firstItem="hYh-DE-TTD" firstAttribute="top" secondItem="8DC-xg-SzW" secondAttribute="bottom" id="jOb-0Z-592"/>
-                            <constraint firstAttribute="bottom" secondItem="hYh-DE-TTD" secondAttribute="bottom" constant="96" id="kIa-hS-fxR"/>
+                            <constraint firstItem="hiU-th-35S" firstAttribute="leading" secondItem="TxF-wK-AZp" secondAttribute="leading" constant="24" id="rVl-f4-1yz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chartView" destination="hiU-th-35S" id="jd0-uI-VPX"/>
                         <outlet property="descriptionLabel" destination="Hg2-Dq-Req" id="2Nw-Xe-G61"/>
                         <outlet property="titleLabel" destination="bvA-oZ-EBs" id="Alk-Zt-0dP"/>
                     </connections>
@@ -113,9 +76,4 @@
             <point key="canvasLocation" x="118.84057971014494" y="59.598214285714285"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

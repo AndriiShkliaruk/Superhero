@@ -36,6 +36,7 @@
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
 		F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54A27F630AB00294816 /* ChartViewModel.swift */; };
 		F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */; };
+		F946D55227FCA05100294816 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D55127FCA05000294816 /* ChartView.swift */; };
 		F94E9F3B27EBA78800693538 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F3A27EBA78800693538 /* ImagePicker.swift */; };
 		F94E9F4727ECD3CA00693538 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */; };
 		F94E9F4827ECD3CA00693538 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */; };
@@ -128,6 +129,7 @@
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
 		F946D54A27F630AB00294816 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewModel.swift; sourceTree = "<group>"; };
+		F946D55127FCA05000294816 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		F94E9F3A27EBA78800693538 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -294,6 +296,39 @@
 			path = ProfileTableFooterView;
 			sourceTree = "<group>";
 		};
+		F946D54E27FC9EF700294816 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				F946D54A27F630AB00294816 /* ChartViewModel.swift */,
+				F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		F946D54F27FCA02900294816 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				F946D55027FCA03300294816 /* Chart */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		F946D55027FCA03300294816 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				F946D55127FCA05000294816 /* ChartView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		F946D55327FCE1CB00294816 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				F92FF3F327F5EC66003B97B5 /* ChartViewController.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		F94E9F3C27EBA81D00693538 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +447,7 @@
 		F953E42E27BBDF5A00DE14B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F946D54F27FCA02900294816 /* Progress */,
 				F92FF3EE27F4FA9C003B97B5 /* InfoView */,
 				F94E9F5927F0419200693538 /* Home */,
 				F935598D27DFB05400229A7B /* Profile */,
@@ -634,7 +670,7 @@
 			isa = PBXGroup;
 			children = (
 				F99706FC27C665D700C24B50 /* ProgressViewController.swift */,
-				F92FF3F327F5EC66003B97B5 /* ChartViewController.swift */,
+				F946D55327FCE1CB00294816 /* Chart */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -719,8 +755,7 @@
 			isa = PBXGroup;
 			children = (
 				F997070827C6665600C24B50 /* ProgressViewModel.swift */,
-				F946D54A27F630AB00294816 /* ChartViewModel.swift */,
-				F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */,
+				F946D54E27FC9EF700294816 /* Chart */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -915,6 +950,7 @@
 				F92D907827E4A94B0018917F /* UIView+Extension.swift in Sources */,
 				F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */,
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,
+				F946D55227FCA05100294816 /* ChartView.swift in Sources */,
 				F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */,
 				F94E9F4827ECD3CA00693538 /* Profile+CoreDataProperties.swift in Sources */,
 				F92D908C27EA0E830018917F /* DismissAnimation.swift in Sources */,

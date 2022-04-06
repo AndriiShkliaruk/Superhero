@@ -70,4 +70,8 @@ extension UIFont {
     public class var gilroySemiboldWithSize12: UIFont {
         return customFont(name: "Gilroy-Semibold", size: 12)
     }
+    
+    public class var gilroySemiboldWithSize14: UIFont {
+        return customFont(name: "Gilroy-Semibold", size: 14)
+    }
 }

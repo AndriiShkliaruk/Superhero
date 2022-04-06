@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class ProfileViewModel {
+class ProfileViewModel {
     private let coreDataProfile = ProfileManager.sharedInstance.userProfile
     
     //MARK: - ProfileViewController constants

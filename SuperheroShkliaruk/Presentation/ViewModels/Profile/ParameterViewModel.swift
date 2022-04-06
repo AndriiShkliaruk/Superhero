@@ -73,7 +73,7 @@ class ParameterViewModel {
         }
         
         guard let lastDate = dates.last else { return }
-        let datesOrder = Calendar.current.compare(currentDate, to: lastDate, toGranularity: .day)
+        let datesOrder = Calendar.current.compare(currentDate, to: lastDate, toGranularity: .second)
         switch datesOrder {
         case .orderedSame:
             values[values.count - 1] = changedValue

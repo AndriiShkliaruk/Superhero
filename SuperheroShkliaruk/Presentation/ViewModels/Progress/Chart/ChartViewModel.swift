@@ -34,11 +34,10 @@ struct ChartViewModel {
     
     private mutating func createChartBarViewModels() {
         chartBarViewModels = parameter.values.enumerated().map { (index, value) in
-            let oldValue = index != 0 ? parameter.values[index - 1] : nil
+            let prevValue = index != 0 ? parameter.values[index - 1] : nil
             return ChartBarViewModel(date: parameter.dates[index],
-                                     prevValue: oldValue,
-                                     value: value,
-                                     units: parameter.units)
+                                     prevValue: prevValue,
+                                     value: value)
         }
     }
 }
