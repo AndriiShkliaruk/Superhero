@@ -14,7 +14,7 @@ class HomeViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var parametersCollectionView: UICollectionView!
     @IBOutlet private weak var menuTableView: UITableView!
     
-    let viewModel = HomeViewModel()
+    private let viewModel = HomeViewModel()
     var coordinator: MainCoordinator?
     
     override func viewDidLoad() {

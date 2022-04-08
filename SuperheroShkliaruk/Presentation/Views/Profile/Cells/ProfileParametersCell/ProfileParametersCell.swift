@@ -56,7 +56,7 @@ class ProfileParametersCell: UITableViewCell {
     private func addDoneButtonOnKeyboard(textField: UITextField) {
         let keypadToolbar: UIToolbar = UIToolbar()
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: textField, action: #selector(UITextField.resignFirstResponder))
+        let doneButton = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: textField, action: #selector(UITextField.resignFirstResponder))
         doneButton.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .normal)
         doneButton.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .highlighted)
         keypadToolbar.items=[flexibleSpace, doneButton]
