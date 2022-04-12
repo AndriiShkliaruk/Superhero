@@ -74,4 +74,16 @@ extension UIFont {
     public class var gilroySemiboldWithSize14: UIFont {
         return customFont(name: "Gilroy-Semibold", size: 14)
     }
+    
+    public class var nunitoLightWithSize14: UIFont {
+        return customFont(name: "Nunito-Light", size: 14)
+    }
+    
+    public class var nunitoLightWithSize16: UIFont {
+        return customFont(name: "Nunito-Light", size: 16)
+    }
+    
+    public class var nunitoSemiboldWithSize14: UIFont {
+        return customFont(name: "Nunito-SemiBold", size: 14)
+    }
 }

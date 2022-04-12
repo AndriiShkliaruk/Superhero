@@ -57,7 +57,6 @@ class ProfileViewController: BaseViewController, Storyboarded {
     }
     
     private func setupNavigationBar() {
-        coordinator?.navigationController.navigationBar.tintColor = .customYellow
         navigationItem.rightBarButtonItem = saveBarButtonItem
         saveBarButtonItem.isEnabled = false
     }
