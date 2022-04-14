@@ -51,6 +51,9 @@ the chest lying</string>
                                 <state key="normal" title="More about">
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="moreButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MOL-co-wHu"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="8em-7I-uIV">
                                 <rect key="frame" x="330" y="4" width="22" height="22"/>

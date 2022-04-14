@@ -13,4 +13,10 @@ extension MainCoordinator {
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func moveToExercise(with viewModel: ExerciseViewModel) {
+        let viewController = ExerciseViewController.instantiate()
+        viewController.viewModel = viewModel
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }

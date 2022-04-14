@@ -64,9 +64,3 @@ class MusclesTableHeaderView: UITableViewHeaderFooterView {
         chevronImageView.transform = transform.rotated(by: isUp ? .pi : 0)
     }
 }
-
-extension MusclesTableHeaderView: MusclesTableHeaderDelegate {
-    func changeSelectedCount() {
-        setSelectedCount()
-    }
-}

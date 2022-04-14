@@ -17,7 +17,8 @@ class ExerciseCell: UITableViewCell {
     
     static let identifier = "ExerciseCell"
     private var viewModel: ExerciseViewModel?
-    var delegate: MusclesTableHeaderDelegate?
+    var delegate: ExerciseCellDelegate?
+    var coordinator: MainCoordinator?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -78,5 +79,10 @@ class ExerciseCell: UITableViewCell {
             innerView.layer.borderColor = UIColor(white: 1, alpha: 0.4).cgColor
             checkboxImageView.isHidden = true
         }
+    }
+    
+    @IBAction func moreButtonTapped(_ sender: UIButton) {
+        guard let viewModel = viewModel else { return }
+        coordinator?.moveToExercise(with: viewModel)
     }
 }

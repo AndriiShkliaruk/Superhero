@@ -33,6 +33,8 @@
 		F92FF40027F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92FF3FE27F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift */; };
 		F935598A27DFA8CD00229A7B /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */; };
 		F935598C27DFA99500229A7B /* ProfileTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */; };
+		F937F9812805E54200EA5DBB /* CustomRoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F937F9802805E54200EA5DBB /* CustomRoundedButtonView.swift */; };
+		F937F9832805E59C00EA5DBB /* CustomRoundedButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F937F9822805E59C00EA5DBB /* CustomRoundedButtonView.xib */; };
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
 		F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54A27F630AB00294816 /* ChartViewModel.swift */; };
 		F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */; };
@@ -104,7 +106,10 @@
 		F997070F27C6B12200C24B50 /* ProgramsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997070E27C6B12200C24B50 /* ProgramsViewController.storyboard */; };
 		F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997071027C6B13100C24B50 /* ProgressViewController.storyboard */; };
 		F997071327C6C05F00C24B50 /* Saira-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F997071227C6C05F00C24B50 /* Saira-Medium.ttf */; };
-		F9D66DEF2804AEBD00371B0F /* MusclesTableHeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D66DEE2804AEBD00371B0F /* MusclesTableHeaderDelegate.swift */; };
+		F9D66DEF2804AEBD00371B0F /* ExerciseCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D66DEE2804AEBD00371B0F /* ExerciseCellDelegate.swift */; };
+		F9D66DF32805D25E00371B0F /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D66DF22805D25E00371B0F /* UITableView+Extension.swift */; };
+		F9D66DF52805D43D00371B0F /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D66DF42805D43D00371B0F /* ExerciseViewController.swift */; };
+		F9D66DF72805D45800371B0F /* ExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D66DF62805D45800371B0F /* ExerciseViewController.storyboard */; };
 		F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D68A2D27C12D18005F551E /* ProfileManager.swift */; };
 		F9D8F1E827F043DC00D2365D /* HomeParametersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */; };
 		F9D8F1E927F043DC00D2365D /* HomeParametersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D8F1E727F043DC00D2365D /* HomeParametersCell.xib */; };
@@ -139,6 +144,8 @@
 		F92FF3FE27F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyParameter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F935598927DFA8CD00229A7B /* ProfileTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableHeaderView.xib; sourceTree = "<group>"; };
 		F935598B27DFA99500229A7B /* ProfileTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableFooterView.xib; sourceTree = "<group>"; };
+		F937F9802805E54200EA5DBB /* CustomRoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedButtonView.swift; sourceTree = "<group>"; };
+		F937F9822805E59C00EA5DBB /* CustomRoundedButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRoundedButtonView.xib; sourceTree = "<group>"; };
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
 		F946D54A27F630AB00294816 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewModel.swift; sourceTree = "<group>"; };
@@ -211,7 +218,10 @@
 		F997070E27C6B12200C24B50 /* ProgramsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgramsViewController.storyboard; sourceTree = "<group>"; };
 		F997071027C6B13100C24B50 /* ProgressViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressViewController.storyboard; sourceTree = "<group>"; };
 		F997071227C6C05F00C24B50 /* Saira-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Medium.ttf"; sourceTree = "<group>"; };
-		F9D66DEE2804AEBD00371B0F /* MusclesTableHeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesTableHeaderDelegate.swift; sourceTree = "<group>"; };
+		F9D66DEE2804AEBD00371B0F /* ExerciseCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCellDelegate.swift; sourceTree = "<group>"; };
+		F9D66DF22805D25E00371B0F /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		F9D66DF42805D43D00371B0F /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		F9D66DF62805D45800371B0F /* ExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseViewController.storyboard; sourceTree = "<group>"; };
 		F9D68A2D27C12D18005F551E /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParametersCell.swift; sourceTree = "<group>"; };
 		F9D8F1E727F043DC00D2365D /* HomeParametersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeParametersCell.xib; sourceTree = "<group>"; };
@@ -320,6 +330,15 @@
 				F98425FA27DFB111002F2196 /* ProfileTableFooterView.swift */,
 			);
 			path = ProfileTableFooterView;
+			sourceTree = "<group>";
+		};
+		F937F97F2805E51000EA5DBB /* CustomRoundedButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				F937F9802805E54200EA5DBB /* CustomRoundedButtonView.swift */,
+				F937F9822805E59C00EA5DBB /* CustomRoundedButtonView.xib */,
+			);
+			path = CustomRoundedButtonView;
 			sourceTree = "<group>";
 		};
 		F946D54E27FC9EF700294816 /* Chart */ = {
@@ -619,6 +638,7 @@
 		F968596227C3AD0C0007FF5C /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				F937F97F2805E51000EA5DBB /* CustomRoundedButtonView */,
 				F96B771F27BE8CBC00678747 /* CustomRoundedButton.swift */,
 			);
 			path = Buttons;
@@ -665,6 +685,7 @@
 				F9FF38D027DB652F00DDA957 /* UITextField+Extension.swift */,
 				F989AF2F27E0AED8008751FB /* Profile+Sex.swift */,
 				F92D907727E4A94B0018917F /* UIView+Extension.swift */,
+				F9D66DF22805D25E00371B0F /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -739,6 +760,7 @@
 			isa = PBXGroup;
 			children = (
 				F99706F627C665B100C24B50 /* MusclesViewController.swift */,
+				F9D66DF42805D43D00371B0F /* ExerciseViewController.swift */,
 			);
 			path = Muscles;
 			sourceTree = "<group>";
@@ -781,6 +803,7 @@
 			isa = PBXGroup;
 			children = (
 				F997070A27C6B0F900C24B50 /* MusclesViewController.storyboard */,
+				F9D66DF62805D45800371B0F /* ExerciseViewController.storyboard */,
 			);
 			path = Muscles;
 			sourceTree = "<group>";
@@ -858,7 +881,7 @@
 		F9D66DED2804AEAD00371B0F /* Muscles */ = {
 			isa = PBXGroup;
 			children = (
-				F9D66DEE2804AEBD00371B0F /* MusclesTableHeaderDelegate.swift */,
+				F9D66DEE2804AEBD00371B0F /* ExerciseCellDelegate.swift */,
 			);
 			path = Muscles;
 			sourceTree = "<group>";
@@ -971,6 +994,7 @@
 				F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */,
 				F92FF3F827F5ECBA003B97B5 /* ChartViewController.storyboard in Resources */,
 				F9D8F1EC27F081CE00D2365D /* Gilroy-Semibold.ttf in Resources */,
+				F9D66DF72805D45800371B0F /* ExerciseViewController.storyboard in Resources */,
 				F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */,
 				F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */,
 				F99706FF27C6660400C24B50 /* CalculatorViewController.storyboard in Resources */,
@@ -983,6 +1007,7 @@
 				F935598A27DFA8CD00229A7B /* ProfileTableHeaderView.xib in Resources */,
 				F96B772727BE90C400678747 /* Saira-Thin.ttf in Resources */,
 				F946D5692801AD6B00294816 /* Nunito-SemiBold.ttf in Resources */,
+				F937F9832805E59C00EA5DBB /* CustomRoundedButtonView.xib in Resources */,
 				F96B772327BE90B200678747 /* Saira-Bold.ttf in Resources */,
 				F935598C27DFA99500229A7B /* ProfileTableFooterView.xib in Resources */,
 				F96B772827BE90C400678747 /* Saira-Light.ttf in Resources */,
@@ -1011,7 +1036,7 @@
 				F99706F727C665B100C24B50 /* MusclesViewController.swift in Sources */,
 				F997070127C6661C00C24B50 /* CalculatorViewModel.swift in Sources */,
 				F99706EE27C6630900C24B50 /* Coordinator+Programs.swift in Sources */,
-				F9D66DEF2804AEBD00371B0F /* MusclesTableHeaderDelegate.swift in Sources */,
+				F9D66DEF2804AEBD00371B0F /* ExerciseCellDelegate.swift in Sources */,
 				F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */,
 				F99706F927C665BB00C24B50 /* ProfileViewController.swift in Sources */,
 				F92D907A27E749640018917F /* ProfileViewControllerDelegate.swift in Sources */,
@@ -1022,6 +1047,7 @@
 				F94E9F4D27EDDFC200693538 /* UserProfileViewModel.swift in Sources */,
 				F946D55D280091B300294816 /* MuscleGroup.swift in Sources */,
 				F99706FD27C665D700C24B50 /* ProgressViewController.swift in Sources */,
+				F937F9812805E54200EA5DBB /* CustomRoundedButtonView.swift in Sources */,
 				F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */,
 				F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */,
 				F9FF38D127DB652F00DDA957 /* UITextField+Extension.swift in Sources */,
@@ -1058,6 +1084,8 @@
 				F92D906927E3781B0018917F /* ProfileParametersListCell.swift in Sources */,
 				F94E9F3B27EBA78800693538 /* ImagePicker.swift in Sources */,
 				F989AF3027E0AED8008751FB /* Profile+Sex.swift in Sources */,
+				F9D66DF52805D43D00371B0F /* ExerciseViewController.swift in Sources */,
+				F9D66DF32805D25E00371B0F /* UITableView+Extension.swift in Sources */,
 				F9D8F1E827F043DC00D2365D /* HomeParametersCell.swift in Sources */,
 				F99706EA27C662F100C24B50 /* Coordinator+Muscles.swift in Sources */,
 				F92D907627E4A5160018917F /* BodyParametersDelegate.swift in Sources */,
@@ -1212,7 +1240,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
@@ -1245,7 +1273,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;

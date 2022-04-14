@@ -8,6 +8,8 @@
 import Foundation
 
 class ExerciseViewModel {
+    let navigationBarTitle = "Exercise"
+    let addButtonTitle = "Add to Program"
     let moreButtonText = "More about"
     let moreButtonIcon = "arrow-right"
     

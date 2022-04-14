@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomRoundedButtonView" customModule="SuperheroShkliaruk" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="G5L-se-gWR" id="PL0-81-wFB"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="N1W-Kk-CXq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5L-se-gWR" customClass="CustomRoundedButton" customModule="SuperheroShkliaruk" customModuleProvider="target">
+                    <rect key="frame" x="43" y="21" width="328" height="49"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="SUo-ol-wDn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="G5L-se-gWR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="21" id="Asy-qg-POD"/>
+                <constraint firstAttribute="bottom" secondItem="G5L-se-gWR" secondAttribute="bottom" constant="48" id="VXm-3p-HkZ"/>
+                <constraint firstItem="G5L-se-gWR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="43" id="acW-Mm-Mib"/>
+                <constraint firstAttribute="trailing" secondItem="G5L-se-gWR" secondAttribute="trailing" constant="43" id="eoh-BZ-ti0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-168.75"/>
+        </view>
+    </objects>
+</document>

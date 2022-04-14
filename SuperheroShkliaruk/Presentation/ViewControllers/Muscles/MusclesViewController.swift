@@ -67,12 +67,7 @@ extension MusclesViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             self.viewModel.muscleGroupViewModels[section].isOpen.toggle()
-            
-            if self.viewModel.muscleGroupViewModels[section].isOpen {
-                tableView.insertRows(at: indexPaths, with: .fade)
-            } else {
-                tableView.deleteRows(at: indexPaths, with: .fade)
-            }
+            self.tableView.reloadDataWithScroll(to: section, animated: true)
         }
         
         return headerView
@@ -98,10 +93,8 @@ extension MusclesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ExerciseCell.identifier, for: indexPath) as! ExerciseCell
         cell.configure(with: viewModel.muscleGroupViewModels[indexPath.section].exercises[indexPath.row], for: mode)
-        
-        if mode == .edit, let headerView = tableView.headerView(forSection: indexPath.section) as? MusclesTableHeaderView {
-            cell.delegate = headerView
-        }
+        cell.delegate = self
+        cell.coordinator = coordinator
         return cell
     }
     
@@ -111,5 +104,11 @@ extension MusclesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+extension MusclesViewController: ExerciseCellDelegate {
+    func changeSelectedCount() {
+        tableView.reloadData()
     }
 }

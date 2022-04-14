@@ -9,8 +9,7 @@ import UIKit
 
 class ProfileViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var buttonBackgroundView: UIView!
-    @IBOutlet private weak var addParametersButton: CustomRoundedButton!
+    @IBOutlet private weak var addParametersButtonView: CustomRoundedButtonView!
     
     var coordinator: MainCoordinator?
     private var viewModel = ProfileViewModel()
@@ -50,10 +49,8 @@ class ProfileViewController: BaseViewController, Storyboarded {
     
     private func setupUI() {
         title = viewModel.navigationBarTitleText
-        buttonBackgroundView.applyBlackTopGradient()
-        addParametersButton.setTitle(viewModel.addParametersButtonText, for: .normal)
-        addParametersButton.backgroundColor = .customYellow
-        addParametersButton.titleLabel?.font = .sairaRegularWithSize16
+        addParametersButtonView.setButtonTitle(viewModel.addParametersButtonText)
+        addParametersButtonView.setButtonActionOnTap(addParametersButtonTapped)
     }
     
     private func setupNavigationBar() {
@@ -79,7 +76,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
         }
     }
     
-    @IBAction private func addParametersButtonTapped(_ sender: UIButton) {
+    private func addParametersButtonTapped() {
         coordinator?.presentBodyParameters { viewController in
             viewController.delegate = self
             viewController.viewModel = viewModel
