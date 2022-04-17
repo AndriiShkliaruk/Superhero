@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9074EC3280C36A8001E4F05 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9074EC2280C36A8001E4F05 /* UIViewController+Keyboard.swift */; };
+		F9074EC5280C42DC001E4F05 /* UIViewController+ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9074EC4280C42DC001E4F05 /* UIViewController+ActionSheet.swift */; };
 		F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DF82727C11E7100B76F30 /* StartViewModel.swift */; };
 		F90DF82A27C11EA600B76F30 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DF82927C11EA600B76F30 /* HomeViewModel.swift */; };
 		F92D905827E362CF0018917F /* ParameterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D905727E362CF0018917F /* ParameterViewModel.swift */; };
@@ -118,6 +120,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F9074EC2280C36A8001E4F05 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		F9074EC4280C42DC001E4F05 /* UIViewController+ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActionSheet.swift"; sourceTree = "<group>"; };
 		F90DF82727C11E7100B76F30 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		F90DF82927C11EA600B76F30 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F92D905727E362CF0018917F /* ParameterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewModel.swift; sourceTree = "<group>"; };
@@ -686,6 +690,8 @@
 				F989AF2F27E0AED8008751FB /* Profile+Sex.swift */,
 				F92D907727E4A94B0018917F /* UIView+Extension.swift */,
 				F9D66DF22805D25E00371B0F /* UITableView+Extension.swift */,
+				F9074EC2280C36A8001E4F05 /* UIViewController+Keyboard.swift */,
+				F9074EC4280C42DC001E4F05 /* UIViewController+ActionSheet.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1079,6 +1085,7 @@
 				F946D55B2800910800294816 /* ExercisesStorage.swift in Sources */,
 				F99706FB27C665CC00C24B50 /* ProgramsViewController.swift in Sources */,
 				F946D5722802DB7100294816 /* MuscleGroupViewModel.swift in Sources */,
+				F9074EC3280C36A8001E4F05 /* UIViewController+Keyboard.swift in Sources */,
 				F96B771827BE810800678747 /* UIColor+CustomColors.swift in Sources */,
 				F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */,
 				F92D906927E3781B0018917F /* ProfileParametersListCell.swift in Sources */,
@@ -1091,6 +1098,7 @@
 				F92D907627E4A5160018917F /* BodyParametersDelegate.swift in Sources */,
 				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F92D905827E362CF0018917F /* ParameterViewModel.swift in Sources */,
+				F9074EC5280C42DC001E4F05 /* UIViewController+ActionSheet.swift in Sources */,
 				F92D907827E4A94B0018917F /* UIView+Extension.swift in Sources */,
 				F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */,
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,

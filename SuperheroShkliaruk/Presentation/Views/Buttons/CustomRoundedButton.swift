@@ -21,6 +21,7 @@ class CustomRoundedButton: UIButton {
     private func setupUI() {
         layer.cornerRadius = layer.frame.height / 2
         titleLabel?.textColor = .black
+        titleLabel?.tintColor = .black
         tintColor = .black
     }
 }

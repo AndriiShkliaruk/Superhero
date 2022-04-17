@@ -17,6 +17,7 @@ class ExerciseViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var addButtonView: CustomRoundedButtonView!
     
     var viewModel: ExerciseViewModel?
+    private var actionSheetItems = [ActionSheetItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +36,23 @@ class ExerciseViewController: UIViewController, Storyboarded {
         
         guard let viewModel = viewModel else { return }
         title = viewModel.navigationBarTitle
+        configureActionSheet(viewModel)
+        
         coverImageView.image = UIImage(named: viewModel.image)
         iconImageView.image = UIImage(named: viewModel.icon)
         titleLabel.text = viewModel.name
         optionsLabel.text = viewModel.options
         descriptionLabel.text = viewModel.description
         addButtonView.setButtonTitle(viewModel.addButtonTitle)
+        addButtonView.setButtonActionOnTap(addButtonTapped)
+    }
+    
+    private func configureActionSheet(_ viewModel: ExerciseViewModel) {
+        let newProgram: ActionSheetItem = (viewModel.newProgramActionTitle, { })
+        actionSheetItems.append(newProgram)
+    }
+    
+    private func addButtonTapped() {
+        showActionSheetWithCancel(with: actionSheetItems)
     }
 }

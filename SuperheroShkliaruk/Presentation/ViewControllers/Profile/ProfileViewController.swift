@@ -28,6 +28,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
         setupUI()
         setupNavigationBar()
         
+        hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -134,7 +135,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileParametersCell.identifier, for: indexPath) as? ProfileParametersCell else { return UITableViewCell() }
         let parameterViewModel = viewModel.selectedParameters[indexPath.row]
-        cell.configure(with: parameterViewModel)
+        cell.configure(with: parameterViewModel, textFieldTag: indexPath.row)
         cell.delegate = self
         return cell
     }
@@ -144,6 +145,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         let parameter = viewModel.selectedParameters[indexPath.row]
         viewModel.deleteDisplayedParameter(parameter)
         tableView.deleteRows(at: [indexPath], with: .fade)
+        tableView.reloadData()
         updateSaveButtonState()
     }
 }

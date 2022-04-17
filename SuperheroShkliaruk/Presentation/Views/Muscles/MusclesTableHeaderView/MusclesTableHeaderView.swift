@@ -14,6 +14,8 @@ class MusclesTableHeaderView: UITableViewHeaderFooterView {
     @IBOutlet private weak var selectedStackView: UIStackView!
     @IBOutlet private weak var selectedLabel: UILabel!
     @IBOutlet private weak var selectedCountLabel: UILabel!
+    @IBOutlet private weak var underlineView: UIView!
+    
     
     static let identifier = "MusclesTableHeaderView"
     private var viewModel: MuscleGroupViewModel?
@@ -27,12 +29,11 @@ class MusclesTableHeaderView: UITableViewHeaderFooterView {
     private func setupUI() {
         titleLabel.font = .helveticaNeueRegularWithSize18
         titleLabel.textColor = .white
-        
         selectedLabel.font = .nunitoLightWithSize14
         selectedLabel.textColor = .white
-        
         selectedCountLabel.font = .nunitoSemiboldWithSize14
         selectedCountLabel.textColor = .customYellow
+        underlineView.backgroundColor = .white
         
         innerView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(headerTapped))

@@ -35,7 +35,6 @@ class ProfileParametersCell: UITableViewCell {
         valueTextField.font = .helveticaNeueRegularWithSize18
         valueTextField.textColor = .customGray
         valueTextField.delegate = self
-        valueTextField.addDoneButtonOnKeyboard()
         
         unitsLabel.font = .helveticaNeueMediumWithSize18
         unitsLabel.textColor = .customGray
@@ -43,7 +42,7 @@ class ProfileParametersCell: UITableViewCell {
         isEnabledSwitch.onTintColor = .customYellow
     }
     
-    func configure(with viewModel: ParameterViewModel) {
+    func configure(with viewModel: ParameterViewModel, textFieldTag: Int) {
         parameterViewModel = viewModel
         
         bodyPartLabel.text = viewModel.title
@@ -51,17 +50,35 @@ class ProfileParametersCell: UITableViewCell {
         unitsLabel.text = viewModel.units
         isEnabledSwitch.isOn = viewModel.isDisplayed
         underlineView.backgroundColor = .white
+        
+        valueTextField.tag = textFieldTag
+        addDoneButtonOnKeyboard()
     }
     
-    private func addDoneButtonOnKeyboard(textField: UITextField) {
-        let keypadToolbar: UIToolbar = UIToolbar()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let doneButton = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: textField, action: #selector(UITextField.resignFirstResponder))
-        doneButton.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .normal)
-        doneButton.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .highlighted)
-        keypadToolbar.items=[flexibleSpace, doneButton]
-        keypadToolbar.sizeToFit()
-        textField.inputAccessoryView = keypadToolbar
+    private func addDoneButtonOnKeyboard() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneKeyboardButtonPressed))
+        done.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .normal)
+        done.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .highlighted)
+        
+        let items = [flexSpace, done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        valueTextField.inputAccessoryView = doneToolbar
+    }
+    
+    @objc func doneKeyboardButtonPressed() {
+        let nextTag = valueTextField.tag + 1
+        
+        if let nextResponder = superview?.viewWithTag(nextTag) as? UITextField {
+            nextResponder.becomeFirstResponder()
+        } else {
+            endEditing(true)
+        }
     }
     
     @IBAction private func switchValueChanged(_ sender: UISwitch) {

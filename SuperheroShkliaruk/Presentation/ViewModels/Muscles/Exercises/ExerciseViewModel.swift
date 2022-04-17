@@ -12,6 +12,7 @@ class ExerciseViewModel {
     let addButtonTitle = "Add to Program"
     let moreButtonText = "More about"
     let moreButtonIcon = "arrow-right"
+    let newProgramActionTitle = "Create New Program"
     
     let name: String
     let icon: String

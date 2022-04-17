@@ -91,6 +91,7 @@
                 <outlet property="selectedLabel" destination="xW1-Ul-ulj" id="LIA-Zm-SW0"/>
                 <outlet property="selectedStackView" destination="7vh-Lz-1qS" id="ez7-H4-db2"/>
                 <outlet property="titleLabel" destination="nGq-Eh-hYu" id="4ON-HM-4Qh"/>
+                <outlet property="underlineView" destination="bgS-up-P5f" id="PCs-7L-kGd"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="-151.67410714285714"/>
         </view>
