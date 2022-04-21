@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Exercise: Decodable {
+struct Exercise: Codable, Equatable {
     let name: String
     let icon: String
     let image: String
@@ -16,19 +16,19 @@ struct Exercise: Decodable {
     let equipment: Equipment
     let level: Level
     
-    enum ExerciseType: String, Decodable {
+    enum ExerciseType: String, Codable {
         case powerlifting = "Powerlifting"
         case bodybuilding = "Bodybuilding"
     }
 
-    enum Equipment: String, Decodable {
+    enum Equipment: String, Codable {
         case barbell = "Barbell"
         case ownWeight = "Own weight"
         case dumbbells = "Dumbbells"
         case trainer = "Trainer"
     }
 
-    enum Level: String, Decodable {
+    enum Level: String, Codable {
         case beginner = "Beginner"
         case normal = "Normal"
         case experienced = "Experienced"

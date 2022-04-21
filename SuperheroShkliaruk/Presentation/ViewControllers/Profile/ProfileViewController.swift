@@ -42,8 +42,8 @@ class ProfileViewController: BaseViewController, Storyboarded {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: ProfileParametersCell.identifier, bundle: nil), forCellReuseIdentifier: ProfileParametersCell.identifier)
-        tableView.register(UINib(nibName: ProfileTableHeaderView.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableHeaderView.identifier)
-        tableView.register(UINib(nibName: ProfileTableFooterView.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableFooterView.identifier)
+        tableView.register(UINib(nibName: ProfileTableHeader.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableHeader.identifier)
+        tableView.register(UINib(nibName: ProfileTableFooter.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableFooter.identifier)
         tableView.backgroundColor = .clear
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
     }
@@ -56,7 +56,6 @@ class ProfileViewController: BaseViewController, Storyboarded {
     
     private func setupNavigationBar() {
         navigationItem.rightBarButtonItem = saveBarButtonItem
-        saveBarButtonItem.isEnabled = false
     }
     
     @objc private func saveBarButtonTapped() {
@@ -101,10 +100,14 @@ class ProfileViewController: BaseViewController, Storyboarded {
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.selectedParameters.count
+    }
+    
     //MARK: - Table View Header Setup
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableHeaderView.identifier) as! ProfileTableHeaderView
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableHeader.identifier) as! ProfileTableHeader
         headerView.configure(with: viewModel)
         headerView.delegate = self
         headerView.imagePicker = ImagePicker(presentationController: self, delegate: headerView)
@@ -115,11 +118,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return 295
     }
     
-    
     //MARK: - Table View Footer Setup
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableFooterView.identifier) as! ProfileTableFooterView
+        let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileTableFooter.identifier) as! ProfileTableFooter
         footerView.configure(with: viewModel)
         return footerView
     }
@@ -128,9 +130,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return 112
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.selectedParameters.count
-    }
+    //MARK: - Table View Cell Setup
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileParametersCell.identifier, for: indexPath) as? ProfileParametersCell else { return UITableViewCell() }
@@ -151,22 +151,32 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ProfileViewController: ProfileViewControllerDelegate {
-    func updateSaveButtonState() {
-        saveBarButtonItem.isEnabled = viewModel.stateHasChanges()
+    func didNameChange(_ text: String) {
+        viewModel.changeName(text)
+        updateSaveButtonState()
     }
     
-    func setActiveTableViewCell(_ cell: UITableViewCell?) {
+    func didAvatarChange(_ imageData: Data?) {
+        viewModel.changeAvatar(imageData)
+        updateSaveButtonState()
+    }
+    
+    func updateSaveButtonState() {
+        saveBarButtonItem.isEnabled = viewModel.isSaveButtonEnabled
+    }
+    
+    func didActiveCellChange(_ cell: UITableViewCell?) {
         activeTableViewCell = cell
     }
 }
 
 extension ProfileViewController: BodyParametersDelegate {
-    func reset() {
+    func didTapResetParametersList() {
         viewModel.resetParametersCheckboxes()
         coordinator?.dismiss(animated: true)
     }
     
-    func save() {
+    func didTapSaveParametersList() {
         viewModel.updateParametersStates()
         coordinator?.dismiss(animated: true)
         tableView.reloadData()

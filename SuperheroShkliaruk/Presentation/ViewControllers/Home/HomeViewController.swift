@@ -81,7 +81,6 @@ class HomeViewController: BaseViewController, Storyboarded {
     
     private func updateParametersCollectionView() {
         parametersCollectionView.reloadData()
-        parametersCollectionView.isHidden = false
     }
 }
 

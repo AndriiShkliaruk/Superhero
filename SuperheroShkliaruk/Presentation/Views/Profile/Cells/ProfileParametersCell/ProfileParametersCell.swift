@@ -82,28 +82,28 @@ class ProfileParametersCell: UITableViewCell {
     }
     
     @IBAction private func switchValueChanged(_ sender: UISwitch) {
-        parameterViewModel?.isDisplayed = sender.isOn
+        parameterViewModel?.changeIsDisplayed(sender.isOn)
         delegate?.updateSaveButtonState()
     }
     
     @IBAction private func valueTextFieldEditingChanged(_ sender: UITextField) {
         guard let stringValue = sender.text else { return }
-        parameterViewModel?.changedValueString = stringValue
+        parameterViewModel?.changeValue(stringValue)
         delegate?.updateSaveButtonState()
     }
     
     @IBAction private func valueTextFieldEditingDidBegin(_ sender: UITextField) {
         underlineView.backgroundColor = .customDarkYellow
-        delegate?.setActiveTableViewCell(self)
+        delegate?.didActiveCellChange(self)
     }
     
     @IBAction private func valueTextFieldEditingDidEnd(_ sender: UITextField) {
-        sender.updateUnderlineColor(underlineView: underlineView)
-        delegate?.setActiveTableViewCell(nil)
+        underlineView.backgroundColor = sender.isTextEmpty ? .white : .customDarkYellow
+        delegate?.didActiveCellChange(nil)
     }
     
     @IBAction private func valueTextFieldDidEndOnExit(_ sender: UITextField) {
-        sender.updateUnderlineColor(underlineView: underlineView)
+        underlineView.backgroundColor = sender.isTextEmpty ? .white : .customDarkYellow
         sender.resignFirstResponder()
     }
 }

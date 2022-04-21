@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ExerciseCellDelegate {
-    func changeSelectedCount()
+    func didExercisesChange()
 }

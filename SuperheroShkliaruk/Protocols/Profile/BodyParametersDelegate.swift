@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 protocol BodyParametersDelegate {
-    func reset()
-    func save()
+    func didTapResetParametersList()
+    func didTapSaveParametersList()
 }

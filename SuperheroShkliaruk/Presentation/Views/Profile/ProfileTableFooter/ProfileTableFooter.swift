@@ -1,5 +1,5 @@
 //
-//  ProfileTableFooterView.swift
+//  ProfileTableFooter.swift
 //  SuperheroShkliaruk
 //
 //  Created by Andrii Shkliaruk on 14.03.2022.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ProfileTableFooterView: UITableViewHeaderFooterView {
+class ProfileTableFooter: UITableViewHeaderFooterView {
     @IBOutlet private weak var descriptionLabel: UILabel!
     
-    static let identifier = "ProfileTableFooterView"
+    static let identifier = "ProfileTableFooter"
     
     override func awakeFromNib() {
         super.awakeFromNib()

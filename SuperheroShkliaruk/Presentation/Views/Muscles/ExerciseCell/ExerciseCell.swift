@@ -65,7 +65,7 @@ class ExerciseCell: UITableViewCell {
     @objc private func cellTapped() {
         viewModel?.isSelected.toggle()
         setCellSelection()
-        delegate?.changeSelectedCount()
+        delegate?.didExercisesChange()
     }
     
     private func setCellSelection() {

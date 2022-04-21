@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct ExercisesStorage {
-    func fetchExercisesByMyscleTypes() -> [MuscleGroup] {
+class ExercisesStorage {
+    static let sharedInstance = ExercisesStorage()
+    
+    func fetchExercises() -> [Exercise] {
+        return fetchMyscleGroups().flatMap { $0.exercises }
+    }
+    
+    func fetchMyscleGroups() -> [MuscleGroup] {
         let fileData = readLocalFile(forName: "Exercises")
         let results: [MuscleGroup] = parse(jsonData: fileData)
         return results

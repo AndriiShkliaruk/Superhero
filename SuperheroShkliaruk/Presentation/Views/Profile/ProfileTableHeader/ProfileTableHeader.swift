@@ -1,5 +1,5 @@
 //
-//  ProfileTableHeaderView.swift
+//  ProfileTableHeader.swift
 //  SuperheroShkliaruk
 //
 //  Created by Andrii Shkliaruk on 14.03.2022.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ProfileTableHeaderView: UITableViewHeaderFooterView {
+class ProfileTableHeader: UITableViewHeaderFooterView {
     
     @IBOutlet private weak var avatarImageButton: UIButton!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var textFieldUnderlineView: UIView!
     
-    static let identifier = "ProfileTableHeaderView"
+    static let identifier = "ProfileTableHeader"
     private var profileViewModel: ProfileViewModel?
     var delegate: ProfileViewControllerDelegate?
     var imagePicker: ImagePicker?
@@ -30,6 +30,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         textFieldUnderlineView.backgroundColor = .white
         nameTextField.font = .helveticaNeueRegularWithSize18
         nameTextField.tintColor = .white
+        nameTextField.textColor = .white
         nameTextField.autocapitalizationType = .sentences
         avatarImageButton.imageView?.layer.cornerRadius = 8
         avatarImageButton.imageView?.contentMode = .scaleAspectFill
@@ -38,13 +39,13 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     
     func configure(with viewModel: ProfileViewModel) {
         profileViewModel = viewModel
-        updateAvatarImage()
+        setAvatarImage()
         nameLabel.text = viewModel.nameLabelText
         nameTextField.configurePlaceholder(withText: viewModel.nameTextFieldPlaceholder, font: .helveticaNeueThinWithSize18, textColor: .customGray)
         nameTextField.text = viewModel.userProfile.name
     }
     
-    private func updateAvatarImage() {
+    private func setAvatarImage() {
         if let imageData = profileViewModel?.userProfile.avatar {
             avatarImageButton.setImage(UIImage(data: imageData), for: .normal)
             avatarImageButton.imageView?.layer.borderWidth = 1
@@ -59,17 +60,16 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     }
     
     @IBAction private func nameTextFieldEditingDidEnd(_ sender: UITextField) {
-        sender.updateUnderlineColor(underlineView: textFieldUnderlineView)
+        textFieldUnderlineView.backgroundColor = sender.isTextEmpty ? .white : .customDarkYellow
     }
     
     @IBAction private func nameTextFieldDidEndOnExit(_ sender: UITextField) {
-        sender.updateUnderlineColor(underlineView: textFieldUnderlineView)
+        textFieldUnderlineView.backgroundColor = sender.isTextEmpty ? .white : .customDarkYellow
         sender.resignFirstResponder()
     }
     
     @IBAction private func nameTextFieldEditingChanged(_ sender: UITextField) {
-        profileViewModel?.userProfile.name = sender.text ?? ""
-        delegate?.updateSaveButtonState()
+        delegate?.didNameChange(sender.text ?? "")
     }
     
     @IBAction private func avatarImageButtonTapped(_ sender: UIButton) {
@@ -78,17 +78,15 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     }
 }
 
-extension ProfileTableHeaderView: ImagePickerDelegate {
+extension ProfileTableHeader: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
-        guard let avatarImage = image else { return }
-        profileViewModel?.userProfile.avatar = avatarImage.pngData()
-        updateAvatarImage()
-        delegate?.updateSaveButtonState()
+        guard let imageData = image?.pngData() else { return }
+        delegate?.didAvatarChange(imageData)
+        setAvatarImage()
     }
     
     func deleteImage() {
-        profileViewModel?.userProfile.avatar = nil
-        updateAvatarImage()
-        delegate?.updateSaveButtonState()
+        delegate?.didAvatarChange(nil)
+        setAvatarImage()
     }
 }

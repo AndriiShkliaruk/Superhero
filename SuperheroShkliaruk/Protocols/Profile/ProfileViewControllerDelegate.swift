@@ -9,5 +9,7 @@ import UIKit
 
 protocol ProfileViewControllerDelegate {
     func updateSaveButtonState()
-    func setActiveTableViewCell(_ cell: UITableViewCell?)
+    func didNameChange(_ text: String)
+    func didAvatarChange(_ imageData: Data?)
+    func didActiveCellChange(_ cell: UITableViewCell?)
 }

@@ -7,12 +7,12 @@
 
 import Foundation
 
-class ExerciseViewModel {
-    let navigationBarTitle = "Exercise"
-    let addButtonTitle = "Add to Program"
-    let moreButtonText = "More about"
-    let moreButtonIcon = "arrow-right"
-    let newProgramActionTitle = "Create New Program"
+class ExerciseViewModel: Codable {
+    private(set) var navigationBarTitle = "Exercise"
+    private(set) var addButtonTitle = "Add to Program"
+    private(set) var moreButtonText = "More about"
+    private(set) var moreButtonIcon = "arrow-right"
+    private(set) var newProgramActionTitle = "Create New Program"
     
     let name: String
     let icon: String
@@ -27,5 +27,13 @@ class ExerciseViewModel {
         image = model.image
         description = model.description
         options = "\(model.equipment.rawValue), \(model.level.rawValue), \(model.type.rawValue)"
+    }
+}
+
+extension ExerciseViewModel: Equatable {
+    static func == (lhs: ExerciseViewModel, rhs: ExerciseViewModel) -> Bool {
+        guard lhs.name == rhs.name else { return false }
+        guard lhs.isSelected == rhs.isSelected else { return false }
+        return true
     }
 }

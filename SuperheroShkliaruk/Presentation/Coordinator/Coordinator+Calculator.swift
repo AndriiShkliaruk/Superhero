@@ -9,9 +9,7 @@ import Foundation
 
 extension MainCoordinator {
     func moveToCalculator() {
-//        let viewController = CalculatorViewController.instantiate()
-        let viewController = MusclesViewController.instantiate()
-        viewController.mode = .edit
+        let viewController = CalculatorViewController.instantiate()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }

@@ -49,11 +49,11 @@ class ParametersViewController: UIViewController, Storyboarded {
     
 
     @IBAction private func cancelButtonTapped(_ sender: UIButton) {
-        delegate?.reset()
+        delegate?.didTapResetParametersList()
     }
     
     @IBAction private func selectButtonTapped(_ sender: UIButton) {
-        delegate?.save()
+        delegate?.didTapSaveParametersList()
     }
 }
 

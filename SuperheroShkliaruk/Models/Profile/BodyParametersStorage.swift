@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 import OrderedCollections
 
-final class BodyParametersStorage {
+class BodyParametersStorage {
     static let sharedInstance = BodyParametersStorage()
     private let profileManager = ProfileManager.sharedInstance
     

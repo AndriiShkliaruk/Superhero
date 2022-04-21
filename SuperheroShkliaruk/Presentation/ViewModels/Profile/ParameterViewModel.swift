@@ -106,6 +106,14 @@ class ParameterViewModel {
         isSelected = false
         isDisplayed = false
     }
+    
+    func changeValue(_ value: String) {
+        changedValueString = value
+    }
+    
+    func changeIsDisplayed(_ isDisplayed: Bool) {
+        self.isDisplayed = isDisplayed
+    }
 }
 
 extension ParameterViewModel: Equatable {

@@ -30,4 +30,22 @@ class MuscleGroupViewModel {
             ExerciseViewModel(exercise)
         }
     }
+    
+    func updateExercises(by inputExercises: [ExerciseViewModel]) {
+        exercises.forEach { exercise in
+            if inputExercises.contains(where: { $0.name == exercise.name }) {
+                exercise.isSelected = true
+            }
+        }
+    }
+}
+
+extension MuscleGroupViewModel: Equatable {
+    static func == (lhs: MuscleGroupViewModel, rhs: MuscleGroupViewModel) -> Bool {
+        guard lhs.name == rhs.name else { return false }
+        guard lhs.exercises == rhs.exercises else { return false }
+        return true
+    }
+    
+    
 }

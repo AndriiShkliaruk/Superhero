@@ -16,10 +16,12 @@ class MusclesViewController: BaseViewController, Storyboarded {
     
     var mode: MusclesViewControllerMode = .normal
     var coordinator: MainCoordinator?
-    let viewModel = MusclesViewModel()
+    var delegate: ProgramViewControllerDelegate?
+    var viewModel = MusclesViewModel()
     
     private lazy var saveBarButtonItem: UIBarButtonItem = {
         let saveButton = UIBarButtonItem(title: viewModel.saveBarButtonText, style: .plain, target: self, action: #selector(saveBarButtonTapped))
+        saveButton.isEnabled = false
         return saveButton
     }()
     
@@ -45,7 +47,8 @@ class MusclesViewController: BaseViewController, Storyboarded {
     }
     
     @objc private func saveBarButtonTapped() {
-        
+        delegate?.didExercisesChange(viewModel)
+        coordinator?.back()
     }
 }
 
@@ -108,7 +111,8 @@ extension MusclesViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension MusclesViewController: ExerciseCellDelegate {
-    func changeSelectedCount() {
+    func didExercisesChange() {
         tableView.reloadData()
+        saveBarButtonItem.isEnabled = viewModel.isSaveButtonEnabled
     }
 }

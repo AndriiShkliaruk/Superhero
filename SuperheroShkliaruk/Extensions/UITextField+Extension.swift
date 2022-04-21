@@ -8,17 +8,17 @@
 import UIKit
 
 extension UITextField {
+    var isTextEmpty: Bool {
+        if text != nil && text != "" {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     func configurePlaceholder(withText text: String, font: UIFont, textColor: UIColor) {
         attributedPlaceholder = NSAttributedString(string: text, attributes: [.font: font,
                                                                               .foregroundColor: textColor])
-    }
-    
-    func updateUnderlineColor(underlineView: UIView) {
-        if text != nil && text != "" {
-            underlineView.backgroundColor = .customDarkYellow
-        } else {
-            underlineView.backgroundColor = .white
-        }
     }
 }
 
