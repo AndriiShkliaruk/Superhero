@@ -13,7 +13,7 @@ class ProgramsViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var newProgramButtonView: CustomRoundedButtonView!
     
     var coordinator: MainCoordinator?
-    private var viewModel = ProgramsViewModel()
+    private let viewModel = ProgramsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -57,9 +57,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="arrowImageView" destination="1bt-mf-UYL" id="oyd-x7-DEz"/>
-                <outlet property="innerView" destination="fEa-ac-aYr" id="yAD-ia-3g4"/>
-                <outlet property="titleLabel" destination="JXd-po-koA" id="gc8-fh-zbK"/>
+                <outlet property="arrowImageView" destination="1bt-mf-UYL" id="Bf1-pk-BwA"/>
+                <outlet property="innerView" destination="fEa-ac-aYr" id="YXn-k7-Vp1"/>
+                <outlet property="titleLabel" destination="JXd-po-koA" id="DzC-zq-mUm"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </tableViewCell>

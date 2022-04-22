@@ -38,7 +38,6 @@
 		F937F9812805E54200EA5DBB /* CustomRoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F937F9802805E54200EA5DBB /* CustomRoundedButtonView.swift */; };
 		F937F9832805E59C00EA5DBB /* CustomRoundedButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F937F9822805E59C00EA5DBB /* CustomRoundedButtonView.xib */; };
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
-		F942887B280DB57800B4D3D5 /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942887A280DB57800B4D3D5 /* ProgramCell.swift */; };
 		F942887D280DB70400B4D3D5 /* ProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942887C280DB70400B4D3D5 /* ProgramViewModel.swift */; };
 		F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54A27F630AB00294816 /* ChartViewModel.swift */; };
 		F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */; };
@@ -85,6 +84,7 @@
 		F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B772C27BE98A900678747 /* UIView+Gradient.swift */; };
 		F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97121D027E26CBE0095B8C9 /* BaseViewController.swift */; };
 		F97121D927E26E6B0095B8C9 /* BaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97121D827E26E6B0095B8C9 /* BaseViewController.storyboard */; };
+		F972F36A2812B888004A059E /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972F3692812B888004A059E /* ProgramCell.swift */; };
 		F98425F927DFB0D9002F2196 /* ProfileTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98425F827DFB0D9002F2196 /* ProfileTableHeader.swift */; };
 		F98425FB27DFB111002F2196 /* ProfileTableFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98425FA27DFB111002F2196 /* ProfileTableFooter.swift */; };
 		F989AF3027E0AED8008751FB /* Profile+Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F989AF2F27E0AED8008751FB /* Profile+Sex.swift */; };
@@ -163,7 +163,6 @@
 		F937F9802805E54200EA5DBB /* CustomRoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedButtonView.swift; sourceTree = "<group>"; };
 		F937F9822805E59C00EA5DBB /* CustomRoundedButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRoundedButtonView.xib; sourceTree = "<group>"; };
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
-		F942887A280DB57800B4D3D5 /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
 		F942887C280DB70400B4D3D5 /* ProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewModel.swift; sourceTree = "<group>"; };
 		F946D54A27F630AB00294816 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewModel.swift; sourceTree = "<group>"; };
@@ -211,6 +210,7 @@
 		F96B772C27BE98A900678747 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		F97121D027E26CBE0095B8C9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F97121D827E26E6B0095B8C9 /* BaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseViewController.storyboard; sourceTree = "<group>"; };
+		F972F3692812B888004A059E /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
 		F98425F827DFB0D9002F2196 /* ProfileTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeader.swift; sourceTree = "<group>"; };
 		F98425FA27DFB111002F2196 /* ProfileTableFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableFooter.swift; sourceTree = "<group>"; };
 		F989AF2F27E0AED8008751FB /* Profile+Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Sex.swift"; sourceTree = "<group>"; };
@@ -373,7 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				F951784F280DA8DF004B76C0 /* ProgramCell.xib */,
-				F942887A280DB57800B4D3D5 /* ProgramCell.swift */,
+				F972F3692812B888004A059E /* ProgramCell.swift */,
 			);
 			path = ProgramCell;
 			sourceTree = "<group>";
@@ -1142,6 +1142,7 @@
 				F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */,
 				F99706F927C665BB00C24B50 /* ProfileViewController.swift in Sources */,
 				F92D907A27E749640018917F /* ProfileViewControllerDelegate.swift in Sources */,
+				F972F36A2812B888004A059E /* ProgramCell.swift in Sources */,
 				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
 				F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */,
 				F92D908E27EA10710018917F /* PresentationController.swift in Sources */,
@@ -1156,7 +1157,6 @@
 				F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */,
 				F946D5742802DB8D00294816 /* ExerciseViewModel.swift in Sources */,
 				F997070527C6663B00C24B50 /* ProfileViewModel.swift in Sources */,
-				F942887B280DB57800B4D3D5 /* ProgramCell.swift in Sources */,
 				F99706F027C6631700C24B50 /* Coordinator+Progress.swift in Sources */,
 				F997070927C6665600C24B50 /* ProgressViewModel.swift in Sources */,
 				F92D906527E378060018917F /* ProfileParametersCell.swift in Sources */,
