@@ -8,11 +8,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Saira-Regular.ttf">
-            <string>Saira-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Profile View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -26,29 +21,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VU5-uD-7Vi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VU5-uD-7Vi" customClass="CustomRoundedButtonView" customModule="SuperheroShkliaruk" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="778" width="414" height="118"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DH-0n-1gr" userLabel="Add Parameters Button" customClass="CustomRoundedButton" customModule="SuperheroShkliaruk" customModuleProvider="target">
-                                        <rect key="frame" x="43" y="21" width="328" height="49"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="49" id="e8X-64-f4k"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="16"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Add Parameters">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addParametersButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tm1-ag-MAH"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2DH-0n-1gr" secondAttribute="trailing" constant="43" id="Lpr-Ub-pv7"/>
-                                    <constraint firstAttribute="bottom" secondItem="2DH-0n-1gr" secondAttribute="bottom" constant="48" id="VuL-tj-Mcj"/>
                                     <constraint firstAttribute="height" constant="118" id="vYf-ek-1Ez"/>
-                                    <constraint firstItem="2DH-0n-1gr" firstAttribute="leading" secondItem="VU5-uD-7Vi" secondAttribute="leading" constant="43" id="z4g-sC-3HK"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -65,8 +41,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addParametersButton" destination="2DH-0n-1gr" id="mdd-Wi-3cr"/>
-                        <outlet property="buttonBackgroundView" destination="VU5-uD-7Vi" id="4qq-rJ-5ke"/>
+                        <outlet property="addParametersButtonView" destination="VU5-uD-7Vi" id="Ktm-vJ-Xlu"/>
                         <outlet property="tableView" destination="ywM-XN-prO" id="Z3a-Sy-HFs"/>
                     </connections>
                 </viewController>
@@ -76,9 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

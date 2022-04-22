@@ -12,6 +12,10 @@ struct UserProfileViewModel {
     var avatar: Data?
     var parameters: [ParameterViewModel]
     
+    var isValidProperties: Bool {
+        !name.isEmpty && !parameters.contains(where: { $0.isSelected && $0.changedValue == 0 })
+    }
+    
     init(_ model: Profile, _ bodyParameters: [ParameterViewModel]) {
         name = model.name ?? ""
         avatar = model.avatar

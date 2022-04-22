@@ -16,8 +16,8 @@ extension Storyboarded where Self: UIViewController {
         let storyboardIdentifier = String(describing: self)
         let storyboard = UIStoryboard(name: storyboardIdentifier, bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as? Self else {
-          fatalError("The ViewController of \(storyboard.classForCoder) is not of class \(self)")
-      }
-      return viewController
+            fatalError("The ViewController of \(storyboard.classForCoder) is not of class \(self)")
+        }
+        return viewController
     }
 }

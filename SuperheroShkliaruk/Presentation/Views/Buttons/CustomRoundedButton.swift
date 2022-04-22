@@ -7,23 +7,21 @@
 
 import UIKit
 
-final class CustomRoundedButton: UIButton {
+class CustomRoundedButton: UIButton {
     override init(frame: CGRect){
         super.init(frame: frame)
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
         setupUI()
     }
 
     private func setupUI() {
         layer.cornerRadius = layer.frame.height / 2
         titleLabel?.textColor = .black
+        titleLabel?.tintColor = .black
         tintColor = .black
     }
 }

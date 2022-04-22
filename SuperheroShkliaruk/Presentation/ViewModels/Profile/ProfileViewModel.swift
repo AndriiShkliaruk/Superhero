@@ -36,6 +36,9 @@ class ProfileViewModel {
     var selectedParameters: [ParameterViewModel] {
         userProfile.parameters.filter { $0.isSelected }
     }
+    var isSaveButtonEnabled: Bool {
+        userProfile.isValidProperties && initialUserProfile != userProfile
+    }
     
     init() {
         guard let profile = coreDataProfile else {
@@ -58,15 +61,6 @@ class ProfileViewModel {
             }
             return parameter
         }
-    }
-    
-    private func isValidValues(in parameters: [ParameterViewModel]) -> Bool {
-        return !parameters.contains(where: { $0.isSelected && $0.changedValue == 0 })
-    }
-    
-    func stateHasChanges() -> Bool {
-        guard isValidValues(in: userProfile.parameters) else { return false }
-        return initialUserProfile != userProfile
     }
     
     func saveUserProfile() {
@@ -93,5 +87,13 @@ class ProfileViewModel {
     
     func deleteDisplayedParameter(_ parameter: ParameterViewModel) {
         parameter.deleteState()
+    }
+    
+    func changeName(_ text: String) {
+        userProfile.name = text
+    }
+    
+    func changeAvatar(_ imageData: Data?) {
+        userProfile.avatar = imageData
     }
 }

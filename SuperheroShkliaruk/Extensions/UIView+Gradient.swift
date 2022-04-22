@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    public func applyBlackVerticalGradient() {
+    func applyBlackVerticalGradient() {
         let clear = UIColor(white: 0, alpha: 0).cgColor
         let halfBlack = UIColor(white: 0, alpha: 0.83).cgColor
         let black = UIColor(white: 0, alpha: 1).cgColor
@@ -20,7 +20,7 @@ extension UIView {
         layer.insertSublayer(gradient, at: 0)
     }
     
-    public func applyBlackTopGradient() {
+    func applyBlackTopGradient() {
         let clear = UIColor(white: 0, alpha: 0).cgColor
         let black = UIColor(white: 0, alpha: 1).cgColor
         
@@ -29,5 +29,19 @@ extension UIView {
         gradient.locations = [0.0, 0.2, 1]
         gradient.frame = bounds
         layer.insertSublayer(gradient, at: 0)
+    }
+    
+    func applyBlackRadialGradient() {
+        let clear = UIColor(white: 0, alpha: 0).cgColor
+        let black = UIColor(white: 0, alpha: 1).cgColor
+        
+        let gradient = CAGradientLayer()
+        gradient.type = .radial
+        gradient.colors = [clear, black]
+        gradient.startPoint = CGPoint(x: 0.45, y: 0.5)
+        gradient.endPoint = CGPoint(x: 0.15, y: 0.9)
+        gradient.frame = frame
+        gradient.opacity = 0.58
+        layer.addSublayer(gradient)
     }
 }

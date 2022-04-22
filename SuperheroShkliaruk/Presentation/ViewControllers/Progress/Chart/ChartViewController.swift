@@ -35,7 +35,8 @@ class ChartViewController: UIViewController, Storyboarded {
         title = viewModel?.navigationBarTitle
         titleLabel.text = viewModel?.titleLabelText
         
-        if let description = viewModel?.descriptionLabelText, let date = viewModel?.startDate {
+        if let description = viewModel?.descriptionLabelText,
+           let date = viewModel?.startDate {
             let descriptionString = NSAttributedString(string: description, attributes: [.font: UIFont.sairaMediumWithSize16])
             let dateString = NSAttributedString(string: date, attributes: [.font: UIFont.sairaMediumWithSize18])
             let unitedString = NSMutableAttributedString()

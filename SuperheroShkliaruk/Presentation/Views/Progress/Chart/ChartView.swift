@@ -32,7 +32,7 @@ class ChartView: UIView {
     
     private var maxBarHeight: CGFloat?
     private var maxBarValue: Int16?
-    private var minBarValue: Int16?
+    private var firstBarValue: Int16?
     
     var dataEntries = [ChartBarViewModel]() {
         didSet {
@@ -43,7 +43,7 @@ class ChartView: UIView {
             
             maxBarHeight = mainLayer.frame.height - (textHeight * 2 + diffenceHeight + dateTopSpace + barTopSpace + valueTopSpace)
             maxBarValue = dataEntries.map { $0.value }.max()
-            minBarValue = dataEntries.map { $0.value }.min()
+            firstBarValue = dataEntries.first?.value
             
             drawHorizontalLines()
             for (index, entry) in dataEntries.enumerated() {
@@ -64,6 +64,7 @@ class ChartView: UIView {
     
     private func setupView() {
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 23, bottom: 0, right: 23 + sideSpace)
+        scrollView.scrollIndicatorInsets = UIEdgeInsets(top: -3, left: -3, bottom: -3, right: -3)
         scrollView.layer.addSublayer(mainLayer)
         addSubview(scrollView)
         
@@ -132,10 +133,10 @@ class ChartView: UIView {
     private func drawHorizontalLines() {
         guard let maxBarValue = maxBarValue,
               let maxBarHeight = maxBarHeight,
-              let minBarValue = minBarValue else { return }
+              let firstBarValue = firstBarValue else { return }
         
         let minBarBottomY = mainLayer.frame.height - (textHeight + dateTopSpace)
-        let minBarHeight: CGFloat = maxBarHeight / CGFloat(maxBarValue) * CGFloat(minBarValue)
+        let minBarHeight: CGFloat = maxBarHeight / CGFloat(maxBarValue) * CGFloat(firstBarValue)
         
         let topLineY = minBarBottomY - minBarHeight - lineHeight
         let topLine = createBasicHorizontalLine(positionY: topLineY, dashPattern: [3, 3])
