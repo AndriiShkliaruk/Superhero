@@ -63,7 +63,7 @@ class ProfileViewModel {
         }
     }
     
-    func saveUserProfile() {
+    func didSaveButtonTap() {
         coreDataProfile?.name = userProfile.name
         coreDataProfile?.avatar = userProfile.avatar
         

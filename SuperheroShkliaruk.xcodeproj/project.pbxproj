@@ -69,6 +69,7 @@
 		F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E43627BBE0E700DE14B7 /* MainCoordinator.swift */; };
 		F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F953E43927BC088D00DE14B7 /* StartViewController.storyboard */; };
 		F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E43B27BC08FC00DE14B7 /* Storyboarded.swift */; };
+		F96358CB28141DAB00EC8E6E /* Coordinator+InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96358CA28141DAB00EC8E6E /* Coordinator+InfoView.swift */; };
 		F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */; };
 		F968597727C3C4B00007FF5C /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968597627C3C4B00007FF5C /* Sex.swift */; };
 		F96B771127BE64B600678747 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771027BE64B600678747 /* HomeViewController.swift */; };
@@ -195,6 +196,7 @@
 		F953E43627BBE0E700DE14B7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F953E43927BC088D00DE14B7 /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		F953E43B27BC08FC00DE14B7 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		F96358CA28141DAB00EC8E6E /* Coordinator+InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+InfoView.swift"; sourceTree = "<group>"; };
 		F968596427C3B6EB0007FF5C /* Profile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Profile.xcdatamodel; sourceTree = "<group>"; };
 		F968597627C3C4B00007FF5C /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		F96B771027BE64B600678747 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 				F99706EB27C662FC00C24B50 /* Coordinator+Profile.swift */,
 				F99706ED27C6630900C24B50 /* Coordinator+Programs.swift */,
 				F99706EF27C6631700C24B50 /* Coordinator+Progress.swift */,
+				F96358CA28141DAB00EC8E6E /* Coordinator+InfoView.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1127,6 +1130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F997070727C6664700C24B50 /* ProgramsViewModel.swift in Sources */,
+				F96358CB28141DAB00EC8E6E /* Coordinator+InfoView.swift in Sources */,
 				F946D56C2801AEB100294816 /* ExerciseCell.swift in Sources */,
 				F92D905B27E365410018917F /* BaseViewModel.swift in Sources */,
 				F997070327C6662E00C24B50 /* MusclesViewModel.swift in Sources */,

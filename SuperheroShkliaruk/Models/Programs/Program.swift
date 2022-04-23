@@ -8,6 +8,8 @@
 import Foundation
 
 struct Program: Codable, Equatable {
+    private(set) var infoIconName = "success"
+    
     let id: String
     var name: String
     var description: String?
@@ -15,5 +17,8 @@ struct Program: Codable, Equatable {
     
     var isValidProperties: Bool {
         return !name.isEmpty && !exercises.isEmpty
+    }
+    var exerciseAddedInfoText: String {
+        "Exercise has been added to the \(name)!"
     }
 }

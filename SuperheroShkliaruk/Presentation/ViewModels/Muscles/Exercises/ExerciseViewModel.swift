@@ -13,6 +13,7 @@ class ExerciseViewModel: Codable {
     private(set) var moreButtonText = "More about"
     private(set) var moreButtonIcon = "arrow-right"
     private(set) var newProgramActionTitle = "Create New Program"
+    private(set) var backButtonText = "Back"
     
     let name: String
     let icon: String
@@ -27,6 +28,18 @@ class ExerciseViewModel: Codable {
         image = model.image
         description = model.description
         options = "\(model.equipment.rawValue), \(model.level.rawValue), \(model.type.rawValue)"
+    }
+    
+    func addExercise(to program: Program) {
+        var updatedProgram = program
+        updatedProgram.exercises.append(self)
+        ProgramsManager.sharedInstance.update(program, with: updatedProgram)
+    }
+    
+    func getAvailablePrograms() -> [Program] {
+        let programs = ProgramsManager.sharedInstance.fetchPrograms()
+        let availablePrograms = programs.filter { !$0.exercises.contains(where: { $0.name == name }) }
+        return availablePrograms
     }
 }
 

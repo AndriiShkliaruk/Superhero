@@ -17,11 +17,13 @@ class ExerciseViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var addButtonView: CustomRoundedButtonView!
     
     var viewModel: ExerciseViewModel?
+    var coordinator: MainCoordinator?
     private var actionSheetItems = [ActionSheetItem]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupNavigationBar()
     }
     
     private func setupUI() {
@@ -47,9 +49,20 @@ class ExerciseViewController: UIViewController, Storyboarded {
         addButtonView.setButtonActionOnTap(addButtonTapped)
     }
     
+    private func setupNavigationBar() {
+        navigationItem.backButtonTitle = viewModel?.backButtonText
+    }
+    
     private func configureActionSheet(_ viewModel: ExerciseViewModel) {
-        let newProgram: ActionSheetItem = (viewModel.newProgramActionTitle, { })
-        actionSheetItems.append(newProgram)
+        actionSheetItems = viewModel.getAvailablePrograms().map { [weak self] program in
+            (program.name, {
+                viewModel.addExercise(to: program)
+                self?.coordinator?.backWithInfoView(iconName: program.infoIconName, text: program.exerciseAddedInfoText)
+            })
+        }
+        actionSheetItems.append((viewModel.newProgramActionTitle, { [weak self] in
+            self?.coordinator?.moveToProgram(with: .create(initialExercise: viewModel))
+        }))
     }
     
     private func addButtonTapped() {

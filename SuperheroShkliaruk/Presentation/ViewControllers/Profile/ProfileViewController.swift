@@ -60,20 +60,8 @@ class ProfileViewController: BaseViewController, Storyboarded {
     
     @objc private func saveBarButtonTapped() {
         view.endEditing(true)
-        viewModel.saveUserProfile()
-        
-        if let navigationControllerView = coordinator?.navigationController.view,
-           let icon = UIImage(named: viewModel.infoIconName) {
-            
-            let infoView: InfoView = InfoView.fromNib()
-            infoView.frame = navigationControllerView.frame
-            infoView.configure(with: icon, text: viewModel.infoText, backgroundColor: nil)
-            UIView.showWithTransition(for: 2, childView: infoView, in: navigationControllerView) {
-                self.coordinator?.back()
-            }
-        } else {
-            coordinator?.back()
-        }
+        viewModel.didSaveButtonTap()
+        coordinator?.backWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText)
     }
     
     private func addParametersButtonTapped() {

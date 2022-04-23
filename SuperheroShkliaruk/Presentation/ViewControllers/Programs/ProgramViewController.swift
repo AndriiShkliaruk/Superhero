@@ -60,22 +60,10 @@ class ProgramViewController: UIViewController, Storyboarded {
     
     @objc private func saveBarButtonTapped() {
         view.endEditing(true)
-        viewModel?.didSaveButtonTap()
         
-        if let navigationControllerView = coordinator?.navigationController.view,
-           let icon = UIImage(named: viewModel?.infoIconName ?? "") {
-            
-            let infoView: InfoView = InfoView.fromNib()
-            infoView.frame = navigationControllerView.frame
-            infoView.configure(with: icon,
-                               text: viewModel?.infoText ?? "",
-                               backgroundColor: nil)
-            UIView.showWithTransition(for: 2, childView: infoView, in: navigationControllerView) {
-                self.coordinator?.back()
-            }
-        } else {
-            coordinator?.back()
-        }
+        guard let viewModel = viewModel else { return }
+        viewModel.didSaveButtonTap() 
+        coordinator?.backWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText)
     }
 }
 

@@ -18,7 +18,12 @@ class ProgramsViewModel {
         programs = ProgramsManager.sharedInstance.fetchPrograms()
     }
     
-    func fetchProgramViewModels() -> [ProgramViewModel] {
-        return programs.map { ProgramViewModel(mode: .edit(inputProgram: $0)) }
+    func fetchProgramViewModel(at index: Int) -> ProgramViewModel {
+        return ProgramViewModel(mode: .edit(inputProgram: programs[index]))
+    }
+    
+    func deleteProgram(at index: Int) {
+        ProgramsManager.sharedInstance.delete(at: index)
+        updateProgramViewModels()
     }
 }

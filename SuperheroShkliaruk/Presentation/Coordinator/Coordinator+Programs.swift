@@ -18,8 +18,8 @@ extension MainCoordinator {
         let viewController = ProgramViewController.instantiate()
         viewController.coordinator = self
         switch mode {
-        case .create:
-            viewController.viewModel = ProgramViewModel(mode: .create)
+        case .create(let exercise):
+            viewController.viewModel = ProgramViewModel(mode: .create(initialExercise: exercise))
         case .edit(let program):
             viewController.viewModel = ProgramViewModel(mode: .edit(inputProgram: program))
         }

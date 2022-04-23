@@ -8,7 +8,7 @@
 import Foundation
 
 enum ProgramMode {
-    case create
+    case create(initialExercise: ExerciseViewModel?)
     case edit(inputProgram: Program)
 }
 
@@ -43,8 +43,11 @@ class ProgramViewModel {
         self.mode = mode
         
         switch mode {
-        case .create:
+        case .create(let initialExercise):
             program = Program(id: UUID().uuidString, name: "", description: nil, exercises: [])
+            if let exercise = initialExercise {
+                program.exercises.append(exercise)
+            }
         case .edit(let inputProgram):
             titleLabelText = inputProgram.name
             self.program = inputProgram
@@ -57,7 +60,7 @@ class ProgramViewModel {
         musclesViewModel.updateExercisesInMuscleGroups(by: program.exercises)
         return musclesViewModel
     }
-
+    
     func didSaveButtonTap() {
         switch mode {
         case .create:

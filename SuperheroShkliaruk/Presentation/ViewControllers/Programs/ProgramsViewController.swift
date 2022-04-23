@@ -44,7 +44,7 @@ class ProgramsViewController: BaseViewController, Storyboarded {
     }
     
     private func newProgramButtonTapped() {
-        coordinator?.moveToProgram(with: .create)
+        coordinator?.moveToProgram(with: .create(initialExercise: nil))
     }
 }
 
@@ -55,12 +55,18 @@ extension ProgramsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProgramCell.identifier, for: indexPath) as? ProgramCell else { return UITableViewCell() }
-        let programViewModel = viewModel.fetchProgramViewModels()[indexPath.row]
+        let programViewModel = viewModel.fetchProgramViewModel(at: indexPath.row)
         cell.configure(with: programViewModel)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         coordinator?.moveToProgram(with: .edit(inputProgram: viewModel.programs[indexPath.row]))
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        viewModel.deleteProgram(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
 }

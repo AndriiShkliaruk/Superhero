@@ -27,25 +27,6 @@ class ProgramsManager {
         return programs
     }
     
-//    func saveProgram(_ program: Program) {
-//        guard !programs.isEmpty else {
-//            saveToFile([program])
-//            return
-//        }
-//        
-//        guard programs.contains(where: { $0.id == program.id }) else {
-//            programs.append(program)
-//            saveToFile(programs)
-//            return
-//        }
-//        
-//        programs = programs.map { initialProgram in
-//            guard initialProgram.id == program.id else { return initialProgram }
-//            return program
-//        }
-//        saveToFile(programs)
-//    }
-    
     func update(_ oldProgram: Program, with newProgram: Program) {
         guard let index = programs.firstIndex(of: oldProgram) else { return }
         programs[index] = newProgram
@@ -54,6 +35,11 @@ class ProgramsManager {
     
     func save(_ newProgram: Program) {
         programs.append(newProgram)
+        saveToFile(programs)
+    }
+    
+    func delete(at index: Int) {
+        programs.remove(at: index)
         saveToFile(programs)
     }
     
