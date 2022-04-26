@@ -126,6 +126,11 @@
 		F9D66DF52805D43D00371B0F /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D66DF42805D43D00371B0F /* ExerciseViewController.swift */; };
 		F9D66DF72805D45800371B0F /* ExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D66DF62805D45800371B0F /* ExerciseViewController.storyboard */; };
 		F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D68A2D27C12D18005F551E /* ProfileManager.swift */; };
+		F9D8670E2818234C009247DA /* CalculatorTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8670D2818234C009247DA /* CalculatorTypeViewController.swift */; };
+		F9D8671028182361009247DA /* CalculatorTypeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D8670F28182361009247DA /* CalculatorTypeViewController.storyboard */; };
+		F9D8671228182A13009247DA /* CalculatorTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8671128182A13009247DA /* CalculatorTypeViewModel.swift */; };
+		F9D8671528182AE8009247DA /* CalculatorParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D8671428182AE8009247DA /* CalculatorParameterView.xib */; };
+		F9D86717281844EE009247DA /* CalculatorParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D86716281844EE009247DA /* CalculatorParameterView.swift */; };
 		F9D8F1E827F043DC00D2365D /* HomeParametersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */; };
 		F9D8F1E927F043DC00D2365D /* HomeParametersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D8F1E727F043DC00D2365D /* HomeParametersCell.xib */; };
 		F9D8F1EC27F081CE00D2365D /* Gilroy-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D8F1EB27F081CE00D2365D /* Gilroy-Semibold.ttf */; };
@@ -253,6 +258,11 @@
 		F9D66DF42805D43D00371B0F /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		F9D66DF62805D45800371B0F /* ExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseViewController.storyboard; sourceTree = "<group>"; };
 		F9D68A2D27C12D18005F551E /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		F9D8670D2818234C009247DA /* CalculatorTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTypeViewController.swift; sourceTree = "<group>"; };
+		F9D8670F28182361009247DA /* CalculatorTypeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculatorTypeViewController.storyboard; sourceTree = "<group>"; };
+		F9D8671128182A13009247DA /* CalculatorTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTypeViewModel.swift; sourceTree = "<group>"; };
+		F9D8671428182AE8009247DA /* CalculatorParameterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorParameterView.xib; sourceTree = "<group>"; };
+		F9D86716281844EE009247DA /* CalculatorParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorParameterView.swift; sourceTree = "<group>"; };
 		F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParametersCell.swift; sourceTree = "<group>"; };
 		F9D8F1E727F043DC00D2365D /* HomeParametersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeParametersCell.xib; sourceTree = "<group>"; };
 		F9D8F1EB27F081CE00D2365D /* Gilroy-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Semibold.ttf"; sourceTree = "<group>"; };
@@ -607,6 +617,7 @@
 		F953E42E27BBDF5A00DE14B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F9D8671328182AC5009247DA /* Calculator */,
 				F951784D280DA8A8004B76C0 /* Programs */,
 				F946D55E2801951600294816 /* Muscles */,
 				F946D54F27FCA02900294816 /* Progress */,
@@ -806,6 +817,7 @@
 			isa = PBXGroup;
 			children = (
 				F99706F427C6659300C24B50 /* CalculatorViewController.swift */,
+				F9D8670D2818234C009247DA /* CalculatorTypeViewController.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -850,6 +862,7 @@
 			isa = PBXGroup;
 			children = (
 				F99706FE27C6660400C24B50 /* CalculatorViewController.storyboard */,
+				F9D8670F28182361009247DA /* CalculatorTypeViewController.storyboard */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -894,6 +907,7 @@
 			isa = PBXGroup;
 			children = (
 				F997070027C6661C00C24B50 /* CalculatorViewModel.swift */,
+				F9D8671128182A13009247DA /* CalculatorTypeViewModel.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -1009,6 +1023,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		F9D8671328182AC5009247DA /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				F9D8671428182AE8009247DA /* CalculatorParameterView.xib */,
+				F9D86716281844EE009247DA /* CalculatorParameterView.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
 		F9D8F1EA27F0819700D2365D /* Gilroy */ = {
 			isa = PBXGroup;
 			children = (
@@ -1095,6 +1118,7 @@
 				F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */,
 				F92FF3F827F5ECBA003B97B5 /* ChartViewController.storyboard in Resources */,
 				F9D8F1EC27F081CE00D2365D /* Gilroy-Semibold.ttf in Resources */,
+				F9D8671028182361009247DA /* CalculatorTypeViewController.storyboard in Resources */,
 				F9D66DF72805D45800371B0F /* ExerciseViewController.storyboard in Resources */,
 				F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */,
 				F99A10DA280DC07700851D6F /* ProgramExerciseCell.xib in Resources */,
@@ -1112,6 +1136,7 @@
 				F946D5692801AD6B00294816 /* Nunito-SemiBold.ttf in Resources */,
 				F937F9832805E59C00EA5DBB /* CustomRoundedButtonView.xib in Resources */,
 				F99A10E5280DDC3E00851D6F /* ProgramTableHeader.xib in Resources */,
+				F9D8671528182AE8009247DA /* CalculatorParameterView.xib in Resources */,
 				F96B772327BE90B200678747 /* Saira-Bold.ttf in Resources */,
 				F935598C27DFA99500229A7B /* ProfileTableFooter.xib in Resources */,
 				F96B772827BE90C400678747 /* Saira-Light.ttf in Resources */,
@@ -1135,6 +1160,7 @@
 				F92D905B27E365410018917F /* BaseViewModel.swift in Sources */,
 				F997070327C6662E00C24B50 /* MusclesViewModel.swift in Sources */,
 				F946D562280195A200294816 /* MusclesTableHeaderView.swift in Sources */,
+				F9D86717281844EE009247DA /* CalculatorParameterView.swift in Sources */,
 				F99706EC27C662FC00C24B50 /* Coordinator+Profile.swift in Sources */,
 				F92FF3F227F4FACB003B97B5 /* InfoView.swift in Sources */,
 				F99706E827C662DF00C24B50 /* Coordinator+Calculator.swift in Sources */,
@@ -1180,6 +1206,7 @@
 				F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */,
 				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
 				F99A10E9280EF2F700851D6F /* ProgramsManager.swift in Sources */,
+				F9D8671228182A13009247DA /* CalculatorTypeViewModel.swift in Sources */,
 				F99A10D9280DC07700851D6F /* ProgramExerciseCell.swift in Sources */,
 				F94E9F4727ECD3CA00693538 /* Profile+CoreDataClass.swift in Sources */,
 				F92FF40027F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift in Sources */,
@@ -1205,6 +1232,7 @@
 				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F92D905827E362CF0018917F /* ParameterViewModel.swift in Sources */,
 				F9074EC5280C42DC001E4F05 /* UIViewController+ActionSheet.swift in Sources */,
+				F9D8670E2818234C009247DA /* CalculatorTypeViewController.swift in Sources */,
 				F92D907827E4A94B0018917F /* UIView+Extension.swift in Sources */,
 				F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */,
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,

@@ -13,4 +13,11 @@ extension MainCoordinator {
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func moveToCalculatorType(_ mode: CalculatorType) {
+        let viewController = CalculatorTypeViewController.instantiate()
+        viewController.coordinator = self
+        viewController.viewModel = CalculatorTypeViewModel(mode: mode)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }

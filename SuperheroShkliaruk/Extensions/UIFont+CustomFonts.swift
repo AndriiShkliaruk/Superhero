@@ -21,6 +21,14 @@ extension UIFont {
     }
     
     //MARK: - Saira
+    public class var sairaLightWithSize16: UIFont {
+        return customFont(name: "Saira-Light", size: 16)
+    }
+    
+    public class var sairaLightWithSize18: UIFont {
+        return customFont(name: "Saira-Light", size: 18)
+    }
+    
     public class var sairaRegularWithSize16: UIFont {
         return customFont(name: "Saira-Regular", size: 16)
     }
@@ -45,8 +53,8 @@ extension UIFont {
         return customFont(name: "Saira-Medium", size: 24)
     }
     
-    public class var sairaLightWithSize16: UIFont {
-        return customFont(name: "Saira-Light", size: 16)
+    public class var sairaSemiBoldWithSize28: UIFont {
+        return customFont(name: "Saira-SemiBold", size: 28)
     }
     
     //MARK: - Helvetica Neue
