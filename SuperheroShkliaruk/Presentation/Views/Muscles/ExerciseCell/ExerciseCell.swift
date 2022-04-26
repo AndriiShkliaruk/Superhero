@@ -19,6 +19,7 @@ class ExerciseCell: UITableViewCell {
     private var viewModel: ExerciseViewModel?
     var delegate: ExerciseCellDelegate?
     var coordinator: MainCoordinator?
+    var mode: ExercisesMode = .normal
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,7 +44,7 @@ class ExerciseCell: UITableViewCell {
         moreButton.semanticContentAttribute = .forceRightToLeft
     }
     
-    func configure(with viewModel: ExerciseViewModel, for mode: MusclesViewControllerMode) {
+    func configure(with viewModel: ExerciseViewModel, for mode: ExercisesMode) {
         self.viewModel = viewModel
         
         iconImageView.image = UIImage(named: viewModel.icon)
@@ -83,6 +84,6 @@ class ExerciseCell: UITableViewCell {
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
         guard let viewModel = viewModel else { return }
-        coordinator?.moveToExercise(with: viewModel)
+        coordinator?.moveToExercise(with: mode, viewModel: viewModel)
     }
 }

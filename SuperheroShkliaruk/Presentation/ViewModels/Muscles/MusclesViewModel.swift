@@ -11,6 +11,10 @@ class MusclesViewModel {
     let navigationBarTitleText = "Muscles"
     let saveBarButtonText = "Save"
     
+    //MARK: - InfoView constants
+    let infoIconName = "success"
+    let infoText = "Exercise has been added!"
+    
     private var initialMuscleGroupViewModels: [MuscleGroupViewModel] = []
     var muscleGroupViewModels: [MuscleGroupViewModel] = []
     

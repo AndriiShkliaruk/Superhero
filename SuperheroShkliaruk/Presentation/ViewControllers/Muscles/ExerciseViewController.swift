@@ -16,6 +16,7 @@ class ExerciseViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var addButtonView: CustomRoundedButtonView!
     
+    var mode: ExercisesMode = .normal
     var viewModel: ExerciseViewModel?
     var coordinator: MainCoordinator?
     private var actionSheetItems = [ActionSheetItem]()
@@ -45,8 +46,15 @@ class ExerciseViewController: UIViewController, Storyboarded {
         titleLabel.text = viewModel.name
         optionsLabel.text = viewModel.options
         descriptionLabel.text = viewModel.description
-        addButtonView.setButtonTitle(viewModel.addButtonTitle)
-        addButtonView.setButtonActionOnTap(addButtonTapped)
+        
+        switch mode {
+        case .normal:
+            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 90, right: 0)
+            addButtonView.setButtonTitle(viewModel.addButtonTitle)
+            addButtonView.setButtonActionOnTap(addButtonTapped)
+        case .edit:
+            addButtonView.isHidden = true
+        }
     }
     
     private func setupNavigationBar() {

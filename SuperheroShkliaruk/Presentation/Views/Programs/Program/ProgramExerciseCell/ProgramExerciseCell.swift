@@ -46,6 +46,6 @@ class ProgramExerciseCell: UITableViewCell {
     
     @objc private func cellTapped() {
         guard let viewModel = viewModel else { return }
-        coordinator?.moveToExercise(with: viewModel)
+        coordinator?.moveToExercise(with: .edit, viewModel: viewModel)
     }
 }

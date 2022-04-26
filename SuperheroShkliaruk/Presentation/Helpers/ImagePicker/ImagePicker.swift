@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 public protocol ImagePickerDelegate: AnyObject {
     func didSelect(image: UIImage?)

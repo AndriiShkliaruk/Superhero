@@ -7,14 +7,14 @@
 
 import UIKit
 
-enum MusclesViewControllerMode {
+enum ExercisesMode {
     case normal, edit
 }
 
 class MusclesViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var tableView: UITableView!
     
-    var mode: MusclesViewControllerMode = .normal
+    var mode: ExercisesMode = .normal
     var coordinator: MainCoordinator?
     var delegate: ProgramViewControllerDelegate?
     var viewModel = MusclesViewModel()
@@ -48,7 +48,7 @@ class MusclesViewController: BaseViewController, Storyboarded {
     
     @objc private func saveBarButtonTapped() {
         delegate?.didExercisesChange(viewModel)
-        coordinator?.back()
+        coordinator?.backWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText)
     }
 }
 
@@ -98,6 +98,7 @@ extension MusclesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: viewModel.muscleGroupViewModels[indexPath.section].exercises[indexPath.row], for: mode)
         cell.delegate = self
         cell.coordinator = coordinator
+        cell.mode = mode
         return cell
     }
     
