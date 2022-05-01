@@ -42,7 +42,7 @@ extension CalculatorViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let mode = CalculatorType(rawValue: viewModel.tableItems[indexPath.row]) else { return }
-        coordinator?.moveToCalculatorType(mode)
+        guard let mode = CalculatorMode(rawValue: viewModel.tableItems[indexPath.row]) else { return }
+        coordinator?.moveToBodyCalculator(mode)
     }
 }

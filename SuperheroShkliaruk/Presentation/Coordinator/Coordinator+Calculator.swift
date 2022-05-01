@@ -14,10 +14,16 @@ extension MainCoordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func moveToCalculatorType(_ mode: CalculatorType) {
-        let viewController = CalculatorTypeViewController.instantiate()
+    func moveToBodyCalculator(_ mode: CalculatorMode) {
+        let viewController = CalculatorModeViewController.instantiate()
         viewController.coordinator = self
-        viewController.viewModel = CalculatorTypeViewModel(mode: mode)
+        viewController.viewModel = CalculatorModeViewModel(mode: mode)
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func presentRateActivities(configuration: (ActivityLevelViewController) -> Void) {
+        let viewController = ActivityLevelViewController.instantiate()
+        configuration(viewController)
+        navigationController.present(viewController, animated: true)
     }
 }

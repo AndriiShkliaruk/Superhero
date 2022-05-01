@@ -28,16 +28,21 @@ class CustomRoundedButtonView: UIView {
         backgroundColor = .clear
         contentView.applyBlackTopGradient()
         addSubview(contentView)
-        button.backgroundColor = .customYellow
+        button.setBackgroundColor(.customYellow, for: .normal)
+        button.setBackgroundColor(.customGray, for: .disabled)
         button.titleLabel?.font = .sairaRegularWithSize16
     }
     
-    func setButtonTitle(_ title: String) {
+    func setButtonTitle(_ title: String?) {
         button.setTitle(title, for: .normal)
     }
     
     func setButtonActionOnTap(_ action: @escaping () -> Void) {
         buttonAction = action
+    }
+    
+    func setButtonIsEnabled(_ isEnabled: Bool) {
+        button.isEnabled = isEnabled
     }
     
     @IBAction func buttonTapped(_ sender: CustomRoundedButton) {

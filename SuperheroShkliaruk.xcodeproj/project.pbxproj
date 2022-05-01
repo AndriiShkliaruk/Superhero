@@ -59,6 +59,8 @@
 		F94E9F4827ECD3CA00693538 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */; };
 		F94E9F4B27ED0EEB00693538 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = F94E9F4A27ED0EEB00693538 /* OrderedCollections */; };
 		F94E9F4D27EDDFC200693538 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E9F4C27EDDFC200693538 /* UserProfileViewModel.swift */; };
+		F94FCD2B281D5A5A0037BEB4 /* ActivityLevelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FCD2A281D5A5A0037BEB4 /* ActivityLevelItemView.swift */; };
+		F94FCD2D281D5A650037BEB4 /* ActivityLevelItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94FCD2C281D5A650037BEB4 /* ActivityLevelItemView.xib */; };
 		F9517851280DA8DF004B76C0 /* ProgramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F951784F280DA8DF004B76C0 /* ProgramCell.xib */; };
 		F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41727BBC85000DE14B7 /* AppDelegate.swift */; };
 		F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41927BBC85000DE14B7 /* SceneDelegate.swift */; };
@@ -70,6 +72,7 @@
 		F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F953E43927BC088D00DE14B7 /* StartViewController.storyboard */; };
 		F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E43B27BC08FC00DE14B7 /* Storyboarded.swift */; };
 		F96358CB28141DAB00EC8E6E /* Coordinator+InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96358CA28141DAB00EC8E6E /* Coordinator+InfoView.swift */; };
+		F965FA70281A7B070044D697 /* CalculatorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F965FA6F281A7B070044D697 /* CalculatorEnums.swift */; };
 		F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */; };
 		F968597727C3C4B00007FF5C /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968597627C3C4B00007FF5C /* Sex.swift */; };
 		F96B771127BE64B600678747 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B771027BE64B600678747 /* HomeViewController.swift */; };
@@ -83,6 +86,7 @@
 		F96B772927BE90C400678747 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772627BE90C400678747 /* Saira-Regular.ttf */; };
 		F96B772B27BE90EC00678747 /* Saira-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96B772A27BE90EC00678747 /* Saira-SemiBold.ttf */; };
 		F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96B772C27BE98A900678747 /* UIView+Gradient.swift */; };
+		F96F19C8281E8F1F0063B8F1 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96F19C7281E8F1F0063B8F1 /* CustomSegmentedControl.swift */; };
 		F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97121D027E26CBE0095B8C9 /* BaseViewController.swift */; };
 		F97121D927E26E6B0095B8C9 /* BaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97121D827E26E6B0095B8C9 /* BaseViewController.storyboard */; };
 		F972F36A2812B888004A059E /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972F3692812B888004A059E /* ProgramCell.swift */; };
@@ -121,14 +125,21 @@
 		F99A10E9280EF2F700851D6F /* ProgramsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A10E8280EF2F700851D6F /* ProgramsManager.swift */; };
 		F99A10EB280EF45D00851D6F /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A10EA280EF45D00851D6F /* Program.swift */; };
 		F99A10F128100E7700851D6F /* ProgramViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A10F028100E7700851D6F /* ProgramViewControllerDelegate.swift */; };
+		F99A51EE281DB43B00318875 /* ActivityLevelViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A51ED281DB43B00318875 /* ActivityLevelViewControllerDelegate.swift */; };
+		F99A51F0281DB45C00318875 /* CalculatorModeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A51EF281DB45C00318875 /* CalculatorModeViewControllerDelegate.swift */; };
+		F9ABC76A281AC49600E652EE /* ActivityLevelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9ABC769281AC49600E652EE /* ActivityLevelViewController.storyboard */; };
+		F9ABC76C281AC4B000E652EE /* ActivityLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC76B281AC4B000E652EE /* ActivityLevelViewController.swift */; };
+		F9ABC770281AC6B900E652EE /* ActivityLevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC76E281AC6B900E652EE /* ActivityLevelCell.swift */; };
+		F9ABC771281AC6B900E652EE /* ActivityLevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9ABC76F281AC6B900E652EE /* ActivityLevelCell.xib */; };
+		F9ABC773281ACBB700E652EE /* ActivityLevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC772281ACBB700E652EE /* ActivityLevelViewModel.swift */; };
 		F9D66DEF2804AEBD00371B0F /* ExerciseCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D66DEE2804AEBD00371B0F /* ExerciseCellDelegate.swift */; };
 		F9D66DF32805D25E00371B0F /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D66DF22805D25E00371B0F /* UITableView+Extension.swift */; };
 		F9D66DF52805D43D00371B0F /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D66DF42805D43D00371B0F /* ExerciseViewController.swift */; };
 		F9D66DF72805D45800371B0F /* ExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D66DF62805D45800371B0F /* ExerciseViewController.storyboard */; };
 		F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D68A2D27C12D18005F551E /* ProfileManager.swift */; };
-		F9D8670E2818234C009247DA /* CalculatorTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8670D2818234C009247DA /* CalculatorTypeViewController.swift */; };
-		F9D8671028182361009247DA /* CalculatorTypeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D8670F28182361009247DA /* CalculatorTypeViewController.storyboard */; };
-		F9D8671228182A13009247DA /* CalculatorTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8671128182A13009247DA /* CalculatorTypeViewModel.swift */; };
+		F9D8670E2818234C009247DA /* CalculatorModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8670D2818234C009247DA /* CalculatorModeViewController.swift */; };
+		F9D8671028182361009247DA /* CalculatorModeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D8670F28182361009247DA /* CalculatorModeViewController.storyboard */; };
+		F9D8671228182A13009247DA /* CalculatorModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8671128182A13009247DA /* CalculatorModeViewModel.swift */; };
 		F9D8671528182AE8009247DA /* CalculatorParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D8671428182AE8009247DA /* CalculatorParameterView.xib */; };
 		F9D86717281844EE009247DA /* CalculatorParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D86716281844EE009247DA /* CalculatorParameterView.swift */; };
 		F9D8F1E827F043DC00D2365D /* HomeParametersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */; };
@@ -189,6 +200,8 @@
 		F94E9F4527ECD3CA00693538 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F94E9F4627ECD3CA00693538 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F94E9F4C27EDDFC200693538 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		F94FCD2A281D5A5A0037BEB4 /* ActivityLevelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelItemView.swift; sourceTree = "<group>"; };
+		F94FCD2C281D5A650037BEB4 /* ActivityLevelItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityLevelItemView.xib; sourceTree = "<group>"; };
 		F951784F280DA8DF004B76C0 /* ProgramCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramCell.xib; sourceTree = "<group>"; };
 		F953E41427BBC85000DE14B7 /* SuperheroShkliaruk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroShkliaruk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F953E41727BBC85000DE14B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +215,7 @@
 		F953E43927BC088D00DE14B7 /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		F953E43B27BC08FC00DE14B7 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		F96358CA28141DAB00EC8E6E /* Coordinator+InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+InfoView.swift"; sourceTree = "<group>"; };
+		F965FA6F281A7B070044D697 /* CalculatorEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorEnums.swift; sourceTree = "<group>"; };
 		F968596427C3B6EB0007FF5C /* Profile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Profile.xcdatamodel; sourceTree = "<group>"; };
 		F968597627C3C4B00007FF5C /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		F96B771027BE64B600678747 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +229,7 @@
 		F96B772627BE90C400678747 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
 		F96B772A27BE90EC00678747 /* Saira-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-SemiBold.ttf"; sourceTree = "<group>"; };
 		F96B772C27BE98A900678747 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		F96F19C7281E8F1F0063B8F1 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		F97121D027E26CBE0095B8C9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F97121D827E26E6B0095B8C9 /* BaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseViewController.storyboard; sourceTree = "<group>"; };
 		F972F3692812B888004A059E /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
@@ -253,14 +268,21 @@
 		F99A10E8280EF2F700851D6F /* ProgramsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsManager.swift; sourceTree = "<group>"; };
 		F99A10EA280EF45D00851D6F /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		F99A10F028100E7700851D6F /* ProgramViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewControllerDelegate.swift; sourceTree = "<group>"; };
+		F99A51ED281DB43B00318875 /* ActivityLevelViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelViewControllerDelegate.swift; sourceTree = "<group>"; };
+		F99A51EF281DB45C00318875 /* CalculatorModeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		F9ABC769281AC49600E652EE /* ActivityLevelViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivityLevelViewController.storyboard; sourceTree = "<group>"; };
+		F9ABC76B281AC4B000E652EE /* ActivityLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelViewController.swift; sourceTree = "<group>"; };
+		F9ABC76E281AC6B900E652EE /* ActivityLevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelCell.swift; sourceTree = "<group>"; };
+		F9ABC76F281AC6B900E652EE /* ActivityLevelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityLevelCell.xib; sourceTree = "<group>"; };
+		F9ABC772281ACBB700E652EE /* ActivityLevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelViewModel.swift; sourceTree = "<group>"; };
 		F9D66DEE2804AEBD00371B0F /* ExerciseCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCellDelegate.swift; sourceTree = "<group>"; };
 		F9D66DF22805D25E00371B0F /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		F9D66DF42805D43D00371B0F /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		F9D66DF62805D45800371B0F /* ExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseViewController.storyboard; sourceTree = "<group>"; };
 		F9D68A2D27C12D18005F551E /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
-		F9D8670D2818234C009247DA /* CalculatorTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTypeViewController.swift; sourceTree = "<group>"; };
-		F9D8670F28182361009247DA /* CalculatorTypeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculatorTypeViewController.storyboard; sourceTree = "<group>"; };
-		F9D8671128182A13009247DA /* CalculatorTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTypeViewModel.swift; sourceTree = "<group>"; };
+		F9D8670D2818234C009247DA /* CalculatorModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModeViewController.swift; sourceTree = "<group>"; };
+		F9D8670F28182361009247DA /* CalculatorModeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculatorModeViewController.storyboard; sourceTree = "<group>"; };
+		F9D8671128182A13009247DA /* CalculatorModeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModeViewModel.swift; sourceTree = "<group>"; };
 		F9D8671428182AE8009247DA /* CalculatorParameterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorParameterView.xib; sourceTree = "<group>"; };
 		F9D86716281844EE009247DA /* CalculatorParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorParameterView.swift; sourceTree = "<group>"; };
 		F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParametersCell.swift; sourceTree = "<group>"; };
@@ -538,6 +560,15 @@
 			path = HomeParametersCell;
 			sourceTree = "<group>";
 		};
+		F94FCD2E281D8D110037BEB4 /* ActivityLevelItemView */ = {
+			isa = PBXGroup;
+			children = (
+				F94FCD2A281D5A5A0037BEB4 /* ActivityLevelItemView.swift */,
+				F94FCD2C281D5A650037BEB4 /* ActivityLevelItemView.xib */,
+			);
+			path = ActivityLevelItemView;
+			sourceTree = "<group>";
+		};
 		F951784D280DA8A8004B76C0 /* Programs */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +636,7 @@
 		F953E42D27BBDF4000DE14B7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F99A51EA281DB3E300318875 /* Calculator */,
 				F99A10EC280F57DF00851D6F /* Program */,
 				F9D66DED2804AEAD00371B0F /* Muscles */,
 				F92D907427E4A5030018917F /* Profile */,
@@ -626,6 +658,7 @@
 				F935598D27DFB05400229A7B /* Profile */,
 				F99706E227C65D3D00C24B50 /* Cells */,
 				F968596227C3AD0C0007FF5C /* Buttons */,
+				F96F19C6281E8EF00063B8F1 /* SegmentedControl */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -696,6 +729,15 @@
 				F953E43427BBE08700DE14B7 /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F965FA73281AAC120044D697 /* CalculatorParameterView */ = {
+			isa = PBXGroup;
+			children = (
+				F9D8671428182AE8009247DA /* CalculatorParameterView.xib */,
+				F9D86716281844EE009247DA /* CalculatorParameterView.swift */,
+			);
+			path = CalculatorParameterView;
 			sourceTree = "<group>";
 		};
 		F968596227C3AD0C0007FF5C /* Buttons */ = {
@@ -788,6 +830,14 @@
 			path = Saira;
 			sourceTree = "<group>";
 		};
+		F96F19C6281E8EF00063B8F1 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				F96F19C7281E8F1F0063B8F1 /* CustomSegmentedControl.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
 		F97121CF27E26CA00095B8C9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -817,7 +867,8 @@
 			isa = PBXGroup;
 			children = (
 				F99706F427C6659300C24B50 /* CalculatorViewController.swift */,
-				F9D8670D2818234C009247DA /* CalculatorTypeViewController.swift */,
+				F9D8670D2818234C009247DA /* CalculatorModeViewController.swift */,
+				F9ABC76B281AC4B000E652EE /* ActivityLevelViewController.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -862,7 +913,8 @@
 			isa = PBXGroup;
 			children = (
 				F99706FE27C6660400C24B50 /* CalculatorViewController.storyboard */,
-				F9D8670F28182361009247DA /* CalculatorTypeViewController.storyboard */,
+				F9D8670F28182361009247DA /* CalculatorModeViewController.storyboard */,
+				F9ABC769281AC49600E652EE /* ActivityLevelViewController.storyboard */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -907,7 +959,9 @@
 			isa = PBXGroup;
 			children = (
 				F997070027C6661C00C24B50 /* CalculatorViewModel.swift */,
-				F9D8671128182A13009247DA /* CalculatorTypeViewModel.swift */,
+				F9D8671128182A13009247DA /* CalculatorModeViewModel.swift */,
+				F9ABC772281ACBB700E652EE /* ActivityLevelViewModel.swift */,
+				F965FA6F281A7B070044D697 /* CalculatorEnums.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -993,6 +1047,24 @@
 			path = Program;
 			sourceTree = "<group>";
 		};
+		F99A51EA281DB3E300318875 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				F99A51ED281DB43B00318875 /* ActivityLevelViewControllerDelegate.swift */,
+				F99A51EF281DB45C00318875 /* CalculatorModeViewControllerDelegate.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		F9ABC76D281AC69700E652EE /* ActivityLevelCell */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC76E281AC6B900E652EE /* ActivityLevelCell.swift */,
+				F9ABC76F281AC6B900E652EE /* ActivityLevelCell.xib */,
+			);
+			path = ActivityLevelCell;
+			sourceTree = "<group>";
+		};
 		F9D66DED2804AEAD00371B0F /* Muscles */ = {
 			isa = PBXGroup;
 			children = (
@@ -1026,8 +1098,9 @@
 		F9D8671328182AC5009247DA /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				F9D8671428182AE8009247DA /* CalculatorParameterView.xib */,
-				F9D86716281844EE009247DA /* CalculatorParameterView.swift */,
+				F94FCD2E281D8D110037BEB4 /* ActivityLevelItemView */,
+				F9ABC76D281AC69700E652EE /* ActivityLevelCell */,
+				F965FA73281AAC120044D697 /* CalculatorParameterView */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -1105,6 +1178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9ABC771281AC6B900E652EE /* ActivityLevelCell.xib in Resources */,
 				F997070B27C6B0F900C24B50 /* MusclesViewController.storyboard in Resources */,
 				F92D906A27E3781B0018917F /* ProfileParametersListCell.xib in Resources */,
 				F946D5672801AD6400294816 /* Nunito-Light.ttf in Resources */,
@@ -1114,11 +1188,12 @@
 				F9D8F1E927F043DC00D2365D /* HomeParametersCell.xib in Resources */,
 				F96B772B27BE90EC00678747 /* Saira-SemiBold.ttf in Resources */,
 				F92FF3F027F4FAB3003B97B5 /* InfoView.xib in Resources */,
+				F94FCD2D281D5A650037BEB4 /* ActivityLevelItemView.xib in Resources */,
 				F99706E627C65D7300C24B50 /* MenuTableViewCell.xib in Resources */,
 				F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */,
 				F92FF3F827F5ECBA003B97B5 /* ChartViewController.storyboard in Resources */,
 				F9D8F1EC27F081CE00D2365D /* Gilroy-Semibold.ttf in Resources */,
-				F9D8671028182361009247DA /* CalculatorTypeViewController.storyboard in Resources */,
+				F9D8671028182361009247DA /* CalculatorModeViewController.storyboard in Resources */,
 				F9D66DF72805D45800371B0F /* ExerciseViewController.storyboard in Resources */,
 				F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */,
 				F99A10DA280DC07700851D6F /* ProgramExerciseCell.xib in Resources */,
@@ -1131,6 +1206,7 @@
 				F946D5562800901C00294816 /* Exercises.json in Resources */,
 				F946D564280195B700294816 /* MusclesTableHeaderView.xib in Resources */,
 				F96B772927BE90C400678747 /* Saira-Regular.ttf in Resources */,
+				F9ABC76A281AC49600E652EE /* ActivityLevelViewController.storyboard in Resources */,
 				F935598A27DFA8CD00229A7B /* ProfileTableHeader.xib in Resources */,
 				F96B772727BE90C400678747 /* Saira-Thin.ttf in Resources */,
 				F946D5692801AD6B00294816 /* Nunito-SemiBold.ttf in Resources */,
@@ -1158,6 +1234,8 @@
 				F96358CB28141DAB00EC8E6E /* Coordinator+InfoView.swift in Sources */,
 				F946D56C2801AEB100294816 /* ExerciseCell.swift in Sources */,
 				F92D905B27E365410018917F /* BaseViewModel.swift in Sources */,
+				F9ABC773281ACBB700E652EE /* ActivityLevelViewModel.swift in Sources */,
+				F965FA70281A7B070044D697 /* CalculatorEnums.swift in Sources */,
 				F997070327C6662E00C24B50 /* MusclesViewModel.swift in Sources */,
 				F946D562280195A200294816 /* MusclesTableHeaderView.swift in Sources */,
 				F9D86717281844EE009247DA /* CalculatorParameterView.swift in Sources */,
@@ -1171,6 +1249,7 @@
 				F9D66DEF2804AEBD00371B0F /* ExerciseCellDelegate.swift in Sources */,
 				F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */,
 				F99706F927C665BB00C24B50 /* ProfileViewController.swift in Sources */,
+				F94FCD2B281D5A5A0037BEB4 /* ActivityLevelItemView.swift in Sources */,
 				F92D907A27E749640018917F /* ProfileViewControllerDelegate.swift in Sources */,
 				F972F36A2812B888004A059E /* ProgramCell.swift in Sources */,
 				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
@@ -1185,10 +1264,13 @@
 				F96B772027BE8CBC00678747 /* CustomRoundedButton.swift in Sources */,
 				F9FF38D127DB652F00DDA957 /* UITextField+Extension.swift in Sources */,
 				F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */,
+				F9ABC76C281AC4B000E652EE /* ActivityLevelViewController.swift in Sources */,
+				F99A51EE281DB43B00318875 /* ActivityLevelViewControllerDelegate.swift in Sources */,
 				F946D5742802DB8D00294816 /* ExerciseViewModel.swift in Sources */,
 				F997070527C6663B00C24B50 /* ProfileViewModel.swift in Sources */,
 				F99706F027C6631700C24B50 /* Coordinator+Progress.swift in Sources */,
 				F997070927C6665600C24B50 /* ProgressViewModel.swift in Sources */,
+				F96F19C8281E8F1F0063B8F1 /* CustomSegmentedControl.swift in Sources */,
 				F92D906527E378060018917F /* ProfileParametersCell.swift in Sources */,
 				F99706F527C6659300C24B50 /* CalculatorViewController.swift in Sources */,
 				F942887D280DB70400B4D3D5 /* ProgramViewModel.swift in Sources */,
@@ -1201,12 +1283,13 @@
 				F92D908A27EA0E230018917F /* PresentAnimation.swift in Sources */,
 				F98425FB27DFB111002F2196 /* ProfileTableFooter.swift in Sources */,
 				F99A10F128100E7700851D6F /* ProgramViewControllerDelegate.swift in Sources */,
+				F99A51F0281DB45C00318875 /* CalculatorModeViewControllerDelegate.swift in Sources */,
 				F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */,
 				F92D908827E9E2490018917F /* DimmPresentationController.swift in Sources */,
 				F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */,
 				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
 				F99A10E9280EF2F700851D6F /* ProgramsManager.swift in Sources */,
-				F9D8671228182A13009247DA /* CalculatorTypeViewModel.swift in Sources */,
+				F9D8671228182A13009247DA /* CalculatorModeViewModel.swift in Sources */,
 				F99A10D9280DC07700851D6F /* ProgramExerciseCell.swift in Sources */,
 				F94E9F4727ECD3CA00693538 /* Profile+CoreDataClass.swift in Sources */,
 				F92FF40027F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift in Sources */,
@@ -1216,6 +1299,7 @@
 				F92D908027E9208A0018917F /* ParametersViewController.swift in Sources */,
 				F946D55B2800910800294816 /* ExercisesStorage.swift in Sources */,
 				F99706FB27C665CC00C24B50 /* ProgramsViewController.swift in Sources */,
+				F9ABC770281AC6B900E652EE /* ActivityLevelCell.swift in Sources */,
 				F946D5722802DB7100294816 /* MuscleGroupViewModel.swift in Sources */,
 				F99A10E3280DDC2600851D6F /* ProgramTableHeader.swift in Sources */,
 				F9074EC3280C36A8001E4F05 /* UIViewController+Keyboard.swift in Sources */,
@@ -1232,7 +1316,7 @@
 				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F92D905827E362CF0018917F /* ParameterViewModel.swift in Sources */,
 				F9074EC5280C42DC001E4F05 /* UIViewController+ActionSheet.swift in Sources */,
-				F9D8670E2818234C009247DA /* CalculatorTypeViewController.swift in Sources */,
+				F9D8670E2818234C009247DA /* CalculatorModeViewController.swift in Sources */,
 				F92D907827E4A94B0018917F /* UIView+Extension.swift in Sources */,
 				F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */,
 				F92D908627E9E21E0018917F /* DimmTransitionManager.swift in Sources */,

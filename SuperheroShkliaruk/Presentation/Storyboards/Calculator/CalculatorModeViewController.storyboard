@@ -15,15 +15,18 @@
         <array key="Saira-Medium.ttf">
             <string>Saira-Medium</string>
         </array>
+        <array key="Saira-Regular.ttf">
+            <string>Saira-Regular</string>
+        </array>
         <array key="Saira-SemiBold.ttf">
             <string>Saira-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Calculator Type View Controller-->
+        <!--Calculator Mode View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CalculatorTypeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CalculatorTypeViewController" customModule="SuperheroShkliaruk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorModeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CalculatorModeViewController" customModule="SuperheroShkliaruk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,35 +38,30 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Calorie Requirement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZe-65-5Ha">
-                                                <rect key="frame" x="56" y="32" width="302" height="38"/>
+                                                <rect key="frame" x="56" y="40" width="302" height="38"/>
                                                 <fontDescription key="fontDescription" name="Saira-Medium" family="Saira" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zx3-ly-FYO">
-                                                <rect key="frame" x="43" y="86" width="328" height="32"/>
-                                                <segments>
-                                                    <segment title="Superman"/>
-                                                    <segment title="Superwoman"/>
-                                                </segments>
-                                            </segmentedControl>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qj0-oG-rRQ">
-                                                <rect key="frame" x="43" y="149" width="328" height="128"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qj0-oG-rRQ">
+                                                <rect key="frame" x="43" y="161" width="328" height="20"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" priority="250" constant="128" id="aal-vW-YdI"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="20" id="rUH-4c-ewa"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q00-Js-2xb">
-                                                <rect key="frame" x="43" y="309" width="328" height="49"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="49" id="Gif-wq-wdP"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Choose Activity Level"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="q00-Js-2xb">
+                                                <rect key="frame" x="43" y="213" width="328" height="50"/>
+                                                <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="16"/>
+                                                <inset key="contentEdgeInsets" minX="22" minY="12" maxX="22" maxY="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Choose Activity Level"/>
+                                                <connections>
+                                                    <action selector="chooseActivityButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wRU-Ok-S2a"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-fd-F0X">
-                                                <rect key="frame" x="121" y="382" width="172" height="137.5"/>
+                                                <rect key="frame" x="121" y="287" width="172" height="137.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozh-nr-VD2">
                                                         <rect key="frame" x="0.0" y="0.0" width="172" height="93"/>
@@ -75,7 +73,7 @@
                                                         <color key="textColor" systemColor="systemYellowColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories/day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAB-At-vMf">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories/day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAB-At-vMf">
                                                         <rect key="frame" x="0.0" y="109" width="172" height="28.5"/>
                                                         <fontDescription key="fontDescription" name="Saira-Light" family="Saira" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,22 +81,34 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-6x-s5O" userLabel="Sex Segmented Control" customClass="CustomSegmentedControl" customModule="SuperheroShkliaruk" customModuleProvider="target">
+                                                <rect key="frame" x="43" y="94" width="328" height="35"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="0H5-bI-7yt"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="sexSegmentedControlValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="qgK-Y3-NFD"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="FDe-6x-s5O" firstAttribute="leading" secondItem="1Tu-s7-pdx" secondAttribute="leading" constant="43" id="0W4-w3-mou"/>
                                             <constraint firstAttribute="trailing" secondItem="Qj0-oG-rRQ" secondAttribute="trailing" constant="43" id="3n3-4A-Q9I"/>
+                                            <constraint firstItem="FDe-6x-s5O" firstAttribute="bottom" secondItem="Qj0-oG-rRQ" secondAttribute="top" constant="-32" id="55z-id-97h"/>
                                             <constraint firstItem="jeA-fd-F0X" firstAttribute="centerX" secondItem="1Tu-s7-pdx" secondAttribute="centerX" id="A1d-Hy-R56"/>
                                             <constraint firstAttribute="trailing" secondItem="EZe-65-5Ha" secondAttribute="trailing" constant="56" id="AJL-Sz-iBr"/>
                                             <constraint firstItem="Qj0-oG-rRQ" firstAttribute="leading" secondItem="1Tu-s7-pdx" secondAttribute="leading" constant="43" id="F4J-wc-0qy"/>
+                                            <constraint firstAttribute="trailing" secondItem="FDe-6x-s5O" secondAttribute="trailing" constant="43" id="HWe-k4-uzO"/>
+                                            <constraint firstItem="Qj0-oG-rRQ" firstAttribute="top" secondItem="EZe-65-5Ha" secondAttribute="bottom" priority="750" constant="40" id="Nhz-3Y-4Ox"/>
                                             <constraint firstAttribute="trailing" secondItem="q00-Js-2xb" secondAttribute="trailing" constant="43" id="RHy-YE-U8e"/>
-                                            <constraint firstItem="EZe-65-5Ha" firstAttribute="top" secondItem="1Tu-s7-pdx" secondAttribute="top" constant="32" id="d3J-e2-rW7"/>
+                                            <constraint firstItem="FDe-6x-s5O" firstAttribute="top" secondItem="EZe-65-5Ha" secondAttribute="bottom" constant="16" id="UDh-N3-HM3"/>
+                                            <constraint firstItem="EZe-65-5Ha" firstAttribute="top" secondItem="1Tu-s7-pdx" secondAttribute="top" constant="40" id="d3J-e2-rW7"/>
                                             <constraint firstItem="q00-Js-2xb" firstAttribute="leading" secondItem="1Tu-s7-pdx" secondAttribute="leading" constant="43" id="drF-UQ-N5Z"/>
                                             <constraint firstItem="q00-Js-2xb" firstAttribute="top" secondItem="Qj0-oG-rRQ" secondAttribute="bottom" constant="32" id="eOc-7T-mLd"/>
-                                            <constraint firstAttribute="trailing" secondItem="zx3-ly-FYO" secondAttribute="trailing" constant="43" id="ebL-ie-XbT"/>
-                                            <constraint firstItem="zx3-ly-FYO" firstAttribute="top" secondItem="EZe-65-5Ha" secondAttribute="bottom" constant="16" id="hMG-PV-pSk"/>
+                                            <constraint firstItem="jeA-fd-F0X" firstAttribute="top" secondItem="Qj0-oG-rRQ" secondAttribute="bottom" priority="250" constant="40" id="h8Y-7O-Jkb"/>
                                             <constraint firstItem="EZe-65-5Ha" firstAttribute="leading" secondItem="1Tu-s7-pdx" secondAttribute="leading" constant="56" id="mBQ-8n-RUh"/>
                                             <constraint firstItem="jeA-fd-F0X" firstAttribute="top" secondItem="q00-Js-2xb" secondAttribute="bottom" constant="24" id="pPO-Sb-w1Z"/>
-                                            <constraint firstItem="zx3-ly-FYO" firstAttribute="leading" secondItem="1Tu-s7-pdx" secondAttribute="leading" constant="43" id="sOb-bH-D8o"/>
-                                            <constraint firstItem="Qj0-oG-rRQ" firstAttribute="top" secondItem="zx3-ly-FYO" secondAttribute="bottom" constant="32" id="v0d-DR-Uhv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -134,10 +144,11 @@
                         <outlet property="calculateButtonView" destination="otg-N2-Csj" id="qB8-9s-PiO"/>
                         <outlet property="chooseActivityButton" destination="q00-Js-2xb" id="TgQ-FH-MiD"/>
                         <outlet property="parametersStackView" destination="Qj0-oG-rRQ" id="Tud-Sp-aSM"/>
-                        <outlet property="resultLabel" destination="ozh-nr-VD2" id="Nf3-TC-rd6"/>
-                        <outlet property="resultUnitsLabel" destination="wAB-At-vMf" id="2Lf-pA-8KA"/>
+                        <outlet property="resultDescriptionLabel" destination="wAB-At-vMf" id="2Lf-pA-8KA"/>
+                        <outlet property="resultStackView" destination="jeA-fd-F0X" id="i0S-p2-df4"/>
+                        <outlet property="resultValueLabel" destination="ozh-nr-VD2" id="Nf3-TC-rd6"/>
                         <outlet property="scrollView" destination="WrS-Cp-OjH" id="lXc-lU-zO3"/>
-                        <outlet property="sexSegmentedControl" destination="zx3-ly-FYO" id="iHF-1T-qKa"/>
+                        <outlet property="sexSegmentedControl" destination="FDe-6x-s5O" id="Kch-aV-gcc"/>
                         <outlet property="titleLabel" destination="EZe-65-5Ha" id="LQn-gN-jel"/>
                     </connections>
                 </viewController>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ActivityLevelCell" customModule="SuperheroShkliaruk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option-selected" translatesAutoresizingMaskIntoConstraints="NO" id="gAz-o0-GwD">
+                        <rect key="frame" x="0.0" y="14.5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="3CN-as-BEg"/>
+                            <constraint firstAttribute="width" constant="15" id="fO6-R6-Jl4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErJ-l5-SRg">
+                        <rect key="frame" x="27" y="9" width="293" height="26"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="gAz-o0-GwD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="20x-Xt-0ov"/>
+                    <constraint firstAttribute="trailing" secondItem="ErJ-l5-SRg" secondAttribute="trailing" id="2jF-FA-dsQ"/>
+                    <constraint firstItem="ErJ-l5-SRg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="7px-4R-7yv"/>
+                    <constraint firstItem="gAz-o0-GwD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="G2m-jD-KoW"/>
+                    <constraint firstItem="ErJ-l5-SRg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wzd-UK-rG9"/>
+                    <constraint firstAttribute="bottom" secondItem="ErJ-l5-SRg" secondAttribute="bottom" constant="9" id="vg7-eY-1Z4"/>
+                    <constraint firstItem="ErJ-l5-SRg" firstAttribute="leading" secondItem="gAz-o0-GwD" secondAttribute="trailing" constant="12" id="x1i-0M-JK6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="ErJ-l5-SRg" id="DZ3-8u-7QY"/>
+                <outlet property="optionImageView" destination="gAz-o0-GwD" id="TLK-CZ-7Gn"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="131"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="option-selected" width="30" height="30"/>
+    </resources>
+</document>

@@ -10,9 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CalculatorParameterView" customModule="SuperheroShkliaruk" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="CalculatorParameterView" customModule="SuperheroShkliaruk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="33"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KV-Aw-Hbj">
                     <rect key="frame" x="0.0" y="0.0" width="68" height="21"/>
@@ -24,27 +23,33 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qsO-Ox-Hba">
-                    <rect key="frame" x="78" y="-1" width="81" height="22.5"/>
+                    <rect key="frame" x="118" y="-1" width="92" height="22.5"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMd-ia-Ja5">
-                            <rect key="frame" x="0.0" y="0.0" width="50" height="22.5"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="hM7-m1-3T9"/>
-                            </constraints>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMd-ia-Ja5">
+                            <rect key="frame" x="0.0" y="0.0" width="61" height="22.5"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <connections>
+                                <action selector="valueTextFieldDidEndOnExit:" destination="iN0-l3-epB" eventType="editingDidEndOnExit" id="rnz-8h-VUC"/>
+                                <action selector="valueTextFieldEditingChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="1e3-df-afG"/>
+                                <action selector="valueTextFieldEditingDidBegin:" destination="iN0-l3-epB" eventType="editingDidBegin" id="1lG-pL-bGc"/>
+                                <action selector="valueTextFieldEditingDidEnd:" destination="iN0-l3-epB" eventType="editingDidEnd" id="8Ji-P4-eoQ"/>
+                            </connections>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WR-vT-Uvd">
-                            <rect key="frame" x="55" y="0.0" width="26" height="22.5"/>
+                            <rect key="frame" x="66" y="0.0" width="26" height="22.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                             <color key="textColor" systemColor="systemGrayColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="92" id="iyA-O1-S7D"/>
+                    </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdz-LO-hf8" userLabel="Underline View">
-                    <rect key="frame" x="78" y="31.5" width="81" height="1"/>
+                    <rect key="frame" x="118" y="31.5" width="92" height="1"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="pDI-MB-eF6"/>
@@ -53,11 +58,14 @@
             </subviews>
             <constraints>
                 <constraint firstItem="4KV-Aw-Hbj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1gK-ND-zNZ"/>
+                <constraint firstAttribute="width" constant="210" id="7mH-UW-M36"/>
                 <constraint firstItem="Fdz-LO-hf8" firstAttribute="leading" secondItem="qsO-Ox-Hba" secondAttribute="leading" id="EmI-tk-EQ3"/>
                 <constraint firstItem="4KV-Aw-Hbj" firstAttribute="firstBaseline" secondItem="qsO-Ox-Hba" secondAttribute="firstBaseline" id="JR9-t3-h7E"/>
                 <constraint firstItem="Fdz-LO-hf8" firstAttribute="bottom" secondItem="qsO-Ox-Hba" secondAttribute="bottom" constant="11" id="JS5-ho-jFD"/>
-                <constraint firstItem="qsO-Ox-Hba" firstAttribute="leading" secondItem="4KV-Aw-Hbj" secondAttribute="trailing" constant="10" id="QLn-Vk-1rx"/>
+                <constraint firstItem="qsO-Ox-Hba" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4KV-Aw-Hbj" secondAttribute="trailing" constant="10" id="QLn-Vk-1rx"/>
                 <constraint firstItem="Fdz-LO-hf8" firstAttribute="trailing" secondItem="qsO-Ox-Hba" secondAttribute="trailing" id="d6F-CS-GvH"/>
+                <constraint firstAttribute="trailing" secondItem="qsO-Ox-Hba" secondAttribute="trailing" id="eor-yb-uFh"/>
+                <constraint firstAttribute="height" constant="33" id="gKU-G4-WK0"/>
                 <constraint firstItem="4KV-Aw-Hbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gcf-lS-xjF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
