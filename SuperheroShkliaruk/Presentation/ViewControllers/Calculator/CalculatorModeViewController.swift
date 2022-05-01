@@ -33,6 +33,7 @@ class CalculatorModeViewController: BaseViewController, Storyboarded {
     
     private func setupUI(with viewModel: CalculatorModeViewModel) {
         title = viewModel.navigationBarTitleText
+    
         titleLabel.font = .sairaMediumWithSize24
         titleLabel.textColor = .white
         titleLabel.text = viewModel.titleLabelText
@@ -64,7 +65,7 @@ class CalculatorModeViewController: BaseViewController, Storyboarded {
         
         resultDescriptionLabel.font = .sairaLightWithSize18
         resultDescriptionLabel.textColor = .white
-        resultStackView.isHidden = true
+        setResultIsHidden(true)
         
         calculateButtonView.setButtonTitle(viewModel.calculateButtonText)
         calculateButtonView.setButtonActionOnTap(calculateButtonTapped)
@@ -95,10 +96,13 @@ class CalculatorModeViewController: BaseViewController, Storyboarded {
     }
     
     private func calculateButtonTapped() {
-        resultStackView.isHidden = false
+        setResultIsHidden(false)
         viewModel?.didCalculateTap()
         resultValueLabel.text = viewModel?.stringResultValue
         resultDescriptionLabel.text = viewModel?.resultDescription
+        
+        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.height + scrollView.contentInset.bottom)
+        scrollView.setContentOffset(bottomOffset, animated: true)
     }
     
     private func updateHipsInputViewVisibility(_ selectedIndex: Int) {
@@ -107,15 +111,21 @@ class CalculatorModeViewController: BaseViewController, Storyboarded {
         hipsInputView.isHidden = selectedIndex == 0 ? true : false
     }
     
+    private func setResultIsHidden(_ isHidden: Bool) {
+        resultStackView.isHidden = isHidden
+        scrollView.isScrollEnabled = !isHidden
+    }
+    
     @IBAction func sexSegmentedControlValueChanged(_ sender: CustomSegmentedControl) {
         guard let viewModel = viewModel else { return }
         viewModel.changeSex(sender.selectedSegmentIndex)
         calculateButtonView.setButtonIsEnabled(viewModel.isCalculateButtonEnabled)
-        resultStackView.isHidden = true
-        
+
         if viewModel.mode == .fatPercentage {
             updateHipsInputViewVisibility(sender.selectedSegmentIndex)
         }
+        scrollView.setContentOffset(.zero, animated: true)
+        setResultIsHidden(true)
     }
     
     

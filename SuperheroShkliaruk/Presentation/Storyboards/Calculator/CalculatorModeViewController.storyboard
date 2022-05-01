@@ -15,9 +15,6 @@
         <array key="Saira-Medium.ttf">
             <string>Saira-Medium</string>
         </array>
-        <array key="Saira-Regular.ttf">
-            <string>Saira-Regular</string>
-        </array>
         <array key="Saira-SemiBold.ttf">
             <string>Saira-SemiBold</string>
         </array>
@@ -31,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WrS-Cp-OjH">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrS-Cp-OjH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tu-s7-pdx">
@@ -52,7 +49,10 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="q00-Js-2xb">
                                                 <rect key="frame" x="43" y="213" width="328" height="50"/>
-                                                <fontDescription key="fontDescription" name="Saira-Regular" family="Saira" pointSize="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="tDE-Hy-3Iy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                 <inset key="contentEdgeInsets" minX="22" minY="12" maxX="22" maxY="12"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Choose Activity Level"/>
@@ -102,11 +102,12 @@
                                             <constraint firstAttribute="trailing" secondItem="FDe-6x-s5O" secondAttribute="trailing" constant="43" id="HWe-k4-uzO"/>
                                             <constraint firstItem="Qj0-oG-rRQ" firstAttribute="top" secondItem="EZe-65-5Ha" secondAttribute="bottom" priority="750" constant="40" id="Nhz-3Y-4Ox"/>
                                             <constraint firstAttribute="trailing" secondItem="q00-Js-2xb" secondAttribute="trailing" constant="43" id="RHy-YE-U8e"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jeA-fd-F0X" secondAttribute="bottom" constant="120" id="Ryc-mh-nBk"/>
                                             <constraint firstItem="FDe-6x-s5O" firstAttribute="top" secondItem="EZe-65-5Ha" secondAttribute="bottom" constant="16" id="UDh-N3-HM3"/>
                                             <constraint firstItem="EZe-65-5Ha" firstAttribute="top" secondItem="1Tu-s7-pdx" secondAttribute="top" constant="40" id="d3J-e2-rW7"/>
                                             <constraint firstItem="q00-Js-2xb" firstAttribute="leading" secondItem="1Tu-s7-pdx" secondAttribute="leading" constant="43" id="drF-UQ-N5Z"/>
                                             <constraint firstItem="q00-Js-2xb" firstAttribute="top" secondItem="Qj0-oG-rRQ" secondAttribute="bottom" constant="32" id="eOc-7T-mLd"/>
-                                            <constraint firstItem="jeA-fd-F0X" firstAttribute="top" secondItem="Qj0-oG-rRQ" secondAttribute="bottom" priority="250" constant="40" id="h8Y-7O-Jkb"/>
+                                            <constraint firstItem="jeA-fd-F0X" firstAttribute="top" secondItem="Qj0-oG-rRQ" secondAttribute="bottom" priority="750" constant="40" id="h8Y-7O-Jkb"/>
                                             <constraint firstItem="EZe-65-5Ha" firstAttribute="leading" secondItem="1Tu-s7-pdx" secondAttribute="leading" constant="56" id="mBQ-8n-RUh"/>
                                             <constraint firstItem="jeA-fd-F0X" firstAttribute="top" secondItem="q00-Js-2xb" secondAttribute="bottom" constant="24" id="pPO-Sb-w1Z"/>
                                         </constraints>
