@@ -58,6 +58,7 @@ class ProgramViewController: UIViewController, Storyboarded {
         title = viewModel?.navigationBarTitleText
         navigationItem.rightBarButtonItem = saveBarButtonItem
         navigationItem.backButtonTitle = viewModel?.backButtonText
+        navigationController?.navigationBar.setBackgroundImage(UIColor.black.image(), for: .default)
     }
     
     @objc private func saveBarButtonTapped() {

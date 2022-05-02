@@ -39,6 +39,7 @@
 		F937F9832805E59C00EA5DBB /* CustomRoundedButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F937F9822805E59C00EA5DBB /* CustomRoundedButtonView.xib */; };
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
 		F942887D280DB70400B4D3D5 /* ProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942887C280DB70400B4D3D5 /* ProgramViewModel.swift */; };
+		F94377DA2820282C002E0159 /* UIColor+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377D92820282C002E0159 /* UIColor+Image.swift */; };
 		F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54A27F630AB00294816 /* ChartViewModel.swift */; };
 		F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */; };
 		F946D55227FCA05100294816 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D55127FCA05000294816 /* ChartView.swift */; };
@@ -181,6 +182,7 @@
 		F937F9822805E59C00EA5DBB /* CustomRoundedButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRoundedButtonView.xib; sourceTree = "<group>"; };
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
 		F942887C280DB70400B4D3D5 /* ProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewModel.swift; sourceTree = "<group>"; };
+		F94377D92820282C002E0159 /* UIColor+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Image.swift"; sourceTree = "<group>"; };
 		F946D54A27F630AB00294816 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewModel.swift; sourceTree = "<group>"; };
 		F946D55127FCA05000294816 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
@@ -784,6 +786,7 @@
 		F96B771627BE80CD00678747 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F94377D92820282C002E0159 /* UIColor+Image.swift */,
 				F96B771727BE810800678747 /* UIColor+CustomColors.swift */,
 				F96B771927BE811D00678747 /* UIFont+CustomFonts.swift */,
 				F96B772C27BE98A900678747 /* UIView+Gradient.swift */,
@@ -1265,6 +1268,7 @@
 				F9FF38D127DB652F00DDA957 /* UITextField+Extension.swift in Sources */,
 				F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */,
 				F9ABC76C281AC4B000E652EE /* ActivityLevelViewController.swift in Sources */,
+				F94377DA2820282C002E0159 /* UIColor+Image.swift in Sources */,
 				F99A51EE281DB43B00318875 /* ActivityLevelViewControllerDelegate.swift in Sources */,
 				F946D5742802DB8D00294816 /* ExerciseViewModel.swift in Sources */,
 				F997070527C6663B00C24B50 /* ProfileViewModel.swift in Sources */,
