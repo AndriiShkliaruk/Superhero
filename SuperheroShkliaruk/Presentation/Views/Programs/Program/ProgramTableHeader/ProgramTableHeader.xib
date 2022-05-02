@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DB9-kV-7Vr">
-                    <rect key="frame" x="133.5" y="32" width="147" height="38"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Program" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DB9-kV-7Vr">
+                    <rect key="frame" x="43" y="32" width="328" height="38"/>
                     <fontDescription key="fontDescription" name="Saira-Medium" family="Saira" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                     <rect key="frame" x="159" y="117" width="212" height="22.5"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <connections>
                         <action selector="nameTextFieldEditingChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="5qs-Bs-ibe"/>
                         <action selector="textFieldDidEndOnExit:" destination="iN0-l3-epB" eventType="editingDidEndOnExit" id="abd-eO-zSr"/>
@@ -52,6 +52,9 @@
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHe-tl-XAH">
                     <rect key="frame" x="43" y="191" width="92" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="CYO-83-eZV"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -60,7 +63,7 @@
                     <rect key="frame" x="159" y="190" width="212" height="22.5"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <connections>
                         <action selector="descriptionTextFieldEditingChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="HGL-nh-bNj"/>
                         <action selector="textFieldDidEndOnExit:" destination="iN0-l3-epB" eventType="editingDidEndOnExit" id="7iO-SN-FxJ"/>
@@ -85,17 +88,20 @@
                 <constraint firstItem="eca-br-5FV" firstAttribute="firstBaseline" secondItem="AHe-tl-XAH" secondAttribute="firstBaseline" id="BON-Nz-yOB"/>
                 <constraint firstItem="AHe-tl-XAH" firstAttribute="leading" secondItem="zKW-Bd-SMy" secondAttribute="leading" id="C7K-Su-RNl"/>
                 <constraint firstItem="zKW-Bd-SMy" firstAttribute="top" secondItem="DB9-kV-7Vr" secondAttribute="bottom" constant="48" id="F4P-P2-YWV"/>
+                <constraint firstItem="DB9-kV-7Vr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="43" id="Hkc-ga-lyK"/>
                 <constraint firstItem="WNu-PV-I8A" firstAttribute="trailing" secondItem="eca-br-5FV" secondAttribute="trailing" id="KoD-0u-F9b"/>
                 <constraint firstAttribute="trailing" secondItem="eca-br-5FV" secondAttribute="trailing" constant="43" id="LBB-PW-21y"/>
                 <constraint firstItem="9KW-gv-G7q" firstAttribute="top" secondItem="WNu-PV-I8A" secondAttribute="bottom" constant="11" id="Ljq-AU-p9D"/>
-                <constraint firstItem="DB9-kV-7Vr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PR6-AF-Y1r"/>
+                <constraint firstAttribute="trailing" secondItem="WNu-PV-I8A" secondAttribute="trailing" constant="43" id="RYc-tU-xGQ"/>
                 <constraint firstItem="3bt-BQ-3Tl" firstAttribute="leading" secondItem="eca-br-5FV" secondAttribute="leading" constant="-10" id="SuO-w1-gcb"/>
                 <constraint firstItem="AHe-tl-XAH" firstAttribute="top" secondItem="zKW-Bd-SMy" secondAttribute="bottom" constant="52" id="XUu-4F-bbo"/>
                 <constraint firstItem="DB9-kV-7Vr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="YqG-Zy-r5q"/>
                 <constraint firstItem="9KW-gv-G7q" firstAttribute="leading" secondItem="WNu-PV-I8A" secondAttribute="leading" constant="-10" id="Zz6-mE-gou"/>
                 <constraint firstItem="WNu-PV-I8A" firstAttribute="firstBaseline" secondItem="zKW-Bd-SMy" secondAttribute="firstBaseline" id="a3w-m0-w8q"/>
+                <constraint firstAttribute="trailing" secondItem="DB9-kV-7Vr" secondAttribute="trailing" constant="43" id="aJd-ZO-y6T"/>
                 <constraint firstItem="zKW-Bd-SMy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="43" id="mFB-Z9-IQU"/>
                 <constraint firstItem="eca-br-5FV" firstAttribute="leading" secondItem="AHe-tl-XAH" secondAttribute="trailing" constant="24" id="qlZ-YS-pXl"/>
+                <constraint firstAttribute="bottom" secondItem="3bt-BQ-3Tl" secondAttribute="bottom" constant="32.5" id="tTU-j0-DGm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

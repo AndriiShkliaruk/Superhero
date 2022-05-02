@@ -49,6 +49,8 @@ class ProgramViewController: UIViewController, Storyboarded {
         tableView.dataSource = self
         tableView.register(UINib(nibName: ProgramExerciseCell.identifier, bundle: nil), forCellReuseIdentifier: ProgramExerciseCell.identifier)
         tableView.register(UINib(nibName: ProgramTableHeader.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProgramTableHeader.identifier)
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = 257
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
     }
     
@@ -78,10 +80,6 @@ extension ProgramViewController: UITableViewDelegate, UITableViewDataSource {
         }
         headerView.configure(with: viewModel)
         return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 257
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
