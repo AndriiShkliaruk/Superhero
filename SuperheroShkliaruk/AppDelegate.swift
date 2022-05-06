@@ -28,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().isTranslucent = true
         
+        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.helveticaNeueRegularWithSize11, .foregroundColor: UIColor.white], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.helveticaNeueRegularWithSize11, .foregroundColor: UIColor.customYellow], for: .selected)
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 3)
+        
         return true
     }
 

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-XO-NFz">
-                                <rect key="frame" x="43" y="195" width="328" height="701"/>
+                                <rect key="frame" x="43" y="195" width="328" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <sections/>
                             </tableView>
@@ -28,7 +28,7 @@
                         <constraints>
                             <constraint firstItem="5bg-XO-NFz" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="195" id="2oO-bv-bpU"/>
                             <constraint firstItem="5bg-XO-NFz" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="43" id="EDn-gs-Xjn"/>
-                            <constraint firstAttribute="bottom" secondItem="5bg-XO-NFz" secondAttribute="bottom" id="Vsd-kr-4Dw"/>
+                            <constraint firstItem="RLj-RJ-YOs" firstAttribute="bottom" secondItem="5bg-XO-NFz" secondAttribute="bottom" id="Vsd-kr-4Dw"/>
                             <constraint firstAttribute="trailing" secondItem="5bg-XO-NFz" secondAttribute="trailing" constant="43" id="sXn-S9-Vma"/>
                         </constraints>
                     </view>

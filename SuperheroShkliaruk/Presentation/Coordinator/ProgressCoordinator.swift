@@ -1,22 +1,22 @@
 //
-//  Coordinator+Progress.swift
+//  ProgressCoordinator.swift
 //  SuperheroShkliaruk
 //
-//  Created by Andrii Shkliaruk on 23.02.2022.
+//  Created by Andrii Shkliaruk on 05.05.2022.
 //
 
-import Foundation
+import UIKit
 
-extension MainCoordinator {
-    func moveToProgress() {
+class ProgressCoordinator: BaseCoordinator, Coordinator {
+    func start() {
         let viewController = ProgressViewController.instantiate()
         viewController.coordinator = self
-        navigationController.pushViewController(viewController, animated: true)
+        pushViewController(viewController, animated: false)
     }
     
     func moveToChart(with parameterViewModel: ParameterViewModel) {
         let viewController = ChartViewController.instantiate()
         viewController.viewModel = ChartViewModel(parameter: parameterViewModel)
-        navigationController.pushViewController(viewController, animated: true)
+        pushViewController(viewController, animated: true)
     }
 }

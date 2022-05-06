@@ -29,7 +29,7 @@ class ProfileViewModel {
     let infoIconName = "success"
     let infoText = "Profile has been saved!"
     
-    private let initialUserProfile: UserProfileViewModel
+    private var initialUserProfile: UserProfileViewModel
     private var initialParameters: [BodyParameter]
     
     var userProfile: UserProfileViewModel
@@ -63,6 +63,12 @@ class ProfileViewModel {
         }
     }
     
+    private func updateInitialProfile() {
+        guard let profile = coreDataProfile else { return }
+        let parametersViewModels = initialParameters.map { ParameterViewModel($0) }
+        initialUserProfile = UserProfileViewModel(profile, parametersViewModels)
+    }
+    
     func didSaveButtonTap() {
         coreDataProfile?.name = userProfile.name
         coreDataProfile?.avatar = userProfile.avatar
@@ -71,6 +77,7 @@ class ProfileViewModel {
         updateInitialParameters(from: userProfile.parameters)
         coreDataProfile?.bodyParameters = NSOrderedSet(array: initialParameters)
         ProfileManager.sharedInstance.saveProfile()
+        updateInitialProfile()
     }
     
     func saveValuesInParameterViewModels() {

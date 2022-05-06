@@ -11,7 +11,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var addParametersButtonView: CustomRoundedButtonView!
     
-    var coordinator: MainCoordinator?
+    var coordinator: ProfileCoordinator?
     private var viewModel = ProfileViewModel()
     private var activeTableViewCell: UITableViewCell?
     
@@ -61,7 +61,8 @@ class ProfileViewController: BaseViewController, Storyboarded {
     @objc private func saveBarButtonTapped() {
         view.endEditing(true)
         viewModel.didSaveButtonTap()
-        coordinator?.backWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText)
+        saveBarButtonItem.isEnabled = false
+        coordinator?.finishWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText, nextTab: .home)
     }
     
     private func addParametersButtonTapped() {

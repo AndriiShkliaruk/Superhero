@@ -19,6 +19,7 @@ class ParameterViewModel {
     var isSelected: Bool
     var isDisplayed: Bool
     
+    var isTextFieldHighlighted = false
     var isChecked: Bool
     let differenceValueString: String
     let differenceValueBackColor: UIColor
@@ -113,6 +114,10 @@ class ParameterViewModel {
     
     func changeIsDisplayed(_ isDisplayed: Bool) {
         self.isDisplayed = isDisplayed
+    }
+    
+    func changeIsTextFieldHighlighted(_ isHighlighted: Bool) {
+        isTextFieldHighlighted = isHighlighted
     }
 }
 

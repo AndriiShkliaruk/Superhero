@@ -1,29 +1,29 @@
 //
-//  Coordinator+Calculator.swift
+//  CalculatorCoordinator.swift
 //  SuperheroShkliaruk
 //
-//  Created by Andrii Shkliaruk on 23.02.2022.
+//  Created by Andrii Shkliaruk on 05.05.2022.
 //
 
-import Foundation
+import UIKit
 
-extension MainCoordinator {
-    func moveToCalculator() {
+class CalculatorCoordinator: BaseCoordinator, Coordinator {
+    func start() {
         let viewController = CalculatorViewController.instantiate()
         viewController.coordinator = self
-        navigationController.pushViewController(viewController, animated: true)
+        pushViewController(viewController, animated: false)
     }
     
     func moveToBodyCalculator(_ mode: CalculatorMode) {
         let viewController = CalculatorModeViewController.instantiate()
         viewController.coordinator = self
         viewController.viewModel = CalculatorModeViewModel(mode: mode)
-        navigationController.pushViewController(viewController, animated: true)
+        pushViewController(viewController, animated: true)
     }
     
     func presentRateActivities(configuration: (ActivityLevelViewController) -> Void) {
         let viewController = ActivityLevelViewController.instantiate()
         configuration(viewController)
-        navigationController.present(viewController, animated: true)
+        pushViewController(viewController, animated: true)
     }
 }

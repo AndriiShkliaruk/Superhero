@@ -12,7 +12,7 @@ class ProgramsViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var programsTableView: UITableView!
     @IBOutlet private weak var newProgramButtonView: CustomRoundedButtonView!
     
-    var coordinator: MainCoordinator?
+    var coordinator: ProgramsCoordinator?
     private let viewModel = ProgramsViewModel()
 
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class ProgramsViewController: BaseViewController, Storyboarded {
         programsTableView.delegate = self
         programsTableView.dataSource = self
         programsTableView.register(UINib(nibName: ProgramCell.identifier, bundle: nil), forCellReuseIdentifier: ProgramCell.identifier)
-        programsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
+        programsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
     }
     
     private func newProgramButtonTapped() {

@@ -15,7 +15,7 @@ class ProgramExerciseCell: UITableViewCell {
     
     static let identifier = "ProgramExerciseCell"
     private var viewModel: ExerciseViewModel?
-    var coordinator: MainCoordinator?
+    var coordinator: ProgramsCoordinator?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,6 +46,6 @@ class ProgramExerciseCell: UITableViewCell {
     
     @objc private func cellTapped() {
         guard let viewModel = viewModel else { return }
-        coordinator?.moveToExercise(with: .edit, viewModel: viewModel)
+        coordinator?.moveToExercise(with: viewModel)
     }
 }

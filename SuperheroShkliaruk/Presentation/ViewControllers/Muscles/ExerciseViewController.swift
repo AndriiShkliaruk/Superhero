@@ -18,7 +18,7 @@ class ExerciseViewController: UIViewController, Storyboarded {
     
     var mode: ExercisesMode = .normal
     var viewModel: ExerciseViewModel?
-    var coordinator: MainCoordinator?
+    var coordinator: MusclesCoordinator?
     private var actionSheetItems = [ActionSheetItem]()
     
     override func viewDidLoad() {
@@ -69,7 +69,7 @@ class ExerciseViewController: UIViewController, Storyboarded {
             })
         }
         actionSheetItems.append((viewModel.newProgramActionTitle, { [weak self] in
-            self?.coordinator?.moveToProgram(with: .create(initialExercise: viewModel))
+            self?.coordinator?.createProgram(with: viewModel)
         }))
     }
     

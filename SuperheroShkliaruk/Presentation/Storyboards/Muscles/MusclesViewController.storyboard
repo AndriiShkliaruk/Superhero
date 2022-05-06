@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-ad-sKJ">
-                                <rect key="frame" x="0.0" y="91" width="414" height="805"/>
+                                <rect key="frame" x="0.0" y="91" width="414" height="771"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zaE-Vc-laV"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="AU2-ad-sKJ" secondAttribute="bottom" id="KjZ-cP-Dm1"/>
+                            <constraint firstItem="zaE-Vc-laV" firstAttribute="bottom" secondItem="AU2-ad-sKJ" secondAttribute="bottom" id="KjZ-cP-Dm1"/>
                             <constraint firstAttribute="trailing" secondItem="AU2-ad-sKJ" secondAttribute="trailing" id="Lf5-P1-6xy"/>
                             <constraint firstItem="AU2-ad-sKJ" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="aU4-Fe-XPm"/>
                             <constraint firstItem="AU2-ad-sKJ" firstAttribute="top" secondItem="zaE-Vc-laV" secondAttribute="top" constant="47" id="ujD-qC-glg"/>

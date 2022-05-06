@@ -58,6 +58,10 @@ extension UIFont {
     }
     
     //MARK: - Helvetica Neue
+    public class var helveticaNeueRegularWithSize11: UIFont {
+        return customFont(name: "HelveticaNeue", size: 11)
+    }
+    
     public class var helveticaNeueRegularWithSize16: UIFont {
         return customFont(name: "HelveticaNeue", size: 16)
     }
@@ -82,6 +86,10 @@ extension UIFont {
         return customFont(name: "HelveticaNeue-Bold", size: 24)
     }
     
+    public class var helveticaNeueBoldWithSize30: UIFont {
+        return customFont(name: "HelveticaNeue-Bold", size: 30)
+    }
+    
     //MARK: - Gilroy
     public class var gilroySemiboldWithSize12: UIFont {
         return customFont(name: "Gilroy-Semibold", size: 12)
@@ -89,6 +97,10 @@ extension UIFont {
     
     public class var gilroySemiboldWithSize14: UIFont {
         return customFont(name: "Gilroy-Semibold", size: 14)
+    }
+    
+    public class var gilroySemiboldWithSize20: UIFont {
+        return customFont(name: "Gilroy-Semibold", size: 20)
     }
     
     //MARK: - Nunito

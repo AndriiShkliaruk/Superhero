@@ -10,16 +10,13 @@ import UIKit
 class ProgressViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var menuTableView: UITableView!
     
-    var coordinator: MainCoordinator?
+    var coordinator: ProgressCoordinator?
     let viewModel = ProgressViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuTableView.delegate = self
-        menuTableView.dataSource = self
-        menuTableView.register(UINib(nibName: MenuTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MenuTableViewCell.identifier)
-        
         setupUI()
+        setupMenuTableView()
     }
     
     private func setupUI() {
@@ -29,6 +26,12 @@ class ProgressViewController: BaseViewController, Storyboarded {
         if viewModel.parametersViewModels.isEmpty {
             showEmptyParametersInfoView()
         }
+    }
+    
+    private func setupMenuTableView() {
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
+        menuTableView.register(UINib(nibName: MenuTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MenuTableViewCell.identifier)
     }
     
     private func showEmptyParametersInfoView() {

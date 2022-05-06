@@ -19,7 +19,7 @@ class CalculatorModeViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var calculateButtonView: CustomRoundedButtonView!
     
     private lazy var transitionDelegate = DimmTransitionManager()
-    var coordinator: MainCoordinator?
+    var coordinator: CalculatorCoordinator?
     var viewModel: CalculatorModeViewModel?
     
     override func viewDidLoad() {

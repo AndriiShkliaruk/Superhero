@@ -17,7 +17,7 @@ class StartViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var femaleImageView: UIImageView!
     
     private let viewModel = StartViewModel()
-    var coordinator: MainCoordinator?
+    var coordinator: StartCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,6 @@ class StartViewController: UIViewController, Storyboarded {
     @IBAction private func chooseCharacterButtonTapped(_ sender: UIButton) {
         let sex = Sex.getStringValueByTag(sender.tag)
         viewModel.createNewUserWithSex(sex)
-        coordinator?.moveToHome()
+        coordinator?.moveToTabs()
     }
 }

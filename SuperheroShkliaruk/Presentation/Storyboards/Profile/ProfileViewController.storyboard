@@ -22,9 +22,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VU5-uD-7Vi" customClass="CustomRoundedButtonView" customModule="SuperheroShkliaruk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="778" width="414" height="118"/>
+                                <rect key="frame" x="0.0" y="772" width="414" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="vYf-ek-1Ez"/>
+                                    <constraint firstAttribute="height" constant="90" id="vYf-ek-1Ez"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -34,7 +34,7 @@
                             <constraint firstItem="NkA-AS-IoW" firstAttribute="bottom" secondItem="ywM-XN-prO" secondAttribute="bottom" id="8KR-DV-huW"/>
                             <constraint firstItem="ywM-XN-prO" firstAttribute="leading" secondItem="NkA-AS-IoW" secondAttribute="leading" id="8eq-4Q-mOl"/>
                             <constraint firstItem="VU5-uD-7Vi" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="GRg-Fw-aVd"/>
-                            <constraint firstAttribute="bottom" secondItem="VU5-uD-7Vi" secondAttribute="bottom" id="QAw-oX-ZyV"/>
+                            <constraint firstItem="NkA-AS-IoW" firstAttribute="bottom" secondItem="VU5-uD-7Vi" secondAttribute="bottom" id="QAw-oX-ZyV"/>
                             <constraint firstItem="NkA-AS-IoW" firstAttribute="trailing" secondItem="ywM-XN-prO" secondAttribute="trailing" id="VIc-B5-auS"/>
                             <constraint firstItem="ywM-XN-prO" firstAttribute="top" secondItem="NkA-AS-IoW" secondAttribute="top" id="Zrn-nX-NKV"/>
                             <constraint firstItem="VU5-uD-7Vi" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="zbO-6G-FyH"/>

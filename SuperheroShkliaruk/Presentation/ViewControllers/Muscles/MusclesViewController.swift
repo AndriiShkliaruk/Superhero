@@ -15,7 +15,7 @@ class MusclesViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var tableView: UITableView!
     
     var mode: ExercisesMode = .normal
-    var coordinator: MainCoordinator?
+    var coordinator: MusclesCoordinator?
     var delegate: ProgramViewControllerDelegate?
     var viewModel = MusclesViewModel()
     

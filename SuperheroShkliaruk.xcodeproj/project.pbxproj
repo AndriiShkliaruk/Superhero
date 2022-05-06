@@ -40,6 +40,22 @@
 		F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */; };
 		F942887D280DB70400B4D3D5 /* ProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942887C280DB70400B4D3D5 /* ProgramViewModel.swift */; };
 		F94377DA2820282C002E0159 /* UIColor+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377D92820282C002E0159 /* UIColor+Image.swift */; };
+		F94377E428215DBE002E0159 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377E328215DBE002E0159 /* MainTabBarController.swift */; };
+		F94377E7282166D7002E0159 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377E6282166D7002E0159 /* TabBarCoordinator.swift */; };
+		F94377E92821913F002E0159 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377E82821913F002E0159 /* AppCoordinator.swift */; };
+		F94377F128227021002E0159 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377F028227021002E0159 /* StartCoordinator.swift */; };
+		F94377F3282289F3002E0159 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377F2282289F3002E0159 /* HomeCoordinator.swift */; };
+		F94377F528228A05002E0159 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377F428228A05002E0159 /* ProfileCoordinator.swift */; };
+		F94377F72822914C002E0159 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377F62822914C002E0159 /* Coordinator.swift */; };
+		F94377F928229413002E0159 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377F828229413002E0159 /* NavigationCoordinator.swift */; };
+		F94377FB282299FF002E0159 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94377FA282299FF002E0159 /* BaseCoordinator.swift */; };
+		F943780728238C8F002E0159 /* ProgressCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F943780628238C8F002E0159 /* ProgressCoordinator.swift */; };
+		F943780928238ED1002E0159 /* ProgramsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F943780828238ED1002E0159 /* ProgramsCoordinator.swift */; };
+		F943780B28239E2A002E0159 /* MusclesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F943780A28239E2A002E0159 /* MusclesCoordinator.swift */; };
+		F943780D28241923002E0159 /* CalculatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F943780C28241923002E0159 /* CalculatorCoordinator.swift */; };
+		F9437811282477D9002E0159 /* HomeParameterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F943780F282477D9002E0159 /* HomeParameterCell.swift */; };
+		F9437812282477D9002E0159 /* HomeParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9437810282477D9002E0159 /* HomeParameterCell.xib */; };
+		F9437815282480C0002E0159 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9437814282480C0002E0159 /* TabBarItem.swift */; };
 		F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54A27F630AB00294816 /* ChartViewModel.swift */; };
 		F946D54D27F75EFE00294816 /* ChartBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */; };
 		F946D55227FCA05100294816 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946D55127FCA05000294816 /* ChartView.swift */; };
@@ -68,11 +84,8 @@
 		F953E41C27BBC85000DE14B7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E41B27BBC85000DE14B7 /* StartViewController.swift */; };
 		F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F953E42027BBC85100DE14B7 /* Assets.xcassets */; };
 		F953E42427BBC85100DE14B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F953E42227BBC85100DE14B7 /* LaunchScreen.storyboard */; };
-		F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E43427BBE08700DE14B7 /* Coordinator.swift */; };
-		F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E43627BBE0E700DE14B7 /* MainCoordinator.swift */; };
 		F953E43A27BC088D00DE14B7 /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F953E43927BC088D00DE14B7 /* StartViewController.storyboard */; };
 		F953E43C27BC08FD00DE14B7 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E43B27BC08FC00DE14B7 /* Storyboarded.swift */; };
-		F96358CB28141DAB00EC8E6E /* Coordinator+InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96358CA28141DAB00EC8E6E /* Coordinator+InfoView.swift */; };
 		F965FA70281A7B070044D697 /* CalculatorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F965FA6F281A7B070044D697 /* CalculatorEnums.swift */; };
 		F968596527C3B6EB0007FF5C /* Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F968596327C3B6EA0007FF5C /* Profile.xcdatamodeld */; };
 		F968597727C3C4B00007FF5C /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968597627C3C4B00007FF5C /* Sex.swift */; };
@@ -96,11 +109,6 @@
 		F989AF3027E0AED8008751FB /* Profile+Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F989AF2F27E0AED8008751FB /* Profile+Sex.swift */; };
 		F99706E527C65D7300C24B50 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706E327C65D7300C24B50 /* MenuTableViewCell.swift */; };
 		F99706E627C65D7300C24B50 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99706E427C65D7300C24B50 /* MenuTableViewCell.xib */; };
-		F99706E827C662DF00C24B50 /* Coordinator+Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706E727C662DF00C24B50 /* Coordinator+Calculator.swift */; };
-		F99706EA27C662F100C24B50 /* Coordinator+Muscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706E927C662F100C24B50 /* Coordinator+Muscles.swift */; };
-		F99706EC27C662FC00C24B50 /* Coordinator+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706EB27C662FC00C24B50 /* Coordinator+Profile.swift */; };
-		F99706EE27C6630900C24B50 /* Coordinator+Programs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706ED27C6630900C24B50 /* Coordinator+Programs.swift */; };
-		F99706F027C6631700C24B50 /* Coordinator+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706EF27C6631700C24B50 /* Coordinator+Progress.swift */; };
 		F99706F527C6659300C24B50 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706F427C6659300C24B50 /* CalculatorViewController.swift */; };
 		F99706F727C665B100C24B50 /* MusclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706F627C665B100C24B50 /* MusclesViewController.swift */; };
 		F99706F927C665BB00C24B50 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99706F827C665BB00C24B50 /* ProfileViewController.swift */; };
@@ -143,8 +151,6 @@
 		F9D8671228182A13009247DA /* CalculatorModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8671128182A13009247DA /* CalculatorModeViewModel.swift */; };
 		F9D8671528182AE8009247DA /* CalculatorParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D8671428182AE8009247DA /* CalculatorParameterView.xib */; };
 		F9D86717281844EE009247DA /* CalculatorParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D86716281844EE009247DA /* CalculatorParameterView.swift */; };
-		F9D8F1E827F043DC00D2365D /* HomeParametersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */; };
-		F9D8F1E927F043DC00D2365D /* HomeParametersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D8F1E727F043DC00D2365D /* HomeParametersCell.xib */; };
 		F9D8F1EC27F081CE00D2365D /* Gilroy-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D8F1EB27F081CE00D2365D /* Gilroy-Semibold.ttf */; };
 		F9FF38D127DB652F00DDA957 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF38D027DB652F00DDA957 /* UITextField+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -183,6 +189,22 @@
 		F938F60F27E3465A00844F65 /* BodyParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersStorage.swift; sourceTree = "<group>"; };
 		F942887C280DB70400B4D3D5 /* ProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewModel.swift; sourceTree = "<group>"; };
 		F94377D92820282C002E0159 /* UIColor+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Image.swift"; sourceTree = "<group>"; };
+		F94377E328215DBE002E0159 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F94377E6282166D7002E0159 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		F94377E82821913F002E0159 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F94377F028227021002E0159 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		F94377F2282289F3002E0159 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		F94377F428228A05002E0159 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		F94377F62822914C002E0159 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F94377F828229413002E0159 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		F94377FA282299FF002E0159 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		F943780628238C8F002E0159 /* ProgressCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCoordinator.swift; sourceTree = "<group>"; };
+		F943780828238ED1002E0159 /* ProgramsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsCoordinator.swift; sourceTree = "<group>"; };
+		F943780A28239E2A002E0159 /* MusclesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesCoordinator.swift; sourceTree = "<group>"; };
+		F943780C28241923002E0159 /* CalculatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCoordinator.swift; sourceTree = "<group>"; };
+		F943780F282477D9002E0159 /* HomeParameterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParameterCell.swift; sourceTree = "<group>"; };
+		F9437810282477D9002E0159 /* HomeParameterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeParameterCell.xib; sourceTree = "<group>"; };
+		F9437814282480C0002E0159 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		F946D54A27F630AB00294816 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		F946D54C27F75EFE00294816 /* ChartBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewModel.swift; sourceTree = "<group>"; };
 		F946D55127FCA05000294816 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
@@ -212,11 +234,8 @@
 		F953E42027BBC85100DE14B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F953E42327BBC85100DE14B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F953E42527BBC85100DE14B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F953E43427BBE08700DE14B7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		F953E43627BBE0E700DE14B7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F953E43927BC088D00DE14B7 /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		F953E43B27BC08FC00DE14B7 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		F96358CA28141DAB00EC8E6E /* Coordinator+InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+InfoView.swift"; sourceTree = "<group>"; };
 		F965FA6F281A7B070044D697 /* CalculatorEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorEnums.swift; sourceTree = "<group>"; };
 		F968596427C3B6EB0007FF5C /* Profile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Profile.xcdatamodel; sourceTree = "<group>"; };
 		F968597627C3C4B00007FF5C /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
@@ -240,11 +259,6 @@
 		F989AF2F27E0AED8008751FB /* Profile+Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Sex.swift"; sourceTree = "<group>"; };
 		F99706E327C65D7300C24B50 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		F99706E427C65D7300C24B50 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		F99706E727C662DF00C24B50 /* Coordinator+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Calculator.swift"; sourceTree = "<group>"; };
-		F99706E927C662F100C24B50 /* Coordinator+Muscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Muscles.swift"; sourceTree = "<group>"; };
-		F99706EB27C662FC00C24B50 /* Coordinator+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Profile.swift"; sourceTree = "<group>"; };
-		F99706ED27C6630900C24B50 /* Coordinator+Programs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Programs.swift"; sourceTree = "<group>"; };
-		F99706EF27C6631700C24B50 /* Coordinator+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Progress.swift"; sourceTree = "<group>"; };
 		F99706F427C6659300C24B50 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		F99706F627C665B100C24B50 /* MusclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewController.swift; sourceTree = "<group>"; };
 		F99706F827C665BB00C24B50 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -287,8 +301,6 @@
 		F9D8671128182A13009247DA /* CalculatorModeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModeViewModel.swift; sourceTree = "<group>"; };
 		F9D8671428182AE8009247DA /* CalculatorParameterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorParameterView.xib; sourceTree = "<group>"; };
 		F9D86716281844EE009247DA /* CalculatorParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorParameterView.swift; sourceTree = "<group>"; };
-		F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParametersCell.swift; sourceTree = "<group>"; };
-		F9D8F1E727F043DC00D2365D /* HomeParametersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeParametersCell.xib; sourceTree = "<group>"; };
 		F9D8F1EB27F081CE00D2365D /* Gilroy-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Semibold.ttf"; sourceTree = "<group>"; };
 		F9FF38D027DB652F00DDA957 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -412,6 +424,32 @@
 				F972F3692812B888004A059E /* ProgramCell.swift */,
 			);
 			path = ProgramCell;
+			sourceTree = "<group>";
+		};
+		F94377E528215DD2002E0159 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F94377E328215DBE002E0159 /* MainTabBarController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		F943780E282477B1002E0159 /* HomeParameterCell */ = {
+			isa = PBXGroup;
+			children = (
+				F943780F282477D9002E0159 /* HomeParameterCell.swift */,
+				F9437810282477D9002E0159 /* HomeParameterCell.xib */,
+			);
+			path = HomeParameterCell;
+			sourceTree = "<group>";
+		};
+		F9437813282480AD002E0159 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F9437814282480C0002E0159 /* TabBarItem.swift */,
+				F94377E6282166D7002E0159 /* TabBarCoordinator.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		F946D54E27FC9EF700294816 /* Chart */ = {
@@ -548,18 +586,9 @@
 		F94E9F5927F0419200693538 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F94E9F5A27F041A500693538 /* HomeParametersCell */,
+				F943780E282477B1002E0159 /* HomeParameterCell */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		F94E9F5A27F041A500693538 /* HomeParametersCell */ = {
-			isa = PBXGroup;
-			children = (
-				F9D8F1E627F043DC00D2365D /* HomeParametersCell.swift */,
-				F9D8F1E727F043DC00D2365D /* HomeParametersCell.xib */,
-			);
-			path = HomeParametersCell;
 			sourceTree = "<group>";
 		};
 		F94FCD2E281D8D110037BEB4 /* ActivityLevelItemView */ = {
@@ -683,6 +712,7 @@
 		F953E43027BBDF6E00DE14B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F94377E528215DD2002E0159 /* MainTabBar */,
 				F97121CF27E26CA00095B8C9 /* Base */,
 				F96B771227BE656800678747 /* Start */,
 				F96B771327BE656F00678747 /* Home */,
@@ -714,13 +744,16 @@
 		F953E43227BBDF8E00DE14B7 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				F953E43627BBE0E700DE14B7 /* MainCoordinator.swift */,
-				F99706E727C662DF00C24B50 /* Coordinator+Calculator.swift */,
-				F99706E927C662F100C24B50 /* Coordinator+Muscles.swift */,
-				F99706EB27C662FC00C24B50 /* Coordinator+Profile.swift */,
-				F99706ED27C6630900C24B50 /* Coordinator+Programs.swift */,
-				F99706EF27C6631700C24B50 /* Coordinator+Progress.swift */,
-				F96358CA28141DAB00EC8E6E /* Coordinator+InfoView.swift */,
+				F9437813282480AD002E0159 /* TabBar */,
+				F94377FA282299FF002E0159 /* BaseCoordinator.swift */,
+				F94377E82821913F002E0159 /* AppCoordinator.swift */,
+				F94377F028227021002E0159 /* StartCoordinator.swift */,
+				F94377F2282289F3002E0159 /* HomeCoordinator.swift */,
+				F94377F428228A05002E0159 /* ProfileCoordinator.swift */,
+				F943780628238C8F002E0159 /* ProgressCoordinator.swift */,
+				F943780828238ED1002E0159 /* ProgramsCoordinator.swift */,
+				F943780A28239E2A002E0159 /* MusclesCoordinator.swift */,
+				F943780C28241923002E0159 /* CalculatorCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -728,7 +761,8 @@
 		F953E43327BBE07600DE14B7 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				F953E43427BBE08700DE14B7 /* Coordinator.swift */,
+				F94377F62822914C002E0159 /* Coordinator.swift */,
+				F94377F828229413002E0159 /* NavigationCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1187,8 +1221,8 @@
 				F946D5672801AD6400294816 /* Nunito-Light.ttf in Resources */,
 				F96B771527BE6C7C00678747 /* HomeViewController.storyboard in Resources */,
 				F92D908227E9209F0018917F /* ParametersViewController.storyboard in Resources */,
+				F9437812282477D9002E0159 /* HomeParameterCell.xib in Resources */,
 				F953E42427BBC85100DE14B7 /* LaunchScreen.storyboard in Resources */,
-				F9D8F1E927F043DC00D2365D /* HomeParametersCell.xib in Resources */,
 				F96B772B27BE90EC00678747 /* Saira-SemiBold.ttf in Resources */,
 				F92FF3F027F4FAB3003B97B5 /* InfoView.xib in Resources */,
 				F94FCD2D281D5A650037BEB4 /* ActivityLevelItemView.xib in Resources */,
@@ -1234,7 +1268,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F997070727C6664700C24B50 /* ProgramsViewModel.swift in Sources */,
-				F96358CB28141DAB00EC8E6E /* Coordinator+InfoView.swift in Sources */,
 				F946D56C2801AEB100294816 /* ExerciseCell.swift in Sources */,
 				F92D905B27E365410018917F /* BaseViewModel.swift in Sources */,
 				F9ABC773281ACBB700E652EE /* ActivityLevelViewModel.swift in Sources */,
@@ -1242,20 +1275,20 @@
 				F997070327C6662E00C24B50 /* MusclesViewModel.swift in Sources */,
 				F946D562280195A200294816 /* MusclesTableHeaderView.swift in Sources */,
 				F9D86717281844EE009247DA /* CalculatorParameterView.swift in Sources */,
-				F99706EC27C662FC00C24B50 /* Coordinator+Profile.swift in Sources */,
+				F94377E428215DBE002E0159 /* MainTabBarController.swift in Sources */,
 				F92FF3F227F4FACB003B97B5 /* InfoView.swift in Sources */,
-				F99706E827C662DF00C24B50 /* Coordinator+Calculator.swift in Sources */,
+				F94377F928229413002E0159 /* NavigationCoordinator.swift in Sources */,
 				F99706E527C65D7300C24B50 /* MenuTableViewCell.swift in Sources */,
+				F9437811282477D9002E0159 /* HomeParameterCell.swift in Sources */,
 				F99706F727C665B100C24B50 /* MusclesViewController.swift in Sources */,
+				F94377F72822914C002E0159 /* Coordinator.swift in Sources */,
 				F997070127C6661C00C24B50 /* CalculatorViewModel.swift in Sources */,
-				F99706EE27C6630900C24B50 /* Coordinator+Programs.swift in Sources */,
 				F9D66DEF2804AEBD00371B0F /* ExerciseCellDelegate.swift in Sources */,
 				F90DF82827C11E7100B76F30 /* StartViewModel.swift in Sources */,
 				F99706F927C665BB00C24B50 /* ProfileViewController.swift in Sources */,
 				F94FCD2B281D5A5A0037BEB4 /* ActivityLevelItemView.swift in Sources */,
 				F92D907A27E749640018917F /* ProfileViewControllerDelegate.swift in Sources */,
 				F972F36A2812B888004A059E /* ProgramCell.swift in Sources */,
-				F953E43527BBE08700DE14B7 /* Coordinator.swift in Sources */,
 				F938F61027E3465A00844F65 /* BodyParametersStorage.swift in Sources */,
 				F92D908E27EA10710018917F /* PresentationController.swift in Sources */,
 				F92FF3FF27F61E0C003B97B5 /* BodyParameter+CoreDataClass.swift in Sources */,
@@ -1272,50 +1305,57 @@
 				F99A51EE281DB43B00318875 /* ActivityLevelViewControllerDelegate.swift in Sources */,
 				F946D5742802DB8D00294816 /* ExerciseViewModel.swift in Sources */,
 				F997070527C6663B00C24B50 /* ProfileViewModel.swift in Sources */,
-				F99706F027C6631700C24B50 /* Coordinator+Progress.swift in Sources */,
 				F997070927C6665600C24B50 /* ProgressViewModel.swift in Sources */,
 				F96F19C8281E8F1F0063B8F1 /* CustomSegmentedControl.swift in Sources */,
 				F92D906527E378060018917F /* ProfileParametersCell.swift in Sources */,
+				F9437815282480C0002E0159 /* TabBarItem.swift in Sources */,
 				F99706F527C6659300C24B50 /* CalculatorViewController.swift in Sources */,
 				F942887D280DB70400B4D3D5 /* ProgramViewModel.swift in Sources */,
 				F98425F927DFB0D9002F2196 /* ProfileTableHeader.swift in Sources */,
 				F953E41827BBC85000DE14B7 /* AppDelegate.swift in Sources */,
 				F92FF3F527F5EC66003B97B5 /* ChartViewController.swift in Sources */,
-				F953E43727BBE0E700DE14B7 /* MainCoordinator.swift in Sources */,
+				F94377E7282166D7002E0159 /* TabBarCoordinator.swift in Sources */,
 				F953E41A27BBC85000DE14B7 /* SceneDelegate.swift in Sources */,
 				F946D559280090E100294816 /* Exercise.swift in Sources */,
+				F943780928238ED1002E0159 /* ProgramsCoordinator.swift in Sources */,
 				F92D908A27EA0E230018917F /* PresentAnimation.swift in Sources */,
 				F98425FB27DFB111002F2196 /* ProfileTableFooter.swift in Sources */,
 				F99A10F128100E7700851D6F /* ProgramViewControllerDelegate.swift in Sources */,
 				F99A51F0281DB45C00318875 /* CalculatorModeViewControllerDelegate.swift in Sources */,
+				F943780B28239E2A002E0159 /* MusclesCoordinator.swift in Sources */,
 				F946D54B27F630AB00294816 /* ChartViewModel.swift in Sources */,
 				F92D908827E9E2490018917F /* DimmPresentationController.swift in Sources */,
 				F97121D227E26CBE0095B8C9 /* BaseViewController.swift in Sources */,
 				F968597727C3C4B00007FF5C /* Sex.swift in Sources */,
+				F943780728238C8F002E0159 /* ProgressCoordinator.swift in Sources */,
 				F99A10E9280EF2F700851D6F /* ProgramsManager.swift in Sources */,
 				F9D8671228182A13009247DA /* CalculatorModeViewModel.swift in Sources */,
 				F99A10D9280DC07700851D6F /* ProgramExerciseCell.swift in Sources */,
 				F94E9F4727ECD3CA00693538 /* Profile+CoreDataClass.swift in Sources */,
 				F92FF40027F61E0C003B97B5 /* BodyParameter+CoreDataProperties.swift in Sources */,
 				F96B771127BE64B600678747 /* HomeViewController.swift in Sources */,
+				F94377E92821913F002E0159 /* AppCoordinator.swift in Sources */,
 				F96B771A27BE811D00678747 /* UIFont+CustomFonts.swift in Sources */,
 				F90DF82A27C11EA600B76F30 /* HomeViewModel.swift in Sources */,
 				F92D908027E9208A0018917F /* ParametersViewController.swift in Sources */,
+				F94377F3282289F3002E0159 /* HomeCoordinator.swift in Sources */,
 				F946D55B2800910800294816 /* ExercisesStorage.swift in Sources */,
 				F99706FB27C665CC00C24B50 /* ProgramsViewController.swift in Sources */,
 				F9ABC770281AC6B900E652EE /* ActivityLevelCell.swift in Sources */,
+				F943780D28241923002E0159 /* CalculatorCoordinator.swift in Sources */,
 				F946D5722802DB7100294816 /* MuscleGroupViewModel.swift in Sources */,
 				F99A10E3280DDC2600851D6F /* ProgramTableHeader.swift in Sources */,
 				F9074EC3280C36A8001E4F05 /* UIViewController+Keyboard.swift in Sources */,
 				F96B771827BE810800678747 /* UIColor+CustomColors.swift in Sources */,
 				F9D68A2E27C12D18005F551E /* ProfileManager.swift in Sources */,
 				F92D906927E3781B0018917F /* ProfileParametersListCell.swift in Sources */,
+				F94377F528228A05002E0159 /* ProfileCoordinator.swift in Sources */,
+				F94377F128227021002E0159 /* StartCoordinator.swift in Sources */,
 				F94E9F3B27EBA78800693538 /* ImagePicker.swift in Sources */,
+				F94377FB282299FF002E0159 /* BaseCoordinator.swift in Sources */,
 				F989AF3027E0AED8008751FB /* Profile+Sex.swift in Sources */,
 				F9D66DF52805D43D00371B0F /* ExerciseViewController.swift in Sources */,
 				F9D66DF32805D25E00371B0F /* UITableView+Extension.swift in Sources */,
-				F9D8F1E827F043DC00D2365D /* HomeParametersCell.swift in Sources */,
-				F99706EA27C662F100C24B50 /* Coordinator+Muscles.swift in Sources */,
 				F92D907627E4A5160018917F /* BodyParametersDelegate.swift in Sources */,
 				F96B772D27BE98A900678747 /* UIView+Gradient.swift in Sources */,
 				F92D905827E362CF0018917F /* ParameterViewModel.swift in Sources */,
@@ -1472,12 +1512,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to take pictures";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app wants to use your photos";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to access your photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1505,12 +1545,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = QZ8GL87UF9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SuperheroShkliaruk/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to take pictures";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app wants to use your photos";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to access your photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

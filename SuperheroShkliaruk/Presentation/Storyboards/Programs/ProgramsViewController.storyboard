@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -28,15 +27,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-Po-Zeo">
-                                <rect key="frame" x="0.0" y="210" width="414" height="686"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-Po-Zeo">
+                                <rect key="frame" x="0.0" y="210" width="414" height="652"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qew-DP-5EP" customClass="CustomRoundedButtonView" customModule="SuperheroShkliaruk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="778" width="414" height="118"/>
+                                <rect key="frame" x="0.0" y="772" width="414" height="90"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="gVf-49-c4X"/>
+                                    <constraint firstAttribute="height" constant="90" id="gVf-49-c4X"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -45,9 +43,9 @@
                             <constraint firstItem="Oui-Po-Zeo" firstAttribute="top" secondItem="idr-Fa-bGg" secondAttribute="bottom" constant="40" id="2BW-gD-Gsv"/>
                             <constraint firstAttribute="trailing" secondItem="Oui-Po-Zeo" secondAttribute="trailing" id="2z3-XM-hSQ"/>
                             <constraint firstItem="idr-Fa-bGg" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="132" id="3Fs-C7-MBF"/>
-                            <constraint firstAttribute="bottom" secondItem="Oui-Po-Zeo" secondAttribute="bottom" id="3zI-id-1gI"/>
+                            <constraint firstItem="vH3-Ac-aH9" firstAttribute="bottom" secondItem="Oui-Po-Zeo" secondAttribute="bottom" id="3zI-id-1gI"/>
                             <constraint firstAttribute="trailing" secondItem="qew-DP-5EP" secondAttribute="trailing" id="MXv-U0-pin"/>
-                            <constraint firstAttribute="bottom" secondItem="qew-DP-5EP" secondAttribute="bottom" id="PZt-Qk-p75"/>
+                            <constraint firstItem="vH3-Ac-aH9" firstAttribute="bottom" secondItem="qew-DP-5EP" secondAttribute="bottom" id="PZt-Qk-p75"/>
                             <constraint firstItem="idr-Fa-bGg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZWg-sV-AWh"/>
                             <constraint firstItem="qew-DP-5EP" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="zBp-wW-u5w"/>
                             <constraint firstItem="Oui-Po-Zeo" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="zRx-Gg-Og9"/>
@@ -64,9 +62,4 @@
             <point key="canvasLocation" x="12" y="116"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

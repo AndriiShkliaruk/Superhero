@@ -20,6 +20,9 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5L-se-gWR" customClass="CustomRoundedButton" customModule="SuperheroShkliaruk" customModuleProvider="target">
                     <rect key="frame" x="43" y="21" width="328" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="O0e-Ga-3ej"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     <connections>
@@ -29,7 +32,7 @@
             </subviews>
             <constraints>
                 <constraint firstItem="G5L-se-gWR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="21" id="Asy-qg-POD"/>
-                <constraint firstAttribute="bottom" secondItem="G5L-se-gWR" secondAttribute="bottom" constant="48" id="VXm-3p-HkZ"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="G5L-se-gWR" secondAttribute="bottom" constant="10" id="VXm-3p-HkZ"/>
                 <constraint firstItem="G5L-se-gWR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="43" id="acW-Mm-Mib"/>
                 <constraint firstAttribute="trailing" secondItem="G5L-se-gWR" secondAttribute="trailing" constant="43" id="eoh-BZ-ti0"/>
             </constraints>

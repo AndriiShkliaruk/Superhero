@@ -15,15 +15,6 @@ class HomeViewModel {
         case superman, supergirl
     }
     
-    private enum ViewControllerIDs: String, CaseIterable {
-        case profile = "ProfileViewController"
-        case progress = "ProgressViewController"
-        case programs = "ProgramsViewController"
-        case calculator = "CalculatorViewController"
-        case muscles = "MusclesViewController"
-    }
-    
-    let tableItems = ["Profile", "Progress", "Programs", "Calculator", "Muscles"]
     let characterLabel: String
     var name: String {
         coreDataProfile?.name ?? ""
@@ -49,20 +40,5 @@ class HomeViewModel {
         let coreDataParameters = parametersInstance.fetchBodyParameters()
         parametersViewModels = coreDataParameters.filter { $0.isDisplayed }
             .map { ParameterViewModel($0) }
-    }
-    
-    func pushToViewController(at indexPath: IndexPath, with coordinator: MainCoordinator?) {
-        switch ViewControllerIDs.allCases[indexPath.row] {
-        case .profile:
-            coordinator?.moveToProfile()
-        case .progress:
-            coordinator?.moveToProgress()
-        case .programs:
-            coordinator?.moveToPrograms()
-        case .calculator:
-            coordinator?.moveToCalculator()
-        case .muscles:
-            coordinator?.moveToMuscles()
-        }
     }
 }

@@ -16,7 +16,7 @@ class ProfileParametersCell: UITableViewCell {
     @IBOutlet private weak var underlineView: UIView!
     
     static let identifier = "ProfileParametersCell"
-    private var parameterViewModel: ParameterViewModel?
+    private var viewModel: ParameterViewModel?
     var delegate: ProfileViewControllerDelegate?
     
     override func awakeFromNib() {
@@ -43,13 +43,13 @@ class ProfileParametersCell: UITableViewCell {
     }
     
     func configure(with viewModel: ParameterViewModel, textFieldTag: Int) {
-        parameterViewModel = viewModel
+        self.viewModel = viewModel
         
         bodyPartLabel.text = viewModel.title
         valueTextField.text = viewModel.changedValueString
         unitsLabel.text = viewModel.units
         isEnabledSwitch.isOn = viewModel.isDisplayed
-        underlineView.backgroundColor = .white
+        updateUnderlineColor()
         
         valueTextField.tag = textFieldTag
         addDoneButtonOnKeyboard()
@@ -81,29 +81,39 @@ class ProfileParametersCell: UITableViewCell {
         }
     }
     
+    private func updateUnderlineColor() {
+        guard let isHighlighted = viewModel?.isTextFieldHighlighted else { return }
+        underlineView.backgroundColor = isHighlighted ? .customYellow : .white
+    }
+    
+    private func updateIsTextFieldHightlighted(_ isHighlighted: Bool) {
+        viewModel?.changeIsTextFieldHighlighted(isHighlighted)
+        updateUnderlineColor()
+    }
+    
     @IBAction private func switchValueChanged(_ sender: UISwitch) {
-        parameterViewModel?.changeIsDisplayed(sender.isOn)
+        viewModel?.changeIsDisplayed(sender.isOn)
         delegate?.updateSaveButtonState()
     }
     
     @IBAction private func valueTextFieldEditingChanged(_ sender: UITextField) {
         guard let stringValue = sender.text else { return }
-        parameterViewModel?.changeValue(stringValue)
+        viewModel?.changeValue(stringValue)
         delegate?.updateSaveButtonState()
     }
     
     @IBAction private func valueTextFieldEditingDidBegin(_ sender: UITextField) {
-        underlineView.backgroundColor = .customDarkYellow
+        updateIsTextFieldHightlighted(true)
         delegate?.didActiveCellChange(self)
     }
     
     @IBAction private func valueTextFieldEditingDidEnd(_ sender: UITextField) {
-        underlineView.backgroundColor = sender.isTextEmpty ? .white : .customDarkYellow
+        updateIsTextFieldHightlighted(!sender.isTextEmpty)
         delegate?.didActiveCellChange(nil)
     }
     
     @IBAction private func valueTextFieldDidEndOnExit(_ sender: UITextField) {
-        underlineView.backgroundColor = sender.isTextEmpty ? .white : .customDarkYellow
+        updateIsTextFieldHightlighted(!sender.isTextEmpty)
         sender.resignFirstResponder()
     }
 }

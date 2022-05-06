@@ -9,7 +9,7 @@ import UIKit
 
 class CalculatorViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var menuTableView: UITableView!
-    var coordinator: MainCoordinator?
+    var coordinator: CalculatorCoordinator?
     let viewModel = CalculatorViewModel()
     
     override func viewDidLoad() {

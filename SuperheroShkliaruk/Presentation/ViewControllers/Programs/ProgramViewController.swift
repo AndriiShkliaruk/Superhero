@@ -11,7 +11,7 @@ class ProgramViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var addExerciseButtonView: CustomRoundedButtonView!
     
-    var coordinator: MainCoordinator?
+    var coordinator: ProgramsCoordinator?
     var viewModel: ProgramViewModel?
     
     private lazy var saveBarButtonItem: UIBarButtonItem = {
@@ -39,7 +39,7 @@ class ProgramViewController: UIViewController, Storyboarded {
         addExerciseButtonView.setButtonActionOnTap { [weak self] in
             guard let self = self,
                   let viewModel = self.viewModel else { return }
-            self.coordinator?.moveToMuscleGroups(with: self, viewModel: viewModel.generateMusclesViewModel())
+            self.coordinator?.moveToMuscles(with: .edit, delegate: self, viewModel: viewModel.generateMusclesViewModel())
         }
     }
     

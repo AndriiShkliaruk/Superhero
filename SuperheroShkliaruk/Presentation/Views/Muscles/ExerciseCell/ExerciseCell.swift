@@ -18,7 +18,7 @@ class ExerciseCell: UITableViewCell {
     static let identifier = "ExerciseCell"
     private var viewModel: ExerciseViewModel?
     var delegate: ExerciseCellDelegate?
-    var coordinator: MainCoordinator?
+    var coordinator: MusclesCoordinator?
     var mode: ExercisesMode = .normal
     
     override func awakeFromNib() {
