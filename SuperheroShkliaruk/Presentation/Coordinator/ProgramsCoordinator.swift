@@ -16,7 +16,7 @@ class ProgramsCoordinator: BaseCoordinator, Coordinator {
         pushViewController(viewController, animated: true)
     }
     
-    func moveToProgram(with mode: ProgramMode) {
+    func moveToProgram(with mode: ProgramMode, animated: Bool) {
         let viewController = ProgramViewController.instantiate()
         viewController.coordinator = self
         switch mode {
@@ -25,7 +25,7 @@ class ProgramsCoordinator: BaseCoordinator, Coordinator {
         case .edit(let program):
             viewController.viewModel = ProgramViewModel(mode: .edit(inputProgram: program))
         }
-        pushViewController(viewController, animated: true)
+        pushViewController(viewController, animated: animated)
     }
     
     func moveToMuscles(with mode: ExercisesMode, delegate: ProgramViewControllerDelegate, viewModel: MusclesViewModel) {

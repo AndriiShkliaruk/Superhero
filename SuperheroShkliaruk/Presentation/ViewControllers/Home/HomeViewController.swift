@@ -87,7 +87,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeParameterCell.identifier, for: indexPath) as? HomeParameterCell else { return UITableViewCell() }
-        cell.configure(with: viewModel.parametersViewModels[indexPath.row])
+        cell.configure(with: viewModel.parametersViewModels[indexPath.row], coordinator: coordinator)
         return cell
     }
 }

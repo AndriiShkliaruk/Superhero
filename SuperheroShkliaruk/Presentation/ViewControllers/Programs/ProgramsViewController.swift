@@ -44,7 +44,7 @@ class ProgramsViewController: BaseViewController, Storyboarded {
     }
     
     private func newProgramButtonTapped() {
-        coordinator?.moveToProgram(with: .create(initialExercise: nil))
+        coordinator?.moveToProgram(with: .create(initialExercise: nil), animated: true)
     }
 }
 
@@ -61,7 +61,7 @@ extension ProgramsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.moveToProgram(with: .edit(inputProgram: viewModel.programs[indexPath.row]))
+        coordinator?.moveToProgram(with: .edit(inputProgram: viewModel.programs[indexPath.row]), animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

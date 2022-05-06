@@ -13,12 +13,11 @@ class TabBarCoordinator: Coordinator, NavigationCoordinator {
     
     let homeCoordinator = HomeCoordinator()
     let profileCoordinator = ProfileCoordinator()
-    //let progressCoordinator = ProgressCoordinator()
     let programsCoordinator = ProgramsCoordinator()
     let musclesCoordinator = MusclesCoordinator(UINavigationController())
     let calculatorCoordinator = CalculatorCoordinator()
     
-    init(navigationController: UINavigationController) {
+    required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
@@ -31,9 +30,6 @@ class TabBarCoordinator: Coordinator, NavigationCoordinator {
         
         let profileViewController = profileCoordinator.navigationViewController
         profileViewController.tabBarItem = generateTabBarItem(.profile)
-        
-//        let progressViewController = progressCoordinator.navigationViewController
-//        progressViewController.tabBarItem = generateTabBarItem(.progress)
         
         let programsViewController = programsCoordinator.navigationViewController
         programsViewController.tabBarItem = generateTabBarItem(.programs)
@@ -53,8 +49,6 @@ class TabBarCoordinator: Coordinator, NavigationCoordinator {
         homeCoordinator.start()
         profileCoordinator.parentCoordinator = self
         profileCoordinator.start()
-        
-        //progressCoordinator.start()
         
         programsCoordinator.start()
         

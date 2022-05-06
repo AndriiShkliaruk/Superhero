@@ -9,4 +9,5 @@ import UIKit
 
 protocol NavigationCoordinator {
     var navigationController: UINavigationController { get set }
+    init(_ navigationController: UINavigationController)
 }

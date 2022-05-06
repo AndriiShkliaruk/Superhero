@@ -13,4 +13,10 @@ class HomeCoordinator: BaseCoordinator, Coordinator {
         viewController.coordinator = self
         pushViewController(viewController, animated: false)
     }
+    
+    func moveToChart(with parameterViewModel: ParameterViewModel) {
+        let viewController = ChartViewController.instantiate()
+        viewController.viewModel = ChartViewModel(parameter: parameterViewModel)
+        pushViewController(viewController, animated: true)
+    }
 }

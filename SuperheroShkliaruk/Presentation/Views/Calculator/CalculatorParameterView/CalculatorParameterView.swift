@@ -31,6 +31,7 @@ class CalculatorParameterView: UIView {
         
         unitsLabel.font = .helveticaNeueMediumWithSize18
         unitsLabel.textColor = .customGray
+        underlineView.backgroundColor = .white
     }
     
     func configure(_ name: CalculatorParameter, units: CalculatorUnits) {

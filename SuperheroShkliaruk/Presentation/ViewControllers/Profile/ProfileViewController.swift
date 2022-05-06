@@ -12,7 +12,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
     @IBOutlet private weak var addParametersButtonView: CustomRoundedButtonView!
     
     var coordinator: ProfileCoordinator?
-    private var viewModel = ProfileViewModel()
+    private lazy var viewModel = ProfileViewModel()
     private var activeTableViewCell: UITableViewCell?
     
     private lazy var transitionDelegate = DimmTransitionManager()

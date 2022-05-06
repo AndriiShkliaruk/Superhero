@@ -25,6 +25,7 @@ class CalculatorModeViewController: BaseViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hideKeyboardWhenTappedAround()
         guard let viewModel = viewModel else { return }
         setupUI(with: viewModel)
         configureInputs(with: viewModel)

@@ -10,7 +10,7 @@ import UIKit
 class AppCoordinator: Coordinator, NavigationCoordinator {
     var navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+    required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
@@ -29,7 +29,7 @@ class AppCoordinator: Coordinator, NavigationCoordinator {
     }
     
     func moveToTabs() {
-        let tabCoordinator = TabBarCoordinator(navigationController: navigationController)
+        let tabCoordinator = TabBarCoordinator(navigationController)
         tabCoordinator.start()
     }
 }

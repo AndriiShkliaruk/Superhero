@@ -10,11 +10,6 @@ import UIKit
 class MusclesCoordinator: BaseCoordinator, Coordinator {
     var parentCoordinator: TabBarCoordinator?
     
-    init(_ navigationController: UINavigationController) {
-        super.init()
-        self.navigationController = navigationController
-    }
-    
     func start() {
         let viewController = MusclesViewController.instantiate()
         viewController.coordinator = self
@@ -41,6 +36,6 @@ class MusclesCoordinator: BaseCoordinator, Coordinator {
     func createProgram(with exercise: ExerciseViewModel) {
         navigationController.popViewController(animated: false)
         parentCoordinator?.selectTab(.programs)
-        parentCoordinator?.programsCoordinator.moveToProgram(with: .create(initialExercise: exercise))   
+        parentCoordinator?.programsCoordinator.moveToProgram(with: .create(initialExercise: exercise), animated: false)   
     }
 }

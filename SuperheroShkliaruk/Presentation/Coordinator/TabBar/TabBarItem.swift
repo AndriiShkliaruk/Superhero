@@ -10,7 +10,6 @@ import UIKit
 enum TabBarItem: Int {
     case home
     case profile
-    //case progress
     case programs
     case calculator
     case muscles
@@ -25,8 +24,6 @@ enum TabBarItem: Int {
             return "Home"
         case .profile:
             return "Profile"
-//        case .progress:
-//            return "Progress"
         case .programs:
             return "Programs"
         case .calculator:

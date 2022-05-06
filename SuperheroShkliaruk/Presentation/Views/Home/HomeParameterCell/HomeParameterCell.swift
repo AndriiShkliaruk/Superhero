@@ -16,6 +16,8 @@ class HomeParameterCell: UITableViewCell {
     @IBOutlet weak var differenceLabel: UILabel!
     
     static let identifier = "HomeParameterCell"
+    private var viewModel: ParameterViewModel?
+    private var coordinator: HomeCoordinator?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +30,9 @@ class HomeParameterCell: UITableViewCell {
         innerView.layer.cornerRadius = 10
         innerView.layer.borderWidth = 1
         innerView.layer.borderColor = UIColor.white.cgColor
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+        innerView.addGestureRecognizer(tapGesture)
         
         titleLabel.font = .helveticaNeueRegularWithSize20
         titleLabel.textColor = .white
@@ -43,11 +48,19 @@ class HomeParameterCell: UITableViewCell {
         differenceLabel.textColor = .white
     }
     
-    func configure(with viewModel: ParameterViewModel) {
+    func configure(with viewModel: ParameterViewModel, coordinator: HomeCoordinator?) {
+        self.viewModel = viewModel
+        self.coordinator = coordinator
+        
         titleLabel.text = viewModel.title
         valueLabel.text = viewModel.changedValueString
         unitsLabel.text = viewModel.units
         differenceView.backgroundColor = viewModel.differenceValueBackColor
         differenceLabel.text = viewModel.differenceValueString
+    }
+    
+    @objc private func cellTapped() {
+        guard let viewModel = viewModel else { return }
+        coordinator?.moveToChart(with: viewModel)
     }
 }
