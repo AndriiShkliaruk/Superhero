@@ -22,24 +22,9 @@ class ProfileCoordinator: BaseCoordinator, Coordinator {
         navigationController.present(viewController, animated: true)
     }
     
-    func finishWithInfoView(iconName: String, text: String, nextTab tab: TabBarItem) {
-        if let navigationControllerView = navigationController.view,
-           let icon = UIImage(named: iconName) {
-            
-            let infoView: InfoView = InfoView.fromNib()
-            infoView.frame = navigationControllerView.frame
-            infoView.configure(with: icon,
-                               text: text,
-                               backgroundColor: nil)
-            UIView.showWithTransition(for: 2, childView: infoView, in: navigationControllerView) { [weak self] in
-                self?.parentCoordinator?.selectTab(tab)
-            }
-        } else {
-            parentCoordinator?.selectTab(tab)
+    func moveToHomeWithInfoView(iconName: String, text: String) {
+        showInfoView(iconName: iconName, text: text) { [weak self] in
+            self?.parentCoordinator?.selectTab(.home)
         }
-    }
-    
-    func finish() {
-        parentCoordinator?.selectTab(.home)
     }
 }

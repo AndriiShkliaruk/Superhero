@@ -23,6 +23,10 @@ class BaseCoordinator: NavigationCoordinator {
     }
     
     func backWithInfoView(iconName: String, text: String) {
+        showInfoView(iconName: iconName, text: text, completion: back)
+    }
+    
+    func showInfoView(iconName: String, text: String, completion: @escaping () -> Void) {
         if let navigationControllerView = navigationController.view,
            let icon = UIImage(named: iconName) {
             
@@ -31,11 +35,11 @@ class BaseCoordinator: NavigationCoordinator {
             infoView.configure(with: icon,
                                text: text,
                                backgroundColor: nil)
-            UIView.showWithTransition(for: 2, childView: infoView, in: navigationControllerView) { [weak self] in
-                self?.back()
+            UIView.showWithTransition(for: 2, childView: infoView, in: navigationControllerView) {
+                completion()
             }
         } else {
-            back()
+            completion()
         }
     }
     

@@ -62,7 +62,7 @@ class ProfileViewController: BaseViewController, Storyboarded {
         view.endEditing(true)
         viewModel.didSaveButtonTap()
         saveBarButtonItem.isEnabled = false
-        coordinator?.finishWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText, nextTab: .home)
+        coordinator?.moveToHomeWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText)
     }
     
     private func addParametersButtonTapped() {
