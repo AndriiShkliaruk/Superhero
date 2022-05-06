@@ -47,6 +47,7 @@ class MusclesViewController: BaseViewController, Storyboarded {
     }
     
     @objc private func saveBarButtonTapped() {
+        saveBarButtonItem.isEnabled = false
         delegate?.didExercisesChange(viewModel)
         coordinator?.backWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText)
     }

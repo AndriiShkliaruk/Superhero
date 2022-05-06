@@ -63,6 +63,7 @@ class ProgramViewController: UIViewController, Storyboarded {
     
     @objc private func saveBarButtonTapped() {
         view.endEditing(true)
+        saveBarButtonItem.isEnabled = false
         
         guard let viewModel = viewModel else { return }
         viewModel.didSaveButtonTap() 

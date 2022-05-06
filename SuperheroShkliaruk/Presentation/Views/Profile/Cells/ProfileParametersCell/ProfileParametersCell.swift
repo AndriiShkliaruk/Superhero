@@ -35,6 +35,8 @@ class ProfileParametersCell: UITableViewCell {
         valueTextField.font = .helveticaNeueRegularWithSize18
         valueTextField.textColor = .customGray
         valueTextField.delegate = self
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneKeyboardButtonPressed))
+        valueTextField.showButtonOnKeyboard(doneButton)
         
         unitsLabel.font = .helveticaNeueMediumWithSize18
         unitsLabel.textColor = .customGray
@@ -49,31 +51,13 @@ class ProfileParametersCell: UITableViewCell {
         valueTextField.text = viewModel.changedValueString
         unitsLabel.text = viewModel.units
         isEnabledSwitch.isOn = viewModel.isDisplayed
-        updateUnderlineColor()
-        
         valueTextField.tag = textFieldTag
-        addDoneButtonOnKeyboard()
+        updateUnderlineColor()
     }
     
-    private func addDoneButtonOnKeyboard() {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-        doneToolbar.barStyle = .default
-        
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneKeyboardButtonPressed))
-        done.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .normal)
-        done.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .highlighted)
-        
-        let items = [flexSpace, done]
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        valueTextField.inputAccessoryView = doneToolbar
-    }
-    
-    @objc func doneKeyboardButtonPressed() {
+    @objc private func doneKeyboardButtonPressed() {
         let nextTag = valueTextField.tag + 1
-        
+
         if let nextResponder = superview?.viewWithTag(nextTag) as? UITextField {
             nextResponder.becomeFirstResponder()
         } else {

@@ -28,16 +28,33 @@ class CalculatorParameterView: UIView {
         valueTextField.font = .helveticaNeueRegularWithSize18
         valueTextField.textColor = .customGray
         valueTextField.delegate = self
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneKeyboardButtonPressed))
+        valueTextField.showButtonOnKeyboard(doneButton)
         
         unitsLabel.font = .helveticaNeueMediumWithSize18
         unitsLabel.textColor = .customGray
         underlineView.backgroundColor = .white
     }
     
-    func configure(_ name: CalculatorParameter, units: CalculatorUnits) {
+    func configure(_ name: CalculatorParameter, units: CalculatorUnits, textFieldTag: Int) {
         inputMode = name
         nameLabel.text = name.description
         unitsLabel.text = units.description
+        valueTextField.tag = textFieldTag
+    }
+    
+    @objc private func doneKeyboardButtonPressed() {
+        let nextTag = valueTextField.tag + 1
+        
+        guard let nextResponder = superview?.viewWithTag(nextTag) as? UITextField else {
+            endEditing(true)
+            return
+        }
+        guard let nextView = nextResponder.superview?.superview, !nextView.isHidden else {
+            endEditing(true)
+            return
+        }
+        nextResponder.becomeFirstResponder()
     }
     
     @IBAction func valueTextFieldEditingChanged(_ sender: UITextField) {

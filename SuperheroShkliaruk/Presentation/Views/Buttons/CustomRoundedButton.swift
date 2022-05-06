@@ -47,9 +47,9 @@ class CustomRoundedButton: UIButton {
     
     private func setupUI() {
         layer.cornerRadius = layer.frame.height / 2
-        titleLabel?.textColor = .black
-        titleLabel?.tintColor = .black
-        tintColor = .black
+        setTitleColor(.black, for: .normal)
+        setTitleColor(.black, for: .disabled)
+        setTitleColor(.black, for: .highlighted)
     }
     
     func setBackgroundColor(_ color: UIColor?, for state: ButtonState) {

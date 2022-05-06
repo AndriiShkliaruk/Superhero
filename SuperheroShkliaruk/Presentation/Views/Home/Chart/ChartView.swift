@@ -41,6 +41,10 @@ class ChartView: UIView {
             scrollView.contentSize = CGSize(width: (barWidth + sideSpace) * CGFloat(dataEntries.count), height: frame.height)
             mainLayer.frame = CGRect(origin: .zero, size: scrollView.contentSize)
             
+            if scrollView.visibleSize.width < scrollView.contentSize.width {
+                scrollViewScrollToRight()
+            }
+            
             maxBarHeight = mainLayer.frame.height - (textHeight * 2 + diffenceHeight + dateTopSpace + barTopSpace + valueTopSpace)
             maxBarValue = dataEntries.map { $0.value }.max()
             firstBarValue = dataEntries.first?.value
@@ -73,6 +77,10 @@ class ChartView: UIView {
         scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    }
+    
+    private func scrollViewScrollToRight() {
+        scrollView.setContentOffset(CGPoint(x: scrollView.contentSize.width - scrollView.bounds.size.width + scrollView.contentInset.right, y: 0), animated: false)
     }
     
     private func showEntry(index: Int, entry: ChartBarViewModel) {

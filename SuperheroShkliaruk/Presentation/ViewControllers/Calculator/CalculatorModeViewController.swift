@@ -87,9 +87,9 @@ class CalculatorModeViewController: BaseViewController, Storyboarded {
     }
     
     private func configureInputs(with viewModel: CalculatorModeViewModel) {
-        viewModel.parameterInputs.forEach { input in
+        viewModel.parameterInputs.enumerated().forEach { index, input in
             let inputView: CalculatorParameterView = CalculatorParameterView.fromNib()
-            inputView.configure(input.name, units: input.units)
+            inputView.configure(input.name, units: input.units, textFieldTag: index)
             inputView.delegate = self
             parametersStackView.addArrangedSubview(inputView)
         }
@@ -128,7 +128,6 @@ class CalculatorModeViewController: BaseViewController, Storyboarded {
         scrollView.setContentOffset(.zero, animated: true)
         setResultIsHidden(true)
     }
-    
     
     @IBAction func chooseActivityButtonTapped(_ sender: UIButton) {
         coordinator?.presentRateActivities { viewController in
