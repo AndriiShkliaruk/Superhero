@@ -78,6 +78,11 @@ class ProfileViewModel {
         coreDataProfile?.bodyParameters = NSOrderedSet(array: initialParameters)
         ProfileManager.sharedInstance.saveProfile()
         updateInitialProfile()
+        resetTextFieldsHighlight()
+    }
+    
+    private func resetTextFieldsHighlight() {
+        userProfile.parameters.forEach { $0.changeIsTextFieldHighlighted(false) }
     }
     
     func saveValuesInParameterViewModels() {

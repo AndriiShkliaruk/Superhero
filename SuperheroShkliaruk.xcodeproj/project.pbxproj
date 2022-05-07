@@ -120,7 +120,6 @@
 		F997070B27C6B0F900C24B50 /* MusclesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997070A27C6B0F900C24B50 /* MusclesViewController.storyboard */; };
 		F997070D27C6B11000C24B50 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997070C27C6B11000C24B50 /* ProfileViewController.storyboard */; };
 		F997070F27C6B12200C24B50 /* ProgramsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997070E27C6B12200C24B50 /* ProgramsViewController.storyboard */; };
-		F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F997071027C6B13100C24B50 /* ProgressViewController.storyboard */; };
 		F997071327C6C05F00C24B50 /* Saira-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F997071227C6C05F00C24B50 /* Saira-Medium.ttf */; };
 		F99A10D9280DC07700851D6F /* ProgramExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A10D7280DC07600851D6F /* ProgramExerciseCell.swift */; };
 		F99A10DA280DC07700851D6F /* ProgramExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99A10D8280DC07700851D6F /* ProgramExerciseCell.xib */; };
@@ -267,7 +266,6 @@
 		F997070A27C6B0F900C24B50 /* MusclesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusclesViewController.storyboard; sourceTree = "<group>"; };
 		F997070C27C6B11000C24B50 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		F997070E27C6B12200C24B50 /* ProgramsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgramsViewController.storyboard; sourceTree = "<group>"; };
-		F997071027C6B13100C24B50 /* ProgressViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressViewController.storyboard; sourceTree = "<group>"; };
 		F997071227C6C05F00C24B50 /* Saira-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Medium.ttf"; sourceTree = "<group>"; };
 		F99A10D7280DC07600851D6F /* ProgramExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramExerciseCell.swift; sourceTree = "<group>"; };
 		F99A10D8280DC07700851D6F /* ProgramExerciseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramExerciseCell.xib; sourceTree = "<group>"; };
@@ -712,7 +710,6 @@
 				F997071B27C6D2E600C24B50 /* Muscles */,
 				F997071C27C6D2EC00C24B50 /* Profile */,
 				F997071D27C6D2F300C24B50 /* Programs */,
-				F997071E27C6D2FA00C24B50 /* Progress */,
 				F953E42227BBC85100DE14B7 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -773,6 +770,7 @@
 			isa = PBXGroup;
 			children = (
 				F96B771427BE6C7C00678747 /* HomeViewController.storyboard */,
+				F92FF3F727F5ECBA003B97B5 /* ChartViewController.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -949,15 +947,6 @@
 				F99A10DD280DDAF400851D6F /* ProgramViewController.storyboard */,
 			);
 			path = Programs;
-			sourceTree = "<group>";
-		};
-		F997071E27C6D2FA00C24B50 /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-				F997071027C6B13100C24B50 /* ProgressViewController.storyboard */,
-				F92FF3F727F5ECBA003B97B5 /* ChartViewController.storyboard */,
-			);
-			path = Progress;
 			sourceTree = "<group>";
 		};
 		F997072027C6D33200C24B50 /* Calculator */ = {
@@ -1193,7 +1182,6 @@
 				F9D66DF72805D45800371B0F /* ExerciseViewController.storyboard in Resources */,
 				F953E42127BBC85100DE14B7 /* Assets.xcassets in Resources */,
 				F99A10DA280DC07700851D6F /* ProgramExerciseCell.xib in Resources */,
-				F997071127C6B13100C24B50 /* ProgressViewController.storyboard in Resources */,
 				F99706FF27C6660400C24B50 /* CalculatorViewController.storyboard in Resources */,
 				F92D906627E378060018917F /* ProfileParametersCell.xib in Resources */,
 				F997070F27C6B12200C24B50 /* ProgramsViewController.storyboard in Resources */,

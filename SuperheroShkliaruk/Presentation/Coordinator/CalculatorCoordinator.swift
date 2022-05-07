@@ -24,6 +24,6 @@ class CalculatorCoordinator: BaseCoordinator, Coordinator {
     func presentRateActivities(configuration: (ActivityLevelViewController) -> Void) {
         let viewController = ActivityLevelViewController.instantiate()
         configuration(viewController)
-        pushViewController(viewController, animated: true)
+        navigationController.present(viewController, animated: true)
     }
 }

@@ -57,10 +57,10 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAp-wb-e6u">
-                                                <rect key="frame" x="0.0" y="646" width="390" height="120"/>
+                                                <rect key="frame" x="0.0" y="666" width="390" height="100"/>
                                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="pXP-oj-dAf"/>
+                                                    <constraint firstAttribute="height" constant="100" id="pXP-oj-dAf"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

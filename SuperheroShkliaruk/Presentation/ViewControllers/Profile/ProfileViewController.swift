@@ -24,11 +24,15 @@ class ProfileViewController: BaseViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
         setupUI()
+        setupTableView()
         setupNavigationBar()
-        
         hideKeyboardWhenTappedAround()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.setContentOffset(.zero, animated: false)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -38,23 +42,23 @@ class ProfileViewController: BaseViewController, Storyboarded {
         NotificationCenter.default.removeObserver(self)
     }
     
-    private func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: ProfileParametersCell.identifier, bundle: nil), forCellReuseIdentifier: ProfileParametersCell.identifier)
-        tableView.register(UINib(nibName: ProfileTableHeader.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableHeader.identifier)
-        tableView.register(UINib(nibName: ProfileTableFooter.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableFooter.identifier)
-        tableView.backgroundColor = .clear
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
-    }
-    
     private func setupUI() {
-        title = viewModel.navigationBarTitleText
         addParametersButtonView.setButtonTitle(viewModel.addParametersButtonText)
         addParametersButtonView.setButtonActionOnTap(addParametersButtonTapped)
     }
     
+    private func setupTableView() {
+        tableView.backgroundColor = .clear
+        tableView.register(UINib(nibName: ProfileParametersCell.identifier, bundle: nil), forCellReuseIdentifier: ProfileParametersCell.identifier)
+        tableView.register(UINib(nibName: ProfileTableHeader.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableHeader.identifier)
+        tableView.register(UINib(nibName: ProfileTableFooter.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: ProfileTableFooter.identifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+    }
+    
     private func setupNavigationBar() {
+        title = viewModel.navigationBarTitleText
         navigationItem.rightBarButtonItem = saveBarButtonItem
     }
     
@@ -62,6 +66,9 @@ class ProfileViewController: BaseViewController, Storyboarded {
         view.endEditing(true)
         viewModel.didSaveButtonTap()
         saveBarButtonItem.isEnabled = false
+        if let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows {
+            tableView.reloadRows(at: indexPathsForVisibleRows, with: .none)
+        }
         coordinator?.moveToHomeWithInfoView(iconName: viewModel.infoIconName, text: viewModel.infoText)
     }
     
@@ -88,7 +95,6 @@ class ProfileViewController: BaseViewController, Storyboarded {
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.selectedParameters.count
     }
