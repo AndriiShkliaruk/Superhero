@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 public protocol ImagePickerDelegate: AnyObject {
     func didSelect(image: UIImage?)
@@ -35,8 +36,19 @@ open class ImagePicker: NSObject {
         }
         
         return UIAlertAction(title: title, style: .default) { [unowned self] _ in
-            self.pickerController.sourceType = type
-            self.presentationController?.present(self.pickerController, animated: true)
+            if type == .camera {
+                AVCaptureDevice.requestAccess(for: .video) { response in
+                    DispatchQueue.main.async {
+                        if response {
+                            self.presentPickerController(with: type)
+                        } else {
+                            self.goToAppPrivacySettings()
+                        }
+                    }
+                }
+            } else {
+                presentPickerController(with: type)
+            }
         }
     }
     
@@ -70,6 +82,20 @@ open class ImagePicker: NSObject {
         controller.dismiss(animated: true, completion: nil)
         self.delegate?.didSelect(image: image)
     }
+    
+    private func presentPickerController(with type: UIImagePickerController.SourceType) {
+        pickerController.sourceType = type
+        presentationController?.present(self.pickerController, animated: true)
+    }
+    
+    private func goToAppPrivacySettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString),
+              UIApplication.shared.canOpenURL(url) else {
+            assertionFailure("Not able to open App privacy settings")
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 }
 
 extension ImagePicker: UIImagePickerControllerDelegate {
@@ -87,6 +113,4 @@ extension ImagePicker: UIImagePickerControllerDelegate {
     }
 }
 
-extension ImagePicker: UINavigationControllerDelegate {
-    
-}
+extension ImagePicker: UINavigationControllerDelegate { }
